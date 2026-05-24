@@ -182,6 +182,7 @@ export default function IframeViewer({
                     minHeight,
                     border: 'none',
                     display: 'block',
+                    backgroundColor: '#FFFFFF',
                 }}
                 loading="lazy"
                 onLoad={handleLoad}
