@@ -1,0 +1,24 @@
+{
+    "email": "sajhishiksha@gmail.com",
+    "whatsapp": "",
+    "contributors": [
+        {
+            "name": "Ms. Jyoti",
+            "role": "Head Mistress, KV Gorakhpur",
+            "contribution": "Classes 1-5 Resources",
+            "initials": "MJ"
+        },
+        {
+            "name": "Mr. Ajit Yadav",
+            "role": "Primary Teacher, KV Loktak",
+            "contribution": "Mathematics Resources",
+            "initials": "AY"
+        },
+        {
+            "name": "Mr. Bhupesh Sharma",
+            "role": "Primary Teacher, KV Loktak",
+            "contribution": "English Resources",
+            "initials": "BS"
+        }
+    ]
+}

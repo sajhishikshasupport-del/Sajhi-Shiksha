@@ -1,0 +1,168 @@
+
+You are a senior front end engineer your Task is to update the current website by the following Requirements the user as listed user is not a technical developer so does not Speak in front and language user has listed the requirements in the plain English try to understand it and implement it accordingly without breaking the code base make sure that every import and every function works as expected behaviour Do analysis and Propose your solution than implement one by one 
+Get in Touch
+
+Arattai - Message us
+https://aratt.ai/user/@kapil_pundir
+
+WhatsApp Group - Request and share content 
+https://chat.whatsapp.com/E3VT5y8Tm44Gto9GpzE83l
+
+WhatsApp Channel - Get regular updates
+https://whatsapp.com/channel/0029VajIeLSLtOjLglxFqi12
+
+Email - write to us
+mamta07691@gmail.com
+
+
+In math lovers section
+remove the numbering "section 1,2 ... etc"
+
+merge section 3 and 4 in math lover then give two different links for Hindi and English
+
+and the setion 1 currently it is too big we should let user click on it and then choose the link of there likeing we already have this in our for-teacher and for-student section we have multiple mutiple cards for each different purpose do same in this one make sure not to reinvent card logic import it 
+
+
+Below is the list of all the updated links Verify it against the current Jason file where we have stored it And I would like you to update the Jason file to show this links correctly and the website without breaking the current code base 
+"Sajhi Shiksha
+
+*For students*
+1. Career Guidance 
+https://youtube.com/playlist?list=PLjIk6QfdhlCivV2L00teBa_n95lLpk2lY&si=ZIzkolf3xE6o_E7E 
+2. CBSE Previous year question papers
+https://www.cbse.gov.in/cbsenew/question-paper.html 
+3. CBSE Previous year Marking Scheme 
+https://www.cbse.gov.in/cbsenew/marking-scheme.html 
+3. Sample papers with Marking Scheme 
+https://cbseacademic.nic.in/additionalPQ.html 
+4. CBSE Additional question papers for practice 
+https://cbseacademic.nic.in/sqp_archive.html 
+5. NCERT textbooks 
+https://ncert.nic.in/textbook.php 
+6. NCERT Exemplar Problems
+https://ncert.nic.in/exemplar-problems.php?ln=en 
+7. CBSE Toppers Answersheets
+https://www.cbse.gov.in/cbsenew/model-answer.html 
+8. CBSE Duplicate Academic Documents 
+https://cbseit.in/cbse/web/dads/List.aspx
+
+
+
+
+*For Teachers*
+
+TGT/PGT Maths
+Question paper
+Periodic test 
+https://drive.google.com/drive/folders/1x50PirEuuh78CkWFfJrDschSsnHenb1V 
+Half yearly exam 
+https://drive.google.com/drive/folders/1Uw2Nac2rF29H7Xklh10mhEPllYjPXJ1D 
+Session ending exam 
+https://drive.google.com/drive/folders/1v_DMFtOAPXaqgAF6OM3tMjOdTUnyswk7 
+Pre board 
+https://drive.google.com/drive/folders/1bPB5hS7fvYbDhmKm9ywb_3RgWYgIe6jN 
+Question Bank /Study material 
+https://drive.google.com/drive/folders/1iSW7Vxx0sWfmGiawWvulxIcyqqR9UTvU 
+Maths Lab
+NCERT Lab Manual
+https://ncert.nic.in/science-laboratory-manual.php?ln=en 
+Maths Lab activities with solutions
+https://drive.google.com/drive/folders/19W-ouw4vbXPduBMJsXUxUaWJZuzSewnW 
+Maths Lab Ideas
+https://drive.google.com/drive/folders/138lT9PwhYpj6AWtC6WR1hNI7atrjwg4E 
+Maths Project Ideas
+(Link it with “Maths project ideas” in Maths lovers section)
+Holiday homework 
+https://drive.google.com/drive/folders/1l5SlBSUsExqQd19IpOd9JHy1vekytMq3 
+Lesson plan/Subject Committee 
+https://drive.google.com/drive/folders/1QxqTrq5NmCZuEGNrms-q-o-qdfW__zB8 
+PPTs/ Worksheets
+https://drive.google.com/drive/folders/1HxDsBB-4KxValby-I6hCMZImB5dTIArr 
+
+
+Circulars/Formats
+GOI /KVS Circulars
+GOI Rules
+https://drive.google.com/drive/folders/1FCEHcCUAoVJwG7dd0UCJBjaXxhIIWOja 
+KVS Rules
+https://drive.google.com/drive/folders/1U4SAP3WxZxkAakwM-etnWbcL_7GcU6Xm 
+KVS Admission Guidelines/Formats
+https://drive.google.com/drive/folders/17JXk96lfAjLdva8_aW5KMesfKkEwVX_S 
+Time Table Circulars and Software 
+KVS Time table Circulars
+https://drive.google.com/drive/folders/17hbgX1IxjOVLaf0Ba1FD7yoDQeov3fzn 
+Softwares and formats
+https://drive.google.com/drive/folders/1i_GtbaA7a2800HkotbAyO0PLwcCaq5Dj 
+FET Time table Software 
+https://lalescu.ro/liviu/fet/ 
+FET software Tutorial
+Hindi
+https://youtube.com/playlist?list=PLC92an0f-oqDbFgpj-4fz-7amv7U6RGrb&si=k8LfbSJfau98cfDJ 
+English 
+https://youtube.com/playlist?list=PLxSRqFIznAtWXJP5o941CwBuXrOq8Q9gY&si=ws5n6zT-csiSlmxf  
+CBSE/NIOS Formats/Circulars
+CBSE
+https://drive.google.com/drive/folders/1d8AzeAo0KPaSL58kREiRwXHDZJ0-SzzB 
+NIOS
+https://drive.google.com/drive/folders/1qsSR8AXO7RXRubGp_mW-l6wl3E9t_RVN 
+Morning Assembly 
+https://drive.google.com/drive/folders/12JVlUWW6QyDOlDMUWm8ipxm6dR1pwRKx 
+Office Related formats
+https://drive.google.com/drive/folders/1lYWwDwvtw0tORS0Tgbc1PuzQHoyaqqkA 
+Miscellaneous 
+APAR
+https://drive.google.com/drive/folders/1mz24NF6JTS8MMMSF2LGoGaZ_Eic3nDum 
+Others
+https://drive.google.com/drive/folders/1NFdXj6ijN_NspZCQL-OQEHjRbg70qd3o 
+
+
+*For Maths Lovers*
+
+Mathematical Olympiad 
+1. Books and Notes PDFs
+https://drive.google.com/drive/folders/10tgDz7rSVrxCUsto6DxifoFXN3qHy3KU 
+2. Stages of Maths Olympiad 
+https://olympiads.hbcse.tifr.res.in/about-olympiads/stages/mathematical-olympiad/ 
+3. Eligibility criteria 
+https://olympiads.hbcse.tifr.res.in/wp-content/uploads/2024/06/elcrIOQM20242025.pdf 
+4. Syllabus 
+https://olympiads.hbcse.tifr.res.in/how-to-prepare/syllabus/#uagb-tabs__tab6 
+5. Previous year question papers 
+https://olympiads.hbcse.tifr.res.in/how-to-prepare/past-papers/ 
+6. Collection of last 40 years (47 countries) olympiad problems 
+https://mathnet.csail.mit.edu/explorer.html 
+7. Official website (International Mathematical Olympiad)
+https://www.imo-official.org/ 
+8. Official website (HBCSE)
+https://olympiads.hbcse.tifr.res.in/ 
+
+Puzzles
+https://ccl.iitgn.ac.in/puzzles-games-resources
+https://youtube.com/playlist?list=PLGzX9Ri8oWs8T211MkzlHwdLLbNOfa5w_&si=dKmZPud5HqX0rZQ_ 
+
+Maths project ideas 
+(english)
+https://drive.google.com/drive/folders/1hB7zZC-lkU6WhOHGEo8JjnE-kg6urg4y
+(Hindi)
+https://drive.google.com/drive/folders/0Bz-krFd5I3MrfmRkTHRBQlk2RjR3UUxQbVMwcU5MbmZzc1FrWTdhdXU1cEczdDA5VzhUbU0?resourcekey=0-LLe4oKQNkbjsSPDgIhE5pg 
+
+YouTube Channels for Maths Lovers
+1. Kapil Pundir 
+https://youtube.com/@kapilpundir?si=4vh4PzbE2C2xsxue 
+2. Super infinity
+https://youtube.com/@superinfinityofficial?si=bOWgIHmikThF7NYD 
+3. Oxford mathematics 
+https://youtube.com/@oxfordmathematics?si=3-sqprddpoFRpH8E 
+4. CCL IITGN
+https://youtube.com/@ccl_iitgn?si=TAuXsQeLgbsxNdpW 
+5. Numberphile
+https://youtube.com/@numberphile?si=ELyeLOmoqwfBe7pF 
+6. Tibees
+https://youtube.com/@tibees?si=MG7Y7vRq6RYWRz63 
+7. Stand-up Maths
+https://youtube.com/@standupmaths?si=YcbqZEPdNn2uvlNH 
+8. Eddie woo
+https://youtube.com/@misterwootube?si=oEYtwdpa1cEa6Yzt 
+9. 3 Blue 1 Brown
+https://youtube.com/@3blue1brown?si=5Tg-Q56mNvCtOfzp 
+"

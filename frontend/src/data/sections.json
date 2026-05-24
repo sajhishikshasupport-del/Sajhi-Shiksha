@@ -1,0 +1,146 @@
+{
+    "_comment": "Doorway cards config for the homepage 'Pick Your Path' section. Changes here affect the three main entry cards. URL: /",
+    "students": {
+        "enabled": true,
+        "title": "For Students",
+        "subtitle": "Resources for Classes 6 to 12",
+        "icon": "School",
+        "buttonColor": "var(--color-blue)",
+        "redirectRoute": "/for-students",
+        "filterParams": {
+            "class": ["6", "7", "8", "9", "10", "11", "12"],
+            "subject": ["Mathematics"]
+        }
+    },
+    "teachers": {
+        "enabled": true,
+        "title": "For Teachers",
+        "subtitle": "Programs, Formats & Rules, Admissions, and more",
+        "icon": "ChalkboardTeacher",
+        "buttonColor": "var(--color-green)",
+        "redirectRoute": "/for-teachers",
+        "categoryFilters": ["programs", "formats", "admissions"]
+    },
+    "mathLovers": {
+        "enabled": true,
+        "title": "For Math Lovers",
+        "subtitle": "Explore the beauty of mathematics",
+        "icon": "Calculator",
+        "buttonColor": "var(--color-purple)",
+        "redirectRoute": "/for-math-lovers",
+        "olympiadSection": {
+            "id": "ml-olympiad",
+            "title": "Mathematical Olympiad",
+            "description": "Comprehensive resources for the Mathematical Olympiad journey — from preparation books to official contest links.",
+            "links": [
+                {
+                    "title": "Books and Notes PDFs",
+                    "url": "https://drive.google.com/embeddedfolderview?id=10tgDz7rSVrxCUsto6DxifoFXN3qHy3KU#list"
+                },
+                {
+                    "title": "Stages of Maths Olympiad",
+                    "url": "https://olympiads.hbcse.tifr.res.in/about-olympiads/stages/mathematical-olympiad/"
+                },
+                {
+                    "title": "Eligibility Criteria (IOQM 2024-25)",
+                    "url": "https://olympiads.hbcse.tifr.res.in/wp-content/uploads/2024/06/elcrIOQM20242025.pdf"
+                },
+                {
+                    "title": "Syllabus",
+                    "url": "https://olympiads.hbcse.tifr.res.in/how-to-prepare/syllabus/#uagb-tabs__tab6"
+                },
+                {
+                    "title": "Previous Year Question Papers",
+                    "url": "https://olympiads.hbcse.tifr.res.in/how-to-prepare/past-papers/"
+                },
+                {
+                    "title": "Collection of last 40 years (47 countries) Olympiad Problems",
+                    "url": "https://mathnet.csail.mit.edu/explorer.html"
+                },
+                {
+                    "title": "International Mathematical Olympiad — Official Website",
+                    "url": "https://www.imo-official.org/"
+                },
+                {
+                    "title": "HBCSE Olympiad — Official Website",
+                    "url": "https://olympiads.hbcse.tifr.res.in/"
+                }
+            ]
+        },
+        "blocks": [
+            {
+                "id": "ml-puzzles",
+                "title": "Puzzles",
+                "description": "A curated collection of puzzles, games, and brain teasers.",
+                "links": [
+                    {
+                        "title": "CCL IITGN Puzzles & Games Resources",
+                        "url": "https://ccl.iitgn.ac.in/puzzles-games-resources"
+                    },
+                    {
+                        "title": "Puzzles & Games YouTube Playlist",
+                        "url": "https://youtube.com/playlist?list=PLGzX9Ri8oWs8T211MkzlHwdLLbNOfa5w_&si=dKmZPud5HqX0rZQ_"
+                    }
+                ]
+            },
+            {
+                "id": "ml-projects",
+                "title": "Maths Project Ideas",
+                "description": "Hands-on mathematics project ideas in English and Hindi — perfect for school exhibitions, lab activities, and inspiring young minds.",
+                "links": [
+                    {
+                        "title": "Google Drive Folder (English)",
+                        "url": "https://drive.google.com/embeddedfolderview?id=1hB7zZC-lkU6WhOHGEo8JjnE-kg6urg4y#list"
+                    },
+                    {
+                        "title": "Google Drive Folder (Hindi)",
+                        "url": "https://drive.google.com/embeddedfolderview?id=1SAmoY8rEktmBjQld5hrfqBo3PyI4dXk5#list"
+                    }
+                ]
+            },
+            {
+                "id": "ml-youtube",
+                "title": "YouTube Channels for Maths Lovers",
+                "description": "Handpicked YouTube channels that make mathematics come alive — from olympiad training to visual explorations and puzzles.",
+                "links": [
+                    {
+                        "title": "Kapil Pundir",
+                        "url": "https://youtube.com/@kapilpundir?si=4vh4PzbE2C2xsxue"
+                    },
+                    {
+                        "title": "Super Infinity",
+                        "url": "https://youtube.com/@superinfinityofficial?si=bOWgIHmikThF7NYD"
+                    },
+                    {
+                        "title": "Oxford Mathematics",
+                        "url": "https://youtube.com/@oxfordmathematics?si=3-sqprddpoFRpH8E"
+                    },
+                    {
+                        "title": "CCL IITGN",
+                        "url": "https://youtube.com/@ccl_iitgn?si=TAuXsQeLgbsxNdpW"
+                    },
+                    {
+                        "title": "Numberphile",
+                        "url": "https://youtube.com/@numberphile?si=ELyeLOmoqwfBe7pF"
+                    },
+                    {
+                        "title": "Tibees",
+                        "url": "https://youtube.com/@tibees?si=MG7Y7vRq6RYWRz63"
+                    },
+                    {
+                        "title": "Stand-up Maths",
+                        "url": "https://youtube.com/@standupmaths?si=YcbqZEPdNn2uvlNH"
+                    },
+                    {
+                        "title": "Eddie Woo",
+                        "url": "https://youtube.com/@misterwootube?si=oEYtwdpa1cEa6Yzt"
+                    },
+                    {
+                        "title": "3Blue1Brown",
+                        "url": "https://youtube.com/@3blue1brown?si=5Tg-Q56mNvCtOfzp"
+                    }
+                ]
+            }
+        ]
+    }
+}

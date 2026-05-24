@@ -1,0 +1,6 @@
+[
+    { "label": "All", "value": "all" },
+    { "label": "Classes 6-12", "value": "secondary" },
+    { "label": "Formats", "value": "formats" },
+    { "label": "Rules", "value": "rules" }
+]

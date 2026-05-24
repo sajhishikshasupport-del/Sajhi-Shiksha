@@ -1,0 +1,41 @@
+# Sajhi Shiksha
+
+Sajhi Shiksha is a free, open educational resource-sharing platform for KVS (Kendriya Vidyalaya Sangathan) students and teachers.
+
+## What is Sajhi Shiksha?
+
+A website that provides free access to study materials, question papers, assembly formats, government rule documents, and teacher-contributed resources for Classes 6-12. No login required.
+
+## Key Features
+
+- Free study materials for Classes 6-12
+- Question papers and answer keys
+- Morning assembly formats
+- GOI/KVS rules and office formats
+- Teacher-contributed resources
+- Google Drive embedded viewing
+- Search and filter functionality
+- Mobile-friendly design
+
+## Content Categories
+
+1. Students: Official CBSE/NCERT resources and searchable question papers for Classes 6-12 Mathematics
+2. Teachers (TGT/PGT Maths): Question papers, question banks, maths lab activities, holiday homework, lesson plans, PPTs/worksheets
+3. Teachers (Circulars/Formats): GOI/KVS circulars, admission formats, time table software, CBSE/NIOS formats, morning assembly, office formats
+4. Math Lovers: Olympiad resources, puzzles, maths project ideas, YouTube channels for math enthusiasts
+
+## How to Contribute
+
+Email resources to sajhishiksha@gmail.com with subject, class, and description.
+
+## URL Structure
+
+- Homepage: https://www.sajhishiksha.in/
+- Students: https://www.sajhishiksha.in/for-students
+- Teachers: https://www.sajhishiksha.in/for-teachers
+- TGT/PGT Maths: https://www.sajhishiksha.in/for-teachers/tgt-pgt
+- Circulars/Formats: https://www.sajhishiksha.in/for-teachers/circular-formats
+- Math Lovers: https://www.sajhishiksha.in/for-math-lovers
+- Search: https://www.sajhishiksha.in/search
+- Contribute: https://www.sajhishiksha.in/contribute
+- About: https://www.sajhishiksha.in/about

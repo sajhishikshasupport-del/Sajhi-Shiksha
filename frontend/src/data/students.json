@@ -1,0 +1,68 @@
+{
+    "_comment": "Official external links shown on the 'For Students' page. Changes here add/remove/update the cards with icons that link to CBSE/NCERT resources. URL: /for-students",
+    "officialLinks": [
+        {
+            "id": "career-guidance",
+            "title": "Career Guidance",
+            "description": "YouTube playlist for career guidance and counselling",
+            "url": "https://youtube.com/playlist?list=PLjIk6QfdhlCivV2L00teBa_n95lLpk2lY&si=ZIzkolf3xE6o_E7E",
+            "icon": "AutoStories"
+        },
+        {
+            "id": "cbse-pyq",
+            "title": "CBSE PYQ",
+            "description": "Previous Year Question Papers from CBSE Official Website",
+            "url": "https://www.cbse.gov.in/cbsenew/question-paper.html",
+            "icon": "Article"
+        },
+        {
+            "id": "cbse-marking-scheme",
+            "title": "CBSE Marking Scheme",
+            "description": "Previous Year Marking Schemes from CBSE",
+            "url": "https://www.cbse.gov.in/cbsenew/marking-scheme.html",
+            "icon": "Description"
+        },
+        {
+            "id": "sample-papers",
+            "title": "Sample Papers with Marking Scheme",
+            "description": "Sample question papers and marking schemes from CBSE Academic",
+            "url": "https://cbseacademic.nic.in/sqp_archive.html",
+            "icon": "Assignment"
+        },
+        {
+            "id": "additional-practice",
+            "title": "CBSE Additional Practice Papers",
+            "description": "Additional question papers for practice from CBSE Academic",
+            "url": "https://cbseacademic.nic.in/additionalPQ.html",
+            "icon": "MenuBook"
+        },
+        {
+            "id": "ncert-textbooks",
+            "title": "NCERT Textbooks",
+            "description": "NCERT Textbooks online from NCERT Official Website",
+            "url": "https://ncert.nic.in/textbook.php",
+            "icon": "MenuBook"
+        },
+        {
+            "id": "ncert-exemplar",
+            "title": "NCERT Exemplar Problems",
+            "description": "NCERT Exemplar Problems for practice from NCERT",
+            "url": "https://ncert.nic.in/exemplar-problems.php?ln=en",
+            "icon": "AutoStories"
+        },
+        {
+            "id": "toppers-answersheets",
+            "title": "CBSE Toppers Answer Sheets",
+            "description": "Model answer sheets from CBSE toppers",
+            "url": "https://www.cbse.gov.in/cbsenew/model-answer.html",
+            "icon": "Article"
+        },
+        {
+            "id": "duplicate-documents",
+            "title": "CBSE Duplicate Documents",
+            "description": "Apply for duplicate academic documents from CBSE",
+            "url": "https://cbseit.in/cbse/web/dads/List.aspx",
+            "icon": "Description"
+        }
+    ]
+}
