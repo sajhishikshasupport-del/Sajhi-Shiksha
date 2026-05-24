@@ -39,7 +39,7 @@ lerna-debug.log*
 .claude/
 
 # Context & docs (agent-generated, not app code)
-context/
+/context/
 docs/
 Screenshot/
 
