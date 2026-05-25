@@ -9,7 +9,7 @@ interface AboutPageProps {
     onNavigate: (route: string) => void;
 }
 
-const CONTACT_EMAIL = 'sajhishiksha@gmail.com';
+
 
 const MISSION_POINTS = [
     'Free access for all students',
@@ -20,7 +20,7 @@ const MISSION_POINTS = [
 
 export default function AboutPage({ onNavigate }: AboutPageProps) {
     const [isDark] = useTheme();
-    const email = contactData.email || CONTACT_EMAIL;
+    const email = contactData.email;
     const mailtoLink = `mailto:${email}?subject=Question about Sajhi Shiksha`;
     const borderColor = 'var(--color-border)';
     const shadowColor = 'var(--color-shadow)';
@@ -388,7 +388,7 @@ export default function AboutPage({ onNavigate }: AboutPageProps) {
                             fontFamily: FONT_MONO,
                         }}
                     >
-                        sajhishiksha@gmail.com
+                        {email}
                     </Box>
                 </Box>
             </Box>
