@@ -1,4 +1,4 @@
-# Sajhi Shiksha — Free Study Materials for KVS Students
+# Sajhi Shiksha — Free Study Materials for Students & Teachers
 
 > Sharing Knowledge — From You, For You
 
