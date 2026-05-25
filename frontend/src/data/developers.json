@@ -1,0 +1,24 @@
+{
+    "_comment": "Developer credits for the /developers page. Changes here update the developer cards shown on the Developers page and the footer credit link.",
+    "tagline": "The people behind the code.",
+    "developers": [
+        {
+            "name": "Aaditya Thakur",
+            "role": "Lead Developer",
+            "initials": "AT",
+            "color": "#4ECDC4",
+            "bio": "Full-stack developer who architected and built the Sajhi Shiksha platform from the ground up — from design system to deployment.",
+            "linkedin": "https://www.linkedin.com/in/aaditya-thakur-1a8842332/",
+            "github": "https://github.com/aditya452007"
+        },
+        {
+            "name": "Ayush Singh",
+            "role": "Developer",
+            "initials": "AS",
+            "color": "#C084FC",
+            "bio": "Developer who contributed across features, performance, and polish — ensuring a seamless experience for students and teachers alike.",
+            "linkedin": "https://www.linkedin.com/in/ayush-singh-6829a4316/",
+            "github": "https://github.com/ayushsingh930"
+        }
+    ]
+}

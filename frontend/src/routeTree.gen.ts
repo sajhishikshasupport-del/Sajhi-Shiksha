@@ -13,6 +13,7 @@ import { Route as SearchRouteImport } from './routes/search'
 import { Route as ForTeachersRouteImport } from './routes/for-teachers'
 import { Route as ForStudentsRouteImport } from './routes/for-students'
 import { Route as ForMathLoversRouteImport } from './routes/for-math-lovers'
+import { Route as DevelopersRouteImport } from './routes/developers'
 import { Route as ContributeRouteImport } from './routes/contribute'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as SplatRouteImport } from './routes/$'
@@ -40,6 +41,11 @@ const ForStudentsRoute = ForStudentsRouteImport.update({
 const ForMathLoversRoute = ForMathLoversRouteImport.update({
   id: '/for-math-lovers',
   path: '/for-math-lovers',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DevelopersRoute = DevelopersRouteImport.update({
+  id: '/developers',
+  path: '/developers',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ContributeRoute = ContributeRouteImport.update({
@@ -89,6 +95,7 @@ export interface FileRoutesByFullPath {
   '/$': typeof SplatRoute
   '/about': typeof AboutRoute
   '/contribute': typeof ContributeRoute
+  '/developers': typeof DevelopersRoute
   '/for-math-lovers': typeof ForMathLoversRoute
   '/for-students': typeof ForStudentsRoute
   '/for-teachers': typeof ForTeachersRouteWithChildren
@@ -103,6 +110,7 @@ export interface FileRoutesByTo {
   '/$': typeof SplatRoute
   '/about': typeof AboutRoute
   '/contribute': typeof ContributeRoute
+  '/developers': typeof DevelopersRoute
   '/for-math-lovers': typeof ForMathLoversRoute
   '/for-students': typeof ForStudentsRoute
   '/search': typeof SearchRoute
@@ -117,6 +125,7 @@ export interface FileRoutesById {
   '/$': typeof SplatRoute
   '/about': typeof AboutRoute
   '/contribute': typeof ContributeRoute
+  '/developers': typeof DevelopersRoute
   '/for-math-lovers': typeof ForMathLoversRoute
   '/for-students': typeof ForStudentsRoute
   '/for-teachers': typeof ForTeachersRouteWithChildren
@@ -133,6 +142,7 @@ export interface FileRouteTypes {
     | '/$'
     | '/about'
     | '/contribute'
+    | '/developers'
     | '/for-math-lovers'
     | '/for-students'
     | '/for-teachers'
@@ -147,6 +157,7 @@ export interface FileRouteTypes {
     | '/$'
     | '/about'
     | '/contribute'
+    | '/developers'
     | '/for-math-lovers'
     | '/for-students'
     | '/search'
@@ -160,6 +171,7 @@ export interface FileRouteTypes {
     | '/$'
     | '/about'
     | '/contribute'
+    | '/developers'
     | '/for-math-lovers'
     | '/for-students'
     | '/for-teachers'
@@ -175,6 +187,7 @@ export interface RootRouteChildren {
   SplatRoute: typeof SplatRoute
   AboutRoute: typeof AboutRoute
   ContributeRoute: typeof ContributeRoute
+  DevelopersRoute: typeof DevelopersRoute
   ForMathLoversRoute: typeof ForMathLoversRoute
   ForStudentsRoute: typeof ForStudentsRoute
   ForTeachersRoute: typeof ForTeachersRouteWithChildren
@@ -210,6 +223,13 @@ declare module '@tanstack/react-router' {
       path: '/for-math-lovers'
       fullPath: '/for-math-lovers'
       preLoaderRoute: typeof ForMathLoversRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/developers': {
+      id: '/developers'
+      path: '/developers'
+      fullPath: '/developers'
+      preLoaderRoute: typeof DevelopersRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/contribute': {
@@ -292,6 +312,7 @@ const rootRouteChildren: RootRouteChildren = {
   SplatRoute: SplatRoute,
   AboutRoute: AboutRoute,
   ContributeRoute: ContributeRoute,
+  DevelopersRoute: DevelopersRoute,
   ForMathLoversRoute: ForMathLoversRoute,
   ForStudentsRoute: ForStudentsRoute,
   ForTeachersRoute: ForTeachersRouteWithChildren,

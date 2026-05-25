@@ -90,6 +90,7 @@ FooterLinkSection.displayName = 'FooterLinkSection';
 
 const Footer: React.FC = () => {
     const [isDark] = useTheme();
+    const navigate = useNavigate();
     const footerGroups = navigationData.footerGroups;
     const borderColor = 'var(--color-border)';
 
@@ -299,6 +300,43 @@ const Footer: React.FC = () => {
                     >
                         &copy; {new Date().getFullYear()} {siteContent.site.name}
                     </Typography>
+                    <Box
+                        component="button"
+                        onClick={() => navigate({ to: '/developers' })}
+                        sx={{
+                            fontFamily: FONT_MONO,
+                            fontSize: '0.8rem',
+                            color: 'var(--color-text-secondary)',
+                            background: 'none',
+                            border: 'none',
+                            padding: 0,
+                            cursor: 'pointer',
+                            position: 'relative',
+                            outline: 'none',
+                            '&:focus-visible': {
+                                outline: '2px solid var(--color-yellow)',
+                                outlineOffset: '2px',
+                            },
+                            '&::after': {
+                                content: '""',
+                                position: 'absolute',
+                                bottom: -2,
+                                left: 0,
+                                width: 0,
+                                height: '2px',
+                                bgcolor: borderColor,
+                                transition: 'width 0.2s cubic-bezier(0.34, 1.56, 0.64, 1)',
+                            },
+                            '&:hover': {
+                                color: 'var(--color-text)',
+                            },
+                            '&:hover::after': {
+                                width: '100%',
+                            },
+                        }}
+                    >
+                        {'</'} Built by Developers {'>'}
+                    </Box>
                     <Typography
                         sx={{
                             fontFamily: FONT_MONO,
