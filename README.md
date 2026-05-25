@@ -2,7 +2,7 @@
 
 > Sharing Knowledge — From You, For You
 
-A modern, fast, and accessible educational resource platform built for KVS (Kendriya Vidyalaya) students and teachers. Provides free study materials, question papers, formats, and learning resources for classes 1-12.
+A modern, fast, and accessible educational resource platform built for students and teachers. Provides free study materials, question papers, formats, and learning resources for classes 1-12.
 
 ## 🌐 Live Demo
 
