@@ -1,6 +1,6 @@
 import { createRoute, useNavigate } from '@tanstack/react-router';
 import { Route as forTeachersRoute } from './for-teachers';
-import { useState, useCallback } from 'react';
+import { useCallback } from 'react';
 import { Box, Typography } from '@mui/material';
 import { FONT_HEADING, FONT_MONO, MAX_CONTENT_WIDTH } from '@/lib/constants';
 import { findCardDeep, getCardPath } from '@/lib/utils';
@@ -13,13 +13,11 @@ import {
 
 function CircularFormatsPage(): React.ReactElement {
     const navigate = useNavigate();
+    const { folder: selectedFolder, leaf: selectedLeaf } = Route.useSearch();
     const mainCard = teachersData.mainCards.find((c) => c.id === 'circular-formats');
     const parentLabel = navigationData.headerLinks.find((l) => l.route === '/for-teachers')?.label ?? 'For Teachers';
     const pageTitle = mainCard?.title ?? '';
     const allSubCards = mainCard?.subCards ?? [];
-
-    const [selectedFolder, setSelectedFolder] = useState<string | null>(null);
-    const [selectedLeaf, setSelectedLeaf] = useState<string | null>(null);
 
     const currentFolder = selectedFolder ? findCardDeep(selectedFolder, allSubCards) : null;
     const folderChildren = currentFolder?.subCards ?? [];
@@ -27,18 +25,24 @@ function CircularFormatsPage(): React.ReactElement {
 
     const handleBack = useCallback(() => {
         if (selectedLeaf) {
-            setSelectedLeaf(null);
+            navigate({
+                to: '/for-teachers/circular-formats',
+                search: selectedFolder ? { folder: selectedFolder } : {},
+            });
         } else if (selectedFolder) {
             const path = getCardPath(selectedFolder, allSubCards);
             if (path && path.length > 1) {
-                setSelectedFolder(path[path.length - 2].id);
+                navigate({
+                    to: '/for-teachers/circular-formats',
+                    search: { folder: path[path.length - 2].id },
+                });
             } else {
-                setSelectedFolder(null);
+                navigate({ to: '/for-teachers/circular-formats', search: {} });
             }
         } else {
             navigate({ to: '/for-teachers' });
         }
-    }, [selectedLeaf, selectedFolder, navigate]);
+    }, [selectedLeaf, selectedFolder, navigate, allSubCards]);
 
     const handleOpenLink = useCallback((url?: string) => {
         if (url) window.open(url, '_blank', 'noopener,noreferrer');
@@ -50,12 +54,12 @@ function CircularFormatsPage(): React.ReactElement {
                 <TeacherBreadcrumbs
                     items={[
                         { label: parentLabel, onClick: () => navigate({ to: '/for-teachers' }) },
-                        { label: pageTitle, onClick: () => { setSelectedFolder(null); setSelectedLeaf(null); } },
+                        { label: pageTitle, onClick: () => navigate({ to: '/for-teachers/circular-formats', search: {} }) },
                         ...(() => {
                             const folderPath = selectedFolder ? getCardPath(selectedFolder, allSubCards) : null;
                             return (folderPath || []).map((item) => ({
                                 label: item.title,
-                                onClick: () => { setSelectedLeaf(null); setSelectedFolder(item.id); },
+                                onClick: () => navigate({ to: '/for-teachers/circular-formats', search: { folder: item.id } }),
                             }));
                         })(),
                         { label: currentLeafItem.title, isCurrent: true },
@@ -78,13 +82,13 @@ function CircularFormatsPage(): React.ReactElement {
                 <TeacherBreadcrumbs
                     items={[
                         { label: parentLabel, onClick: () => navigate({ to: '/for-teachers' }) },
-                        { label: pageTitle, onClick: () => { setSelectedFolder(null); setSelectedLeaf(null); } },
+                        { label: pageTitle, onClick: () => navigate({ to: '/for-teachers/circular-formats', search: {} }) },
                         ...(() => {
                             const folderPath = getCardPath(selectedFolder, allSubCards);
                             return (folderPath || []).map((item, idx) => ({
                                 label: item.title,
                                 isCurrent: idx === (folderPath?.length ?? 0) - 1,
-                                onClick: idx < (folderPath?.length ?? 0) - 1 ? () => { setSelectedLeaf(null); setSelectedFolder(item.id); } : undefined,
+                                onClick: idx < (folderPath?.length ?? 0) - 1 ? () => navigate({ to: '/for-teachers/circular-formats', search: { folder: item.id } }) : undefined,
                             }));
                         })(),
                     ]}
@@ -109,8 +113,8 @@ function CircularFormatsPage(): React.ReactElement {
                                         title={child.title}
                                         description={child.description}
                                         parentTitle={currentFolder.title}
-                                        onClick={() => setSelectedFolder(child.id)}
-                                        onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); setSelectedFolder(child.id); } }}
+                                        onClick={() => navigate({ to: '/for-teachers/circular-formats', search: { folder: child.id } })}
+                                        onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); navigate({ to: '/for-teachers/circular-formats', search: { folder: child.id } }); } }}
                                     />
                                 );
                             }
@@ -119,7 +123,7 @@ function CircularFormatsPage(): React.ReactElement {
                                     key={child.id}
                                     item={child}
                                     subject={currentFolder.title}
-                                    onView={() => setSelectedLeaf(child.id)}
+                                    onView={() => navigate({ to: '/for-teachers/circular-formats', search: { folder: selectedFolder, leaf: child.id } })}
                                     onDownload={(url) => window.open(url, '_blank')}
                                 />
                             );
@@ -158,8 +162,8 @@ function CircularFormatsPage(): React.ReactElement {
                                     title={subCard.title}
                                     description={subCard.description}
                                     parentTitle={pageTitle}
-                                    onClick={() => setSelectedFolder(subCard.id)}
-                                    onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); setSelectedFolder(subCard.id); } }}
+                                    onClick={() => navigate({ to: '/for-teachers/circular-formats', search: { folder: subCard.id } })}
+                                    onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); navigate({ to: '/for-teachers/circular-formats', search: { folder: subCard.id } }); } }}
                                 />
                             );
                         }
@@ -183,4 +187,8 @@ export const Route = createRoute({
     getParentRoute: () => forTeachersRoute,
     path: 'circular-formats',
     component: CircularFormatsPage,
+    validateSearch: (search: Record<string, unknown>): { folder?: string; leaf?: string } => ({
+        folder: typeof search.folder === 'string' ? search.folder : undefined,
+        leaf: typeof search.leaf === 'string' ? search.leaf : undefined,
+    }),
 });

@@ -1,6 +1,6 @@
 import { createRoute, useNavigate } from '@tanstack/react-router';
 import { Route as forTeachersRoute } from './for-teachers';
-import { useState, useCallback } from 'react';
+import { useCallback } from 'react';
 import { Box, Typography } from '@mui/material';
 import { FONT_HEADING, FONT_MONO, MAX_CONTENT_WIDTH } from '@/lib/constants';
 import teachersData from '@/data/teachers.json';
@@ -12,13 +12,11 @@ import {
 
 function TgtPgtPage(): React.ReactElement {
     const navigate = useNavigate();
+    const { folder: selectedSubCard, leaf: selectedLeaf } = Route.useSearch();
     const mainCard = teachersData.mainCards.find((c) => c.id === 'tgt-pgt');
     const parentLabel = navigationData.headerLinks.find((l) => l.route === '/for-teachers')?.label ?? 'For Teachers';
     const pageTitle = mainCard?.title ?? '';
     const allSubCards = mainCard?.subCards ?? [];
-
-    const [selectedSubCard, setSelectedSubCard] = useState<string | null>(null);
-    const [selectedLeaf, setSelectedLeaf] = useState<string | null>(null);
 
     const currentSubCard = allSubCards.find((s) => s.id === selectedSubCard) ?? null;
     const hasSubCards = currentSubCard?.hasSubCards && !!currentSubCard?.subCards?.length;
@@ -27,9 +25,12 @@ function TgtPgtPage(): React.ReactElement {
 
     const handleBack = useCallback(() => {
         if (selectedLeaf) {
-            setSelectedLeaf(null);
+            navigate({
+                to: '/for-teachers/tgt-pgt',
+                search: selectedSubCard ? { folder: selectedSubCard } : {},
+            });
         } else if (selectedSubCard) {
-            setSelectedSubCard(null);
+            navigate({ to: '/for-teachers/tgt-pgt', search: {} });
         } else {
             navigate({ to: '/for-teachers' });
         }
@@ -45,8 +46,8 @@ function TgtPgtPage(): React.ReactElement {
                 <TeacherBreadcrumbs
                     items={[
                         { label: parentLabel, onClick: () => navigate({ to: '/for-teachers' }) },
-                        { label: pageTitle, onClick: () => { setSelectedSubCard(null); setSelectedLeaf(null); } },
-                        ...(selectedSubCard && currentSubCard ? [{ label: currentSubCard.title, onClick: () => setSelectedLeaf(null) }] : []),
+                        { label: pageTitle, onClick: () => navigate({ to: '/for-teachers/tgt-pgt', search: {} }) },
+                        ...(selectedSubCard && currentSubCard ? [{ label: currentSubCard.title, onClick: () => navigate({ to: '/for-teachers/tgt-pgt', search: { folder: selectedSubCard } }) }] : []),
                         { label: currentLeaf.title, isCurrent: true },
                     ]}
                 />
@@ -67,7 +68,7 @@ function TgtPgtPage(): React.ReactElement {
                 <TeacherBreadcrumbs
                     items={[
                         { label: parentLabel, onClick: () => navigate({ to: '/for-teachers' }) },
-                        { label: pageTitle, onClick: () => { setSelectedSubCard(null); setSelectedLeaf(null); } },
+                        { label: pageTitle, onClick: () => navigate({ to: '/for-teachers/tgt-pgt', search: {} }) },
                         { label: currentSubCard.title, isCurrent: true },
                     ]}
                 />
@@ -121,8 +122,8 @@ function TgtPgtPage(): React.ReactElement {
                                     title={subCard.title}
                                     description={subCard.description}
                                     parentTitle={pageTitle}
-                                    onClick={() => setSelectedSubCard(subCard.id)}
-                                    onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); setSelectedSubCard(subCard.id); } }}
+                                    onClick={() => navigate({ to: '/for-teachers/tgt-pgt', search: { folder: subCard.id } })}
+                                    onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); navigate({ to: '/for-teachers/tgt-pgt', search: { folder: subCard.id } }); } }}
                                 />
                             );
                         }
@@ -146,4 +147,8 @@ export const Route = createRoute({
     getParentRoute: () => forTeachersRoute,
     path: 'tgt-pgt',
     component: TgtPgtPage,
+    validateSearch: (search: Record<string, unknown>): { folder?: string; leaf?: string } => ({
+        folder: typeof search.folder === 'string' ? search.folder : undefined,
+        leaf: typeof search.leaf === 'string' ? search.leaf : undefined,
+    }),
 });

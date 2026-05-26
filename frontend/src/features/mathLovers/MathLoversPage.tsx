@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Box, Typography } from '@mui/material';
 import { ArrowBackIcon, ArrowForwardIcon } from '@/components/Icons';
 import siteContent from '@/data/sections.json';
@@ -152,7 +152,12 @@ function ExpandedSectionView({ section, onBack }: { section: SectionCard; onBack
     );
 }
 
-const MathLoversPage: React.FC = () => {
+interface MathLoversPageProps {
+    activeSection?: string;
+    onSectionChange: (id: string | null) => void;
+}
+
+const MathLoversPage: React.FC<MathLoversPageProps> = ({ activeSection: activeSectionId, onSectionChange }) => {
     const { mathLovers } = siteContent;
     const blocks = mathLovers.blocks || [];
     const olympiadSection = (mathLovers as unknown as Record<string, SectionCard | undefined>).olympiadSection;
@@ -167,7 +172,7 @@ const MathLoversPage: React.FC = () => {
         })),
     ];
 
-    const [activeId, setActiveId] = useState<string | null>(null);
+    const activeId = activeSectionId ?? null;
 
     const activeSection = activeId ? allSections.find((s) => s.id === activeId) ?? null : null;
 
@@ -195,7 +200,7 @@ const MathLoversPage: React.FC = () => {
             </Typography>
 
             {activeSection ? (
-                <ExpandedSectionView section={activeSection} onBack={() => setActiveId(null)} />
+                <ExpandedSectionView section={activeSection} onBack={() => onSectionChange(null)} />
             ) : allSections.length === 0 ? (
                 <Box
                     sx={{
@@ -227,7 +232,7 @@ const MathLoversPage: React.FC = () => {
                             key={section.id}
                             section={section}
                             index={index}
-                            onClick={() => setActiveId(section.id)}
+                            onClick={() => onSectionChange(section.id)}
                         />
                     ))}
                 </Box>
