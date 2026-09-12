@@ -17,6 +17,7 @@ function ViewResourcePage(): React.ReactElement {
         title: resource ? resource.title : 'Resource Not Found',
         description: resource ? `View and download ${resource.title}. ${resource.description}` : 'The requested resource could not be found.',
         canonicalPath: `/view/${id}`,
+        noIndex: !resource,
     });
 
     const handleBack = (): void => {
