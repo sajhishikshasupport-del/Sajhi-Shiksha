@@ -28,6 +28,13 @@
                 { "label": "About Us", "route": "/about" },
                 { "label": "Contribute", "route": "/contribute" }
             ]
+        },
+        {
+            "heading": "Legal",
+            "links": [
+                { "label": "Privacy Policy", "route": "/privacy-policy" },
+                { "label": "Terms & Conditions", "route": "/terms" }
+            ]
         }
     ]
 }
