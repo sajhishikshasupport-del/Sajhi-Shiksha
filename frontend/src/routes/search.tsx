@@ -30,6 +30,7 @@ function SearchRouteComponent(): React.ReactElement {
                 ...(search.type ? { type: String(search.type) } : {}),
             }).toString()}`
             : '/search',
+        noIndex: hasFilters,
     });
 
     const handleViewResource = (id: string): void => {
