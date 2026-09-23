@@ -127,9 +127,52 @@ const docIcon = (mime: string): React.ReactElement => {
     return <InsertDriveFileIcon sx={{ fontSize: 30, color: 'var(--color-text)' }} />;
 };
 
+const CLASS_ORDER = ['Class 6', 'Class 7', 'Class 8', 'Class 9', 'Class 10', 'Class 11', 'Class 12'];
+
+const classSlug = (name: string): string => name.replace(/[^a-zA-Z0-9]+/g, '-').toLowerCase();
+
 interface DocumentListProps {
     contents: FolderContents;
 }
+
+const DocCard: React.FC<{ doc: DriveDocument; showClass?: boolean }> = ({ doc, showClass }) => (
+    <Box
+        onClick={() => window.open(doc.link, '_blank', 'noopener,noreferrer')}
+        onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); window.open(doc.link, '_blank', 'noopener,noreferrer'); } }}
+        role="link"
+        tabIndex={0}
+        sx={{
+            display: 'flex', alignItems: 'center', gap: 2, p: { xs: 1.5, md: 2 },
+            bgcolor: 'var(--color-bg)', border: `3px solid ${BORDER}`,
+            boxShadow: `4px 4px 0px ${SHADOW}`, cursor: 'pointer',
+            '&:hover': { transform: 'translate(-2px, -2px)', boxShadow: `6px 6px 0px ${SHADOW}` },
+            '&:focus-visible': { outline: '3px solid var(--color-yellow)', outlineOffset: '2px' },
+        }}
+    >
+        <Box sx={{ flexShrink: 0 }}>{docIcon(doc.mimeType)}</Box>
+        <Box sx={{ flexGrow: 1, minWidth: 0 }}>
+            {showClass && doc.className && (
+                <Chip
+                    label={doc.className}
+                    size="small"
+                    sx={{
+                        height: 20, mb: 0.5, fontFamily: FONT_MONO, fontWeight: 700, fontSize: '0.7rem',
+                        bgcolor: 'var(--color-yellow)', color: '#1A1A1A', border: `2px solid ${BORDER}`,
+                    }}
+                />
+            )}
+            <Typography sx={{ fontFamily: FONT_HEADING, fontWeight: 700, fontSize: { xs: '0.95rem', md: '1.05rem' }, lineHeight: 1.3 }}>
+                {doc.title}
+            </Typography>
+            {doc.modifiedDate && (
+                <Typography sx={{ fontFamily: FONT_MONO, fontSize: '0.75rem', color: 'var(--color-text-secondary)', mt: 0.5 }}>
+                    Updated: {formatDate(doc.modifiedDate)}
+                </Typography>
+            )}
+        </Box>
+        <OpenInNewIcon sx={{ color: 'var(--color-text-secondary)', flexShrink: 0 }} aria-hidden="true" />
+    </Box>
+);
 
 export const DocumentList: React.FC<DocumentListProps> = ({ contents }) => {
     const sorted = [...contents.documents].sort(
@@ -138,45 +181,71 @@ export const DocumentList: React.FC<DocumentListProps> = ({ contents }) => {
     if (sorted.length === 0) {
         return <EmptyState title="No documents yet" message="Documents will appear here once added." />;
     }
+
+    if (!sorted.some((d) => d.className)) {
+        return (
+            <Box sx={{ display: 'grid', gap: 2 }}>
+                {sorted.map((doc) => (
+                    <DocCard key={doc.id} doc={doc} showClass />
+                ))}
+            </Box>
+        );
+    }
+
+    const groups = new Map<string, DriveDocument[]>();
+    for (const doc of sorted) {
+        const key = doc.className || 'Other';
+        if (!groups.has(key)) groups.set(key, []);
+        (groups.get(key) as DriveDocument[]).push(doc);
+    }
+    const orderedKeys = Array.from(groups.keys()).sort((a, b) => {
+        const ia = CLASS_ORDER.indexOf(a);
+        const ib = CLASS_ORDER.indexOf(b);
+        if (ia !== -1 && ib !== -1) return ia - ib;
+        if (ia !== -1) return -1;
+        if (ib !== -1) return 1;
+        return a.localeCompare(b);
+    });
+
     return (
-        <Box sx={{ display: 'grid', gap: 2 }}>
-            {sorted.map((doc) => (
-                <Box
-                    key={doc.id}
-                    onClick={() => window.open(doc.link, '_blank', 'noopener,noreferrer')}
-                    onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); window.open(doc.link, '_blank', 'noopener,noreferrer'); } }}
-                    role="link"
-                    tabIndex={0}
-                    sx={{
-                        display: 'flex', alignItems: 'center', gap: 2, p: { xs: 1.5, md: 2 },
-                        bgcolor: 'var(--color-bg)', border: `3px solid ${BORDER}`,
-                        boxShadow: `4px 4px 0px ${SHADOW}`, cursor: 'pointer',
-                        '&:hover': { transform: 'translate(-2px, -2px)', boxShadow: `6px 6px 0px ${SHADOW}` },
-                        '&:focus-visible': { outline: '3px solid var(--color-yellow)', outlineOffset: '2px' },
-                    }}
-                >
-                    <Box sx={{ flexShrink: 0 }}>{docIcon(doc.mimeType)}</Box>
-                    <Box sx={{ flexGrow: 1, minWidth: 0 }}>
-                        {doc.className && (
-                            <Chip
-                                label={doc.className}
-                                size="small"
-                                sx={{
-                                    height: 20, mb: 0.5, fontFamily: FONT_MONO, fontWeight: 700, fontSize: '0.7rem',
-                                    bgcolor: 'var(--color-yellow)', color: '#1A1A1A', border: `2px solid ${BORDER}`,
-                                }}
-                            />
-                        )}
-                        <Typography sx={{ fontFamily: FONT_HEADING, fontWeight: 700, fontSize: { xs: '0.95rem', md: '1.05rem' }, lineHeight: 1.3 }}>
-                            {doc.title}
+        <Box>
+            <Box sx={{ display: 'flex', gap: 1, flexWrap: 'wrap', mb: 3 }} role="navigation" aria-label="Jump to class">
+                {orderedKeys.map((k) => (
+                    <Chip
+                        key={k}
+                        component="a"
+                        href={`#${classSlug(k)}`}
+                        clickable
+                        label={`${k} (${(groups.get(k) as DriveDocument[]).length})`}
+                        sx={{
+                            fontFamily: FONT_MONO, fontWeight: 700, fontSize: '0.8rem',
+                            bgcolor: 'var(--color-bg)', color: 'var(--color-text)',
+                            border: `2px solid ${BORDER}`, boxShadow: `2px 2px 0px ${SHADOW}`,
+                            '&:hover': { bgcolor: 'var(--color-yellow)', color: '#1A1A1A' },
+                        }}
+                    />
+                ))}
+            </Box>
+            {orderedKeys.map((k) => (
+                <Box key={k} component="section" id={classSlug(k)} sx={{ mb: 4, scrollMarginTop: '16px' }}>
+                    <Box sx={{ display: 'flex', alignItems: 'center', gap: 1.5, mb: 2 }}>
+                        <Typography sx={{ fontFamily: FONT_HEADING, fontWeight: 800, fontSize: { xs: '1.2rem', md: '1.45rem' } }}>
+                            {k}
                         </Typography>
-                        {doc.modifiedDate && (
-                            <Typography sx={{ fontFamily: FONT_MONO, fontSize: '0.75rem', color: 'var(--color-text-secondary)', mt: 0.5 }}>
-                                Updated: {formatDate(doc.modifiedDate)}
-                            </Typography>
-                        )}
+                        <Box
+                            sx={{
+                                px: 1.5, py: 0.3, bgcolor: 'var(--color-pink)', border: `2px solid ${BORDER}`,
+                                fontFamily: FONT_MONO, fontWeight: 700, fontSize: '0.75rem',
+                            }}
+                        >
+                            {(groups.get(k) as DriveDocument[]).length} papers
+                        </Box>
                     </Box>
-                    <OpenInNewIcon sx={{ color: 'var(--color-text-secondary)', flexShrink: 0 }} aria-hidden="true" />
+                    <Box sx={{ display: 'grid', gap: 2 }}>
+                        {(groups.get(k) as DriveDocument[]).map((doc) => (
+                            <DocCard key={doc.id} doc={doc} />
+                        ))}
+                    </Box>
                 </Box>
             ))}
         </Box>
