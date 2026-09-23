@@ -4,6 +4,8 @@ import { useCallback } from 'react';
 import { Box, Typography } from '@mui/material';
 import { FONT_HEADING, FONT_MONO, MAX_CONTENT_WIDTH } from '@/lib/constants';
 import teachersData from '@/data/teachers.json';
+import teacherContents from '@/data/teacher-contents.json';
+import type { FolderContents } from '@/features/teachers/components/TeacherShared';
 import navigationData from '@/data/navigation.json';
 import {
     BackButton, EmptyState, LeafView, FolderCard, ResourceCardWrapper,
@@ -55,6 +57,7 @@ function TgtPgtPage(): React.ReactElement {
                     title={currentLeaf.title}
                     description={currentLeaf.description}
                     driveUrl={currentLeaf.driveUrl || ''}
+                    contents={(teacherContents as unknown as Record<string, FolderContents | undefined>)[currentLeaf.id]}
                     onBack={handleBack}
                     onOpenLink={handleOpenLink}
                 />
