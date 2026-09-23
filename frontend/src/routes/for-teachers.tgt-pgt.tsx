@@ -88,7 +88,7 @@ function TgtPgtPage(): React.ReactElement {
                             key={leaf.id}
                             item={leaf}
                             subject={currentSubCard.title}
-                            onView={(id) => navigate({ to: '/view/$id', params: { id } })}
+                            onView={(id) => navigate({ to: '/for-teachers/tgt-pgt', search: { folder: selectedSubCard, leaf: id } })}
                             onDownload={(url) => window.open(url, '_blank')}
                         />
                     ))}
@@ -135,7 +135,7 @@ function TgtPgtPage(): React.ReactElement {
                                 key={subCard.id}
                                 item={subCard}
                                 subject={pageTitle}
-                                onView={(id) => navigate({ to: '/view/$id', params: { id } })}
+                                onView={(id) => navigate({ to: '/for-teachers/tgt-pgt', search: { leaf: id } })}
                                 onDownload={(url) => window.open(url, '_blank')}
                             />
                         );
