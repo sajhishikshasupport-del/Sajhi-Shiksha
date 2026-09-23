@@ -1,6 +1,6 @@
 import React from 'react';
-import { Box, Typography, Button } from '@mui/material';
-import { ArrowBackIcon, SearchOffIcon, OpenInNewIcon, DownloadIcon, PictureAsPdfIcon, ArrowForwardIcon, ChevronRightIcon } from '@/components/Icons';
+import { Box, Typography, Button, Chip } from '@mui/material';
+import { ArrowBackIcon, SearchOffIcon, OpenInNewIcon, DownloadIcon, PictureAsPdfIcon, ArrowForwardIcon, ChevronRightIcon, DescriptionIcon, InsertDriveFileIcon } from '@/components/Icons';
 import IframeViewer from '@/components/IframeViewer/IframeViewer';
 import ResourceCard from '@/components/ResourceCard/ResourceCard';
 import { teacherCardToResource } from '@/lib/utils';
@@ -100,15 +100,99 @@ export const EmptyState: React.FC<EmptyStateProps> = ({ title, message }) => (
     </Box>
 );
 
+export interface DriveDocument {
+    id: string;
+    title: string;
+    link: string;
+    mimeType: string;
+    modifiedDate?: string;
+    className?: string;
+}
+
+export interface FolderContents {
+    folders: { title: string; id: string }[];
+    documents: DriveDocument[];
+}
+
+const formatDate = (iso?: string): string => {
+    if (!iso) return '';
+    const d = new Date(iso);
+    if (Number.isNaN(d.getTime())) return '';
+    return d.toLocaleDateString('en-IN', { day: '2-digit', month: 'short', year: 'numeric' });
+};
+
+const docIcon = (mime: string): React.ReactElement => {
+    if (mime === 'application/pdf') return <PictureAsPdfIcon sx={{ fontSize: 30, color: 'var(--color-text)' }} />;
+    if (mime.startsWith('application/vnd.google-apps') || mime.includes('word') || mime.includes('document')) return <DescriptionIcon sx={{ fontSize: 30, color: 'var(--color-text)' }} />;
+    return <InsertDriveFileIcon sx={{ fontSize: 30, color: 'var(--color-text)' }} />;
+};
+
+interface DocumentListProps {
+    contents: FolderContents;
+}
+
+export const DocumentList: React.FC<DocumentListProps> = ({ contents }) => {
+    const sorted = [...contents.documents].sort(
+        (a, b) => (b.modifiedDate || '').localeCompare(a.modifiedDate || '')
+    );
+    if (sorted.length === 0) {
+        return <EmptyState title="No documents yet" message="Documents will appear here once added." />;
+    }
+    return (
+        <Box sx={{ display: 'grid', gap: 2 }}>
+            {sorted.map((doc) => (
+                <Box
+                    key={doc.id}
+                    onClick={() => window.open(doc.link, '_blank', 'noopener,noreferrer')}
+                    onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); window.open(doc.link, '_blank', 'noopener,noreferrer'); } }}
+                    role="link"
+                    tabIndex={0}
+                    sx={{
+                        display: 'flex', alignItems: 'center', gap: 2, p: { xs: 1.5, md: 2 },
+                        bgcolor: 'var(--color-bg)', border: `3px solid ${BORDER}`,
+                        boxShadow: `4px 4px 0px ${SHADOW}`, cursor: 'pointer',
+                        '&:hover': { transform: 'translate(-2px, -2px)', boxShadow: `6px 6px 0px ${SHADOW}` },
+                        '&:focus-visible': { outline: '3px solid var(--color-yellow)', outlineOffset: '2px' },
+                    }}
+                >
+                    <Box sx={{ flexShrink: 0 }}>{docIcon(doc.mimeType)}</Box>
+                    <Box sx={{ flexGrow: 1, minWidth: 0 }}>
+                        {doc.className && (
+                            <Chip
+                                label={doc.className}
+                                size="small"
+                                sx={{
+                                    height: 20, mb: 0.5, fontFamily: FONT_MONO, fontWeight: 700, fontSize: '0.7rem',
+                                    bgcolor: 'var(--color-yellow)', color: '#1A1A1A', border: `2px solid ${BORDER}`,
+                                }}
+                            />
+                        )}
+                        <Typography sx={{ fontFamily: FONT_HEADING, fontWeight: 700, fontSize: { xs: '0.95rem', md: '1.05rem' }, lineHeight: 1.3 }}>
+                            {doc.title}
+                        </Typography>
+                        {doc.modifiedDate && (
+                            <Typography sx={{ fontFamily: FONT_MONO, fontSize: '0.75rem', color: 'var(--color-text-secondary)', mt: 0.5 }}>
+                                Updated: {formatDate(doc.modifiedDate)}
+                            </Typography>
+                        )}
+                    </Box>
+                    <OpenInNewIcon sx={{ color: 'var(--color-text-secondary)', flexShrink: 0 }} aria-hidden="true" />
+                </Box>
+            ))}
+        </Box>
+    );
+};
+
 interface LeafViewProps {
     title: string;
     description: string;
     driveUrl: string;
     onBack: () => void;
     onOpenLink: (url?: string) => void;
+    contents?: FolderContents;
 }
 
-export const LeafView: React.FC<LeafViewProps> = ({ title, description, driveUrl, onBack, onOpenLink }) => (
+export const LeafView: React.FC<LeafViewProps> = ({ title, description, driveUrl, onBack, onOpenLink, contents }) => (
     <>
         <BackButton onClick={onBack} />
         <Typography sx={{ fontFamily: FONT_HEADING, fontWeight: 800, fontSize: { xs: '1.5rem', md: '2rem' }, mb: 1 }}>
@@ -117,7 +201,9 @@ export const LeafView: React.FC<LeafViewProps> = ({ title, description, driveUrl
         <Typography sx={{ fontFamily: FONT_MONO, fontSize: '0.9rem', color: 'var(--color-text-secondary)', mb: 4 }}>
             {description}
         </Typography>
-        {driveUrl ? (
+        {contents && contents.documents && contents.documents.length > 0 ? (
+            <DocumentList contents={contents} />
+        ) : driveUrl ? (
             getUrlType(driveUrl) !== 'drive' ? (
                 <Box
                     sx={{
