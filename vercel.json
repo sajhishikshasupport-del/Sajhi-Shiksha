@@ -1,6 +1,10 @@
 {
     "buildCommand": "cd frontend && npm install && npm run build",
     "outputDirectory": "frontend/dist",
+    "redirects": [
+        { "source": "/home", "destination": "/", "permanent": true },
+        { "source": "/home/:path*", "destination": "/", "permanent": true }
+    ],
     "rewrites": [
         {
             "source": "/(.*)",
@@ -9,7 +13,7 @@
     ],
     "headers": [
         {
-            "source": "/assets/(.*)",
+            "source": "/assets/(*)",
             "headers": [
                 {
                     "key": "Cache-Control",
