@@ -6,10 +6,17 @@ import type { LinkItem } from '@/types';
 import { getUrlType } from '@/lib/urlUtils';
 import ResourceCard from '@/components/ResourceCard/ResourceCard';
 import mathLoversContents from '@/data/math-lovers-contents.json';
+import teacherContents from '@/data/teacher-contents.json';
 import { DocumentList } from '@/features/teachers/components/TeacherShared';
 import type { FolderContents } from '@/features/teachers/components/TeacherShared';
 
 const DRIVE_FOLDER_RE = /embeddedfolderview\?id=([A-Za-z0-9_-]+)/;
+
+// The English project-ideas Drive folder holds the same files as the Maths Lab
+// project-ideas leaf, so its document list is reused from teacher-contents.json.
+const FALLBACK_LEAF_KEYS: Record<string, string> = {
+    '1hB7zZC-lkU6WhOHGEo8JjnE-kg6urg4y': 'project-ideas',
+};
 
 interface DriveFolderList {
     linkTitle: string;
@@ -30,10 +37,12 @@ const ContentBlock: React.FC<ContentBlockProps> = ({ id, title, description, lin
     const driveFolderLists = useMemo<DriveFolderList[]>(() => {
         if (!links) return [];
         const contentsMap = mathLoversContents as unknown as Record<string, FolderContents | undefined>;
+        const teacherContentsMap = teacherContents as unknown as Record<string, FolderContents | undefined>;
         const out: DriveFolderList[] = [];
         for (const link of links) {
             const match = link.url.match(DRIVE_FOLDER_RE);
-            const contents = match ? contentsMap[match[1] ?? ''] : undefined;
+            const folderId = match?.[1] ?? '';
+            const contents = contentsMap[folderId] ?? (FALLBACK_LEAF_KEYS[folderId] ? teacherContentsMap[FALLBACK_LEAF_KEYS[folderId] ?? ''] : undefined);
             if (contents) out.push({ linkTitle: link.title, contents });
         }
         return out;
