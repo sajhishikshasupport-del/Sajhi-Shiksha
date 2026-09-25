@@ -1,6 +1,6 @@
 import React from 'react';
 import { BottomNavigation, BottomNavigationAction, Box, IconButton } from '@mui/material';
-import { HomeIcon, SchoolIcon, MenuBookIcon, FavoriteIcon, MenuIcon, WhatsAppIcon } from '@/components/Icons';
+import { HomeIcon, SchoolIcon, MenuBookIcon, FavoriteIcon, SearchIcon, WhatsAppIcon } from '@/components/Icons';
 import { useLocation, useNavigate } from '@tanstack/react-router';
 import siteContent from '@/data/site.json';
 import { FONT_MONO, COLOR_TEXT_LIGHT } from '@/lib/constants';
@@ -16,7 +16,7 @@ const tabs: TabConfig[] = [
     { label: 'Students', route: '/for-students', icon: <SchoolIcon /> },
     { label: 'Teachers', route: '/for-teachers', icon: <MenuBookIcon /> },
     { label: 'Math', route: '/for-math-lovers', icon: <FavoriteIcon /> },
-    { label: 'Menu', route: '/search', icon: <MenuIcon /> },
+    { label: 'Search', route: '/search', icon: <SearchIcon /> },
 ];
 
 const BottomTabBar: React.FC = () => {
