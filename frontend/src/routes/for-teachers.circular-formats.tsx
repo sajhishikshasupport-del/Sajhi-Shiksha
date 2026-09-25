@@ -5,11 +5,13 @@ import { Box, Typography } from '@mui/material';
 import { FONT_HEADING, FONT_MONO, MAX_CONTENT_WIDTH } from '@/lib/constants';
 import { findCardDeep, getCardPath } from '@/lib/utils';
 import teachersData from '@/data/teachers.json';
+import teacherContents from '@/data/teacher-contents-circular.json';
 import navigationData from '@/data/navigation.json';
 import {
     BackButton, EmptyState, LeafView, FolderCard, ResourceCardWrapper,
     TeacherBreadcrumbs
 } from '@/features/teachers/components/TeacherShared';
+import type { FolderContents } from '@/features/teachers/components/TeacherShared';
 
 function CircularFormatsPage(): React.ReactElement {
     const navigate = useNavigate();
@@ -69,6 +71,7 @@ function CircularFormatsPage(): React.ReactElement {
                     title={currentLeafItem.title}
                     description={currentLeafItem.description}
                     driveUrl={currentLeafItem.driveUrl || ''}
+                    contents={(teacherContents as unknown as Record<string, FolderContents | undefined>)[currentLeafItem.id]}
                     onBack={handleBack}
                     onOpenLink={handleOpenLink}
                 />
@@ -169,7 +172,7 @@ function CircularFormatsPage(): React.ReactElement {
                         }
                         return (
                             <ResourceCardWrapper
-                                key={subCard.id}
+n                                key={subCard.id}
                                 item={subCard}
                                 subject={pageTitle}
                                 onView={(id) => navigate({ to: '/view/$id', params: { id } })}
