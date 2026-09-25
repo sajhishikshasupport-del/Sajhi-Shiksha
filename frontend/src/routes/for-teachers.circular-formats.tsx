@@ -175,7 +175,7 @@ function CircularFormatsPage(): React.ReactElement {
                                 key={subCard.id}
                                 item={subCard}
                                 subject={pageTitle}
-                                onView={(id) => navigate({ to: '/view/$id', params: { id } })}
+                                onView={(id) => navigate({ to: '/for-teachers/circular-formats', search: { leaf: id } })}
                                 onDownload={(url) => window.open(url, '_blank')}
                             />
                         );
