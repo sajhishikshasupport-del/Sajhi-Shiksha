@@ -1,8 +1,9 @@
 import type { Resource, ContentBlock, OlympiadSection } from '@/types';
 import teachersData from '@/data/teachers.json';
+import teacherContentsData from '@/data/teacher-contents.json';
 import studentsData from '@/data/students.json';
 import sectionsData from '@/data/sections.json';
-import { findTeacherResourceById, teacherCardToResource } from '@/lib/utils';
+import { findCardDeep, findTeacherResourceById, teacherCardToResource } from '@/lib/utils';
 import { getUrlType } from '@/lib/urlUtils';
 
 // --- URL Source of Truth Map ---
@@ -74,6 +75,16 @@ function applyLatestUrl(resource: Resource): Resource {
 }
 
 /**
+ * Look up the human-readable title of a teacher leaf card (e.g. "Periodic Test")
+ * from teachers.json, given its id.
+ */
+function getTeacherLeafTitle(leafId: string): string {
+    if (!teachersData?.mainCards) return '';
+    const card = findCardDeep(leafId, teachersData.mainCards);
+    return card?.title ?? '';
+}
+
+/**
  * Flatten all resources from ALL JSON files into a single deduplicated array.
  * Uses a Map keyed by ID so the latest source wins (teachers.json over resources.json).
  */
@@ -96,6 +107,45 @@ function buildFlattenedResources(): Resource[] {
         for (const mainCard of teachersData.mainCards) {
             const subject = mainCard.id === 'tgt-pgt' ? 'Mathematics' : 'General';
             collectTeacherResources(mainCard.subCards ?? [], subject);
+        }
+    }
+
+    // 2. Individual teacher documents from teacher-contents.json (Drive files inside leaf folders)
+    const contentsRecord = teacherContentsData as unknown as Record<string, unknown>;
+    for (const leafId of Object.keys(contentsRecord)) {
+        const leaf = contentsRecord[leafId] as { documents?: Array<Record<string, unknown>> } | null;
+        const documents = leaf?.documents ?? [];
+        const leafTitle = getTeacherLeafTitle(leafId);
+        for (const doc of documents) {
+            const docId = typeof doc.id === 'string' ? doc.id : '';
+            const docLink = typeof doc.link === 'string' ? doc.link : '';
+            if (!docId || !docLink) continue;
+            const docTitle = typeof doc.title === 'string' ? doc.title : docId;
+            const className = typeof doc.className === 'string' ? doc.className : '';
+            const mimeType = typeof doc.mimeType === 'string' ? doc.mimeType : '';
+            const modifiedDate = typeof doc.modifiedDate === 'string' ? doc.modifiedDate : '';
+            const classMatch = className.match(/(\d+)/);
+            const urlType = getUrlType(docLink);
+            let type: Resource['type'] = 'document';
+            if (urlType !== 'drive') {
+                type = 'link';
+            } else if (mimeType === 'application/pdf') {
+                type = 'pdf';
+            }
+            map.set(docId, {
+                id: docId,
+                title: docTitle,
+                description: [leafTitle, className].filter(Boolean).join(' — ') || 'Teacher-shared document',
+                category: 'teacher',
+                class: classMatch ? parseInt(classMatch[1] ?? '', 10) : null,
+                subject: 'Mathematics',
+                type,
+                driveUrl: docLink,
+                urlType,
+                thumbnail: null,
+                contributors: ['Sajhi Shiksha Team'],
+                lastUpdated: modifiedDate ? (modifiedDate.split('T')[0] ?? '') : '',
+            });
         }
     }
 
