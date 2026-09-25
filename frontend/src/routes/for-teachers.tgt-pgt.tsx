@@ -23,7 +23,7 @@ function TgtPgtPage(): React.ReactElement {
     const currentSubCard = allSubCards.find((s) => s.id === selectedSubCard) ?? null;
     const hasSubCards = currentSubCard?.hasSubCards && !!currentSubCard?.subCards?.length;
     const leafItems = hasSubCards ? (currentSubCard?.subCards ?? []) : [];
-    const currentLeaf = (hasSubCards ? leafItems : allSubCards).find((l: any) => l.id === (hasSubCards ? selectedLeaf : selectedSubCard)) ?? null;
+    const currentLeaf = (hasSubCards ? leafItems : allSubCards).find((l: any) => l.id === (hasSubCards ? selectedLeaf : (selectedLeaf ?? selectedSubCard))) ?? null;
 
     const handleBack = useCallback(() => {
         if (selectedLeaf) {
