@@ -84,14 +84,12 @@ export default function SearchPage({
         let filtered = allResources;
 
         if (filters.search) {
-            const q = filters.search.toLowerCase();
-            filtered = filtered.filter(
-                (r) =>
-                    r.title.toLowerCase().includes(q) ||
-                    r.description.toLowerCase().includes(q) ||
-                    r.category.toLowerCase().includes(q) ||
-                    r.subject?.toLowerCase().includes(q)
-            );
+            const terms = filters.search.toLowerCase().split(/\s+/).filter(Boolean);
+
+            filtered = filtered.filter((r) => {
+                const haystack = `${r.title} ${r.description} ${r.category} ${r.subject ?? ''}`.toLowerCase();
+                return terms.every((term) => haystack.includes(term));
+            });
 
             filtered = filtered
                 .map((r) => ({ resource: r, score: scoreResource(r, filters.search) }))
@@ -167,7 +165,7 @@ export default function SearchPage({
                     value={filters.search}
                     onChange={(val) => setFilters((prev) => ({ ...prev, search: val }))}
                     onSearch={handleSearch}
-                    autoFocus
+                    autofocus
                 />
             </Box>
 
@@ -189,13 +187,13 @@ export default function SearchPage({
                                 key={search}
                                 label={search}
                                 onClick={() => handleSearch(search)}
-                                clickable
-                                sx={{
+                                 clickable
+                                 sx={{
                                     border: `2px solid var(--color-border)`,
                                     boxShadow: `2px 2px 0px var(--color-shadow)`,
                                     fontFamily: FONT_MONO,
                                     fontWeight: 600,
-                                    bgcolor: 'var(--color-bg)',
+                                     bgcolor: 'var(--color-bg)',
                                     color: 'var(--color-text)',
                                 }}
                             />
@@ -210,24 +208,24 @@ export default function SearchPage({
 
                     <Box sx={{ mt: 3, mb: 2 }}>
                         {filters.search ? (
-                            <Typography
+                           <Typography
                                 sx={{
                                     fontFamily: FONT_MONO,
                                     fontSize: '0.85rem',
                                     color: 'var(--color-text-secondary)',
-                                }}
-                            >
+                                 }}
+                               >
                                 {results.length} result{results.length !== 1 ? 's' : ''} for &quot;{filters.search}&quot;
                             </Typography>
-                        ) : (
+                         ): (
                             <Typography
                                 sx={{
-                                    fontFamily: FONT_MONO,
-                                    fontSize: '0.85rem',
-                                    color: 'var(--color-text-secondary)',
+                                     fontFamily: FONT_MONO,
+                                     fontSize: '0.85rem',
+                                     color: 'var(--color-text-secondary)',
                                 }}
-                            >
-                                {results.length} resource{results.length !== 1 ? 's' : ''}
+                                >
+                                 {results.length} resource{results.length !== 1 ? 's' : ''}}
                             </Typography>
                         )}
                     </Box>
@@ -277,10 +275,10 @@ export default function SearchPage({
                             fontFamily: FONT_HEADING,
                             fontWeight: 700,
                             fontSize: '1.25rem',
-                            mb: 1,
+                           mb: 1,
                         }}
                     >
-                        No results found
+                         No results found
                     </Typography>
                     <Typography sx={{ color: 'var(--color-text-secondary)', fontSize: '0.95rem', mb: 3 }}>
                         Try different keywords or remove some filters
@@ -295,19 +293,19 @@ export default function SearchPage({
                                 sx={{
                                     border: `2px solid var(--color-border)`,
                                     boxShadow: `2px 2px 0px var(--color-shadow)`,
-                                    fontFamily: FONT_MONO,
+                                   fontFamily: FONT_MONO,
                                     fontWeight: 600,
                                     bgcolor: 'var(--color-bg)',
-                                    color: 'var(--color-text)',
+                                     color: 'var(--color-text)',
                                 }}
-                            />
-                        ))}
+                           />
+                         )}
                     </Box>
                 </Box>
             ) : (
                 <Box
                     sx={{
-                        display: 'grid',
+                         display: 'grid',
                         gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))',
                         gap: 3,
                     }}
