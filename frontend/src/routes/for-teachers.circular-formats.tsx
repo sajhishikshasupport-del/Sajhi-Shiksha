@@ -172,7 +172,7 @@ function CircularFormatsPage(): React.ReactElement {
                         }
                         return (
                             <ResourceCardWrapper
-n                                key={subCard.id}
+                                key={subCard.id}
                                 item={subCard}
                                 subject={pageTitle}
                                 onView={(id) => navigate({ to: '/view/$id', params: { id } })}
