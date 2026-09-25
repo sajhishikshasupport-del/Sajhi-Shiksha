@@ -5,6 +5,16 @@ import { FONT_HEADING } from '@/lib/constants';
 import type { LinkItem } from '@/types';
 import { getUrlType } from '@/lib/urlUtils';
 import ResourceCard from '@/components/ResourceCard/ResourceCard';
+import mathLoversContents from '@/data/math-lovers-contents.json';
+import { DocumentList } from '@/features/teachers/components/TeacherShared';
+import type { FolderContents } from '@/features/teachers/components/TeacherShared';
+
+const DRIVE_FOLDER_RE = /embeddedfolderview\?id=([A-Za-z0-9_-]+)/;
+
+interface DriveFolderList {
+    linkTitle: string;
+    contents: FolderContents;
+}
 
 interface ContentBlockProps {
     id: string;
@@ -16,28 +26,55 @@ interface ContentBlockProps {
 const ContentBlock: React.FC<ContentBlockProps> = ({ id, title, description, links }) => {
     const navigate = useNavigate();
 
+    // Drive-folder links with a scanned document list render as a DocumentList instead of a card
+    const driveFolderLists = useMemo<DriveFolderList[]>(() => {
+        if (!links) return [];
+        const contentsMap = mathLoversContents as unknown as Record<string, FolderContents | undefined>;
+        const out: DriveFolderList[] = [];
+        for (const link of links) {
+            const match = link.url.match(DRIVE_FOLDER_RE);
+            const contents = match ? contentsMap[match[1] ?? ''] : undefined;
+            if (contents) out.push({ linkTitle: link.title, contents });
+        }
+        return out;
+    }, [links]);
+
+    const listedFolderIds = useMemo(() => {
+        const s = new Set<string>();
+        for (const folder of driveFolderLists) {
+            const match = (links || []).find((l) => l.title === folder.linkTitle)?.url.match(DRIVE_FOLDER_RE);
+            if (match) s.add(match[1] ?? '');
+        }
+        return s;
+    }, [driveFolderLists, links]);
+
     // Map mathematical link items to unified Resource format for ResourceCard consumption
     const mappedResources = useMemo(() => {
         if (!links) return [];
-        return links.map((link) => {
-            const prefix = id === 'ml-olympiad' ? 'olympiad' : id;
-            const linkId = `${prefix}-${link.title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')}`;
-            return {
-                id: linkId,
-                title: link.title,
-                description: `${title} - ${link.title}`,
-                category: 'math-lovers',
-                class: null,
-                subject: 'Mathematics',
-                type: 'link' as const,
-                driveUrl: link.url,
-                urlType: getUrlType(link.url),
-                thumbnail: null,
-                contributors: ['Sajhi Shiksha Team'],
-                lastUpdated: new Date().toISOString().split('T')[0] || '',
-            };
-        });
-    }, [links, title, id]);
+        return links
+            .filter((link) => {
+                const match = link.url.match(DRIVE_FOLDER_RE);
+                return !(match && listedFolderIds.has(match[1] ?? ''));
+            })
+            .map((link) => {
+                const prefix = id === 'ml-olympiad' ? 'olympiad' : id;
+                const linkId = `${prefix}-${link.title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')}`;
+                return {
+                    id: linkId,
+                    title: link.title,
+                    description: `${title} - ${link.title}`,
+                    category: 'math-lovers',
+                    class: null,
+                    subject: 'Mathematics',
+                    type: 'link' as const,
+                    driveUrl: link.url,
+                    urlType: getUrlType(link.url),
+                    thumbnail: null,
+                    contributors: ['Sajhi Shiksha Team'],
+                    lastUpdated: new Date().toISOString().split('T')[0] || '',
+                };
+            });
+    }, [links, title, id, listedFolderIds]);
 
     const handleView = (resourceId: string) => {
         navigate({ to: '/view/$id', params: { id: resourceId } });
@@ -96,6 +133,22 @@ const ContentBlock: React.FC<ContentBlockProps> = ({ id, title, description, lin
                     ))}
                 </Box>
             )}
+
+            {driveFolderLists.map((folder) => (
+                <Box key={folder.linkTitle} sx={{ mt: 4 }}>
+                    <Typography
+                        sx={{
+                            fontFamily: FONT_HEADING,
+                            fontWeight: 700,
+                            fontSize: { xs: '1.25rem', md: '1.4rem' },
+                            mb: 2,
+                        }}
+                    >
+                        {folder.linkTitle}
+                    </Typography>
+                    <DocumentList contents={folder.contents} />
+                </Box>
+            ))}
         </Box>
     );
 };
