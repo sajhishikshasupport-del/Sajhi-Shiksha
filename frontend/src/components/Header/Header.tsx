@@ -51,7 +51,7 @@ const Header: React.FC = () => {
         return () => document.removeEventListener('keydown', handleKeyDown);
     }, [mobileOpen]);
 
-    const navItems = navigationData.headerLinks.slice(0, 5);
+    const navItems = navigationData.headerLinks;
     const borderColor = 'var(--color-border)';
     const shadowColor = 'var(--color-shadow)';
 
