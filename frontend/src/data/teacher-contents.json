@@ -389,5 +389,689 @@
   "session-ending": {
     "folders": [],
     "documents": []
+  },
+  "pre-board": {
+    "folders": [],
+    "documents": [
+      {
+        "id": "1Pak8dmbjPkF8aDYJH3hRvWrv4zKAeGsl",
+        "title": "12_ MATH_PB_23-24_Gurugram(MS)",
+        "link": "https://drive.google.com/file/d/1Pak8dmbjPkF8aDYJH3hRvWrv4zKAeGsl/view",
+        "mimeType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+        "modifiedDate": "2023-12-21T15:20:28.975Z",
+        "className": "Class 12"
+      },
+      {
+        "id": "1PaPE3qkDaliYbG6sK8fsmBGASQiqDbK1",
+        "title": "12_MATH_PB-1 _23-24_gurugram",
+        "link": "https://drive.google.com/file/d/1PaPE3qkDaliYbG6sK8fsmBGASQiqDbK1/view",
+        "mimeType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+        "modifiedDate": "2023-12-21T15:19:34.759Z",
+        "className": "Class 12"
+      },
+      {
+        "id": "1NK8mOJ87H0C56yHa9QrHyYAH2MGPHyjJ",
+        "title": "12_Appliedmath_PB_23-24",
+        "link": "https://drive.google.com/file/d/1NK8mOJ87H0C56yHa9QrHyYAH2MGPHyjJ/view",
+        "mimeType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+        "modifiedDate": "2023-12-20T15:56:09.624Z",
+        "className": "Class 12"
+      },
+      {
+        "id": "1NG71S1G8vT1VmGNEr7cxS0d8uAqKvPNi",
+        "title": "12_Appliedmath_PB_23-24",
+        "link": "https://drive.google.com/file/d/1NG71S1G8vT1VmGNEr7cxS0d8uAqKvPNi/view",
+        "mimeType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+        "modifiedDate": "2023-12-20T15:55:41.077Z",
+        "className": "Class 12"
+      },
+      {
+        "id": "1Gqa0Vw21FuHBibHxaC5hTLuxSiWLDyZC",
+        "title": "10_mathbasic_SQP(30)",
+        "link": "https://drive.google.com/file/d/1Gqa0Vw21FuHBibHxaC5hTLuxSiWLDyZC/view",
+        "mimeType": "application/pdf",
+        "modifiedDate": "2023-12-18T11:37:14.243Z",
+        "className": "Class 10"
+      },
+      {
+        "id": "1jSOuRAEwdthDsPgLZvm7bVhfPVU-sum8",
+        "title": "10_MathBasic_PreBoard_23-24_Jaipur(3)MS.pdf",
+        "link": "https://drive.google.com/file/d/1jSOuRAEwdthDsPgLZvm7bVhfPVU-sum8/view",
+        "mimeType": "application/pdf",
+        "modifiedDate": "2023-12-06T12:32:29.897Z",
+        "className": "Class 10"
+      },
+      {
+        "id": "1jOdILKv9cR_im-n_DHajUCwuxHzFymeo",
+        "title": "10_MathBasic_PreBoard_23-24_Jaipur(3).pdf",
+        "link": "https://drive.google.com/file/d/1jOdILKv9cR_im-n_DHajUCwuxHzFymeo/view",
+        "mimeType": "application/pdf",
+        "modifiedDate": "2023-12-06T12:31:56.302Z",
+        "className": "Class 10"
+      },
+      {
+        "id": "1jEJUyLQp6APCj_Dn1rUsDBGVukjkEo-0",
+        "title": "10_MathBasic_PreBoard_23-24_Jaipur(2)MS.pdf",
+        "link": "https://drive.google.com/file/d/1jEJUyLQp6APCj_Dn1rUsDBGVukjkEo-0/view",
+        "mimeType": "application/pdf",
+        "modifiedDate": "2023-12-06T12:31:34.668Z",
+        "className": "Class 10"
+      },
+      {
+        "id": "1jCc-I2vGcnD4mn8ZjHEq5qWf3akr1Lbm",
+        "title": "10_MathBasic_PreBoard_23-24_Jaipur(2).pdf",
+        "link": "https://drive.google.com/file/d/1jCc-I2vGcnD4mn8ZjHEq5qWf3akr1Lbm/view",
+        "mimeType": "application/pdf",
+        "modifiedDate": "2023-12-06T12:31:07.638Z",
+        "className": "Class 10"
+      },
+      {
+        "id": "1jAaGP5eowxeUt-1uGR-QAijljMKMHSGb",
+        "title": "10_MathBasic_PreBoard_23-24_Jaipur(1)MS.pdf",
+        "link": "https://drive.google.com/file/d/1jAaGP5eowxeUt-1uGR-QAijljMKMHSGb/view",
+        "mimeType": "application/pdf",
+        "modifiedDate": "2023-12-06T12:30:41.959Z",
+        "className": "Class 10"
+      },
+      {
+        "id": "1izXLqGN_JPMSQ2aTPb_i9KavGslZUeiN",
+        "title": "10_MathBasic_PreBoard_23-24_Jaipur(1).pdf",
+        "link": "https://drive.google.com/file/d/1izXLqGN_JPMSQ2aTPb_i9KavGslZUeiN/view",
+        "mimeType": "application/pdf",
+        "modifiedDate": "2023-12-06T12:30:15.124Z",
+        "className": "Class 10"
+      },
+      {
+        "id": "1ismSXTrI9dJbmPKek-kKQW4tM0_Pim7v",
+        "title": "10_MathSTD_PreBoard_23-24_Jaipur(3)MS.pdf",
+        "link": "https://drive.google.com/file/d/1ismSXTrI9dJbmPKek-kKQW4tM0_Pim7v/view",
+        "mimeType": "application/pdf",
+        "modifiedDate": "2023-12-06T12:29:35.331Z",
+        "className": "Class 10"
+      },
+      {
+        "id": "1ir03sfYauestx4I2rFMD3jNe7qUUZImd",
+        "title": "10_MathSTD_PreBoard_23-24_Jaipur(3).pdf",
+        "link": "https://drive.google.com/file/d/1ir03sfYauestx4I2rFMD3jNe7qUUZImd/view",
+        "mimeType": "application/pdf",
+        "modifiedDate": "2023-12-06T12:29:00.512Z",
+        "className": "Class 10"
+      },
+      {
+        "id": "1ikcxjhy7G7W9L6-UxNCALkqZFtf45rSm",
+        "title": "10_MathSTD_PreBoard_23-24_Jaipur(2)MS.pdf",
+        "link": "https://drive.google.com/file/d/1ikcxjhy7G7W9L6-UxNCALkqZFtf45rSm/view",
+        "mimeType": "application/pdf",
+        "modifiedDate": "2023-12-06T12:28:12.094Z",
+        "className": "Class 10"
+      },
+      {
+        "id": "1ijO4bOe-HPqTb00xIkS1vry8oD7j84sL",
+        "title": "10_MathSTD_PreBoard_23-24_Jaipur(2).pdf",
+        "link": "https://drive.google.com/file/d/1ijO4bOe-HPqTb00xIkS1vry8oD7j84sL/view",
+        "mimeType": "application/pdf",
+        "modifiedDate": "2023-12-06T12:27:39.585Z",
+        "className": "Class 10"
+      },
+      {
+        "id": "1iiUFCPM3t35fw97hSP9TicGl6m9LRLtk",
+        "title": "10_MathSTD_PreBoard_23-24_Jaipur(1)MS.pdf",
+        "link": "https://drive.google.com/file/d/1iiUFCPM3t35fw97hSP9TicGl6m9LRLtk/view",
+        "mimeType": "application/pdf",
+        "modifiedDate": "2023-12-06T12:27:11.891Z",
+        "className": "Class 10"
+      },
+      {
+        "id": "1id3isyIqBV0XYAhyqBzCq3C8uOKVs5_k",
+        "title": "10_MathSTD_PreBoard_23-24_Jaipur(1).pdf",
+        "link": "https://drive.google.com/file/d/1id3isyIqBV0XYAhyqBzCq3C8uOKVs5_k/view",
+        "mimeType": "application/pdf",
+        "modifiedDate": "2023-12-06T12:26:53.581Z",
+        "className": "Class 10"
+      },
+      {
+        "id": "1iOzDWuJZTS4OykRow1ojDvkfeHPga62I",
+        "title": "12_Math_PreBoard_23-24_Jaipur(3).pdf",
+        "link": "https://drive.google.com/file/d/1iOzDWuJZTS4OykRow1ojDvkfeHPga62I/view",
+        "mimeType": "application/pdf",
+        "modifiedDate": "2023-12-06T12:20:30.247Z",
+        "className": "Class 12"
+      },
+      {
+        "id": "1iLXGPQy6qJtQ9SVb-3iHE59Oj4r8QeJO",
+        "title": "12_Math_PreBoard_23-24_Jaipur(2)MS.pdf",
+        "link": "https://drive.google.com/file/d/1iLXGPQy6qJtQ9SVb-3iHE59Oj4r8QeJO/view",
+        "mimeType": "application/pdf",
+        "modifiedDate": "2023-12-06T12:20:15.956Z",
+        "className": "Class 12"
+      },
+      {
+        "id": "1iAzW6o0Qsj9mShWRCpizfkDA8CicCgjO",
+        "title": "12_Math_PreBoard_23-24_Jaipur(2).pdf",
+        "link": "https://drive.google.com/file/d/1iAzW6o0Qsj9mShWRCpizfkDA8CicCgjO/view",
+        "mimeType": "application/pdf",
+        "modifiedDate": "2023-12-06T12:19:20.771Z",
+        "className": "Class 12"
+      },
+      {
+        "id": "1i4cT-jod0h318jOcNjffNt4VpXXRwUxF",
+        "title": "12_Math_PreBoard_23-24_Jaipur(1)MS.pdf",
+        "link": "https://drive.google.com/file/d/1i4cT-jod0h318jOcNjffNt4VpXXRwUxF/view",
+        "mimeType": "application/pdf",
+        "modifiedDate": "2023-12-06T12:18:22.148Z",
+        "className": "Class 12"
+      },
+      {
+        "id": "1i2RSLF-ZHhXgdvKYhxEPIZFzD5Gq9dmR",
+        "title": "12_Math_PreBoard_23-24_Jaipur(1).pdf",
+        "link": "https://drive.google.com/file/d/1i2RSLF-ZHhXgdvKYhxEPIZFzD5Gq9dmR/view",
+        "mimeType": "application/pdf",
+        "modifiedDate": "2023-12-06T12:16:56.268Z",
+        "className": "Class 12"
+      },
+      {
+        "id": "1hwMEsWaYzJpsIzHhFhB1Xd9pbpUD7TEr",
+        "title": "12_math_PreBoard_23-24_Hyderabad.pdf",
+        "link": "https://drive.google.com/file/d/1hwMEsWaYzJpsIzHhFhB1Xd9pbpUD7TEr/view",
+        "mimeType": "application/pdf",
+        "modifiedDate": "2023-12-06T12:16:21.554Z",
+        "className": "Class 12"
+      },
+      {
+        "id": "1i0kpWLiRWZIOyAJjPJvQAvsIEAakgVgN",
+        "title": "12_Math_PreBoard_23-24_Hyderabad(MS)",
+        "link": "https://drive.google.com/file/d/1i0kpWLiRWZIOyAJjPJvQAvsIEAakgVgN/view",
+        "mimeType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+        "modifiedDate": "2023-12-06T12:15:33.995Z",
+        "className": "Class 12"
+      },
+      {
+        "id": "1hvO_45-AOsxwGVtD82jvgb4ercq_FEHU",
+        "title": "12_maths_PreBoard_23-24_Chandigarh.pdf",
+        "link": "https://drive.google.com/file/d/1hvO_45-AOsxwGVtD82jvgb4ercq_FEHU/view",
+        "mimeType": "application/pdf",
+        "modifiedDate": "2023-12-06T12:12:31.013Z",
+        "className": "Class 12"
+      },
+      {
+        "id": "1dgmsEn1aGJJCBFlGh9FXM4R27Rs7Tuzc",
+        "title": "10_MathBasic_PreBoard_23-24(MS).pdf",
+        "link": "https://drive.google.com/file/d/1dgmsEn1aGJJCBFlGh9FXM4R27Rs7Tuzc/view",
+        "mimeType": "application/pdf",
+        "modifiedDate": "2023-12-03T10:49:25.758Z",
+        "className": "Class 10"
+      },
+      {
+        "id": "1dgIpf7PEKUY8H-Hdmq55voQ8f7T56M3Q",
+        "title": "10_MathBasic_PreBoard_23-24",
+        "link": "https://drive.google.com/file/d/1dgIpf7PEKUY8H-Hdmq55voQ8f7T56M3Q/view",
+        "mimeType": "application/pdf",
+        "modifiedDate": "2023-12-03T10:48:46.294Z",
+        "className": "Class 10"
+      },
+      {
+        "id": "1dfR7m_g2_mTZ0gNjbxZfYNtHDwLf4r-G",
+        "title": "10_MathSTD_PreBoard_23-24(MS).pdf",
+        "link": "https://drive.google.com/file/d/1dfR7m_g2_mTZ0gNjbxZfYNtHDwLf4r-G/view",
+        "mimeType": "application/pdf",
+        "modifiedDate": "2023-12-03T10:48:09.332Z",
+        "className": "Class 10"
+      },
+      {
+        "id": "1dUDw_eqmdEj1t-TxNfhjKl3XfYTZxq5w",
+        "title": "10_MathSTD_PreBoard_23-24",
+        "link": "https://drive.google.com/file/d/1dUDw_eqmdEj1t-TxNfhjKl3XfYTZxq5w/view",
+        "mimeType": "application/pdf",
+        "modifiedDate": "2023-12-03T10:46:28.887Z",
+        "className": "Class 10"
+      },
+      {
+        "id": "1YdzLtSVcBFgQ8o9j5I_Ddg3JsURhRLo6",
+        "title": "12_math_PreBoard_23-24(MS)",
+        "link": "https://drive.google.com/file/d/1YdzLtSVcBFgQ8o9j5I_Ddg3JsURhRLo6/view",
+        "mimeType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+        "modifiedDate": "2023-11-25T16:38:02.995Z",
+        "className": "Class 12"
+      },
+      {
+        "id": "1Y_eHyRfqropBhT9LoO-rPDNd5VAL87tb",
+        "title": "12_math_PreBoard_23-24(QP)",
+        "link": "https://drive.google.com/file/d/1Y_eHyRfqropBhT9LoO-rPDNd5VAL87tb/view",
+        "mimeType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+        "modifiedDate": "2023-11-25T16:37:22.333Z",
+        "className": "Class 12"
+      },
+      {
+        "id": "1YJ32itKgBhhBZpAFxA9WINqYR2S2McCr",
+        "title": "10_math_PreBoard_23-24.pdf",
+        "link": "https://drive.google.com/file/d/1YJ32itKgBhhBZpAFxA9WINqYR2S2McCr/view",
+        "mimeType": "application/pdf",
+        "modifiedDate": "2023-11-25T14:27:41.704Z",
+        "className": "Class 10"
+      },
+      {
+        "id": "1X3I5yInerpzIl5zfNh8_lTfd4aqsasmC",
+        "title": "12_math_PreBoard_23-24.pdf",
+        "link": "https://drive.google.com/file/d/1X3I5yInerpzIl5zfNh8_lTfd4aqsasmC/view",
+        "mimeType": "application/pdf",
+        "modifiedDate": "2023-11-23T08:36:25.215Z",
+        "className": "Class 12"
+      },
+      {
+        "id": "1OqxBaJxyuZ-cpnNa1c7nhcRaqxK3GlC1",
+        "title": "12_maths_23-24",
+        "link": "https://drive.google.com/file/d/1OqxBaJxyuZ-cpnNa1c7nhcRaqxK3GlC1/view",
+        "mimeType": "application/pdf",
+        "modifiedDate": "2023-11-13T06:54:00.097Z",
+        "className": "Class 12"
+      },
+      {
+        "id": "15Pb6_DlsklBmPEyPTsuddZoUkfLdydst",
+        "title": "12_maths_PreBoard",
+        "link": "https://drive.google.com/file/d/15Pb6_DlsklBmPEyPTsuddZoUkfLdydst/view",
+        "mimeType": "application/pdf",
+        "modifiedDate": "2023-10-25T08:58:15.188Z",
+        "className": "Class 12"
+      },
+      {
+        "id": "15JM_FE5tnBuF_B0a85ar0VZnN3JYGJZs",
+        "title": "12_maths_PreBoard",
+        "link": "https://drive.google.com/file/d/15JM_FE5tnBuF_B0a85ar0VZnN3JYGJZs/view",
+        "mimeType": "application/pdf",
+        "modifiedDate": "2023-10-25T08:58:04.794Z",
+        "className": "Class 12"
+      },
+      {
+        "id": "15FrTmqI8hwHu5p64MNgXXl9gHWcYcxdJ",
+        "title": "12_maths_PreBoard",
+        "link": "https://drive.google.com/file/d/15FrTmqI8hwHu5p64MNgXXl9gHWcYcxdJ/view",
+        "mimeType": "application/pdf",
+        "modifiedDate": "2023-10-25T08:57:34.778Z",
+        "className": "Class 12"
+      }
+    ]
+  },
+  "question-bank": {
+    "folders": [],
+    "documents": [
+      {
+        "id": "17YKIhyGt0MpRzIQaBp06oNsW4M-K2Rte",
+        "title": "12 case study",
+        "link": "https://drive.google.com/file/d/17YKIhyGt0MpRzIQaBp06oNsW4M-K2Rte/view",
+        "mimeType": "application/msword",
+        "modifiedDate": "2026-06-27T09:57:19.935Z",
+        "className": "Class 12"
+      },
+      {
+        "id": "1aSN3Hwk9CDL9dSFX_WMZuMglFM0AsiMy",
+        "title": "12 assertion reasoning",
+        "link": "https://drive.google.com/file/d/1aSN3Hwk9CDL9dSFX_WMZuMglFM0AsiMy/view",
+        "mimeType": "application/msword",
+        "modifiedDate": "2026-06-27T09:56:50.987Z",
+        "className": "Class 12"
+      },
+      {
+        "id": "15qsLYhk7M8P3d_LfvM4DmacefDzbSLS5",
+        "title": "12 MCQ",
+        "link": "https://drive.google.com/file/d/15qsLYhk7M8P3d_LfvM4DmacefDzbSLS5/view",
+        "mimeType": "application/msword",
+        "modifiedDate": "2026-06-27T09:56:30.064Z",
+        "className": "Class 12"
+      },
+      {
+        "id": "1vNqpVNubHd8p54RE_Z2Dfg82FyJNTYH-",
+        "title": "11 case study",
+        "link": "https://drive.google.com/file/d/1vNqpVNubHd8p54RE_Z2Dfg82FyJNTYH-/view",
+        "mimeType": "application/msword",
+        "modifiedDate": "2026-06-27T09:55:36.666Z",
+        "className": "Class 11"
+      },
+      {
+        "id": "1aSQCYMudexIfaDU8fA3qC25rjElOO5jE",
+        "title": "11 assertion reasoning",
+        "link": "https://drive.google.com/file/d/1aSQCYMudexIfaDU8fA3qC25rjElOO5jE/view",
+        "mimeType": "application/msword",
+        "modifiedDate": "2026-06-27T09:55:22.294Z",
+        "className": "Class 11"
+      },
+      {
+        "id": "1rxRVQFZyA_mJCF-9NpYNX-yjDW1gbRn0",
+        "title": "11 MCQ",
+        "link": "https://drive.google.com/file/d/1rxRVQFZyA_mJCF-9NpYNX-yjDW1gbRn0/view",
+        "mimeType": "application/msword",
+        "modifiedDate": "2026-06-27T09:55:09.076Z",
+        "className": "Class 11"
+      },
+      {
+        "id": "1V0lxikEj5dvFqhKhegw9UoGypAEcvIri",
+        "title": "10 case study question",
+        "link": "https://drive.google.com/file/d/1V0lxikEj5dvFqhKhegw9UoGypAEcvIri/view",
+        "mimeType": "application/msword",
+        "modifiedDate": "2026-06-27T09:54:33.825Z",
+        "className": "Class 10"
+      },
+      {
+        "id": "1b0k7h9J4kdpsdF1M2PDVTitV7TEC01lY",
+        "title": "10 assertion reasoning",
+        "link": "https://drive.google.com/file/d/1b0k7h9J4kdpsdF1M2PDVTitV7TEC01lY/view",
+        "mimeType": "application/msword",
+        "modifiedDate": "2026-06-27T09:54:04.617Z",
+        "className": "Class 10"
+      },
+      {
+        "id": "1ByxlaFfnC0JbIb-e4ib9keYi3vRbBiyq",
+        "title": "10 mcq",
+        "link": "https://drive.google.com/file/d/1ByxlaFfnC0JbIb-e4ib9keYi3vRbBiyq/view",
+        "mimeType": "application/msword",
+        "modifiedDate": "2026-06-27T09:53:46.112Z",
+        "className": "Class 10"
+      },
+      {
+        "id": "1WVyQQd2mtPkEQXDk_5pEiQFurIVxFQWQ",
+        "title": "Math Book (RD Sharma ).pdf",
+        "link": "https://drive.google.com/file/d/1WVyQQd2mtPkEQXDk_5pEiQFurIVxFQWQ/view",
+        "mimeType": "application/pdf",
+        "modifiedDate": "2024-11-20T04:56:46.682Z"
+      },
+      {
+        "id": "1WREWbz19qBs-QPICihXPhA0Xbi4PZzqz",
+        "title": "Maths MTG 2024.pdf",
+        "link": "https://drive.google.com/file/d/1WREWbz19qBs-QPICihXPhA0Xbi4PZzqz/view",
+        "mimeType": "application/pdf",
+        "modifiedDate": "2024-11-20T04:56:03.835Z"
+      },
+      {
+        "id": "1YinvT9k6PuUqx41HipcoNuqDpE3KPUNu",
+        "title": "important 100 questions.pdf",
+        "link": "https://drive.google.com/file/d/1YinvT9k6PuUqx41HipcoNuqDpE3KPUNu/view",
+        "mimeType": "application/pdf",
+        "modifiedDate": "2024-10-09T03:38:19.588Z",
+        "className": "Class 10"
+      },
+      {
+        "id": "1nU8TEwvGlupnUic7qy47CJPXsHWqXCJi",
+        "title": "Class XII AR & CB Question Bank ZIET Bhubaneshwar_240706_103254.pdf",
+        "link": "https://drive.google.com/file/d/1nU8TEwvGlupnUic7qy47CJPXsHWqXCJi/view",
+        "mimeType": "application/pdf",
+        "modifiedDate": "2024-08-09T09:00:52.917Z",
+        "className": "Class 12"
+      },
+      {
+        "id": "1M1AalMyXPqcNVLY_WmlzLnIiQOmP6YHA",
+        "title": "MathematicsXIIcasestudy questions.pdf",
+        "link": "https://drive.google.com/file/d/1M1AalMyXPqcNVLY_WmlzLnIiQOmP6YHA/view",
+        "mimeType": "application/pdf",
+        "modifiedDate": "2024-05-18T06:28:42.370Z"
+      },
+      {
+        "id": "1HeulAsrbo5xIE5HHnPHq-Jx1NCPfMMxn",
+        "title": "12 Maths lab activity with solution.pdf",
+        "link": "https://drive.google.com/file/d/1HeulAsrbo5xIE5HHnPHq-Jx1NCPfMMxn/view",
+        "mimeType": "application/pdf",
+        "modifiedDate": "2024-05-10T03:28:11.702Z",
+        "className": "Class 12"
+      },
+      {
+        "id": "165M2cKdFYaLJCsUGTm5dL9UKnyLhIvmy",
+        "title": "Bridge Course Module class 12 Maths.pdf",
+        "link": "https://drive.google.com/file/d/165M2cKdFYaLJCsUGTm5dL9UKnyLhIvmy/view",
+        "mimeType": "application/pdf",
+        "modifiedDate": "2024-05-02T12:25:11.389Z"
+      },
+      {
+        "id": "1hqVcbuQDguRWFcRmJvciaEOXbA_0ck9V",
+        "title": "Competency focused practice question",
+        "link": "https://drive.google.com/file/d/1hqVcbuQDguRWFcRmJvciaEOXbA_0ck9V/view",
+        "mimeType": "application/pdf",
+        "modifiedDate": "2024-04-23T04:43:59.393Z"
+      },
+      {
+        "id": "1GkHlwhITGTaSUrhQ0C_505CPrZbSSZYP",
+        "title": "12_ math_SQP(30)",
+        "link": "https://drive.google.com/file/d/1GkHlwhITGTaSUrhQ0C_505CPrZbSSZYP/view",
+        "mimeType": "application/pdf",
+        "modifiedDate": "2023-12-18T11:36:08.386Z",
+        "className": "Class 12"
+      },
+      {
+        "id": "1CMFjrsFz2YRtai3Aw9Y0P0WqlM2g_TeQ",
+        "title": "topic wise important questions for slow learners",
+        "link": "https://drive.google.com/file/d/1CMFjrsFz2YRtai3Aw9Y0P0WqlM2g_TeQ/view",
+        "mimeType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+        "modifiedDate": "2023-12-15T10:20:51.074Z"
+      },
+      {
+        "id": "1sha6C7Qn4Nq9grSt_-qHmfSBkAKIyAkS",
+        "title": "vectors",
+        "link": "https://drive.google.com/file/d/1sha6C7Qn4Nq9grSt_-qHmfSBkAKIyAkS/view",
+        "mimeType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+        "modifiedDate": "2023-12-11T16:31:24.251Z"
+      },
+      {
+        "id": "1sgNLp5bQtzCqcrXCC0JBLUscVXSZzcFY",
+        "title": "determinations",
+        "link": "https://drive.google.com/file/d/1sgNLp5bQtzCqcrXCC0JBLUscVXSZzcFY/view",
+        "mimeType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+        "modifiedDate": "2023-12-11T16:31:04.840Z"
+      },
+      {
+        "id": "1sNfgzTY0IqZ5g7nEQDsSfI1HqqWO26_G",
+        "title": "relations and functions",
+        "link": "https://drive.google.com/file/d/1sNfgzTY0IqZ5g7nEQDsSfI1HqqWO26_G/view",
+        "mimeType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+        "modifiedDate": "2023-12-11T16:30:53.257Z"
+      },
+      {
+        "id": "1sCpNYpDuR3tkfNpBaxlOlPecz7SCkidT",
+        "title": "application of derivations",
+        "link": "https://drive.google.com/file/d/1sCpNYpDuR3tkfNpBaxlOlPecz7SCkidT/view",
+        "mimeType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+        "modifiedDate": "2023-12-11T16:30:39.559Z"
+      },
+      {
+        "id": "1sB2qUYO75A8vN0XKmCZcJfwBxAj2WOsu",
+        "title": "probability",
+        "link": "https://drive.google.com/file/d/1sB2qUYO75A8vN0XKmCZcJfwBxAj2WOsu/view",
+        "mimeType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+        "modifiedDate": "2023-12-11T16:30:25.472Z"
+      },
+      {
+        "id": "1s8HM7SwXz5Ep0m4jjD5beEWV26PmfGCu",
+        "title": "continuity and Differentiability",
+        "link": "https://drive.google.com/file/d/1s8HM7SwXz5Ep0m4jjD5beEWV26PmfGCu/view",
+        "mimeType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+        "modifiedDate": "2023-12-11T16:30:11.400Z"
+      },
+      {
+        "id": "1s3F7ScO0M4obXN-XoBB9J3MLfYM7n0t0",
+        "title": "integrals",
+        "link": "https://drive.google.com/file/d/1s3F7ScO0M4obXN-XoBB9J3MLfYM7n0t0/view",
+        "mimeType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+        "modifiedDate": "2023-12-11T16:30:05.582Z"
+      },
+      {
+        "id": "1s2oy31DY5JlyjButmEOj44uQNfIz4uL4",
+        "title": "Inverse Trigonometric functions",
+        "link": "https://drive.google.com/file/d/1s2oy31DY5JlyjButmEOj44uQNfIz4uL4/view",
+        "mimeType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+        "modifiedDate": "2023-12-11T16:29:34.146Z"
+      },
+      {
+        "id": "1s0OLXLgivruHK7GrOuIZiNh1bzWnBsWb",
+        "title": "application of integrals",
+        "link": "https://drive.google.com/file/d/1s0OLXLgivruHK7GrOuIZiNh1bzWnBsWb/view",
+        "mimeType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+        "modifiedDate": "2023-12-11T16:29:12.748Z"
+      },
+      {
+        "id": "1rna7NOQFdmg3Ypoozha5ZA9k4UbsCfbk",
+        "title": "differential equation",
+        "link": "https://drive.google.com/file/d/1rna7NOQFdmg3Ypoozha5ZA9k4UbsCfbk/view",
+        "mimeType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+        "modifiedDate": "2023-12-11T16:28:54.903Z"
+      },
+      {
+        "id": "1rn9dgQv-B_6JPH6Zikb25cFc3rtkTlzs",
+        "title": "three dimensional geometry",
+        "link": "https://drive.google.com/file/d/1rn9dgQv-B_6JPH6Zikb25cFc3rtkTlzs/view",
+        "mimeType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+        "modifiedDate": "2023-12-11T16:28:20.965Z"
+      },
+      {
+        "id": "1rfaz8BfGqBEg-MQOk-_7PMdWcuHG0CxD",
+        "title": "probability",
+        "link": "https://drive.google.com/file/d/1rfaz8BfGqBEg-MQOk-_7PMdWcuHG0CxD/view",
+        "mimeType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+        "modifiedDate": "2023-12-11T16:25:03.437Z"
+      },
+      {
+        "id": "1rcTQaKNAoRHlBmgQfitqEZMSfYMj7cbL",
+        "title": "linear programming",
+        "link": "https://drive.google.com/file/d/1rcTQaKNAoRHlBmgQfitqEZMSfYMj7cbL/view",
+        "mimeType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+        "modifiedDate": "2023-12-11T16:24:32.314Z"
+      },
+      {
+        "id": "1raMOUNBW-lP_V2ELcGST7wKf7Ai-9EuR",
+        "title": "integrals",
+        "link": "https://drive.google.com/file/d/1raMOUNBW-lP_V2ELcGST7wKf7Ai-9EuR/view",
+        "mimeType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+        "modifiedDate": "2023-12-11T16:24:03.589Z"
+      },
+      {
+        "id": "1rYfL8-uqNTBD2AyHaoyYRIJ_0Zj1zMP9",
+        "title": "vectors",
+        "link": "https://drive.google.com/file/d/1rYfL8-uqNTBD2AyHaoyYRIJ_0Zj1zMP9/view",
+        "mimeType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+        "modifiedDate": "2023-12-11T16:23:50.932Z"
+      },
+      {
+        "id": "1rVk_Qb6-WyqFVLFr3F4MGfn3KNGYbt4q",
+        "title": "continuity and Differentiability",
+        "link": "https://drive.google.com/file/d/1rVk_Qb6-WyqFVLFr3F4MGfn3KNGYbt4q/view",
+        "mimeType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+        "modifiedDate": "2023-12-11T16:23:41.662Z"
+      },
+      {
+        "id": "1rU4QRNPaRviLRgxs1EcvpbjT_wbHjwxG",
+        "title": "differential equations",
+        "link": "https://drive.google.com/file/d/1rU4QRNPaRviLRgxs1EcvpbjT_wbHjwxG/view",
+        "mimeType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+        "modifiedDate": "2023-12-11T16:23:20.506Z"
+      },
+      {
+        "id": "1rSH9AFNLv5guR659A28yZW1NgQFRSTyO",
+        "title": "three dimensional geometry",
+        "link": "https://drive.google.com/file/d/1rSH9AFNLv5guR659A28yZW1NgQFRSTyO/view",
+        "mimeType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+        "modifiedDate": "2023-12-11T16:23:06.849Z"
+      },
+      {
+        "id": "1rJHe3t3I-YSZH6EuVc8Xj10GVkNPJp-E",
+        "title": "determinants",
+        "link": "https://drive.google.com/file/d/1rJHe3t3I-YSZH6EuVc8Xj10GVkNPJp-E/view",
+        "mimeType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+        "modifiedDate": "2023-12-11T16:22:51.459Z"
+      },
+      {
+        "id": "1rJF_lO9gAnYHVNtNdHFq4DHP2lYEZGV1",
+        "title": "application of derivations",
+        "link": "https://drive.google.com/file/d/1rJF_lO9gAnYHVNtNdHFq4DHP2lYEZGV1/view",
+        "mimeType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+        "modifiedDate": "2023-12-11T16:22:40.331Z"
+      },
+      {
+        "id": "1rIM0IRnmiE1Gni7jGHe2vgdvAahxZNhI",
+        "title": "Inverse Trigonometric functions",
+        "link": "https://drive.google.com/file/d/1rIM0IRnmiE1Gni7jGHe2vgdvAahxZNhI/view",
+        "mimeType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+        "modifiedDate": "2023-12-11T16:22:21.376Z"
+      },
+      {
+        "id": "1rHe-XL7yjKKkXa5OzlbCAyX1GRTJrNlp",
+        "title": "relations and functions",
+        "link": "https://drive.google.com/file/d/1rHe-XL7yjKKkXa5OzlbCAyX1GRTJrNlp/view",
+        "mimeType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+        "modifiedDate": "2023-12-11T16:22:04.482Z"
+      },
+      {
+        "id": "1rB3LH5AO3fG2RUGp-UGyhcTO4OkhAbHR",
+        "title": "application of integrals",
+        "link": "https://drive.google.com/file/d/1rB3LH5AO3fG2RUGp-UGyhcTO4OkhAbHR/view",
+        "mimeType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+        "modifiedDate": "2023-12-11T16:21:49.741Z"
+      },
+      {
+        "id": "1r9w_-mU0AjVe045YBXAbm_t-zrby2l6n",
+        "title": "matrices",
+        "link": "https://drive.google.com/file/d/1r9w_-mU0AjVe045YBXAbm_t-zrby2l6n/view",
+        "mimeType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+        "modifiedDate": "2023-12-11T16:21:27.734Z"
+      },
+      {
+        "id": "1bfbsSv1MAnx76xYAffGN3Jzi_Iu8NG9q",
+        "title": "12_AppliedMaths_StudyMaterial_23-24.pdf",
+        "link": "https://drive.google.com/file/d/1bfbsSv1MAnx76xYAffGN3Jzi_Iu8NG9q/view",
+        "mimeType": "application/pdf",
+        "modifiedDate": "2023-12-01T09:04:32.842Z",
+        "className": "Class 12"
+      },
+      {
+        "id": "1beJKQ_hpFe0onDLQbWOBU5_GYdocxwAF",
+        "title": "12_AppliedMath_StudyMaterial_22-23.pdf",
+        "link": "https://drive.google.com/file/d/1beJKQ_hpFe0onDLQbWOBU5_GYdocxwAF/view",
+        "mimeType": "application/pdf",
+        "modifiedDate": "2023-12-01T09:03:34.860Z",
+        "className": "Class 12"
+      },
+      {
+        "id": "1Pm3ikDckGTTI5o2XwlX84VHt8zdN2m7_",
+        "title": "12_math_ChapterwisePYQ",
+        "link": "https://drive.google.com/file/d/1Pm3ikDckGTTI5o2XwlX84VHt8zdN2m7_/view",
+        "mimeType": "application/pdf",
+        "modifiedDate": "2023-11-14T09:43:22.734Z",
+        "className": "Class 12"
+      },
+      {
+        "id": "1Pi84NlvREdmkVDkOeAKiS9jhzZqy9IKr",
+        "title": "12_math_AssertionReasoning",
+        "link": "https://drive.google.com/file/d/1Pi84NlvREdmkVDkOeAKiS9jhzZqy9IKr/view",
+        "mimeType": "application/pdf",
+        "modifiedDate": "2023-11-14T09:41:06.006Z",
+        "className": "Class 12"
+      },
+      {
+        "id": "1PP2mPODtpQVig_KIMKfhY1XCnhK3dJfQ",
+        "title": "12_math_MLL(Minimum learning material)_23-24",
+        "link": "https://drive.google.com/file/d/1PP2mPODtpQVig_KIMKfhY1XCnhK3dJfQ/view",
+        "mimeType": "application/pdf",
+        "modifiedDate": "2023-11-14T09:28:32.721Z",
+        "className": "Class 12"
+      },
+      {
+        "id": "1PO33kVIVBIRwaU5kJ3SkP_D2dzWhNKyv",
+        "title": "11_math_StudyMaterial_23-24",
+        "link": "https://drive.google.com/file/d/1PO33kVIVBIRwaU5kJ3SkP_D2dzWhNKyv/view",
+        "mimeType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+        "modifiedDate": "2023-11-14T09:26:40.806Z",
+        "className": "Class 11"
+      },
+      {
+        "id": "1PM_hkPoGn2_uvyfM97bHGFjPO5CGpOHY",
+        "title": "12_math_StudyMaterial_23-24",
+        "link": "https://drive.google.com/file/d/1PM_hkPoGn2_uvyfM97bHGFjPO5CGpOHY/view",
+        "mimeType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+        "modifiedDate": "2023-11-14T09:25:26.030Z",
+        "className": "Class 12"
+      },
+      {
+        "id": "1P9cSslAAxcZThTpiPAd6DxTT2MzK_RN6",
+        "title": "12_maths_STUDY MATERIL_23-24.pdf",
+        "link": "https://drive.google.com/file/d/1P9cSslAAxcZThTpiPAd6DxTT2MzK_RN6/view",
+        "mimeType": "application/pdf",
+        "modifiedDate": "2023-11-13T16:08:49.752Z",
+        "className": "Class 12"
+      }
+    ]
   }
 }
