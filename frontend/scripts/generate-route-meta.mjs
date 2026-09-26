@@ -32,30 +32,35 @@ const ROUTES = [
         title: 'For Students — Mathematics Resources — Sajhi Shiksha',
         description:
             'Mathematics study materials for Classes 6 to 12. Free question papers, notes, and resources for KVS students.',
+        ogImage: '/images/og-students.png',
     },
     {
         path: 'for-teachers',
         title: 'For Teachers — Teaching Resources — Sajhi Shiksha',
         description:
             'Teacher resources including TGT/PGT Maths materials, circulars, formats, and KVS teaching resources.',
+        ogImage: '/images/og-teachers.png',
     },
     {
         path: 'for-teachers/tgt-pgt',
         title: 'TGT/PGT Maths — Teaching Resources — Sajhi Shiksha',
         description:
             'TGT and PGT Mathematics teaching materials: question papers, question bank, holiday homework, lesson plans, PPTs and worksheets.',
+        ogImage: '/images/og-tgt-pgt.png',
     },
     {
         path: 'for-teachers/circular-formats',
         title: 'Circulars & Formats — Sajhi Shiksha',
         description:
             'KVS circulars and office formats: GOI rules, KVS rules, admission, time table, CBSE/NIOS formats, morning assembly and more.',
+        ogImage: '/images/og-circular.png',
     },
     {
         path: 'for-math-lovers',
         title: 'For Math Lovers — Explore the Beauty of Mathematics — Sajhi Shiksha',
         description:
             'Interesting math facts, puzzles, and blog posts about the beauty of mathematics.',
+        ogImage: '/images/og-math-lovers.png',
     },
     {
         path: 'contribute',
@@ -114,6 +119,7 @@ for (const route of ROUTES) {
     const url = `${SITE_URL}/${route.path}`;
     const titleAttr = escapeAttr(route.title);
     const descAttr = escapeAttr(route.description);
+    const ogImage = `${SITE_URL}${route.ogImage || '/images/og-image.png'}`;
 
     let html = template;
 
@@ -158,6 +164,18 @@ for (const route of ROUTES) {
         /<meta name="twitter:description" content="[^"]*" \/>/,
         `<meta name="twitter:description" content="${descAttr}" />`,
         'twitter:description',
+    );
+    html = replaceOnce(
+        html,
+        /<meta property="og:image" content="[^"]*" \/>/,
+        `<meta property="og:image" content="${ogImage}" />`,
+        'og:image',
+    );
+    html = replaceOnce(
+        html,
+        /<meta name="twitter:image" content="[^"]*" \/>/,
+        `<meta name="twitter:image" content="${ogImage}" />`,
+        'twitter:image',
     );
     html = replaceOnce(
         html,

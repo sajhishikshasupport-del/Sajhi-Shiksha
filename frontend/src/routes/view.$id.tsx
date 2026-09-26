@@ -2,7 +2,7 @@ import { createRoute, useNavigate, useParams } from '@tanstack/react-router';
 import { Route as rootRoute } from './__root';
 import { Suspense, lazy, useMemo } from 'react';
 import { ViewPageSkeleton } from '@/components/Skeletons';
-import { useSEO } from '@/hooks/useSEO';
+import { useSEO, breadcrumbSchema } from '@/hooks/useSEO';
 import { getResourceById } from '@/lib/resourceAggregator';
 
 const ResourceViewPage = lazy(() => import('@/features/viewer/components/ResourceViewPage'));
@@ -18,6 +18,10 @@ function ViewResourcePage(): React.ReactElement {
         description: resource ? `View and download ${resource.title}. ${resource.description}` : 'The requested resource could not be found.',
         canonicalPath: `/view/${id}`,
         noIndex: !resource,
+        jsonLd: resource ? breadcrumbSchema([
+            { name: 'Home', path: '/' },
+            { name: resource.title, path: `/view/${id}` },
+        ]) : undefined,
     });
 
     const handleBack = (): void => {

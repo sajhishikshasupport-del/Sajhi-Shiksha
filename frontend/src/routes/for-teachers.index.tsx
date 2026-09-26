@@ -5,7 +5,7 @@ import { Box, Typography } from '@mui/material';
 import {
     SchoolIcon, FolderOpenIcon, ArrowForwardIcon
 } from '@/components/Icons';
-import { useSEO } from '@/hooks/useSEO';
+import { useSEO, breadcrumbSchema } from '@/hooks/useSEO';
 import { FONT_HEADING, FONT_MONO, MAX_CONTENT_WIDTH } from '@/lib/constants';
 import teachersData from '@/data/teachers.json';
 
@@ -24,6 +24,11 @@ function ForTeachersIndexPage(): React.ReactElement {
         title: 'For Teachers — Teaching Resources',
         description: 'Teacher resources including TGT/PGT Maths materials, circulars, formats, and KVS teaching resources.',
         canonicalPath: '/for-teachers',
+        ogImage: '/images/og-teachers.png',
+        jsonLd: breadcrumbSchema([
+            { name: 'Home', path: '/' },
+            { name: 'For Teachers', path: '/for-teachers' },
+        ]),
     });
     const mainCards = teachersData.mainCards;
 

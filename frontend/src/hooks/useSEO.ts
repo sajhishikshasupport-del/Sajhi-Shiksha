@@ -80,6 +80,9 @@ export function useSEO({
 
     useEffect(() => {
         const fullTitle = title === DEFAULT_TITLE ? title : `${title} — Sajhi Shiksha`;
+        const resolvedOgImage = ogImage
+            ? (ogImage.startsWith('http') ? ogImage : `${SITE_URL}${ogImage}`)
+            : DEFAULT_OG_IMAGE;
         prevTitleRef.current = document.title;
         document.title = fullTitle;
 
@@ -96,7 +99,7 @@ export function useSEO({
         setMeta('og:url', canonical, 'property');
         setMeta('og:title', fullTitle, 'property');
         setMeta('og:description', description, 'property');
-        setMeta('og:image', ogImage || DEFAULT_OG_IMAGE, 'property');
+        setMeta('og:image', resolvedOgImage, 'property');
         setMeta('og:image:width', '1200', 'property');
         setMeta('og:image:height', '630', 'property');
         setMeta('og:site_name', 'Sajhi Shiksha', 'property');
@@ -105,7 +108,7 @@ export function useSEO({
         setMeta('twitter:card', 'summary_large_image');
         setMeta('twitter:title', fullTitle);
         setMeta('twitter:description', description);
-        setMeta('twitter:image', ogImage || DEFAULT_OG_IMAGE);
+        setMeta('twitter:image', resolvedOgImage);
 
         if (jsonLd) {
             if (!jsonLdEl) {
@@ -190,3 +193,20 @@ export const educationalOrgSchema = {
         audienceType: 'KVS students Classes 1-12',
     },
 };
+
+/**
+ * Build a schema.org BreadcrumbList JSON-LD object from a list of labels and
+ * site-relative paths. The last item is the current page.
+ */
+export function breadcrumbSchema(items: Array<{ name: string; path: string }>): Record<string, unknown> {
+    return {
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        itemListElement: items.map((item, index) => ({
+            '@type': 'ListItem',
+            position: index + 1,
+            name: item.name,
+            item: `${SITE_URL}${item.path}`,
+        })),
+    };
+}

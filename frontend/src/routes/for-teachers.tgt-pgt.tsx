@@ -3,6 +3,7 @@ import { Route as forTeachersRoute } from './for-teachers';
 import { useCallback } from 'react';
 import { Box, Typography } from '@mui/material';
 import { FONT_HEADING, FONT_MONO, MAX_CONTENT_WIDTH } from '@/lib/constants';
+import { useSEO, breadcrumbSchema } from '@/hooks/useSEO';
 import teachersData from '@/data/teachers.json';
 import teacherContents from '@/data/teacher-contents.json';
 import type { FolderContents } from '@/features/teachers/components/TeacherShared';
@@ -24,6 +25,18 @@ function TgtPgtPage(): React.ReactElement {
     const hasSubCards = currentSubCard?.hasSubCards && !!currentSubCard?.subCards?.length;
     const leafItems = hasSubCards ? (currentSubCard?.subCards ?? []) : [];
     const currentLeaf = (hasSubCards ? leafItems : allSubCards).find((l: any) => l.id === (hasSubCards ? selectedLeaf : (selectedLeaf ?? selectedSubCard))) ?? null;
+
+    useSEO({
+        title: pageTitle || 'TGT/PGT Maths — Teaching Resources',
+        description: 'TGT and PGT Mathematics teaching materials: question papers, question bank, holiday homework, lesson plans, PPTs and worksheets.',
+        canonicalPath: '/for-teachers/tgt-pgt',
+        ogImage: '/images/og-tgt-pgt.png',
+        jsonLd: breadcrumbSchema([
+            { name: 'Home', path: '/' },
+            { name: 'For Teachers', path: '/for-teachers' },
+            { name: pageTitle || 'TGT/PGT Maths', path: '/for-teachers/tgt-pgt' },
+        ]),
+    });
 
     const handleBack = useCallback(() => {
         if (selectedLeaf) {

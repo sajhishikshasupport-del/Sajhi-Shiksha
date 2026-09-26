@@ -3,6 +3,7 @@ import { Route as forTeachersRoute } from './for-teachers';
 import { useCallback } from 'react';
 import { Box, Typography } from '@mui/material';
 import { FONT_HEADING, FONT_MONO, MAX_CONTENT_WIDTH } from '@/lib/constants';
+import { useSEO, breadcrumbSchema } from '@/hooks/useSEO';
 import { findCardDeep, getCardPath } from '@/lib/utils';
 import teachersData from '@/data/teachers.json';
 import teacherContents from '@/data/teacher-contents-circular.json';
@@ -24,6 +25,18 @@ function CircularFormatsPage(): React.ReactElement {
     const currentFolder = selectedFolder ? findCardDeep(selectedFolder, allSubCards) : null;
     const folderChildren = currentFolder?.subCards ?? [];
     const currentLeafItem = selectedLeaf ? findCardDeep(selectedLeaf, allSubCards) : null;
+
+    useSEO({
+        title: pageTitle || 'Circulars & Formats',
+        description: 'KVS circulars and office formats: GOI rules, KVS rules, admission, time table, CBSE/NIOS formats, morning assembly and more.',
+        canonicalPath: '/for-teachers/circular-formats',
+        ogImage: '/images/og-circular.png',
+        jsonLd: breadcrumbSchema([
+            { name: 'Home', path: '/' },
+            { name: 'For Teachers', path: '/for-teachers' },
+            { name: pageTitle || 'Circulars & Formats', path: '/for-teachers/circular-formats' },
+        ]),
+    });
 
     const handleBack = useCallback(() => {
         if (selectedLeaf) {
