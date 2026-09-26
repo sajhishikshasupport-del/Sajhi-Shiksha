@@ -147,6 +147,9 @@ function buildFlattenedResources(): Resource[] {
                 contributors: ['Sajhi Shiksha Team'],
                 lastUpdated: modifiedDate ? (modifiedDate.split('T')[0] ?? '') : '',
             });
+            if (modifiedDate) {
+                recentTeacherDocuments.push({ id: docId, modifiedDate });
+            }
         }
     }
 
@@ -234,6 +237,10 @@ function buildFlattenedResources(): Resource[] {
     return Array.from(map.values());
 }
 
+// Drive-backed teacher documents (from teacher-contents JSONs) with their real
+// modifiedDate, collected while flattening. Used to power "Recently Added".
+const recentTeacherDocuments: Array<{ id: string; modifiedDate: string }> = [];
+
 const allFlattenedResources = buildFlattenedResources();
 
 export function getResourceById(id: string): Resource | null {
@@ -250,4 +257,17 @@ export function getResourceById(id: string): Resource | null {
 
 export function getAllResources(): Resource[] {
     return allFlattenedResources.map((r) => applyLatestUrl(r));
+}
+
+/**
+ * Return the most recently updated Drive-backed teacher documents,
+ * newest first. Used by the homepage "Recently Added" section.
+ */
+export function getRecentlyAdded(count: number): Resource[] {
+    return [...recentTeacherDocuments]
+        .sort((a, b) => (a.modifiedDate < b.modifiedDate ? 1 : -1))
+        .slice(0, count)
+        .map((entry) => allFlattenedResources.find((r) => r.id === entry.id))
+        .filter((r): r is Resource => r !== undefined)
+        .map((r) => applyLatestUrl(r));
 }
