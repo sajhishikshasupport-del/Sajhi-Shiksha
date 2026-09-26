@@ -6,6 +6,7 @@ import ResourceCard from '@/components/ResourceCard/ResourceCard';
 import { teacherCardToResource } from '@/lib/utils';
 import { getUrlType } from '@/lib/urlUtils';
 import { FONT_HEADING, FONT_MONO } from '@/lib/constants';
+import { trackEvent } from '@/hooks/useAnalytics';
 
 export const BORDER = 'var(--color-border)';
 export const SHADOW = 'var(--color-shadow)';
@@ -135,10 +136,20 @@ interface DocumentListProps {
     contents: FolderContents;
 }
 
-const DocCard: React.FC<{ doc: DriveDocument; showClass?: boolean }> = ({ doc, showClass }) => (
+const DocCard: React.FC<{ doc: DriveDocument; showClass?: boolean }> = ({ doc, showClass }) => {
+    const openDoc = () => {
+        trackEvent('document_open', {
+            document_title: doc.title,
+            document_class: doc.className ?? null,
+            source: 'teacher_document_list',
+        });
+        window.open(doc.link, '_blank', 'noopener,noreferrer');
+    };
+
+    return (
     <Box
-        onClick={() => window.open(doc.link, '_blank', 'noopener,noreferrer')}
-        onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); window.open(doc.link, '_blank', 'noopener,noreferrer'); } }}
+        onClick={openDoc}
+        onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openDoc(); } }}
         role="link"
         tabIndex={0}
         sx={{
@@ -172,7 +183,8 @@ const DocCard: React.FC<{ doc: DriveDocument; showClass?: boolean }> = ({ doc, s
         </Box>
         <OpenInNewIcon sx={{ color: 'var(--color-text-secondary)', flexShrink: 0 }} aria-hidden="true" />
     </Box>
-);
+    );
+};
 
 export const DocumentList: React.FC<DocumentListProps> = ({ contents }) => {
     const sorted = [...contents.documents].sort(
