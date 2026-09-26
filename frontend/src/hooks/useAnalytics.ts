@@ -48,3 +48,13 @@ export function useAnalytics(): void {
         });
     }, [window.location.pathname, window.location.search]);
 }
+
+/**
+ * Fire a Google Analytics custom event (e.g. search, document_open, filter_use).
+ * Safe to call from anywhere: silently no-ops when gtag has not loaded yet
+ * or is blocked by the browser.
+ */
+export function trackEvent(eventName: string, params?: Record<string, unknown>): void {
+    if (typeof window === 'undefined' || typeof window.gtag !== 'function') return;
+    window.gtag('event', eventName, params);
+}
