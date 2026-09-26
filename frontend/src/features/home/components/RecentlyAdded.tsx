@@ -9,6 +9,7 @@ import {
     PictureAsPdfIcon,
 } from '@/components/Icons';
 import { getRecentlyAdded } from '@/lib/resourceAggregator';
+import { trackEvent } from '@/hooks/useAnalytics';
 import type { Resource } from '@/types';
 import {
     BORDER_RADIUS_PILL,
@@ -48,6 +49,11 @@ const RecentlyAddedCard: React.FC<{ resource: Resource; index: number }> = ({ re
             <Box
                 component="a"
                 href={resource.driveUrl}
+                onClick={() => trackEvent('document_open', {
+                    document_title: resource.title,
+                    document_class: resource.class,
+                    source: 'recently_added',
+                })}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={`Open ${resource.title}`}
