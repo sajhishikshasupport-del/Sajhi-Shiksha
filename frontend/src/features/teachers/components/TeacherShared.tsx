@@ -1,6 +1,6 @@
 import React from 'react';
 import { Box, Typography, Button, Chip } from '@mui/material';
-import { ArrowBackIcon, SearchOffIcon, OpenInNewIcon, DownloadIcon, PictureAsPdfIcon, ArrowForwardIcon, ChevronRightIcon, DescriptionIcon, InsertDriveFileIcon } from '@/components/Icons';
+import { ArrowBackIcon, SearchOffIcon, OpenInNewIcon, DownloadIcon, PictureAsPdfIcon, ArrowForwardIcon, ChevronRightIcon, DescriptionIcon, InsertDriveFileIcon, ErrorOutlineOutlinedIcon } from '@/components/Icons';
 import IframeViewer from '@/components/IframeViewer/IframeViewer';
 import ResourceCard from '@/components/ResourceCard/ResourceCard';
 import { teacherCardToResource } from '@/lib/utils';
@@ -309,6 +309,27 @@ export const LeafView: React.FC<LeafViewProps> = ({ title, description, driveUrl
         ) : (
             <EmptyState title="Content Coming Soon" message="The document URL will be added soon." />
         )}
+        <Box sx={{ display: 'flex', justifyContent: 'flex-end', mt: 4 }}>
+            <Button
+                component="a"
+                href={`mailto:sajhishiksha@gmail.com?subject=${encodeURIComponent(`[Problem] ${title}`)}`}
+                size="small"
+                aria-label={`Report a problem with ${title}`}
+                sx={{
+                    fontFamily: FONT_MONO, fontWeight: 700, fontSize: '0.75rem',
+                    color: 'var(--color-text-secondary)', bgcolor: 'var(--color-bg)',
+                    border: `2px solid ${BORDER}`, py: 0.5, px: 1.5, minWidth: 0,
+                    textTransform: 'none',
+                    '&:hover': {
+                        bgcolor: 'var(--color-yellow)', color: '#1A1A1A',
+                        borderColor: BORDER,
+                    },
+                }}
+            >
+                <ErrorOutlineOutlinedIcon sx={{ mr: 0.75, fontSize: 16 }} />
+                Report a problem
+            </Button>
+        </Box>
     </>
 );
 
