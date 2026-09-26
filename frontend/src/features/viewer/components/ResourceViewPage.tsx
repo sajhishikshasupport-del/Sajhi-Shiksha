@@ -6,6 +6,7 @@ import IframeViewer from '@/components/IframeViewer/IframeViewer';
 import Breadcrumb from '@/components/Breadcrumb/Breadcrumb';
 import type { Resource } from '@/types';
 import { FONT_HEADING, FONT_MONO, MAX_CONTENT_WIDTH, COLOR_TEXT_LIGHT, BORDER_RADIUS_PILL } from '@/lib/constants';
+import { trackEvent } from '@/hooks/useAnalytics';
 
 interface ResourceViewPageProps {
     resource: Resource | null;
@@ -59,10 +60,12 @@ export default function ResourceViewPage({ resource, onBack, onNavigate }: Resou
     }
 
     const handleDownload = () => {
+        trackEvent('document_open', { document_title: resource.title, source: 'resource_view' });
         window.open(resource.driveUrl, '_blank');
     };
 
     const handleShare = async () => {
+        trackEvent('document_share', { document_title: resource.title });
         const url = window.location.href;
         const shareData = {
             title: resource.title,
@@ -91,6 +94,7 @@ export default function ResourceViewPage({ resource, onBack, onNavigate }: Resou
     };
 
     const handleOpenInTab = () => {
+        trackEvent('document_open', { document_title: resource.title, source: 'resource_view' });
         window.open(resource.driveUrl, '_blank');
     };
 
