@@ -10,6 +10,7 @@ import Breadcrumb from '@/components/Breadcrumb/Breadcrumb';
 import type { Resource } from '@/types';
 import { FONT_HEADING, FONT_MONO, MAX_CONTENT_WIDTH } from '@/lib/constants';
 import { filtersToSearchParams } from '@/lib/filterUtils';
+import { trackEvent } from '@/hooks/useAnalytics';
 
 interface SearchPageProps {
     initialFilters: FilterState;
@@ -126,18 +127,32 @@ export default function SearchPage({
         syncFiltersToUrl(newFilters);
         if (value.trim()) {
             saveRecentSearch(value.trim());
+            trackEvent('search', { search_term: value.trim() });
         }
     }, [filters, syncFiltersToUrl]);
 
+    useEffect(() => {
+        if (!hasSearched || !filters.search) return;
+        trackEvent('search_results', { search_term: filters.search, result_count: results.length });
+    }, [hasSearched, filters.search, results.length]);
+
     const handleFilterChange = useCallback((newFilters: FilterState | ((prev: FilterState) => FilterState)) => {
         const resolved = typeof newFilters === 'function' ? newFilters(filters) : newFilters;
+        if (resolved.class !== filters.class) {
+            trackEvent('filter_use', { filter_name: 'class', filter_value: resolved.class });
+        }
+        if (resolved.subject !== filters.subject) {
+            trackEvent('filter_use', { filter_name: 'subject', filter_value: resolved.subject });
+        }
+        if (resolved.type !== filters.type) {
+            trackEvent('filter_use', { filter_name: 'type', filter_value: resolved.type });
+        }
         syncFiltersToUrl(resolved);
     }, [filters, syncFiltersToUrl]);
 
     const handleDownload = (url: string) => {
         window.open(url, '_blank');
     };
-
 
 
     const recentSearches = getRecentSearches();
@@ -215,7 +230,7 @@ export default function SearchPage({
                                     color: 'var(--color-text-secondary)',
                                 }}
                             >
-                                {results.length} result{results.length !== 1 ? 's' : ''} for &quot;{filters.search}&quot;
+                                {results.length} result{results.length !== 1 ? 's' : ''} for "{filters.search}"
                             </Typography>
                         ) : (
                             <Typography
@@ -254,7 +269,7 @@ export default function SearchPage({
                         Search for study materials
                     </Typography>
                     <Typography sx={{ color: 'var(--color-text-secondary)', fontSize: '0.95rem' }}>
-                        Type keywords like &quot;mathematics&quot;, &quot;class 3&quot;, or &quot;question papers&quot;
+                        Type keywords like "mathematics", "class 3", or "question papers"
                     </Typography>
                 </Box>
             ) : results.length === 0 ? (
