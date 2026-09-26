@@ -114,7 +114,7 @@
                 {
                     "id": "goi-kvs-circulars",
                     "title": "GOI / KVS Circulars",
-                    "description": "Government of India and KVS circulars and rules",
+                    "description": "Government of India and KVS rules and circulars",
                     "icon": "Gavel",
                     "hasSubCards": true,
                     "subCards": [
@@ -163,7 +163,7 @@
                             "id": "fet-software",
                             "title": "FET Time Table Software",
                             "description": "Free open-source timetable scheduling software",
-                            "driveUrl": "https://lalescu.ro/liviu/fet/"
+                            "driveUrl": "https://lalescu.ro/liveu/fet/"
                         },
                         {
                             "id": "fet-tutorial",
@@ -198,7 +198,7 @@
                             "id": "cbse",
                             "title": "CBSE",
                             "description": "CBSE formats and circulars",
-                            "driveUrl": "https://drive.google.com/embeddedfolderview?id=1d8AzeAo0KPaSL58kREiRwXHDZJ0-SzzB#list"
+                            "driveUrl": "https://drive.google.com/embeddedfolderview?id=1Q8XHQJnmjRpRjjnVoYudtOEiO2ZILr3r#list"
                         },
                         {
                             "id": "nios",
