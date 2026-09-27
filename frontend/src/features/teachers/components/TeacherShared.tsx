@@ -62,379 +62,135 @@ export const outlineBtnSx = {
     },
     '&:active': {
         transform: 'translate(2px, 2px)',
-        boxShadow: `1px 1px 0px ${SHADOW}`,
-    },
-};
+        boxShadow: `1px 1px 0px ${SHQÕßXˆKŸNÂ‚™^ÜÛÛœİ[\P›ŞŞHÂˆˆ^[YÛˆ	ØÙ[\‰Ëˆ›Ü™\ˆÜÛÛY	Ğ“Ô‘TŸXˆ›ŞÚYİÎˆ	ÔÒQÕßXŸNÂ‚š[\™˜XÙH˜XÚĞ]Û”›ÜÈÂˆÛÛXÚÎˆ
 
-export const emptyBoxSx = {
-    p: 4, textAlign: 'center',
-    border: `3px solid ${BORDER}`,
-    boxShadow: `4px 4px 0px ${SHADOW}`,
-};
+HOˆ›ÚYÂŸB‚™^ÜÛÛœİ˜XÚĞ]Ûˆ™XXİ‘Ï˜XÚĞ]Û”›ÜÏˆH
+ÈÛÛXÚÈJHOˆ
+ˆ›ŞˆÛÛ\Û™[HœÜ[ˆ‚ˆÛÛXÚÏ^ÛÛÛXÚßBˆÛ’Ù^QİÛ^ÊJHOˆÈYˆ
+KšÙ^HOOH	Ñ[\‰ÈKšÙ^HOOH	È	ÊHÈKœ™]™[Y˜][
 
-interface BackButtonProps {
-    onClick: () => void;
-}
+NÈÛÛXÚÊ
+NÈH_BˆŞ^Ø˜XÚĞ”ŞBˆ›ÛOH›[šÈˆX’[™^^ÌH\šXK[X™[H‘ÛÈ˜XÚÈ‚ˆ‚ˆ\œ›İĞ˜XÚÒXÛÛˆ›ÛÚ^™OHœÛX[ˆÏˆ˜XÚÂˆĞ›Ş‚ŠNÂ‚š[\™˜XÙH[\Tİ]T›ÜÈÂˆ]Nˆİš[™ÎÂˆY\ÜØYÙNˆİš[™ÎÂŸB‚™^ÜÛÛœİ[\Tİ]Nˆ™XXİ‘Ï[\Tİ]T›ÜÏˆH
+È]KY\ÜØYÙHJHOˆ
+ˆ›ŞŞ^Ù[\P›ŞŞO‚ˆÙX\˜ÚÙ™’XÛÛˆŞ^ŞÈ›ÛÚ^™NˆÛÛÜˆ	İ˜\ŠKXÛÛÜ‹]^\ÙXÛÛ™\JIËXˆˆ_HÏ‚ˆ\ÙÜ˜\HŞ^ŞÈ›Û˜[Z[Nˆ“Ó•ÒPQS‘Ë›ÛÙZYÚˆÌXˆH_Oİ]_OÕ\ÙÜ˜\O‚ˆ\ÙÜ˜\HŞ^ŞÈÛÛÜˆ	İ˜\ŠKXÛÛÜ‹]^\ÙXÛÛ™\JIË›Û˜[Z[Nˆ“Ó•ÓSÓ“Ë›ÛÚ^™Nˆ	Ì\™[IÈ_OÛY\ÜØYÙ_OÕ\ÙÜ˜\O‚ˆĞ›Ş‚ŠNÂ‚™^Ü[\™˜XÙHš]™QØİ[Y[ÂˆYˆİš[™ÎÂˆ]Nˆİš[™ÎÂˆ[šÎˆİš[™ÎÂˆZ[YU\Nˆİš[™ÎÂˆ[ÙYšYY]OÎˆİš[™ÎÂˆÛ\ÜÓ˜[YOÎˆİš[™ÎÂŸB‚™^Ü[\™˜XÙH›Û\ÛÛ[ÈÂˆ›Û\œÎˆÈ]Nˆİš[™ÎÈYˆİš[™ÈV×NÂˆØİ[Y[Îˆš]™QØİ[Y[×NÂŸB‚˜ÛÛœİ›Ü›X]]HH
+\ÛÏÎˆİš[™ÊNˆİš[™ÈOˆÂˆYˆ
+Z\ÛÊH™]\›ˆ	ÉÎÂˆÛÛœİH™]È]J\ÛÊNÂˆYˆ
+[X™\‹š\Ó˜SŠ™Ù][YJ
+JJH™]\›ˆ	ÉÎÂˆ™]\›ˆÓØØ[Q]Tİš[™Ê	Ù[‹RS‰ËÈ^Nˆ	Ì‹YYÚ]	Ë[Ûˆ	ÜÚÜ	ËYX\ˆ	Û[Y\šXÉÈJNÂŸNÂ‚˜ÛÛœİØÒXÛÛˆH
+Z[YNˆİš[™ÊNˆ™XXİ”™XXİ[[Y[OˆÂˆYˆ
+Z[YHOOH	Ø\XØ][Û‹Ü‰ÊH™]\›ˆXİ\™P\Ô’XÛÛˆŞ^ŞÈ›ÛÚ^™NˆÌÛÛÜˆ	İ˜\ŠKXÛÛÜ‹]^
+IÈ_HÏÂˆYˆ
+Z[YKœİ\ÕÚ]
+	Ø\XØ][Û‹İ›™™ÛÛÙÛKX\ÉÊHZ[YKš[˜ÛY\Ê	İÛÜ™	ÊHZ[YKš[˜ÛY\Ê	ÙØİ[Y[	ÊJH™]\›ˆ\ØÜš\[Û’XÛÛˆŞ^ŞÈ›ÛÚ^™NˆÌÛÛÜˆ	İ˜\ŠKXÛÛÜ‹]^
+IÈ_HÏÂˆ™]\›ˆ[œÙ\š]™Qš[RXÛÛˆŞ^ŞÈ›ÛÚ^™NˆÌÛÛÜˆ	İ˜\ŠKXÛÛÜ‹]^
+IÈ_HÏÂŸNÂ‚˜ÛÛœİÓTÔ×ÓÔ‘TˆHÉĞÛ\ÜÈ‰Ë	ĞÛ\ÜÈÉË	ĞÛ\ÜÈ	Ë	ĞÛ\ÜÈIË	ĞÛ\ÜÈL	Ë	ĞÛ\ÜÈLIË	ĞÛ\ÜÈL‰Ë	ĞÛ\ÜÈLH\YYX]ÉË	ĞÛ\ÜÈLˆ\YYX]É×NÂ‚˜ÛÛœİÛ\ÜÔÛYÈH
+˜[YNˆİš[™ÊNˆİš[™ÈOˆ˜[YKœ™\XÙJÖ×˜K^KVŒNWJËÙË	ËIÊKÓİÙ\Ø\ÙJ
+NÂ‚‹ËÈ\YYX]ÈØİ[Y[È
+]Y\İ[Ûˆ\\œÈÈ]Y\İ[Ûˆ˜[šÜÊHÙ]Z\ˆİÛˆÛ\ÜÂ‹ËÈÙXİ[ÛœÈY\ˆH™Yİ[\ˆÛ™\Ëˆ\š]™Yœ›ÛHH]HÛÈ]š[\ÈYYHB‹ËÈšYÚHš]™HŞ[˜È
+‹‹‹\YYX]Ë‹‹ˆˆÈŒL—Ğ\YYX]Ë‹‹ˆŠHÜ›İ\]]ÛX]XØ[K‚˜ÛÛœİTQQÓPU×ÕUHHØ\YY××ËWJ›X]ÚNÂ˜ÛÛœİY™™Xİ]™PÛ\ÜÓ˜[YHH
+ØÎˆš]™QØİ[Y[
+Nˆİš[™È[OˆÂˆÛÛœİ\Ğ\YYHTQQÓPU×ÕUK\İ
+ØË]JNÂˆYˆ
+ØË˜Û\ÜÓ˜[YJH™]\›ˆ\Ğ\YYÈ	ÙØË˜Û\ÜÓ˜[Y_H\YYX]ØˆØË˜Û\ÜÓ˜[YNÂˆYˆ
+Z\Ğ\YY
+H™]\›ˆ[ÂˆÛÛœİHHØË]K›X]Ú
+ÊÎ—Ÿ
+JŸß_LL_LŠJÎ—	
+KÊNÂˆ™]\›ˆÛ\ÜÈ	ÛHÈVÌWHˆ	ÌL‰ßH\YYX]ØÂŸNÂ‚š[\™˜XÙHØİ[Y[\İ›ÜÈÂˆÛÛ[Îˆ›Û\ÛÛ[ÎÂŸB‚˜ÛÛœİØĞØ\™ˆ™XXİ‘ÏÈØÎˆš]™QØİ[Y[ÈÚİĞÛ\ÜÏÎˆ›ÛÛX[ˆOˆH
+ÈØËÚİĞÛ\ÜÈJHOˆÂˆÛÛœİÛ\ÜÓX™[HÚİĞÛ\ÜÈÈY™™Xİ]™PÛ\ÜÓ˜[YJØÊHˆ[ÂˆÛÛœİÜ[‘ØÈH
 
-export const BackButton: React.FC<BackButtonProps> = ({ onClick }) => (
-    <Box
-        component="span"
-        onClick={onClick}
-        onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); onClick(); } }}
-        sx={backBtnSx}
-        role="link" tabIndex={0} aria-label="Go back"
-    >
-        <ArrowBackIcon fontSize="small" /> Back
-    </Box>
-);
+HOˆÂˆ˜XÚÑ]™[
+	ÙØİ[Y[ÛÜ[‰ËÂˆØİ[Y[İ]NˆØË]KˆØİ[Y[ØÛ\ÜÎˆY™™Xİ]™PÛ\ÜÓ˜[YJØÊKˆÛİ\˜ÙNˆ	İXXÚ\—ÙØİ[Y[Û\İ	ËˆJNÂˆÚ[™İË›Ü[ŠØË›[šË	×Ø›[šÉË	Û›ÛÜ[™\‹›Ü™Y™\œ™\‰ÊNÂˆNÂ‚ˆ™]\›ˆ
+ˆ›ŞˆÛÛXÚÏ^ÛÜ[‘ØßBˆÛ’Ù^QİÛ^ÊJHOˆÈYˆ
+KšÙ^HOOH	Ñ[\‰ÈKšÙ^HOOH	È	ÊHÈKœ™]™[Y˜][
 
-interface EmptyStateProps {
-    title: string;
-    message: string;
-}
+NÈÜ[‘ØÊ
+NÈH_Bˆ›ÛOH›[šÈ‚ˆX’[™^^ÌBˆŞ^ŞÂˆ\Ü^Nˆ	Ù›^	Ë[YÛ’][\Îˆ	ØÙ[\‰ËØ\ˆ‹ˆÈÎˆKKYˆˆKˆ™ØÛÛÜˆ	İ˜\ŠKXÛÛÜ‹X™ÊIË›Ü™\ˆÜÛÛY	Ğ“Ô‘TŸXˆ›ŞÚYİÎˆ	ÔÒQÕßXİ\œÛÜˆ	ÜÚ[\‰Ëˆ	Éšİ™\‰ÎˆÈ˜[œÙ›Ü›Nˆ	İ˜[œÛ]JLœLœ
+IË›ŞÚYİÎˆœœ	ÔÒQÕßXKˆ	É™›Øİ\Ë]š\ÚX›IÎˆÈİ][™Nˆ	ÌÜÛÛY˜\ŠKXÛÛÜ‹^Y[İÊIËİ][™SÙ™œÙ]ˆ	Ìœ	ÈKˆ_Bˆ‚ˆ›ŞŞ^ŞÈ›^Úš[šÎˆ_OÙØÒXÛÛŠØË›Z[YU\J_OĞ›Ş‚ˆ›ŞŞ^ŞÈ›^Ü›İÎˆKZ[•ÚYˆ_O‚ˆØÛ\ÜÓX™[	‰ˆ
+ˆÚ\ˆX™[^ØÛ\ÜÓX™[BˆÚ^™OHœÛX[‚ˆŞ^ŞÂˆZYÚˆŒXˆK›Û˜[Z[Nˆ“Ó•ÓSÓ“Ë›ÛÙZYÚˆÌ›ÛÚ^™Nˆ	ÌÜ™[IËˆ™ØÛÛÜˆ	İ˜\ŠKXÛÛÜ‹^Y[İÊIËÛÛÜˆ	ÈÌPLPLPIË›Ü™\ˆœÛÛY	Ğ“Ô‘TŸXˆ_BˆÏ‚ˆ
+_Bˆ\ÙÜ˜\HŞ^ŞÈ›Û˜[Z[Nˆ“Ó•ÒPQS‘Ë›ÛÙZYÚˆÌ›ÛÚ^™NˆÈÎˆ	ÌM\™[IËYˆ	ÌKŒ\™[IÈK[™RZYÚˆKŒÈ_O‚ˆÙØË]_BˆÕ\ÙÜ˜\O‚ˆÙØË›[ÙYšYY]H	‰ˆ
+ˆ\ÙÜ˜\HŞ^ŞÈ›Û˜[Z[Nˆ“Ó•ÓSÓ“Ë›ÛÚ^™Nˆ	ÌÍ\™[IËÛÛÜˆ	İ˜\ŠKXÛÛÜ‹]^\ÙXÛÛ™\JIË]ˆH_O‚ˆ\]YˆÙ›Ü›X]]JØË›[ÙYšYY]J_BˆÕ\ÙÜ˜\O‚ˆ
+_BˆĞ›Ş‚ˆÜ[’[“™]ÒXÛÛˆŞ^ŞÈÛÛÜˆ	İ˜\ŠKXÛÛÜ‹]^\ÙXÛÛ™\JIË›^Úš[šÎˆ_H\šXKZY[HYHˆÏ‚ˆĞ›Ş‚ˆ
+NÂŸNÂ‚™^ÜÛÛœİØİ[Y[\İˆ™XXİ‘ÏØİ[Y[\İ›ÜÏˆH
+ÈÛÛ[ÈJHOˆÂˆÛÛœİÛÜYHË‹‹˜ÛÛ[Ë™Øİ[Y[×KœÛÜ
+ˆ
+KŠHOˆ
+‹›[ÙYšYY]H	ÉÊK›ØØ[PÛÛ\\™JK›[ÙYšYY]H	ÉÊBˆ
+NÂˆYˆ
+ÛÜY›[™İOOH
+HÂˆ™]\›ˆ[\Tİ]H]OH“›ÈØİ[Y[ÈY]ˆY\ÜØYÙOH‘Øİ[Y[ÈÚ[\X\ˆ\™HÛ˜ÙHYYˆˆÏÂˆB‚ˆYˆ
+\ÛÜYœÛÛYJ
+
+HOˆ˜Û\ÜÓ˜[YJJHÂˆ™]\›ˆ
+ˆ›ŞŞ^ŞÈ\Ü^Nˆ	ÙÜšY	ËØ\ˆˆ_O‚ˆÜÛÜY›X\
 
-export const EmptyState: React.FC<EmptyStateProps> = ({ title, message }) => (
-    <Box sx={emptyBoxSx}>
-        <SearchOffIcon sx={{ fontSize: 48, color: 'var(--color-text-secondary)', mb: 2 }} />
-        <Typography sx={{ fontFamily: FONT_HEADING, fontWeight: 700, mb: 1 }}>{title}</Typography>
-        <Typography sx={{ color: 'var(--color-text-secondary)', fontFamily: FONT_MONO, fontSize: '0.85rem' }}>{message}</Typography>
-    </Box>
-);
+ØÊHOˆ
+ˆØĞØ\™Ù^O^ÙØËšYHØÏ^ÙØßHÚİĞÛ\ÜÈÏ‚ˆ
+J_BˆĞ›Ş‚ˆ
+NÂˆB‚ˆÛÛœİÜ›İ\ÈH™]ÈX\İš[™Ëš]™QØİ[Y[×OŠ
+NÂˆ›Üˆ
+ÛÛœİØÈÙˆÛÜY
+HÂˆÛÛœİÙ^HHY™™Xİ]™PÛ\ÜÓ˜[YJØÊH	Óİ\‰ÎÂˆYˆ
+YÜ›İ\Ëš\ÊÙ^JJHÜ›İ\ËœÙ]
+Ù^K×JNÂˆ
+Ü›İ\Ë™Ù]
+Ù^JH\Èš]™QØİ[Y[×JKœ\Ú
+ØÊNÂˆBˆÛÛœİÜ™\™YÙ^\ÈH\œ˜^K™œ›ÛJÜ›İ\ËšÙ^\Ê
+JKœÛÜ
 
-export interface DriveDocument {
-    id: string;
-    title: string;
-    link: string;
-    mimeType: string;
-    modifiedDate?: string;
-    className?: string;
-}
+KŠHOˆÂˆÛÛœİXHHÓTÔ×ÓÔ‘T‹š[™^ÙŠJNÂˆÛÛœİXˆHÓTÔ×ÓÔ‘T‹š[™^ÙŠŠNÂˆYˆ
+XHOOHLH	‰ˆXˆOOHLJH™]\›ˆXHHXÂˆYˆ
+XHOOHLJH™]\›ˆLNÂˆYˆ
+XˆOOHLJH™]\›ˆNÂˆ™]\›ˆK›ØØ[PÛÛ\\™JŠNÂˆJNÂ‚ˆ™]\›ˆ
+ˆ›Ş‚ˆ›ŞŞ^ŞÈ\Ü^Nˆ	Ù›^	ËØ\ˆK›^Ü˜\ˆ	İÜ˜\	ËXˆÈ_H›ÛOH›˜]šYØ][Ûˆˆ\šXK[X™[H’[\ÈÛ\ÜÈ‚ˆÛÜ™\™YÙ^\Ë›X\
 
-export interface FolderContents {
-    folders: { title: string; id: string }[];
-    documents: DriveDocument[];
-}
+ÊHOˆ
+ˆÚ\ˆÙ^O^ÚßBˆÛÛ\Û™[H˜H‚ˆ™Y^ØÉØÛ\ÜÔÛYÊÊ_XBˆÛXÚØX›BˆX™[^Ø	ÚßH
+	ÊÜ›İ\Ë™Ù]
+ÊH\Èš]™QØİ[Y[×JK›[™İJXBˆŞ^ŞÂˆ›Û˜[Z[Nˆ“Ó•ÓSÓ“Ë›ÛÙZYÚˆÌ›ÛÚ^™Nˆ	Ì™[IËˆ™ØÛÛÜˆ	İ˜\ŠKXÛÛÜ‹X™ÊIËÛÛÜˆ	İ˜\ŠKXÛÛÜ‹]^
+IËˆ›Ü™\ˆœÛÛY	Ğ“Ô‘TŸX›ŞÚYİÎˆœœ	ÔÒQÕßXˆ	Éšİ™\‰ÎˆÈ™ØÛÛÜˆ	İ˜\ŠKXÛÛÜ‹^Y[İÊIËÛÛÜˆ	ÈÌPLPLPIÈKˆ_BˆÏ‚ˆ
+J_BˆĞ›Ş‚ˆÛÜ™\™YÙ^\Ë›X\
 
-const formatDate = (iso?: string): string => {
-    if (!iso) return '';
-    const d = new Date(iso);
-    if (Number.isNaN(d.getTime())) return '';
-    return d.toLocaleDateString('en-IN', { day: '2-digit', month: 'short', year: 'numeric' });
-};
+ÊHOˆ
+ˆ›ŞÙ^O^ÚßHÛÛ\Û™[HœÙXİ[ÛˆˆY^ØÛ\ÜÔÛYÊÊ_HŞ^ŞÈXˆØÜ›ÛX\™Ú[•Üˆ	ÌMœ	È_O‚ˆ›ŞŞ^ŞÈ\Ü^Nˆ	Ù›^	Ë[YÛ’][\Îˆ	ØÙ[\‰ËØ\ˆKKXˆˆ_O‚ˆ\ÙÜ˜\HŞ^ŞÈ›Û˜[Z[Nˆ“Ó•ÒPQS‘Ë›ÛÙZYÚˆ›ÛÚ^™NˆÈÎˆ	ÌKŒœ™[IËYˆ	ÌK\™[IÈH_O‚ˆÚßBˆÕ\ÙÜ˜\O‚ˆ›ŞˆŞ^ŞÂˆˆKKNˆŒË™ØÛÛÜˆ	İ˜\ŠKXÛÛÜ‹\[šÊIË›Ü™\ˆœÛÛY	Ğ“Ô‘TŸXˆ›Û˜[Z[Nˆ“Ó•ÓSÓ“Ë›ÛÙZYÚˆÌ›ÛÚ^™Nˆ	ÌÍ\™[IËˆ_Bˆ‚ˆÊÜ›İ\Ë™Ù]
+ÊH\Èš]™QØİ[Y[×JK›[™İH\\œÂˆĞ›Ş‚ˆĞ›Ş‚ˆ›ŞŞ^ŞÈ\Ü^Nˆ	ÙÜšY	ËØ\ˆˆ_O‚ˆÊÜ›İ\Ë™Ù]
+ÊH\Èš]™QØİ[Y[×JK›X\
 
-const docIcon = (mime: string): React.ReactElement => {
-    if (mime === 'application/pdf') return <PictureAsPdfIcon sx={{ fontSize: 30, color: 'var(--color-text)' }} />;
-    if (mime.startsWith('application/vnd.google-apps') || mime.includes('word') || mime.includes('document')) return <DescriptionIcon sx={{ fontSize: 30, color: 'var(--color-text)' }} />;
-    return <InsertDriveFileIcon sx={{ fontSize: 30, color: 'var(--color-text)' }} />;
-};
+ØÊHOˆ
+ˆØĞØ\™Ù^O^ÙØËšYHØÏ^ÙØßHÏ‚ˆ
+J_BˆĞ›Ş‚ˆĞ›Ş‚ˆ
+J_BˆĞ›Ş‚ˆ
+NÂŸNÂ‚š[\™˜XÙHXY•šY]Ô›ÜÈÂˆ]Nˆİš[™ÎÂˆ\ØÜš\[Ûˆİš[™ÎÂˆš]™U\›ˆİš[™ÎÂˆÛ˜XÚÎˆ
 
-const CLASS_ORDER = ['Class 6', 'Class 7', 'Class 8', 'Class 9', 'Class 10', 'Class 11', 'Class 12'];
+HOˆ›ÚYÂˆÛ“Ü[“[šÎˆ
+\›Îˆİš[™ÊHOˆ›ÚYÂˆÛÛ[ÏÎˆ›Û\ÛÛ[ÎÂŸB‚™^ÜÛÛœİXY•šY]Îˆ™XXİ‘ÏXY•šY]Ô›ÜÏˆH
+È]K\ØÜš\[Û‹š]™U\›Û˜XÚËÛ“Ü[“[šËÛÛ[ÈJHOˆ
+ˆ‚ˆ˜XÚĞ]ÛˆÛÛXÚÏ^ÛÛ˜XÚßHÏ‚ˆ\ÙÜ˜\HŞ^ŞÈ›Û˜[Z[Nˆ“Ó•ÒPQS‘Ë›ÛÙZYÚˆ›ÛÚ^™NˆÈÎˆ	ÌK\™[IËYˆ	Ìœ™[IÈKXˆH_O‚ˆİ]_BˆÕ\ÙÜ˜\O‚ˆ\ÙÜ˜\HŞ^ŞÈ›Û˜[Z[Nˆ“Ó•ÓSÓ“Ë›ÛÚ^™Nˆ	Ì\™[IËÛÛÜˆ	İ˜\ŠKXÛÛÜ‹]^\ÙXÛÛ™\JIËXˆ_O‚ˆÙ\ØÜš\[ÛŸBˆÕ\ÙÜ˜\O‚ˆØÛÛ[È	‰ˆÛÛ[Ë™Øİ[Y[È	‰ˆÛÛ[Ë™Øİ[Y[Ë›[™İˆÈ
+ˆØİ[Y[\İÛÛ[Ï^ØÛÛ[ßHÏ‚ˆ
+Hˆš]™U\›È
+ˆÙ]\›\Jš]™U\›
+HOOH	Ùš]™IÈÈ
+ˆ›ŞˆŞ^ŞÂˆˆˆ^[YÛˆ	ØÙ[\‰Ëˆ›Ü™\ˆÜÛÛY	Ğ“Ô‘TŸXˆ›ŞÚYİÎˆ	ÔÒQÕßXˆ™ØÛÛÜˆ	İ˜\ŠKXÛÛÜ‹X™ÊIËˆ_Bˆ‚ˆ\ÙÜ˜\HŞ^ŞÈ›Û˜[Z[Nˆ“Ó•ÒPQS‘Ë›ÛÙZYÚˆÌXˆˆ_O‚ˆ^\›˜[™\Ûİ\˜ÙBˆÕ\ÙÜ˜\O‚ˆ\ÙÜ˜\HŞ^ŞÈÛÛÜˆ	İ˜\ŠKXÛÛÜ‹]^\ÙXÛÛ™\JIËXˆÈ_O‚ˆ\È™\Ûİ\˜ÙH\ÈÜİY^\›˜[KˆÛXÚÈ™[İÈÈÜ[ˆ][ˆH™]ÈX‹‚ˆÕ\ÙÜ˜\O‚ˆ]Ûˆ˜\šX[H˜ÛÛZ[™YˆÛÛXÚÏ^Ê
+HOˆÛ“Ü[“[šÊš]™U\›
+_HŞ^ŞY[İĞ”ŞO‚ˆÜ[’[“™]ÒXÛÛˆŞ^ŞÈ\ˆKH_HÏˆÜ[ˆ[ˆ™]ÈX‚ˆĞ]Û‚ˆĞ›Ş‚ˆ
+Hˆ
+ˆ‚ˆYœ˜[YUšY]Ù\ˆš]™U\›^Ùš]™U\›H]O^İ]_HZYÚHÍ]šˆZ[’ZYÚHLˆÏ‚ˆ›ŞŞ^ŞÈ\Ü^Nˆ	Ù›^	ËØ\ˆ‹]ˆË›^Ü˜\ˆ	İÜ˜\	È_O‚ˆ]Ûˆ˜\šX[H˜ÛÛZ[™YˆÛÛXÚÏ^Ê
+HOˆÛ“Ü[“[šÊš]™U\›
+_HŞ^ŞY[İĞ”ŞO‚ˆÜ[’[“™]ÒXÛÛˆŞ^ŞÈ\ˆKHHÏˆšY]È[ˆ™]ÈX‚ˆĞ]Û‚ˆ]Ûˆ˜\šX[H›İ][™YˆÛÛXÚÏ^Ê
+HOˆÛ“Ü[“[šÊš]™U\›
+_HŞ^Ûİ][™P”ŞO‚ˆİÛ›ØYXÛÛˆŞ^ŞÈ\ˆKH_HÏˆİÛ›ØYˆĞ]Û‚ˆĞ›Ş‚ˆÏ‚ˆ
+Bˆ
+Hˆ
+ˆ[\Tİ]H]OHÛÛ[ÛÛZ[™ÈÛÛÛˆˆY\ÜØYÙOH•HØİ[Y[T“Ú[™HYYÛÛÛ‹ˆˆÏ‚ˆ
+_Bˆ›ŞŞ^ŞÈ\Ü^Nˆ	Ù›^	Ë\İYPÛÛ[ˆ	Ù›^Y[™	Ë]ˆ_O‚ˆ]Û‚ˆÛÛ\Û™[H˜H‚ˆ™Y^ØXZ[ÎœØZš\ÚZÜÚPÛXZ[˜ÛÛOÜİXš™XİIÙ[˜ÛÙUT’PÛÛ\Û™[
+Ô›Ø›[WH	İ]_X
+_XBˆÚ^™OHœÛX[‚ˆ\šXK[X™[^Ø™\ÜH›Ø›[HÚ]	İ]_XBˆŞ^ŞÂˆ›Û˜[Z[Nˆ“Ó•ÓSÓ“Ë›ÛÙZYÚˆÌ›ÛÚ^™Nˆ	ÌÍ\™[IËˆÛÛÜˆ	İ˜\ŠKXÛÛÜ‹]^\ÙXÛÛ™\JIË™ØÛÛÜˆ	İ˜\ŠKXÛÛÜ‹X™ÊIËˆ›Ü™\ˆœÛÛY	Ğ“Ô‘TŸXNˆKˆKKZ[•ÚYˆˆ^˜[œÙ›Ü›Nˆ	Û›Û™IËˆ	Éšİ™\‰ÎˆÂˆ™ØÛÛÜˆ	İ˜\ŠKXÛÛÜ‹^Y[İÊIËÛÛÜˆ	ÈÌPLPLPIËˆ›Ü™\ÛÛÜˆ“Ô‘T‹ˆKˆ_Bˆ‚ˆ\œ›Ü“İ][™Sİ][™YXÛÛˆŞ^ŞÈ\ˆÍK›ÛÚ^™NˆMˆ_HÏ‚ˆ™\ÜH›Ø›[BˆĞ]Û‚ˆĞ›Ş‚ˆÏ‚ŠNÂ‚š[\™˜XÙH›Û\Ø\™›ÜÈÂˆ]Nˆİš[™ÎÂˆ\ØÜš\[Ûˆİš[™ÎÂˆ\™[]Nˆİš[™ÎÂˆÛÛXÚÎˆ
 
-const classSlug = (name: string): string => name.replace(/[^a-zA-Z0-9]+/g, '-').toLowerCase();
-
-interface DocumentListProps {
-    contents: FolderContents;
-}
-
-const DocCard: React.FC<{ doc: DriveDocument; showClass?: boolean }> = ({ doc, showClass }) => {
-    const openDoc = () => {
-        trackEvent('document_open', {
-            document_title: doc.title,
-            document_class: doc.className ?? null,
-            source: 'teacher_document_list',
-        });
-        window.open(doc.link, '_blank', 'noopener,noreferrer');
-    };
-
-    return (
-    <Box
-        onClick={openDoc}
-        onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openDoc(); } }}
-        role="link"
-        tabIndex={0}
-        sx={{
-            display: 'flex', alignItems: 'center', gap: 2, p: { xs: 1.5, md: 2 },
-            bgcolor: 'var(--color-bg)', border: `3px solid ${BORDER}`,
-            boxShadow: `4px 4px 0px ${SHADOW}`, cursor: 'pointer',
-            '&:hover': { transform: 'translate(-2px, -2px)', boxShadow: `6px 6px 0px ${SHADOW}` },
-            '&:focus-visible': { outline: '3px solid var(--color-yellow)', outlineOffset: '2px' },
-        }}
-    >
-        <Box sx={{ flexShrink: 0 }}>{docIcon(doc.mimeType)}</Box>
-        <Box sx={{ flexGrow: 1, minWidth: 0 }}>
-            {showClass && doc.className && (
-                <Chip
-                    label={doc.className}
-                    size="small"
-                    sx={{
-                        height: 20, mb: 0.5, fontFamily: FONT_MONO, fontWeight: 700, fontSize: '0.7rem',
-                        bgcolor: 'var(--color-yellow)', color: '#1A1A1A', border: `2px solid ${BORDER}`,
-                    }}
-                />
-            )}
-            <Typography sx={{ fontFamily: FONT_HEADING, fontWeight: 700, fontSize: { xs: '0.95rem', md: '1.05rem' }, lineHeight: 1.3 }}>
-                {doc.title}
-            </Typography>
-            {doc.modifiedDate && (
-                <Typography sx={{ fontFamily: FONT_MONO, fontSize: '0.75rem', color: 'var(--color-text-secondary)', mt: 0.5 }}>
-                    Updated: {formatDate(doc.modifiedDate)}
-                </Typography>
-            )}
-        </Box>
-        <OpenInNewIcon sx={{ color: 'var(--color-text-secondary)', flexShrink: 0 }} aria-hidden="true" />
-    </Box>
-    );
-};
-
-export const DocumentList: React.FC<DocumentListProps> = ({ contents }) => {
-    const sorted = [...contents.documents].sort(
-        (a, b) => (b.modifiedDate || '').localeCompare(a.modifiedDate || '')
-    );
-    if (sorted.length === 0) {
-        return <EmptyState title="No documents yet" message="Documents will appear here once added." />;
-    }
-
-    if (!sorted.some((d) => d.className)) {
-        return (
-            <Box sx={{ display: 'grid', gap: 2 }}>
-                {sorted.map((doc) => (
-                    <DocCard key={doc.id} doc={doc} showClass />
-                ))}
-            </Box>
-        );
-    }
-
-    const groups = new Map<string, DriveDocument[]>();
-    for (const doc of sorted) {
-        const key = doc.className || 'Other';
-        if (!groups.has(key)) groups.set(key, []);
-        (groups.get(key) as DriveDocument[]).push(doc);
-    }
-    const orderedKeys = Array.from(groups.keys()).sort((a, b) => {
-        const ia = CLASS_ORDER.indexOf(a);
-        const ib = CLASS_ORDER.indexOf(b);
-        if (ia !== -1 && ib !== -1) return ia - ib;
-        if (ia !== -1) return -1;
-        if (ib !== -1) return 1;
-        return a.localeCompare(b);
-    });
-
-    return (
-        <Box>
-            <Box sx={{ display: 'flex', gap: 1, flexWrap: 'wrap', mb: 3 }} role="navigation" aria-label="Jump to class">
-                {orderedKeys.map((k) => (
-                    <Chip
-                        key={k}
-                        component="a"
-                        href={`#${classSlug(k)}`}
-                        clickable
-                        label={`${k} (${(groups.get(k) as DriveDocument[]).length})`}
-                        sx={{
-                            fontFamily: FONT_MONO, fontWeight: 700, fontSize: '0.8rem',
-                            bgcolor: 'var(--color-bg)', color: 'var(--color-text)',
-                            border: `2px solid ${BORDER}`, boxShadow: `2px 2px 0px ${SHADOW}`,
-                            '&:hover': { bgcolor: 'var(--color-yellow)', color: '#1A1A1A' },
-                        }}
-                    />
-                ))}
-            </Box>
-            {orderedKeys.map((k) => (
-                <Box key={k} component="section" id={classSlug(k)} sx={{ mb: 4, scrollMarginTop: '16px' }}>
-                    <Box sx={{ display: 'flex', alignItems: 'center', gap: 1.5, mb: 2 }}>
-                        <Typography sx={{ fontFamily: FONT_HEADING, fontWeight: 800, fontSize: { xs: '1.2rem', md: '1.45rem' } }}>
-                            {k}
-                        </Typography>
-                        <Box
-                            sx={{
-                                px: 1.5, py: 0.3, bgcolor: 'var(--color-pink)', border: `2px solid ${BORDER}`,
-                                fontFamily: FONT_MONO, fontWeight: 700, fontSize: '0.75rem',
-                            }}
-                        >
-                            {(groups.get(k) as DriveDocument[]).length} papers
-                        </Box>
-                    </Box>
-                    <Box sx={{ display: 'grid', gap: 2 }}>
-                        {(groups.get(k) as DriveDocument[]).map((doc) => (
-                            <DocCard key={doc.id} doc={doc} />
-                        ))}
-                    </Box>
-                </Box>
-            ))}
-        </Box>
-    );
-};
-
-interface LeafViewProps {
-    title: string;
-    description: string;
-    driveUrl: string;
-    onBack: () => void;
-    onOpenLink: (url?: string) => void;
-    contents?: FolderContents;
-}
-
-export const LeafView: React.FC<LeafViewProps> = ({ title, description, driveUrl, onBack, onOpenLink, contents }) => (
-    <>
-        <BackButton onClick={onBack} />
-        <Typography sx={{ fontFamily: FONT_HEADING, fontWeight: 800, fontSize: { xs: '1.5rem', md: '2rem' }, mb: 1 }}>
-            {title}
-        </Typography>
-        <Typography sx={{ fontFamily: FONT_MONO, fontSize: '0.9rem', color: 'var(--color-text-secondary)', mb: 4 }}>
-            {description}
-        </Typography>
-        {contents && contents.documents && contents.documents.length > 0 ? (
-            <DocumentList contents={contents} />
-        ) : driveUrl ? (
-            getUrlType(driveUrl) !== 'drive' ? (
-                <Box
-                    sx={{
-                        p: 4,
-                        textAlign: 'center',
-                        border: `3px solid ${BORDER}`,
-                        boxShadow: `4px 4px 0px ${SHADOW}`,
-                        bgcolor: 'var(--color-bg)',
-                    }}
-                >
-                    <Typography sx={{ fontFamily: FONT_HEADING, fontWeight: 700, mb: 2 }}>
-                        External Resource
-                    </Typography>
-                    <Typography sx={{ color: 'var(--color-text-secondary)', mb: 3 }}>
-                        This resource is hosted externally. Click below to open it in a new tab.
-                    </Typography>
-                    <Button variant="contained" onClick={() => onOpenLink(driveUrl)} sx={yellowBtnSx}>
-                        <OpenInNewIcon sx={{ mr: 1.5 }} /> Open in New Tab
-                    </Button>
-                </Box>
-            ) : (
-                <>
-                    <IframeViewer driveUrl={driveUrl} title={title} height="75vh" minHeight="500px" />
-                    <Box sx={{ display: 'flex', gap: 2, mt: 3, flexWrap: 'wrap' }}>
-                        <Button variant="contained" onClick={() => onOpenLink(driveUrl)} sx={yellowBtnSx}>
-                            <OpenInNewIcon sx={{ mr: 1.5 }} /> View in New Tab
-                        </Button>
-                        <Button variant="outlined" onClick={() => onOpenLink(driveUrl)} sx={outlineBtnSx}>
-                            <DownloadIcon sx={{ mr: 1.5 }} /> Download
-                        </Button>
-                    </Box>
-                </>
-            )
-        ) : (
-            <EmptyState title="Content Coming Soon" message="The document URL will be added soon." />
-        )}
-        <Box sx={{ display: 'flex', justifyContent: 'flex-end', mt: 4 }}>
-            <Button
-                component="a"
-                href={`mailto:sajhishiksha@gmail.com?subject=${encodeURIComponent(`[Problem] ${title}`)}`}
-                size="small"
-                aria-label={`Report a problem with ${title}`}
-                sx={{
-                    fontFamily: FONT_MONO, fontWeight: 700, fontSize: '0.75rem',
-                    color: 'var(--color-text-secondary)', bgcolor: 'var(--color-bg)',
-                    border: `2px solid ${BORDER}`, py: 0.5, px: 1.5, minWidth: 0,
-                    textTransform: 'none',
-                    '&:hover': {
-                        bgcolor: 'var(--color-yellow)', color: '#1A1A1A',
-                        borderColor: BORDER,
-                    },
-                }}
-            >
-                <ErrorOutlineOutlinedIcon sx={{ mr: 0.75, fontSize: 16 }} />
-                Report a problem
-            </Button>
-        </Box>
-    </>
-);
-
-interface FolderCardProps {
-    title: string;
-    description: string;
-    parentTitle: string;
-    onClick: () => void;
-    onKeyDown: (e: React.KeyboardEvent) => void;
-}
-
-export const FolderCard: React.FC<FolderCardProps> = ({ title, description, parentTitle, onClick, onKeyDown }) => (
-    <Box
-        onClick={onClick}
-        onKeyDown={onKeyDown}
-        sx={folderCardSx}
-        role="button" tabIndex={0}
-    >
-        <Box sx={{ display: 'flex', alignItems: 'flex-start', gap: 2.5, flexDirection: { xs: 'column', sm: 'row' } }}>
-            <Box sx={{ p: 1.5, border: `2px solid ${BORDER}`, bgcolor: 'var(--color-yellow)', display: 'inline-flex', flexShrink: 0 }}>
-                <PictureAsPdfIcon sx={{ fontSize: 32, color: 'var(--color-text)' }} />
-            </Box>
-            <Box sx={{ flex: 1, minWidth: 0 }}>
-                <Typography sx={{ fontFamily: FONT_HEADING, fontWeight: 800, fontSize: '1.05rem', mb: 0.5, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
-                    {title}
-                </Typography>
-                <Box sx={{ display: 'inline-flex', px: 1.5, py: 0.3, bgcolor: 'var(--color-pink)', border: `2px solid ${BORDER}`, fontFamily: FONT_MONO, fontWeight: 700, fontSize: '0.75rem', mb: 1 }}>
-                    {parentTitle}
-                </Box>
-                <Typography sx={{ fontSize: '0.85rem', color: 'var(--color-text-secondary)' }}>
-                    {description}
-                </Typography>
-            </Box>
-        </Box>
-        <Box sx={{ mt: 2 }}>
-            <Typography sx={{ display: 'inline-flex', alignItems: 'center', gap: 0.5, fontFamily: FONT_MONO, fontSize: '0.75rem', fontWeight: 700, color: 'var(--color-text-secondary)', textTransform: 'uppercase', letterSpacing: '0.5px' }}>
-                Browse <ArrowForwardIcon sx={{ fontSize: 14 }} />
-            </Typography>
-        </Box>
-    </Box>
-);
-
-interface ResourceCardWrapperProps {
-    item: any;
-    subject: string;
-    onView: (id: string) => void;
-    onDownload: (url: string) => void;
-}
-
-export const ResourceCardWrapper: React.FC<ResourceCardWrapperProps> = ({ item, subject, onView, onDownload }) => (
-    <ResourceCard
-        resource={teacherCardToResource(item, subject)}
-        viewMode="grid"
-        onView={onView}
-        onDownload={onDownload}
-    />
-);
-
-// ExternalLinkCard and cardColors have been removed as all leaf components are now rendered by the unified ResourceCard.
-
-interface BreadcrumbItem {
-    label: string;
-    onClick?: () => void;
-    isCurrent?: boolean;
-}
-
-interface TeacherBreadcrumbsProps {
-    items: BreadcrumbItem[];
-}
-
-export const TeacherBreadcrumbs: React.FC<TeacherBreadcrumbsProps> = ({ items }) => (
-    <Box sx={{ display: 'flex', alignItems: 'center', gap: 0.5, mb: 3, flexWrap: 'wrap' }}>
-        {items.map((item, i) => (
-            <React.Fragment key={i}>
-                {i > 0 && (
-                    <ChevronRightIcon sx={{ fontSize: '1rem', color: 'var(--color-text-secondary)' }} aria-hidden="true" />
-                )}
-                {item.isCurrent ? (
-                    <Typography component="span" sx={{ fontFamily: FONT_HEADING, fontSize: '0.85rem', fontWeight: 700, color: 'var(--color-text)' }} aria-current="page">
-                        {item.label}
-                    </Typography>
-                ) : (
-                    <Box
-                        component="span"
-                        onClick={item.onClick}
-                        onKeyDown={(e) => { if ((e.key === 'Enter' || e.key === ' ') && item.onClick) { e.preventDefault(); item.onClick(); } }}
-                        sx={breadcrumbLinkSx}
-                        role="link" tabIndex={0}
-                    >
-                        {item.label}
-                    </Box>
-                )}
-            </React.Fragment>
-        ))}
-    </Box>
-);
+HOˆ›ÚYÂˆÛ’Ù^QİÛˆ
+Nˆ™XXİ’Ù^X›Ø\™]™[
+HOˆ›ÚYÂŸB‚™^ÜÛÛœİ›Û\Ø\™ˆ™XXİ‘Ï›Û\Ø\™›ÜÏˆH
+È]K\ØÜš\[Û‹\™[]KÛÛXÚËÛ’Ù^QİÛˆJHOˆ
+ˆ›ŞˆÛÛXÚÏ^ÛÛÛXÚßBˆÛ’Ù^QİÛ^ÛÛ’Ù^QİÛŸBˆŞ^Ù›Û\Ø\™ŞBˆ›ÛOH˜]ÛˆˆX’[™^^ÌBˆ‚ˆ›ŞŞ^ŞÈ\Ü^Nˆ	Ù›^	Ë[YÛ’][\Îˆ	Ù›^\İ\	ËØ\ˆ‹K›^\™Xİ[ÛˆÈÎˆ	ØÛÛ[[‰ËÛNˆ	Ü›İÉÈH_O‚ˆ›ŞŞ^ŞÈˆKK›Ü™\ˆœÛÛY	Ğ“Ô‘TŸX™ØÛÛÜˆ	İ˜\ŠKXÛÛÜ‹^Y[İÊIË\Ü^Nˆ	Ú[›[™KY›^	Ë›^Úš[šÎˆ_O‚ˆXİ\™P\Ô’XÛÛˆŞ^ŞÈ›ÛÚ^™NˆÌ‹ÛÛÜˆ	İ˜\ŠKXÛÛÜ‹]^
+IÈ_HÏ‚ˆĞ›Ş‚ˆ›ŞŞ^ŞÈ›^ˆKZ[•ÚYˆ_O‚ˆ\ÙÜ˜\HŞ^ŞÈ›Û˜[Z[Nˆ“Ó•ÒPQS‘Ë›ÛÙZYÚˆ›ÛÚ^™Nˆ	ÌKŒ\™[IËXˆKİ™\™›İÎˆ	ÚY[‰Ë^İ™\™›İÎˆ	Ù[\Ú\ÉËÚ]TÜXÙNˆ	Û›İÜ˜\	È_O‚ˆİ]_BˆÕ\ÙÜ˜\O‚ˆ›ŞŞ^ŞÈ\Ü^Nˆ	Ú[›[™KY›^	ËˆKKNˆŒË™ØÛÛÜˆ	İ˜\ŠKXÛÛÜ‹\[šÊIË›Ü™\ˆœÛÛY	Ğ“Ô‘TŸX›Û˜[Z[Nˆ“Ó•ÓSÓ“Ë›ÛÙZYÚˆÌ›ÛÚ^™Nˆ	ÌÍ\™[IËXˆH_O‚ˆÜ\™[]_BˆĞ›Ş‚ˆ\ÙÜ˜\HŞ^ŞÈ›ÛÚ^™Nˆ	Ì\™[IËÛÛÜˆ	İ˜\ŠKXÛÛÜ‹]^\ÙXÛÛ™\JIÈ_O‚ˆÙ\ØÜš\[ÛŸBˆÕ\ÙÜ˜\O‚ˆĞ›Ş‚ˆĞ›Ş‚ˆ›ŞŞ^ŞÈ]ˆˆ_O‚ˆ\ÙÜ˜\HŞ^ŞÈ\Ü^Nˆ	Ú[›[™KY›^	Ë[YÛ’][\Îˆ	ØÙ[\‰ËØ\ˆK›Û˜[Z[Nˆ“Ó•ÓSÓ“Ë›ÛÚ^™Nˆ	ÌÍ\™[IË›ÛÙZYÚˆÌÛÛÜˆ	İ˜\ŠKXÛÛÜ‹]^\ÙXÛÛ™\JIË^˜[œÙ›Ü›Nˆ	İ\\˜Ø\ÙIË]\”ÜXÚ[™Îˆ	Ì\	È_O‚ˆœ›İÜÙH\œ›İÑ›ÜØ\™XÛÛˆŞ^ŞÈ›ÛÚ^™NˆM_HÏ‚ˆÕ\ÙÜ˜\O‚ˆĞ›Ş‚ˆĞ›Ş‚ŠNÂ‚š[\™˜XÙH™\Ûİ\˜ÙPØ\™Ô˜\\”›ÜÈÂˆ][Nˆ[NÂˆİXš™Xİˆİš[™ÎÂˆÛ•šY]Îˆ
+Yˆİš[™ÊHOˆ›ÚYÂˆÛ‘İÛ›ØYˆ
+\›ˆİš[™ÊHOˆ›ÚYÂŸB‚™^ÜÛÛœİ™\Ûİ\˜ÙPØ\™İÉ¥…Á•ÈèI•…Ğ¹ñI•Í½ÕÉ•…É‘]É…ÁÁ•ÉAÉ½ÁÌø€ô€¡ì¥Ñ•´°ÍÕ‰©•Ğ°½¹Y¥•Ü°½¹½İ¹±½…ô¤€ôø€ (€€€€ñI•Í½ÕÉ•…É(€€€€€€€É•Í½ÕÉ”õíÑ•…¡•É…É‘Q½I•Í½ÕÉ”¡¥Ñ•´°ÍÕ‰©•Ğ¥ô(€€€€€€€Ù¥•İ5½‘”ô‰É¥ˆ(€€€€€€€½¹Y¥•Üõí½¹Y¥•İô(€€€€€€€½¹½İ¹±½…õí½¹½İ¹±½…‘ô(€€€€¼ø((ó2÷n#\n
