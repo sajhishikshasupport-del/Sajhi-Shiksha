@@ -128,19 +128,32 @@ const docIcon = (mime: string): React.ReactElement => {
     return <InsertDriveFileIcon sx={{ fontSize: 30, color: 'var(--color-text)' }} />;
 };
 
-const CLASS_ORDER = ['Class 6', 'Class 7', 'Class 8', 'Class 9', 'Class 10', 'Class 11', 'Class 12'];
+const CLASS_ORDER = ['Class 6', 'Class 7', 'Class 8', 'Class 9', 'Class 10', 'Class 11', 'Class 12', 'Class 11 Applied Maths', 'Class 12 Applied Maths'];
 
 const classSlug = (name: string): string => name.replace(/[^a-zA-Z0-9]+/g, '-').toLowerCase();
+
+// Applied Maths documents (question papers / question banks) get their own class
+// sections after the regular ones. Derived from the title so that files added by the
+// nightly Drive sync ("...Applied Maths..." / "12_Appliedmath_...") group automatically.
+const APPLIED_MATHS_TITLE = /applied[\s_-]*math/i;
+const effectiveClassName = (doc: DriveDocument): string | null => {
+    const isApplied = APPLIED_MATHS_TITLE.test(doc.title);
+    if (doc.className) return isApplied ? `${doc.className} Applied Maths` : doc.className;
+    if (!isApplied) return null;
+    const m = doc.title.match(/(?:^|\D)(6|7|8|9|10|11|12)(?:\D|$)/);
+    return `Class ${m ? m[1] : '12'} Applied Maths`;
+};
 
 interface DocumentListProps {
     contents: FolderContents;
 }
 
 const DocCard: React.FC<{ doc: DriveDocument; showClass?: boolean }> = ({ doc, showClass }) => {
+    const classLabel = showClass ? effectiveClassName(doc) : null;
     const openDoc = () => {
         trackEvent('document_open', {
             document_title: doc.title,
-            document_class: doc.className ?? null,
+            document_class: effectiveClassName(doc),
             source: 'teacher_document_list',
         });
         window.open(doc.link, '_blank', 'noopener,noreferrer');
@@ -162,9 +175,9 @@ const DocCard: React.FC<{ doc: DriveDocument; showClass?: boolean }> = ({ doc, s
     >
         <Box sx={{ flexShrink: 0 }}>{docIcon(doc.mimeType)}</Box>
         <Box sx={{ flexGrow: 1, minWidth: 0 }}>
-            {showClass && doc.className && (
+            {classLabel && (
                 <Chip
-                    label={doc.className}
+                    label={classLabel}
                     size="small"
                     sx={{
                         height: 20, mb: 0.5, fontFamily: FONT_MONO, fontWeight: 700, fontSize: '0.7rem',
@@ -206,7 +219,7 @@ export const DocumentList: React.FC<DocumentListProps> = ({ contents }) => {
 
     const groups = new Map<string, DriveDocument[]>();
     for (const doc of sorted) {
-        const key = doc.className || 'Other';
+        const key = effectiveClassName(doc) || 'Other';
         if (!groups.has(key)) groups.set(key, []);
         (groups.get(key) as DriveDocument[]).push(doc);
     }
