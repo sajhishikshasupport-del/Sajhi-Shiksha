@@ -1,0 +1,19 @@
+name: Add CMP FLN Cub Bulbul Toy Based Pedagogy leaves
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 frontend/scripts/extra-website-20260928.py
+      - name: Commit and push if changed
+        run: |
+          git config user.name "sajhishiksha-support"
+          git config user.email "sajhishikshasupport@gmail.com"
+          git add frontend/src/data/teacher-contents-primary.json frontend/src/data/teachers.json
+          git diff --cached --quiet && echo "no changes" && exit 0
+          git commit -m "feat: add CMP, FLN, Cub Bulbul, Toy Based Pedagogy leaves and misc training docs to Programmes & Common"
+          git push
