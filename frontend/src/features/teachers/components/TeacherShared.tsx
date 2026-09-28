@@ -263,7 +263,7 @@ export const DocumentList: React.FC<DocumentListProps> = ({ contents }) => {
                                 fontFamily: FONT_MONO, fontWeight: 700, fontSize: '0.75rem',
                             }}
                         >
-                            {(groups.get(k) as DriveDocument[]).length} papers
+                            {(groups.get(k) as DriveDocument[]).length} files
                         </Box>
                     </Box>
                     <Box sx={{ display: 'grid', gap: 2 }}>
