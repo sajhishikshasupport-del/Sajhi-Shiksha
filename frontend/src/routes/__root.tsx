@@ -8,6 +8,7 @@ import PageTransition from '@/components/PageTransition/PageTransition';
 import CookieConsent from '@/components/CookieConsent/CookieConsent';
 import WhatsAppButton from '@/components/WhatsAppButton/WhatsAppButton';
 import { useAnalytics } from '@/hooks/useAnalytics';
+import { useAdSense } from '@/hooks/useAdSense';
 
 export const Route = createRootRoute({
     component: RootComponent,
@@ -15,6 +16,7 @@ export const Route = createRootRoute({
 
 function RootComponent(): React.ReactElement {
     useAnalytics();
+    useAdSense();
 
     const isDev = import.meta.env.DEV;
     const Devtools = isDev
