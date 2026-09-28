@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { Box, Tooltip } from '@mui/material';
 import { WhatsAppIcon } from '@/components/Icons';
-import siteContent from '@/data/site.json';
+import contributorsData from '@/data/contributors.json';
 
 const WhatsAppButton: React.FC = () => {
     const [showPulse, setShowPulse] = useState(false);
-    const url = siteContent.site.whatsappGroupUrl;
+    const url = contributorsData.whatsappLink;
 
     useEffect(() => {
         if (!url) return;
@@ -19,13 +19,13 @@ const WhatsAppButton: React.FC = () => {
     if (!url) return null;
 
     return (
-        <Tooltip title="Join our WhatsApp group" placement="left">
+        <Tooltip title="Chat with us — share or request content" placement="left">
             <Box
                 component="a"
                 href={url}
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Join WhatsApp group"
+                aria-label="Chat with us on WhatsApp"
                 sx={{
                     position: 'fixed',
                     bottom: 24,
