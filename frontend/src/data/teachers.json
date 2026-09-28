@@ -337,6 +337,21 @@
                 ]
             },
             {
+                "id": "primary-class-3",
+                "title": "Class 3",
+                "description": "Class 3 textbooks (new NCERT 2024 series)",
+                "icon": "School",
+                "hasSubCards": true,
+                "subCards": [
+                    {
+                        "id": "class-3-textbook",
+                        "title": "Textbook",
+                        "description": "Class 3 textbooks: Santoor (English), Veena (Hindi), Maths Mela",
+                        "driveUrl": "https://drive.google.com/embeddedfolderview?id=1P9r30_bU-bjGPwzuJvJ_KZCyr7gAN1wo#list"
+                    }
+                ]
+            },
+            {
                 "id": "programmes-common",
                 "title": "Programmes & Common",
                 "description": "Common primary programmes and teacher resources",
@@ -348,6 +363,12 @@
                         "title": "Miscellaneous",
                         "description": "Teacher training and resource materials",
                         "driveUrl": "https://drive.google.com/embeddedfolderview?id=19pbEhZbnm0b04kdsuUQHlh_r8MCo8kpG#list"
+                    },
+                    {
+                        "id": "programmes-mdp",
+                        "title": "Multidisciplinary Project (MDP)",
+                        "description": "MDP guidelines, rubrics, templates and project examples",
+                        "driveUrl": "https://drive.google.com/embeddedfolderview?id=1YYh-NpCKLHtNturPUKgwTTl3ZDaSPNzm#list"
                     }
                 ]
             }
