@@ -250,6 +250,60 @@
                     ]
                 }
             ]
+        },
+        {
+            "id": "primary-hm",
+            "title": "Primary Teachers & HM",
+            "description": "Primary classes (1-5) resources, programmes, and Head Master materials",
+            "icon": "MenuBook",
+            "buttonColor": "var(--color-purple)",
+            "subCards": [
+                {
+                    "id": "primary-class-1",
+                    "title": "Class 1",
+                    "description": "Class 1 lesson plans, worksheets, question papers, SRP and textbooks",
+                    "icon": "School",
+                    "hasSubCards": true,
+                    "subCards": [
+                        {
+                            "id": "class-1-srp",
+                            "title": "SRP / Vidya Pravesh",
+                            "description": "School Readiness Programme and Vidya Pravesh materials",
+                            "driveUrl": "https://drive.google.com/embeddedfolderview?id=12v7jpf-7JRa6SE9P-JhX5dez9HTZ6zbH#list"
+                        },
+                        {
+                            "id": "class-1-lesson-plans",
+                            "title": "Lesson Plans",
+                            "description": "Class 1 lesson plans (English, EVS)",
+                            "driveUrl": "https://drive.google.com/embeddedfolderview?id=1HfdIi7hLZjSMr5aLNlLEp8EkktD-gb72#list"
+                        },
+                        {
+                            "id": "class-1-worksheets",
+                            "title": "Worksheets",
+                            "description": "Class 1 worksheets (English, EVS, Hindi, Maths)",
+                            "driveUrl": "https://drive.google.com/embeddedfolderview?id=1GBdocJ_bx06rwCV99pFNDt3EVJBF9EoE#list"
+                        },
+                        {
+                            "id": "class-1-question-papers",
+                            "title": "Question Papers",
+                            "description": "Class 1 cycle tests and question papers",
+                            "driveUrl": "https://drive.google.com/embeddedfolderview?id=1o4X5hla0be6_YxU7vxkKehqnHSXaEzFP#list"
+                        },
+                        {
+                            "id": "class-1-textbook",
+                            "title": "Textbook, Split-up & TLO",
+                            "description": "Class 1 textbook, split-ups and learning outcomes",
+                            "driveUrl": "https://drive.google.com/embeddedfolderview?id=1HD2WW7xnh4yfc2kup3MTOFwiqKoT3_4G#list"
+                        },
+                        {
+                            "id": "class-1-av",
+                            "title": "Audio-Video Resources",
+                            "description": "Class 1 audio-video teaching resources (PPTs)",
+                            "driveUrl": "https://drive.google.com/embeddedfolderview?id=1UKwW4tlrRRPjszpCx3-pVkB52rnkBROd#list"
+                        }
+                    ]
+                }
+            ]
         }
     ]
 }
