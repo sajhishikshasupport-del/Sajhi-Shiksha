@@ -52,3 +52,4 @@ export { default as TelegramIcon } from '@mui/icons-material/Telegram';
 export { default as GitHubIcon } from '@mui/icons-material/GitHub';
 export { default as CodeIcon } from '@mui/icons-material/Code';
 
+export { default as CloudUploadIcon } from '@mui/icons-material/CloudUpload';
