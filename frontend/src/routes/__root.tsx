@@ -1,6 +1,6 @@
-import { createRootRoute, Outlet } from '@tanstack/react-router';
-import { Box } from '@mui/material';
-import React, { Suspense } from 'react';
+import { createRootRoute, Outlet, type ErrorComponentProps } from '@tanstack/react-router';
+import { Box, Button, Typography } from '@mui/material';
+import React, { Suspense, useEffect } from 'react';
 import Header from '@/components/Header/Header';
 import Footer from '@/components/Footer/Footer';
 import BottomTabBar from '@/components/BottomTabBar/BottomTabBar';
@@ -12,7 +12,61 @@ import { useAdSense } from '@/hooks/useAdSense';
 
 export const Route = createRootRoute({
     component: RootComponent,
+    errorComponent: RouteErrorComponent,
 });
+
+/**
+ * Route-level error screen.
+ * "Failed to fetch dynamically imported module" happens when a visitor's
+ * cached (old) build tries to load JS chunks that a newer deployment has
+ * replaced — fix is a single automatic hard reload (guarded so it can't loop).
+ */
+function RouteErrorComponent({ error }: ErrorComponentProps): React.ReactElement {
+    const isChunkError: boolean =
+        /failed to fetch dynamically imported module|importing a module script failed|error loading dynamically imported module/i.test(
+            error?.message ?? ''
+        );
+
+    useEffect(() => {
+        if (!isChunkError) return;
+        const KEY = 'ss-chunk-reload-at';
+        const last = Number(sessionStorage.getItem(KEY) || 0);
+        if (Date.now() - last > 10000) {
+            sessionStorage.setItem(KEY, String(Date.now()));
+            window.location.reload();
+        }
+    }, [isChunkError]);
+
+    return (
+        <Box
+            sx={{
+                minHeight: '60vh',
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                justifyContent: 'center',
+                px: 2,
+                textAlign: 'center',
+            }}
+        >
+            <Typography variant="h4" sx={{ fontWeight: 800, mb: 1 }}>
+                {isChunkError ? 'Website updated' : 'Something went wrong'}
+            </Typography>
+            <Typography color="text.secondary" sx={{ mb: 3, maxWidth: 460 }}>
+                {isChunkError
+                    ? 'The website was recently updated. Loading the latest version...'
+                    : (error?.message ?? 'An unexpected error occurred')}
+            </Typography>
+            <Button
+                variant="contained"
+                onClick={() => window.location.reload()}
+                sx={{ fontWeight: 700 }}
+            >
+                Reload Page
+            </Button>
+        </Box>
+    );
+}
 
 function RootComponent(): React.ReactElement {
     useAnalytics();
