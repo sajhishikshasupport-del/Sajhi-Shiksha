@@ -1,0 +1,54 @@
+name: Apply pending content changes (2026-09-28)
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Apply patch
+        run: python frontend/scripts/apply-pending-20260928.py
+
+      - name: Commit and push (tgt-pgt sync)
+        run: |
+          git config user.name "sajhishikshasupport-del"
+          git config user.email "sajhishiksha@gmail.com"
+          git add frontend/src/data/teacher-contents.json
+          if git diff --cached --quiet; then echo "No changes"; else
+            git commit -m "chore: nightly drive sync (tgt-pgt) — +0 new, -0 removed, 13 title updates"
+            git push
+          fi
+
+      - name: Commit and push (circular-formats sync)
+        run: |
+          git add frontend/src/data/teacher-contents-circular.json
+          if git diff --cached --quiet; then echo "No changes"; else
+            git commit -m "chore: nightly drive sync (circular-formats) — +0 new, -0 removed, 4 updates"
+            git push
+          fi
+
+      - name: Commit and push (DIKSHA link)
+        run: |
+          git add frontend/src/data/teachers.json
+          if git diff --cached --quiet; then echo "No changes"; else
+            git commit -m "feat: content scout — added DIKSHA (NCERT national digital platform) link to circular-formats miscellaneous"
+            git push
+          fi
+
+      - name: Commit and push (ISI book)
+        run: |
+          git add frontend/src/data/math-lovers-contents.json frontend/src/data/sections.json
+          if git diff --cached --quiet; then echo "No changes"; else
+            git commit -m "feat: add ISI Test of Mathematics book to Math Lovers olympiad section"
+            git push
+          fi
