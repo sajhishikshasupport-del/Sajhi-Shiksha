@@ -2,6 +2,7 @@ import type { Resource, ContentBlock, OlympiadSection } from '@/types';
 import teachersData from '@/data/teachers.json';
 import teacherContentsData from '@/data/teacher-contents.json';
 import teacherContentsCircularData from '@/data/teacher-contents-circular.json';
+import teacherContentsPrimaryData from '@/data/teacher-contents-primary.json';
 import studentsData from '@/data/students.json';
 import sectionsData from '@/data/sections.json';
 import { findCardDeep, findTeacherResourceById, teacherCardToResource } from '@/lib/utils';
@@ -112,7 +113,8 @@ function buildFlattenedResources(): Resource[] {
     }
 
     // 2. Individual teacher documents from teacher-contents.json (Drive files inside leaf folders)
-    const contentsRecord = { ...teacherContentsData, ...teacherContentsCircularData } as unknown as Record<string, unknown>;
+    const contentsRecord = { ...teacherContentsData, ...teacherContentsCircularData, ...teacherContentsPrimaryData } as unknown as Record<string, unknown>;
+    const primaryLeafIds = new Set(Object.keys(teacherContentsPrimaryData as unknown as object));
     for (const leafId of Object.keys(contentsRecord)) {
         const leaf = contentsRecord[leafId] as { documents?: Array<Record<string, unknown>> } | null;
         const documents = leaf?.documents ?? [];
@@ -139,7 +141,7 @@ function buildFlattenedResources(): Resource[] {
                 description: [leafTitle, className].filter(Boolean).join(' — ') || 'Teacher-shared document',
                 category: 'teacher',
                 class: classMatch ? parseInt(classMatch[1] ?? '', 10) : null,
-                subject: 'Mathematics',
+                subject: primaryLeafIds.has(leafId) ? 'General' : 'Mathematics',
                 type,
                 driveUrl: docLink,
                 urlType,
