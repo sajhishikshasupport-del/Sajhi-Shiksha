@@ -395,6 +395,27 @@
                         "driveUrl": "https://drive.google.com/embeddedfolderview?id=15MnfWOvrGSlBcVYB0D55VWtsWwuqSOEH#list"
                     }
                 ]
+            },
+            {
+                "id": "hm-corner",
+                "title": "HM Corner",
+                "description": "Resources for Head Masters and primary section administration",
+                "icon": "School",
+                "hasSubCards": true,
+                "subCards": [
+                    {
+                        "id": "hm-materials",
+                        "title": "HM Materials",
+                        "description": "APAR, supervision, inspection and administration resources for Head Masters",
+                        "driveUrl": "https://drive.google.com/embeddedfolderview?id=1NlSxEdmT0nr7xeP-GDKGUzEDtcLCR7N9#list"
+                    },
+                    {
+                        "id": "hm-records",
+                        "title": "Records & Registers",
+                        "description": "Records, registers and proformas to be maintained in the primary section",
+                        "driveUrl": "https://drive.google.com/embeddedfolderview?id=1XpgkM4M0JII04J5jEt4O3zRX1WtNUtRp#list"
+                    }
+                ]
             }
             ]
         }
