@@ -10,9 +10,9 @@ const ADSENSE_SCRIPT_SRC = 'https://pagead2.googlesyndication.com/pagead/js/adsb
  *   - /search  : dynamic results page, noindex
  *   - 404 splat route ('/$') : not-found page
  */
-function isAdFreeRoute(pathname: string, lastRouteId?: string): boolean {
+function isAdFreeRoute(pathname: string, lastRouteId: string): boolean {
     if (pathname === '/search' || pathname.startsWith('/search/')) return true;
-    if (lastRouteId && lastRouteId.endsWith('/$')) return true; // 404 splat route
+    if (lastRouteId.endsWith('/$')) return true; // 404 splat route
     return false;
 }
 
@@ -23,9 +23,11 @@ function isAdFreeRoute(pathname: string, lastRouteId?: string): boolean {
  * verification meta (google-adsense-account) stays in index.html.
  */
 export function useAdSense(): void {
-    const pathname = useRouterState({ select: (s) => s.location.pathname });
-    const lastRouteId = useRouterState({
-        select: (s) => s.matches[s.matches.length - 1]?.routeId,
+    const { pathname, lastRouteId } = useRouterState({
+        select: (s) => ({
+            pathname: s.location.pathname,
+            lastRouteId: s.matches[s.matches.length - 1]?.routeId ?? '',
+        }),
     });
 
     useEffect(() => {
