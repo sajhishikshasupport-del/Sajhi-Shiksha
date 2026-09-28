@@ -38,7 +38,7 @@ const ROUTES = [
         path: 'for-teachers',
         title: 'For Teachers — Teaching Resources — Sajhi Shiksha',
         description:
-            'Teacher resources including TGT/PGT Maths materials, circulars, formats, and KVS teaching resources.',
+            'Teacher resources including TGT/PGT Maths materials, primary classes (1-5), circulars, formats, and KVS teaching resources.',
         ogImage: '/images/og-teachers.png',
     },
     {
@@ -54,6 +54,13 @@ const ROUTES = [
         description:
             'KVS circulars and office formats: GOI rules, KVS rules, admission, time table, CBSE/NIOS formats, morning assembly and more.',
         ogImage: '/images/og-circular.png',
+    },
+    {
+        path: 'for-teachers/primary-hm',
+        title: 'Primary Teachers & HM — Sajhi Shiksha',
+        description:
+            'Primary classes (1-5) teaching resources: lesson plans, worksheets, cycle tests, SRP, textbooks, split-ups, primary programmes, and Head Master materials.',
+        ogImage: '/images/og-teachers.png',
     },
     {
         path: 'for-math-lovers',
