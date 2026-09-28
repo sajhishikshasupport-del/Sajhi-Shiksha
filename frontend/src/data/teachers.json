@@ -240,6 +240,12 @@
                             "title": "Others",
                             "description": "Other miscellaneous documents",
                             "driveUrl": "https://drive.google.com/embeddedfolderview?id=1NFdXj6ijN_NspZCQL-OQEHjRbg70qd3o#list"
+                        },
+                        {
+                            "id": "diksha-portal",
+                            "title": "DIKSHA - National Digital Platform (NCERT/MoE)",
+                            "description": "Sarkari (NCERT/Ministry of Education) digital platform - NCERT-aligned maths videos, practice exercises, question banks and textbook QR-code content, Class 1-12, 36 Indian languages. Free and official.",
+                            "driveUrl": "https://diksha.gov.in/"
                         }
                     ]
                 }
