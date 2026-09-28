@@ -1,24 +1,27 @@
 {
-    "email": "sajhishiksha@gmail.com",
-    "whatsapp": "",
-    "contributors": [
-        {
-            "name": "Ms. Jyoti",
-            "role": "Head Mistress, KV Gorakhpur",
-            "contribution": "Classes 1-5 Resources",
-            "initials": "MJ"
-        },
-        {
-            "name": "Mr. Ajit Yadav",
-            "role": "Primary Teacher, KV Loktak",
-            "contribution": "Mathematics Resources",
-            "initials": "AY"
-        },
-        {
-            "name": "Mr. Bhupesh Sharma",
-            "role": "Primary Teacher, KV Loktak",
-            "contribution": "English Resources",
-            "initials": "BS"
-        }
-    ]
+  "email": "sajhishikshasupport@gmail.com",
+  "whatsapp": "+917579797637",
+  "whatsappLink": "https://wa.me/917579797637?text=Hi!%20I%20want%20to%20contribute%20study%20material%20for%20Sajhi%20Shiksha.",
+  "formUrl": "https://docs.google.com/forms/d/1kQao545fc-hIQjuEXdJ0g7hLg2tiVofH3lIHwISnUr4/viewform",
+  "driveFolderUrl": "https://drive.google.com/drive/folders/1a1AbsMJKOTDeRURj8CWggHFLzLGuwLT5",
+  "contributors": [
+    {
+      "name": "Ms. Jyoti",
+      "role": "Head Mistress, KV Gorakhpur",
+      "contribution": "Classes 1-5 Resources",
+      "initials": "MJ"
+    },
+    {
+      "name": "Mr. Ajit Yadav",
+      "role": "Primary Teacher, KV Loktak",
+      "contribution": "Mathematics Resources",
+      "initials": "AY"
+    },
+    {
+      "name": "Mr. Bhupesh Sharma",
+      "role": "Primary Teacher, KV Loktak",
+      "contribution": "English Resources",
+      "initials": "BS"
+    }
+  ]
 }
