@@ -478,6 +478,48 @@ export default function ContributePage({ onNavigate }: ContributePageProps) {
                 </Typography>
             </Box>
 
+            <Box
+                sx={{
+                    p: 4,
+                    mb: 8,
+                    textAlign: 'center',
+                    bgcolor: isDark ? 'var(--color-bg-secondary)' : 'var(--color-yellow)',
+                    border: `3px solid ${borderColor}`,
+                    boxShadow: `4px 4px 0px ${shadowColor}`,
+                }}
+            >
+                <Typography
+                    sx={{
+                        fontFamily: FONT_HEADING,
+                        fontWeight: 800,
+                        fontSize: { xs: '1.3rem', md: '1.6rem' },
+                        mb: 1,
+                    }}
+                >
+                    Can't Find Something?
+                </Typography>
+                <Typography
+                    sx={{
+                        color: 'var(--color-text-secondary)',
+                        fontSize: '1rem',
+                        mb: 3,
+                        maxWidth: 600,
+                        mx: 'auto',
+                    }}
+                >
+                    Looking for a question paper, notes, or any resource that is not on the website yet? Just message us on WhatsApp — we will arrange it and publish it for everyone.
+                </Typography>
+                <Button
+                    variant="contained"
+                    href={whatsappLink}
+                    target="_blank"
+                    startIcon={<WhatsAppIcon />}
+                    sx={cardButtonSx}
+                >
+                    Request on WhatsApp
+                </Button>
+            </Box>
+
             <Typography
                 sx={{
                     fontFamily: FONT_HEADING,
