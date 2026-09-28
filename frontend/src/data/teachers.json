@@ -302,7 +302,55 @@
                             "driveUrl": "https://drive.google.com/embeddedfolderview?id=1UKwW4tlrRRPjszpCx3-pVkB52rnkBROd#list"
                         }
                     ]
-                }
+                },
+            {
+                "id": "primary-class-2",
+                "title": "Class 2",
+                "description": "Class 2 lesson plans, worksheets, question papers, textbooks and split-ups",
+                "icon": "School",
+                "hasSubCards": true,
+                "subCards": [
+                    {
+                        "id": "class-2-lesson-plans",
+                        "title": "Lesson Plans",
+                        "description": "Class 2 lesson plans (EVS, English, Maths)",
+                        "driveUrl": "https://drive.google.com/embeddedfolderview?id=1CDV00lkdtQBW8_U0Xj5JIrZ-rew1cvJJ#list"
+                    },
+                    {
+                        "id": "class-2-worksheets",
+                        "title": "Worksheets",
+                        "description": "Class 2 worksheets (English, EVS, Hindi, Maths)",
+                        "driveUrl": "https://drive.google.com/embeddedfolderview?id=1BYLnzjEo9Az9GtmXBP4v8sz40I6PuCG0#list"
+                    },
+                    {
+                        "id": "class-2-question-papers",
+                        "title": "Question Papers",
+                        "description": "Class 2 cycle tests and question papers",
+                        "driveUrl": "https://drive.google.com/embeddedfolderview?id=1sVTbXNeFWNrj2-D3W5KdhJkx829l_zDs#list"
+                    },
+                    {
+                        "id": "class-2-textbook",
+                        "title": "Textbook, Split-up & TLO",
+                        "description": "Class 2 textbooks, split-ups and learning outcomes",
+                        "driveUrl": "https://drive.google.com/embeddedfolderview?id=1fnM1e5pBF5EPaHEe1AX6C8dwTWbCZfhI#list"
+                    }
+                ]
+            },
+            {
+                "id": "programmes-common",
+                "title": "Programmes & Common",
+                "description": "Common primary programmes and teacher resources",
+                "icon": "Campaign",
+                "hasSubCards": true,
+                "subCards": [
+                    {
+                        "id": "programmes-misc",
+                        "title": "Miscellaneous",
+                        "description": "Teacher training and resource materials",
+                        "driveUrl": "https://drive.google.com/embeddedfolderview?id=19pbEhZbnm0b04kdsuUQHlh_r8MCo8kpG#list"
+                    }
+                ]
+            }
             ]
         }
     ]
