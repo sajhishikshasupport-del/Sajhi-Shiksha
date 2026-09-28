@@ -25,8 +25,8 @@ const STEPS = [
     {
         number: 3,
         icon: <CheckCircleIcon sx={{ fontSize: 32 }} />,
-        title: 'Reviewed & Credited',
-        description: "We review every submission and publish it with your name credited as the contributor.",
+        title: 'Reviewed & Published',
+        description: 'We review every submission and publish it on the website for everyone to use.'
     },
 ];
 
@@ -83,7 +83,7 @@ export default function ContributePage({ onNavigate }: ContributePageProps) {
         {
             icon: <CloudUploadIcon sx={{ fontSize: 40 }} />,
             title: 'Upload via Form',
-            description: 'Fill a short form and upload up to 10 files at once. Your name and school get credited automatically.',
+            description: 'Fill a short form and upload up to 10 files at once — quick and simple.',
             action: 'Open Form',
             href: formLink,
         },
