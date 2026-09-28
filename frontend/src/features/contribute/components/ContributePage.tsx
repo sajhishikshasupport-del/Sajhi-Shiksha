@@ -1,5 +1,5 @@
 import { Box, Typography, Button, Grid, Link } from '@mui/material';
-import { VolunteerActivismIcon, EmailIcon, DescriptionIcon, ArticleIcon, InsertDriveFileIcon, LinkIcon, FavoriteIcon, CheckCircleIcon, WhatsAppIcon } from '@/components/Icons';
+import { VolunteerActivismIcon, EmailIcon, DescriptionIcon, ArticleIcon, InsertDriveFileIcon, LinkIcon, FavoriteIcon, CheckCircleIcon, WhatsAppIcon, CloudUploadIcon, PublicIcon, ErrorOutlineOutlinedIcon } from '@/components/Icons';
 import { useTheme } from '@/context/ThemeContext';
 import contributorsData from '@/data/contributors.json';
 import Breadcrumb from '@/components/Breadcrumb/Breadcrumb';
@@ -14,19 +14,19 @@ const STEPS = [
         number: 1,
         icon: <DescriptionIcon sx={{ fontSize: 32 }} />,
         title: 'Prepare',
-        description: 'Gather your study materials, notes, or resources in PDF or document format.',
+        description: 'Gather your study materials, notes, or resources in PDF, document, or image format.',
     },
     {
         number: 2,
-        icon: <EmailIcon sx={{ fontSize: 32 }} />,
-        title: 'Email',
-        description: 'Send us an email with the resource, subject, class, and a brief description.',
+        icon: <CloudUploadIcon sx={{ fontSize: 32 }} />,
+        title: 'Send',
+        description: 'Upload via the form, send on WhatsApp, or drop files in our shared Drive folder.',
     },
     {
         number: 3,
         icon: <CheckCircleIcon sx={{ fontSize: 32 }} />,
-        title: 'Credit',
-        description: "We'll add it to the site with your name credited as the contributor.",
+        title: 'Reviewed & Credited',
+        description: "We review every submission and publish it with your name credited as the contributor.",
     },
 ];
 
@@ -38,12 +38,70 @@ const SHARE_TYPES = [
     { icon: <FavoriteIcon />, title: 'Monetary contributions', description: 'Support the platform to keep it free for everyone.' },
 ];
 
+const ALLOWED = [
+    'Question papers, worksheets, and lesson plans you have created',
+    'School-made notes, assignments, and activity ideas',
+    'Official circulars and government education resources',
+    'PDF, Word, PowerPoint, Excel, and image files',
+];
+
+const NOT_ALLOWED = [
+    'Copyrighted publisher books or guides (e.g. private guide books)',
+    'Videos and very large files',
+    'ZIP, EXE, or other executable files',
+    'Content from other websites that you do not have rights to share',
+];
+
 export default function ContributePage({ onNavigate }: ContributePageProps) {
     const [isDark] = useTheme();
     const email = contributorsData.email;
     const mailtoLink = `mailto:${email}?subject=Resource Contribution to Sajhi Shiksha`;
+    const whatsappLink = contributorsData.whatsappLink;
+    const formLink = contributorsData.formUrl;
+    const driveFolderLink = contributorsData.driveFolderUrl;
     const borderColor = 'var(--color-border)';
     const shadowColor = 'var(--color-shadow)';
+
+    const cardButtonSx = {
+        px: 3,
+        py: 1,
+        fontSize: '0.95rem',
+        fontWeight: 700,
+        bgcolor: 'var(--color-bg)',
+        color: 'var(--color-text)',
+        border: `2px solid ${borderColor}`,
+        boxShadow: `3px 3px 0px ${shadowColor}`,
+        '&:hover': {
+            bgcolor: 'var(--color-bg-secondary)',
+            color: 'var(--color-text)',
+            transform: 'none',
+            boxShadow: `3px 3px 0px ${shadowColor}`,
+        },
+    } as const;
+
+    const WAYS = [
+        {
+            icon: <CloudUploadIcon sx={{ fontSize: 40 }} />,
+            title: 'Upload via Form',
+            description: 'Fill a short form and upload up to 10 files at once. Your name and school get credited automatically.',
+            action: 'Open Form',
+            href: formLink,
+        },
+        {
+            icon: <WhatsAppIcon sx={{ fontSize: 40 }} />,
+            title: 'WhatsApp Us',
+            description: 'The quickest way — click, attach your files, and send. Great for photos of question papers.',
+            action: 'Message on WhatsApp',
+            href: whatsappLink,
+        },
+        {
+            icon: <PublicIcon sx={{ fontSize: 40 }} />,
+            title: 'Shared Drive Folder',
+            description: 'For teachers with many files — drop everything directly into our Google Drive folder.',
+            action: 'Open Folder',
+            href: driveFolderLink,
+        },
+    ];
 
     return (
         <Box sx={{ maxWidth: MAX_CONTENT_WIDTH, mx: 'auto', px: { xs: 2, md: 4 }, py: 4 }}>
@@ -86,31 +144,141 @@ export default function ContributePage({ onNavigate }: ContributePageProps) {
                 >
                     Help fellow teachers and students by sharing your study materials, question papers, and resources.
                 </Typography>
-                <Button
-                    variant="contained"
-                    size="large"
-                    href={mailtoLink}
-                    startIcon={<EmailIcon />}
-                    sx={{
-                        px: 4,
-                        py: 1.5,
-                        fontSize: '1.1rem',
-                        fontWeight: 700,
-                        bgcolor: 'var(--color-bg)',
-                        color: 'var(--color-text)',
-                        border: `3px solid ${borderColor}`,
-                        boxShadow: `4px 4px 0px ${shadowColor}`,
-                        '&:hover': {
-                            bgcolor: 'var(--color-bg-secondary)',
+                <Box sx={{ display: 'flex', gap: 2, justifyContent: 'center', flexWrap: 'wrap' }}>
+                    <Button
+                        variant="contained"
+                        size="large"
+                        href={formLink}
+                        target="_blank"
+                        startIcon={<CloudUploadIcon />}
+                        sx={{
+                            px: 4,
+                            py: 1.5,
+                            fontSize: '1.1rem',
+                            fontWeight: 700,
+                            bgcolor: 'var(--color-bg)',
                             color: 'var(--color-text)',
-                            transform: 'none',
+                            border: `3px solid ${borderColor}`,
                             boxShadow: `4px 4px 0px ${shadowColor}`,
-                        },
-                    }}
-                >
-                    Email Us
-                </Button>
+                            '&:hover': {
+                                bgcolor: 'var(--color-bg-secondary)',
+                                color: 'var(--color-text)',
+                                transform: 'none',
+                                boxShadow: `4px 4px 0px ${shadowColor}`,
+                            },
+                        }}
+                    >
+                        Upload Files
+                    </Button>
+                    <Button
+                        variant="contained"
+                        size="large"
+                        href={whatsappLink}
+                        target="_blank"
+                        startIcon={<WhatsAppIcon />}
+                        sx={{
+                            px: 4,
+                            py: 1.5,
+                            fontSize: '1.1rem',
+                            fontWeight: 700,
+                            bgcolor: 'var(--color-bg)',
+                            color: 'var(--color-text)',
+                            border: `3px solid ${borderColor}`,
+                            boxShadow: `4px 4px 0px ${shadowColor}`,
+                            '&:hover': {
+                                bgcolor: 'var(--color-bg-secondary)',
+                                color: 'var(--color-text)',
+                                transform: 'none',
+                                boxShadow: `4px 4px 0px ${shadowColor}`,
+                            },
+                        }}
+                    >
+                        WhatsApp
+                    </Button>
+                    <Button
+                        variant="contained"
+                        size="large"
+                        href={mailtoLink}
+                        startIcon={<EmailIcon />}
+                        sx={{
+                            px: 4,
+                            py: 1.5,
+                            fontSize: '1.1rem',
+                            fontWeight: 700,
+                            bgcolor: 'var(--color-bg)',
+                            color: 'var(--color-text)',
+                            border: `3px solid ${borderColor}`,
+                            boxShadow: `4px 4px 0px ${shadowColor}`,
+                            '&:hover': {
+                                bgcolor: 'var(--color-bg-secondary)',
+                                color: 'var(--color-text)',
+                                transform: 'none',
+                                boxShadow: `4px 4px 0px ${shadowColor}`,
+                            },
+                        }}
+                    >
+                        Email Us
+                    </Button>
+                </Box>
             </Box>
+
+            <Typography
+                sx={{
+                    fontFamily: FONT_HEADING,
+                    fontWeight: 800,
+                    fontSize: { xs: '1.5rem', md: '2rem' },
+                    mb: 4,
+                }}
+            >
+                3 Easy Ways to Share
+            </Typography>
+            <Grid container spacing={4} sx={{ mb: 8 }}>
+                {WAYS.map((way) => (
+                    <Grid size={{ xs: 12, md: 4 }} key={way.title}>
+                        <Box
+                            sx={{
+                                p: 4,
+                                textAlign: 'center',
+                                height: '100%',
+                                display: 'flex',
+                                flexDirection: 'column',
+                                alignItems: 'center',
+                                bgcolor: 'var(--color-bg)',
+                                border: `3px solid ${borderColor}`,
+                                boxShadow: `4px 4px 0px ${shadowColor}`,
+                                transition: 'transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.2s cubic-bezier(0.34, 1.56, 0.64, 1)',
+                                '&:hover': {
+                                    transform: 'translate(-2px, -2px)',
+                                    boxShadow: `6px 6px 0px ${shadowColor}`,
+                                },
+                            }}
+                        >
+                            <Box sx={{ color: 'var(--color-text)', mb: 2 }}>{way.icon}</Box>
+                            <Typography
+                                sx={{
+                                    fontFamily: FONT_HEADING,
+                                    fontWeight: 700,
+                                    fontSize: '1.1rem',
+                                    mb: 1,
+                                }}
+                            >
+                                {way.title}
+                            </Typography>
+                            <Typography sx={{ color: 'var(--color-text-secondary)', fontSize: '0.95rem', mb: 3, flexGrow: 1 }}>
+                                {way.description}
+                            </Typography>
+                            <Button
+                                variant="contained"
+                                href={way.href}
+                                target="_blank"
+                                sx={cardButtonSx}
+                            >
+                                {way.action}
+                            </Button>
+                        </Box>
+                    </Grid>
+                ))}
+            </Grid>
 
             <Typography
                 sx={{
@@ -243,6 +411,81 @@ export default function ContributePage({ onNavigate }: ContributePageProps) {
                     mb: 4,
                 }}
             >
+                Submission Guidelines
+            </Typography>
+            <Box
+                sx={{
+                    p: 4,
+                    mb: 8,
+                    bgcolor: 'var(--color-bg)',
+                    border: `3px solid ${borderColor}`,
+                    boxShadow: `4px 4px 0px ${shadowColor}`,
+                }}
+            >
+                <Grid container spacing={{ xs: 4, md: 6 }}>
+                    <Grid size={{ xs: 12, md: 6 }}>
+                        <Typography
+                            sx={{
+                                fontFamily: FONT_HEADING,
+                                fontWeight: 700,
+                                mb: 2,
+                                color: 'var(--color-text)',
+                            }}
+                        >
+                            ✓ What we accept
+                        </Typography>
+                        {ALLOWED.map((item, index) => (
+                            <Box key={index} sx={{ display: 'flex', gap: 1.5, mb: 1.5, alignItems: 'flex-start' }}>
+                                <CheckCircleIcon sx={{ color: 'var(--color-text)', fontSize: 20, mt: 0.25, flexShrink: 0 }} />
+                                <Typography sx={{ color: 'var(--color-text-secondary)', fontSize: '0.95rem' }}>
+                                    {item}
+                                </Typography>
+                            </Box>
+                        ))}
+                    </Grid>
+                    <Grid size={{ xs: 12, md: 6 }}>
+                        <Typography
+                            sx={{
+                                fontFamily: FONT_HEADING,
+                                fontWeight: 700,
+                                mb: 2,
+                                color: 'var(--color-text)',
+                            }}
+                        >
+                            ✗ What we cannot accept
+                        </Typography>
+                        {NOT_ALLOWED.map((item, index) => (
+                            <Box key={index} sx={{ display: 'flex', gap: 1.5, mb: 1.5, alignItems: 'flex-start' }}>
+                                <ErrorOutlineOutlinedIcon sx={{ color: 'var(--color-text)', fontSize: 20, mt: 0.25, flexShrink: 0 }} />
+                                <Typography sx={{ color: 'var(--color-text-secondary)', fontSize: '0.95rem' }}>
+                                    {item}
+                                </Typography>
+                            </Box>
+                        ))}
+                    </Grid>
+                </Grid>
+                <Typography
+                    sx={{
+                        mt: 3,
+                        pt: 3,
+                        borderTop: `2px dashed ${borderColor}`,
+                        color: 'var(--color-text-secondary)',
+                        fontSize: '0.9rem',
+                        fontStyle: 'italic',
+                    }}
+                >
+                    Note: Every submission is reviewed by our team before it is published. This keeps the content safe, relevant, and useful for everyone.
+                </Typography>
+            </Box>
+
+            <Typography
+                sx={{
+                    fontFamily: FONT_HEADING,
+                    fontWeight: 800,
+                    fontSize: { xs: '1.5rem', md: '2rem' },
+                    mb: 4,
+                }}
+            >
                 Contact Information
             </Typography>
             <Box
@@ -263,7 +506,13 @@ export default function ContributePage({ onNavigate }: ContributePageProps) {
                     {contributorsData.whatsapp && (
                         <Box sx={{ display: 'flex', gap: 2, alignItems: 'center' }}>
                             <WhatsAppIcon sx={{ color: 'var(--color-text)' }} />
-                            <Typography sx={{ fontFamily: FONT_MONO }}>{contributorsData.whatsapp}</Typography>
+                            <Link
+                                href={whatsappLink}
+                                target="_blank"
+                                sx={{ fontWeight: 700, color: 'var(--color-text)', fontFamily: FONT_MONO }}
+                            >
+                                {contributorsData.whatsapp}
+                            </Link>
                         </Box>
                     )}
                 </Box>
