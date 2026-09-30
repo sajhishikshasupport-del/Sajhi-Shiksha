@@ -6,6 +6,7 @@ import ResourceCard from '@/components/ResourceCard/ResourceCard';
 import { teacherCardToResource } from '@/lib/utils';
 import { getUrlType } from '@/lib/urlUtils';
 import { FONT_HEADING, FONT_MONO } from '@/lib/constants';
+import PageIntro from '@/components/PageIntro';
 import { trackEvent } from '@/hooks/useAnalytics';
 
 export const BORDER = 'var(--color-border)';
@@ -284,17 +285,19 @@ interface LeafViewProps {
     onBack: () => void;
     onOpenLink: (url?: string) => void;
     contents?: FolderContents;
+    introId?: string;
 }
 
-export const LeafView: React.FC<LeafViewProps> = ({ title, description, driveUrl, onBack, onOpenLink, contents }) => (
+export const LeafView: React.FC<LeafViewProps> = ({ title, description, driveUrl, onBack, onOpenLink, contents, introId }) => (
     <>
         <BackButton onClick={onBack} />
         <Typography sx={{ fontFamily: FONT_HEADING, fontWeight: 800, fontSize: { xs: '1.5rem', md: '2rem' }, mb: 1 }}>
             {title}
         </Typography>
-        <Typography sx={{ fontFamily: FONT_MONO, fontSize: '0.9rem', color: 'var(--color-text-secondary)', mb: 4 }}>
+        <Typography sx={{ fontFamily: FONT_MONO, fontSize: '0.9rem', color: 'var(--color-text-secondary)', mb: 2 }}>
             {description}
         </Typography>
+        {introId && <PageIntro page={introId} mb={4} />}
         {contents && contents.documents && contents.documents.length > 0 ? (
             <DocumentList contents={contents} />
         ) : driveUrl ? (
