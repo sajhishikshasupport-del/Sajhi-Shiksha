@@ -6,6 +6,7 @@ import { FONT_HEADING, FONT_MONO, MAX_CONTENT_WIDTH } from '@/lib/constants';
 import { useSEO, breadcrumbSchema } from '@/hooks/useSEO';
 import teachersData from '@/data/teachers.json';
 import teacherContents from '@/data/teacher-contents.json';
+import PageIntro from '@/components/PageIntro';
 import type { FolderContents } from '@/features/teachers/components/TeacherShared';
 import navigationData from '@/data/navigation.json';
 import {
@@ -125,6 +126,8 @@ function TgtPgtPage(): React.ReactElement {
             <Typography sx={{ fontFamily: FONT_MONO, fontSize: '0.9rem', color: 'var(--color-text-secondary)', mb: 4 }}>
                 {mainCard?.description ?? ''}
             </Typography>
+
+            <PageIntro page="tgt-pgt" />
             {allSubCards.length === 0 ? (
                 <EmptyState title="No resources yet" message="Resources will appear here once added." />
             ) : (
