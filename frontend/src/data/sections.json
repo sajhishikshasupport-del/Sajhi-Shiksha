@@ -1,7 +1,7 @@
 {
     "_comment": "Doorway cards config for the homepage 'Pick Your Path' section. Changes here affect the three main entry cards. URL: /",
     "students": {
-        "enabled": true,
+        "enabled": false,
         "title": "For Students",
         "subtitle": "Resources for Classes 6 to 12",
         "icon": "School",
