@@ -3,6 +3,7 @@ import { VolunteerActivismIcon, EmailIcon, DescriptionIcon, ArticleIcon, InsertD
 import { useTheme } from '@/context/ThemeContext';
 import contributorsData from '@/data/contributors.json';
 import Breadcrumb from '@/components/Breadcrumb/Breadcrumb';
+import PageIntro from '@/components/PageIntro';
 import { FONT_HEADING, FONT_MONO, MAX_CONTENT_WIDTH, COLOR_TEXT_LIGHT } from '@/lib/constants';
 
 interface ContributePageProps {
@@ -144,6 +145,9 @@ export default function ContributePage({ onNavigate }: ContributePageProps) {
                 >
                     Help fellow teachers and students by sharing your study materials, question papers, and resources.
                 </Typography>
+                <Box sx={{ maxWidth: 680, mx: 'auto', textAlign: 'left', mb: 4 }}>
+                    <PageIntro page="contribute" mb={0} />
+                </Box>
                 <Box sx={{ display: 'flex', gap: 2, justifyContent: 'center', flexWrap: 'wrap' }}>
                     <Button
                         variant="contained"
