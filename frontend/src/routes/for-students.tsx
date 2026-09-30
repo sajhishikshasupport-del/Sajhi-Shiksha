@@ -28,6 +28,7 @@ function ForStudentsPage(): React.ReactElement {
         title: 'For Students — Mathematics Resources',
         description: 'Mathematics study materials for Classes 6 to 12. Free question papers, notes, and resources for KVS students.',
         canonicalPath: '/for-students',
+        noIndex: true,
     });
 
     const handleViewResource = (id: string): void => {
