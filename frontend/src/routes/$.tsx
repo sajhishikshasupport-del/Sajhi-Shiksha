@@ -20,7 +20,6 @@ function NotFoundPage(): React.ReactElement {
     const borderColor = 'var(--color-border)';
 
     const quickLinks = [
-        { label: 'Students', route: '/for-students' },
         { label: 'Search', route: '/search' },
         { label: 'Teachers', route: '/for-teachers' },
         { label: 'Math Lovers', route: '/for-math-lovers' },
