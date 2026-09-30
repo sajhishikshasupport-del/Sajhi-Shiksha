@@ -3,6 +3,7 @@ import { CheckCircleIcon, EmailIcon, WhatsAppIcon, LinkIcon } from '@/components
 import { useTheme } from '@/context/ThemeContext';
 import contactData from '@/data/contact.json';
 import Breadcrumb from '@/components/Breadcrumb/Breadcrumb';
+import PageIntro from '@/components/PageIntro';
 import { FONT_HEADING, FONT_MONO, MAX_CONTENT_WIDTH } from '@/lib/constants';
 
 interface AboutPageProps {
@@ -64,6 +65,10 @@ export default function AboutPage({ onNavigate }: AboutPageProps) {
                 >
                     Sajhi Shiksha is a free, open educational platform built for KVS students and teachers. Our mission is to make quality study materials accessible to everyone — no login, no paywalls, no barriers.
                 </Typography>
+
+                <Box sx={{ textAlign: 'left', maxWidth: 760, mx: 'auto', mb: 4 }}>
+                    <PageIntro page="about" mb={0} />
+                </Box>
                 <Typography
                     sx={{
                         fontStyle: 'italic',
