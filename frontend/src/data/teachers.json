@@ -201,6 +201,24 @@
                             "driveUrl": "https://drive.google.com/embeddedfolderview?id=1Q8XHQJnmjRpRjjnVoYudtOEiO2ZILr3r#list"
                         },
                         {
+                            "id": "cbse-curriculum-2026-27",
+                            "title": "CBSE Curriculum 2026-27 (All Subjects)",
+                            "description": "Official CBSE curriculum for Classes 9-12, session 2026-27 - all subjects, from CBSE Academic",
+                            "driveUrl": "https://cbseacademic.nic.in/curriculum_2027.html"
+                        },
+                        {
+                            "id": "cbse-sqp-2026-27-class-10",
+                            "title": "CBSE Sample Papers 2026-27 - Class 10",
+                            "description": "Sample question papers & marking schemes for Class 10 board exam 2026-27, from CBSE Academic",
+                            "driveUrl": "https://cbseacademic.nic.in/SQP_CLASSX_2026-27.html"
+                        },
+                        {
+                            "id": "cbse-sqp-2026-27-class-12",
+                            "title": "CBSE Sample Papers 2026-27 - Class 12",
+                            "description": "Sample question papers & marking schemes for Class 12 board exam 2026-27, from CBSE Academic",
+                            "driveUrl": "https://cbseacademic.nic.in/SQP_CLASSXII_2026-27.html"
+                        },
+                        {
                             "id": "nios",
                             "title": "NIOS",
                             "description": "NIOS formats and circulars",
