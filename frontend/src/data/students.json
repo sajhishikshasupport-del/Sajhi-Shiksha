@@ -2,6 +2,27 @@
     "_comment": "Official external links shown on the 'For Students' page. Changes here add/remove/update the cards with icons that link to CBSE/NCERT resources. URL: /for-students",
     "officialLinks": [
         {
+            "id": "cbse-curriculum-2026-27",
+            "title": "CBSE Curriculum 2026-27 (All Subjects)",
+            "description": "Official CBSE curriculum for Classes 9-12, session 2026-27 — all subjects, from CBSE Academic",
+            "url": "https://cbseacademic.nic.in/curriculum_2027.html",
+            "icon": "MenuBook"
+        },
+        {
+            "id": "sample-papers-2026-27-class-10",
+            "title": "CBSE Sample Papers 2026-27 — Class 10",
+            "description": "Sample question papers & marking schemes for Class 10 board exam 2026-27",
+            "url": "https://cbseacademic.nic.in/SQP_CLASSX_2026-27.html",
+            "icon": "Assignment"
+        },
+        {
+            "id": "sample-papers-2026-27-class-12",
+            "title": "CBSE Sample Papers 2026-27 — Class 12",
+            "description": "Sample question papers & marking schemes for Class 12 board exam 2026-27",
+            "url": "https://cbseacademic.nic.in/SQP_CLASSXII_2026-27.html",
+            "icon": "Assignment"
+        },
+        {
             "id": "career-guidance",
             "title": "Career Guidance",
             "description": "YouTube playlist for career guidance and counselling",
