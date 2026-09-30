@@ -74,6 +74,7 @@ function TgtPgtPage(): React.ReactElement {
                     contents={(teacherContents as unknown as Record<string, FolderContents | undefined>)[currentLeaf.id]}
                     onBack={handleBack}
                     onOpenLink={handleOpenLink}
+                    introId={currentLeaf.id}
                 />
             </Box>
         );
@@ -93,9 +94,10 @@ function TgtPgtPage(): React.ReactElement {
                 <Typography sx={{ fontFamily: FONT_HEADING, fontWeight: 800, fontSize: { xs: '1.5rem', md: '2rem' }, mb: 1 }}>
                     {currentSubCard.title}
                 </Typography>
-                <Typography sx={{ fontFamily: FONT_MONO, fontSize: '0.9rem', color: 'var(--color-text-secondary)', mb: 4 }}>
+                <Typography sx={{ fontFamily: FONT_MONO, fontSize: '0.9rem', color: 'var(--color-text-secondary)', mb: 2 }}>
                     {currentSubCard.description}
                 </Typography>
+                <PageIntro page={currentSubCard.id} />
                 <Box sx={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: 3 }}>
                     {leafItems.map((leaf) => (
                         <ResourceCardWrapper
