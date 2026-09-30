@@ -7,6 +7,7 @@ import { useSEO, breadcrumbSchema } from '@/hooks/useSEO';
 import { findCardDeep, getCardPath } from '@/lib/utils';
 import teachersData from '@/data/teachers.json';
 import teacherContents from '@/data/teacher-contents-circular.json';
+import PageIntro from '@/components/PageIntro';
 import navigationData from '@/data/navigation.json';
 import {
     BackButton, EmptyState, LeafView, FolderCard, ResourceCardWrapper,
@@ -165,6 +166,8 @@ function CircularFormatsPage(): React.ReactElement {
             <Typography sx={{ fontFamily: FONT_MONO, fontSize: '0.9rem', color: 'var(--color-text-secondary)', mb: 4 }}>
                 {mainCard?.description ?? ''}
             </Typography>
+
+            <PageIntro page="circular-formats" />
             {allSubCards.length === 0 ? (
                 <EmptyState title="No resources yet" message="Resources will appear here once added." />
             ) : (
