@@ -88,6 +88,7 @@ function CircularFormatsPage(): React.ReactElement {
                     contents={(teacherContents as unknown as Record<string, FolderContents | undefined>)[currentLeafItem.id]}
                     onBack={handleBack}
                     onOpenLink={handleOpenLink}
+                    introId={currentLeafItem.id}
                 />
             </Box>
         );
@@ -114,9 +115,10 @@ function CircularFormatsPage(): React.ReactElement {
                 <Typography sx={{ fontFamily: FONT_HEADING, fontWeight: 800, fontSize: { xs: '1.5rem', md: '2rem' }, mb: 1 }}>
                     {currentFolder.title}
                 </Typography>
-                <Typography sx={{ fontFamily: FONT_MONO, fontSize: '0.9rem', color: 'var(--color-text-secondary)', mb: 4 }}>
+                <Typography sx={{ fontFamily: FONT_MONO, fontSize: '0.9rem', color: 'var(--color-text-secondary)', mb: 2 }}>
                     {currentFolder.description}
                 </Typography>
+                <PageIntro page={currentFolder.id} />
                 {folderChildren.length === 0 ? (
                     <EmptyState title="No resources yet" message="Resources will appear here once added." />
                 ) : (
