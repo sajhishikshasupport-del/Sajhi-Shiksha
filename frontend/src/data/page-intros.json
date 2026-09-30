@@ -1,0 +1,35 @@
+{
+  "_comment": "Original intro text per page for AdSense 'low value content' fix. short = always visible (2-3 lines), full = behind 'Read more' toggle. PageIntro component renders this. Keys: home, for-teachers, tgt-pgt, circular-formats, primary-hm, math-lovers, about, contribute.",
+  "home": {
+    "short": "Searching for question papers, worksheets, lesson plans or KVS circulars? Sajhi Shiksha keeps them all in one place — free, no login.",
+    "full": "Searching for question papers, worksheets, lesson plans or KVS circulars? Sajhi Shiksha keeps them all in one place — free for every student and teacher of Classes 1 to 12. Students can find question banks, study material and sample papers. Teachers can download periodic test and pre-board question papers, primary lesson plans and worksheets, NCERT textbooks and lab manuals, GOI/KVS circulars, admission formats, timetable software and office formats. No login, no fees — every file opens directly. New resources are added every week, shared by working teachers."
+  },
+  "for-teachers": {
+    "short": "TGT/PGT Maths papers, Primary Classes 1-5 lesson plans, GOI/KVS circulars and office formats — free for every teacher, no login.",
+    "full": "Teaching resources for KVS and CBSE teachers, all in one place — no more searching through old emails and files. TGT/PGT Maths question papers, question banks, maths lab activities and PPTs. Primary Classes 1-5 lesson plans, worksheets, cycle tests and the new NCERT textbooks. GOI/KVS circulars, admission formats, CBSE curriculum and sample papers, morning assembly material, APAR and office formats. Everything is free to download without login. Missing something? Request it on WhatsApp — teachers like you keep this library growing."
+  },
+  "tgt-pgt": {
+    "short": "Classroom-tested TGT/PGT Maths material: periodic test to pre-board question papers, question banks, lab activities and PPTs — free download, no login.",
+    "full": "Why make question papers from scratch every year? Here TGT and PGT Maths teachers get classroom-tested material: periodic test, half-yearly, session-ending and pre-board question papers; question banks and study material for practice; NCERT lab manual, maths lab activities and project ideas for exhibitions; holiday homework; lesson plans and subject committee records; ready-made PPTs and worksheets. Organised term-wise so you can find the right paper in seconds. All files are free to download — no login required."
+  },
+  "circular-formats": {
+    "short": "GOI rules, KVS circulars, admission formats, CBSE sample papers and free FET timetable software — folder-wise, free to download.",
+    "full": "Stop hunting through email chains for one circular. This section keeps GOI rules, KVS rules, KVS admission guidelines and formats, time table circulars, CBSE/NIOS circulars, CBSE Curriculum 2026-27 and official sample papers for Class 10 and 12 — all folder-wise and free to download. The time table section also includes the free FET software with tutorials in both Hindi and English. Morning assembly material, APAR formats and other office formats are here too."
+  },
+  "primary-hm": {
+    "short": "Classes 1-5 lesson plans, worksheets, cycle tests, new NCERT textbooks, FLN/NIPUN Bharat programme material and the HM Corner for Head Masters.",
+    "full": "Complete material for Primary Classes 1 to 5 — lesson plans, worksheets, cycle test question papers, textbooks, split-ups and learning outcomes, including the new NCERT 2024 series (Santoor, Veena, Maths Magic). Programme material is covered too: SRP/Vidya Pravesh, FLN and NIPUN Bharat targets and rubrics, MDP, CMP, Cub-Bulbul and Toy Based Pedagogy. Head Masters get their own HM Corner with APAR, supervision, records and registers material."
+  },
+  "math-lovers": {
+    "short": "Maths facts, puzzles and blog posts, 250+ project ideas (English + Hindi), Olympiad preparation books and ISI entrance material.",
+    "full": "Maths is much bigger than the exam syllabus. Explore maths facts, puzzles and blog posts; 180+ maths project ideas in English and 79 in Hindi for exhibitions and activities; Mathematical Olympiad preparation books and notes, official HBCSE links for stages, eligibility, syllabus and previous year papers; and the ISI Test of Mathematics at 10+2 level. Perfect for students preparing for Olympiads and ISI, teachers looking for engaging maths lab ideas, and anyone who enjoys a good problem."
+  },
+  "about": {
+    "short": "Sajhi Shiksha means 'shared knowledge' — free, organised teaching material for every teacher, student and parent.",
+    "full": "Sajhi Shiksha means 'shared knowledge'. It started with a simple problem: teachers everywhere have good material — question papers, formats, lesson plans — but it stays scattered in drawers, phones and email chains, so everyone keeps rebuilding the same things. This site collects that material, checks it, organises it and gives it back to every teacher, student and parent — free, no login. It is run by working teachers, for the teaching community. See how you can share your material on the Contribute page."
+  },
+  "contribute": {
+    "short": "Your question papers and formats can save another teacher hours of work — upload in one step, no account needed.",
+    "full": "Have question papers, worksheets or formats that worked well in your classroom? Share them and help thousands of other teachers and students. Upload directly through the form — your files go to our team first, are checked for quality and copyright, then published in the right section. No account needed. One folder of yours could save another teacher hours of work."
+  }
+}
