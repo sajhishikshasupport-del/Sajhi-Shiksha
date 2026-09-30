@@ -3,6 +3,7 @@ import { Box, Typography } from '@mui/material';
 import { ArrowBackIcon, ArrowForwardIcon } from '@/components/Icons';
 import siteContent from '@/data/sections.json';
 import ContentBlock from './components/ContentBlock';
+import PageIntro from '@/components/PageIntro';
 import { FONT_HEADING, FONT_MONO, MAX_CONTENT_WIDTH } from '@/lib/constants';
 
 const BORDER = 'var(--color-border)';
@@ -198,6 +199,8 @@ const MathLoversPage: React.FC<MathLoversPageProps> = ({ activeSection: activeSe
             >
                 {mathLovers.subtitle}
             </Typography>
+
+            <PageIntro page="math-lovers" />
 
             {activeSection ? (
                 <ExpandedSectionView section={activeSection} onBack={() => onSectionChange(null)} />
