@@ -3,10 +3,9 @@ import { Box, Typography, Button } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import pageIntros from '@/data/page-intros.json';
 
-type PageKey = keyof typeof pageIntros;
-
 interface PageIntroProps {
-    page: Exclude<PageKey, '_comment'>;
+    /** Key into page-intros.json: a page key or a teachers.json subCard id. Unknown keys render nothing. */
+    page: string;
     /** Space below the intro block. Default 4. */
     mb?: number;
 }
@@ -19,7 +18,7 @@ interface PageIntroProps {
  */
 function PageIntro({ page, mb = 4 }: PageIntroProps): React.ReactElement {
     const [expanded, setExpanded] = useState(false);
-    const intro = pageIntros[page] as { short: string; full: string } | undefined;
+    const intro = (pageIntros as unknown as Record<string, { short: string; full: string } | undefined>)[page];
 
     if (!intro) return <Box sx={{ mb }} />;
 
