@@ -2,19 +2,12 @@
     "_comment": "Header and footer navigation links. Changes here update the site menu and footer link columns. Affects Header, Footer, and BottomTabBar components. Visible on every page.",
     "headerLinks": [
         { "label": "Home", "route": "/" },
-        { "label": "Students", "route": "/for-students" },
         { "label": "Teachers", "route": "/for-teachers" },
         { "label": "Math Lovers", "route": "/for-math-lovers" },
         { "label": "Contribute", "route": "/contribute" },
         { "label": "About", "route": "/about" }
     ],
     "footerGroups": [
-        {
-            "heading": "For Students",
-            "links": [
-                { "label": "Classes 6-12 Maths", "route": "/for-students" }
-            ]
-        },
         {
             "heading": "For Teachers",
             "links": [
