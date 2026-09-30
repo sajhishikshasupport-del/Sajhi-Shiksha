@@ -1,6 +1,6 @@
 import React from 'react';
 import { BottomNavigation, BottomNavigationAction, Box, IconButton } from '@mui/material';
-import { HomeIcon, SchoolIcon, MenuBookIcon, FavoriteIcon, SearchIcon, WhatsAppIcon } from '@/components/Icons';
+import { HomeIcon, MenuBookIcon, FavoriteIcon, SearchIcon, WhatsAppIcon } from '@/components/Icons';
 import { useLocation, useNavigate } from '@tanstack/react-router';
 import siteContent from '@/data/site.json';
 import { FONT_MONO, COLOR_TEXT_LIGHT } from '@/lib/constants';
@@ -13,7 +13,6 @@ interface TabConfig {
 
 const tabs: TabConfig[] = [
     { label: 'Home', route: '/', icon: <HomeIcon /> },
-    { label: 'Students', route: '/for-students', icon: <SchoolIcon /> },
     { label: 'Teachers', route: '/for-teachers', icon: <MenuBookIcon /> },
     { label: 'Math', route: '/for-math-lovers', icon: <FavoriteIcon /> },
     { label: 'Search', route: '/search', icon: <SearchIcon /> },
