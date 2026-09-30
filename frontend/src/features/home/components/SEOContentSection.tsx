@@ -3,6 +3,7 @@ import { Box, Typography, Grid } from '@mui/material';
 import { FONT_HEADING, FONT_MONO, MAX_CONTENT_WIDTH } from '@/lib/constants';
 import { useTheme } from '@/context/ThemeContext';
 import { StarDoodle, PencilDoodle } from '@/components/Doodles';
+import PageIntro from '@/components/PageIntro';
 
 const SEOContentSection: React.FC = React.memo(() => {
     const [isDark] = useTheme();
@@ -100,6 +101,10 @@ const SEOContentSection: React.FC = React.memo(() => {
                 >
                     Learn. Share. Grow. — An Open Portal for Everyone
                 </Typography>
+
+                <Box sx={{ maxWidth: 760, mx: 'auto', mb: 6, textAlign: 'left' }}>
+                    <PageIntro page="home" mb={0} />
+                </Box>
 
                 <Grid container spacing={4} sx={{ mb: 8 }}>
                     <Grid size={{ xs: 12, md: 6 }}>
