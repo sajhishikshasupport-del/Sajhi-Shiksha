@@ -66,9 +66,6 @@ export default function AboutPage({ onNavigate }: AboutPageProps) {
                     Sajhi Shiksha is a free, open educational platform built for KVS students and teachers. Our mission is to make quality study materials accessible to everyone — no login, no paywalls, no barriers.
                 </Typography>
 
-                <Box sx={{ textAlign: 'left', maxWidth: 760, mx: 'auto', mb: 4 }}>
-                    <PageIntro page="about" mb={0} />
-                </Box>
                 <Typography
                     sx={{
                         fontStyle: 'italic',
@@ -397,6 +394,7 @@ export default function AboutPage({ onNavigate }: AboutPageProps) {
                     </Box>
                 </Box>
             </Box>
+            <PageIntro page="about" />
         </Box>
     );
 }
