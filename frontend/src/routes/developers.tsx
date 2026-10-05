@@ -11,6 +11,7 @@ function DevelopersRouteComponent(): React.ReactElement {
         title: 'Developers',
         description: 'Meet the developers behind Sajhi Shiksha — the team that built this free educational platform for KVS students and teachers.',
         canonicalPath: '/developers',
+        noIndex: true,
     });
 
     const navigate = useNavigate();
