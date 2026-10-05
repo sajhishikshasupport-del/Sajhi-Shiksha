@@ -7,6 +7,7 @@ import { teacherCardToResource } from '@/lib/utils';
 import { getUrlType } from '@/lib/urlUtils';
 import { FONT_HEADING, FONT_MONO } from '@/lib/constants';
 import PageIntro from '@/components/PageIntro';
+import documentDescriptions from '@/data/document-descriptions.json';
 import { trackEvent } from '@/hooks/useAnalytics';
 
 export const BORDER = 'var(--color-border)';
@@ -109,6 +110,7 @@ export interface DriveDocument {
     mimeType: string;
     modifiedDate?: string;
     className?: string;
+    description?: string;
 }
 
 export interface FolderContents {
@@ -151,6 +153,7 @@ interface DocumentListProps {
 
 const DocCard: React.FC<{ doc: DriveDocument; showClass?: boolean }> = ({ doc, showClass }) => {
     const classLabel = showClass ? effectiveClassName(doc) : null;
+    const description = doc.description || (documentDescriptions as Record<string, string>)[doc.id];
     const openDoc = () => {
         trackEvent('document_open', {
             document_title: doc.title,
@@ -189,6 +192,11 @@ const DocCard: React.FC<{ doc: DriveDocument; showClass?: boolean }> = ({ doc, s
             <Typography sx={{ fontFamily: FONT_HEADING, fontWeight: 700, fontSize: { xs: '0.95rem', md: '1.05rem' }, lineHeight: 1.3 }}>
                 {doc.title}
             </Typography>
+            {description && (
+                <Typography sx={{ fontSize: '0.85rem', color: 'var(--color-text-secondary)', mt: 0.5, lineHeight: 1.5 }}>
+                    {description}
+                </Typography>
+            )}
             {doc.modifiedDate && (
                 <Typography sx={{ fontFamily: FONT_MONO, fontSize: '0.75rem', color: 'var(--color-text-secondary)', mt: 0.5 }}>
                     Updated: {formatDate(doc.modifiedDate)}
