@@ -67,7 +67,6 @@ function ForTeachersIndexPage(): React.ReactElement {
                 Teaching resources, circulars, formats, and more
             </Typography>
 
-            <PageIntro page="for-teachers" />
 
             <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', sm: '1fr 1fr' }, gap: 4 }}>
                 {mainCards.map((card) => (
@@ -132,6 +131,7 @@ function ForTeachersIndexPage(): React.ReactElement {
                     </Box>
                 ))}
             </Box>
+            <PageIntro page="for-teachers" />
         </Box>
     );
 }
