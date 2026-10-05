@@ -102,10 +102,6 @@ const SEOContentSection: React.FC = React.memo(() => {
                     Learn. Share. Grow. — An Open Portal for Everyone
                 </Typography>
 
-                <Box sx={{ maxWidth: 760, mx: 'auto', mb: 6, textAlign: 'left' }}>
-                    <PageIntro page="home" mb={0} />
-                </Box>
-
                 <Grid container spacing={4} sx={{ mb: 8 }}>
                     <Grid size={{ xs: 12, md: 6 }}>
                         <Box
@@ -273,6 +269,10 @@ const SEOContentSection: React.FC = React.memo(() => {
                         </Grid>
                     ))}
                 </Grid>
+
+                <Box sx={{ maxWidth: 760, mx: 'auto', mt: 8, textAlign: 'left' }}>
+                    <PageIntro page="home" mb={0} />
+                </Box>
             </Box>
         </Box>
     );
