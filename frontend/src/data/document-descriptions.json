@@ -1,0 +1,21 @@
+{
+  "_comment": "Per-document original descriptions (written by reading each document's actual content). Keyed by Drive file id. Used by the site UI (TeacherShared DocCard) and search index (resourceAggregator). Kept in a SEPARATE file so the nightly Drive sync (which rebuilds teacher-contents*.json) never overwrites it. Section: Circulars/Formats.",
+  "1vUROLmRVoEsPpBRxR5XKUQKBf3ySWEfo": "KVS Board of Governors (BOG) ki 113th meeting (20 Feb 2019) ke minutes — KVS ke bade policy decisions ka official circulation record. Policy history check karne ke liye.",
+  "1PqT216KodGlXWSPeoPj33i9Rr-D3aFKt": "Central Civil Services (Leave) Rules 1972, 24.09.2024 tak updated. Poora index ke saath: earned leave, leave ka encashment, LTC ke saath leave, cash payment in lieu of leave, definitions. Leave se juda koi bhi sawal ho to yahi asli document.",
+  "1M6UirWA6CmIrVq1Bl17Y-o8b9DZiWeDY": "DoPT ka Office Memorandum (02.04.2024) — allowances (bhatte) se jude sarkari instructions ek jagah. DA/HRA jaise bhatton ke niyam ka official source.",
+  "10GLVF7XgC6YZL_XpIYVWeUBnp4nKnSWB": "National Commission for Protection of Child Rights (NCPCR) ka Gazette notification (2006) — bachon ke adhikaron ki suraksha ka kanoon. Schools aur teachers ke liye bachon se jude kanoon ka reference.",
+  "1wYQcORhGJ4L4fZDMUyrDWBW949SBKWUq": "Leave Rules ki presentation (KVS-ZIET Gwalior) — leave ke general principles, earned leave, leave sanctioning authority ke adhikaar, slide-wise. Training aur samajhne ke liye aasan.",
+  "1vyy3FPKVLiouDcTHFOilSVdQAV4YSy6y": "Leave Rules (PDF) — Dr. Anurag Yadav (DC, KVS-ZIET Gwalior) ke notes: leave ka principle, kinds of leave, sanctioning authority. Padhne/print ke liye PDF version.",
+  "1SXkIbVekQRR5BCq-cGIWrhhnytSBJIDg": "General Financial Rules (GFR) 2017, 31.07.2023 tak updated — sarkari paise ke kharche, purchase/procurement aur payment ke niyam. School office ki khareed aur kharche ke rules.",
+  "1SV4tlR0QzT7z9_OspKphAzTWDMBapeb6": "GFR 2017 ka Hindi version — वित्तीय नियमावली 2017. Hindi me padhne walon ke liye official niyam.",
+  "1SO_Smya2ZbWCTPeSfiCzaQtj4GlEEodp": "GFR 2017 (English) — preface aur poore rules; Government of India ke public finance se jude sab executive instructions.",
+  "1SMfLIjTiLBAJU7NepuXhbY042mYsGzZq": "New Pension System (NPS) Handbook — CRA operations aur monitoring offices ke liye. NPS account, contribution aur pension ke sawalon ka reference.",
+  "1SM8okdUqOR3jD4zr6XynsVRrz4SzxnB9": "All India Services (Medical Attendance) Rules 1954 — AIS officers ke ilaaj/medical attendance ke niyam. Medical claim se jude sawalon ke liye.",
+  "1SLwg4yVKtazrmB9QSAT4K2VBTs7eeVp6": "Central Services (Medical Attendance) Rules 1944 — karmchariyon ke ilaaj aur medical reimbursement ke niyam. Purane par aaj bhi valid.",
+  "1SLf6Q9xgBryo5yLqT__-avo22uPBPqrr": "All India Services (Leave Travel Concession) Rules 1975 — LTC ke niyam: kitne block, kaun eligible, claim kaise karein. LTC claim ke liye asli niyam.",
+  "1SLK-I8uqNG-nyN3vNatYRg20LIUaoVrt": "Travelling Allowance (TA) Rules — 7th Central Pay Commission ke baad ka official OM (13.07.2017). Tour/TA claim ke niyam aur rates.",
+  "1SH99m9oprkc9WQuffK59octldsYneKzE": "FR/SR (Fundamental Rules & Supplementary Rules) ka compilation — service conditions ke buniyadi niyam (pay, leave, joining time) ek hi document me.",
+  "1SBYoT0vftbYw0F36r8qU2Pfpu5VfEYi-": "Central Civil Services (Conduct) Rules 1964, 31.12.2014 tak updated — karmchariyon ke aachran (conduct) ke niyam. Kya allowed hai, kya nahi — ek jagah.",
+  "1S9fTnCTZH11KVjwIT3OrMfGlY8U8OzBI": "CCS (Classification, Control and Appeal) Rules 1965 ka Hindi version — अनुशासन और अपील नियमावली. Disciplinary matters Hindi me padhne ke liye.",
+  "1S6ALsLwYVVOIxI8IMroF52Ef8yH-bXBF": "CCS (CCA) Rules 1965, 15.10.2018 tak updated (English) — disciplinary action, appeal aur classification ke niyam. Departmental enquiry/appeal ke liye."
+}
