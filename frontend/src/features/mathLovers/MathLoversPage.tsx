@@ -200,7 +200,6 @@ const MathLoversPage: React.FC<MathLoversPageProps> = ({ activeSection: activeSe
                 {mathLovers.subtitle}
             </Typography>
 
-            <PageIntro page="math-lovers" />
 
             {activeSection ? (
                 <ExpandedSectionView section={activeSection} onBack={() => onSectionChange(null)} />
@@ -240,6 +239,7 @@ const MathLoversPage: React.FC<MathLoversPageProps> = ({ activeSection: activeSe
                     ))}
                 </Box>
             )}
+            <PageIntro page="math-lovers" />
         </Box>
     );
 };
