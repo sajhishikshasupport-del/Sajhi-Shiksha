@@ -118,7 +118,6 @@ function CircularFormatsPage(): React.ReactElement {
                 <Typography sx={{ fontFamily: FONT_MONO, fontSize: '0.9rem', color: 'var(--color-text-secondary)', mb: 2 }}>
                     {currentFolder.description}
                 </Typography>
-                <PageIntro page={currentFolder.id} />
                 {folderChildren.length === 0 ? (
                     <EmptyState title="No resources yet" message="Resources will appear here once added." />
                 ) : (
@@ -149,6 +148,7 @@ function CircularFormatsPage(): React.ReactElement {
                         })}
                     </Box>
                 )}
+                <PageIntro page={currentFolder.id} />
             </Box>
         );
     }
@@ -169,7 +169,6 @@ function CircularFormatsPage(): React.ReactElement {
                 {mainCard?.description ?? ''}
             </Typography>
 
-            <PageIntro page="circular-formats" />
             {allSubCards.length === 0 ? (
                 <EmptyState title="No resources yet" message="Resources will appear here once added." />
             ) : (
@@ -200,6 +199,7 @@ function CircularFormatsPage(): React.ReactElement {
                     })}
                 </Box>
             )}
+            <PageIntro page="circular-formats" />
         </Box>
     );
 }
