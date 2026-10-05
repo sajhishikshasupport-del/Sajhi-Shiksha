@@ -97,7 +97,6 @@ function TgtPgtPage(): React.ReactElement {
                 <Typography sx={{ fontFamily: FONT_MONO, fontSize: '0.9rem', color: 'var(--color-text-secondary)', mb: 2 }}>
                     {currentSubCard.description}
                 </Typography>
-                <PageIntro page={currentSubCard.id} />
                 <Box sx={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: 3 }}>
                     {leafItems.map((leaf) => (
                         <ResourceCardWrapper
@@ -109,6 +108,7 @@ function TgtPgtPage(): React.ReactElement {
                         />
                     ))}
                 </Box>
+                <PageIntro page={currentSubCard.id} />
             </Box>
         );
     }
@@ -129,7 +129,6 @@ function TgtPgtPage(): React.ReactElement {
                 {mainCard?.description ?? ''}
             </Typography>
 
-            <PageIntro page="tgt-pgt" />
             {allSubCards.length === 0 ? (
                 <EmptyState title="No resources yet" message="Resources will appear here once added." />
             ) : (
@@ -160,6 +159,7 @@ function TgtPgtPage(): React.ReactElement {
                     })}
                 </Box>
             )}
+            <PageIntro page="tgt-pgt" />
         </Box>
     );
 }
