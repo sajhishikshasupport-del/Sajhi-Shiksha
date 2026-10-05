@@ -145,9 +145,6 @@ export default function ContributePage({ onNavigate }: ContributePageProps) {
                 >
                     Help fellow teachers and students by sharing your study materials, question papers, and resources.
                 </Typography>
-                <Box sx={{ maxWidth: 680, mx: 'auto', textAlign: 'left', mb: 4 }}>
-                    <PageIntro page="contribute" mb={0} />
-                </Box>
                 <Box sx={{ display: 'flex', gap: 2, justifyContent: 'center', flexWrap: 'wrap' }}>
                     <Button
                         variant="contained"
@@ -563,6 +560,7 @@ export default function ContributePage({ onNavigate }: ContributePageProps) {
                     )}
                 </Box>
             </Box>
+            <PageIntro page="contribute" />
         </Box>
     );
 }
