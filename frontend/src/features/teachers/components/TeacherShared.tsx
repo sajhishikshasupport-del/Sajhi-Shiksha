@@ -297,7 +297,6 @@ export const LeafView: React.FC<LeafViewProps> = ({ title, description, driveUrl
         <Typography sx={{ fontFamily: FONT_MONO, fontSize: '0.9rem', color: 'var(--color-text-secondary)', mb: 2 }}>
             {description}
         </Typography>
-        {introId && <PageIntro page={introId} mb={4} />}
         {contents && contents.documents && contents.documents.length > 0 ? (
             <DocumentList contents={contents} />
         ) : driveUrl ? (
@@ -337,6 +336,7 @@ export const LeafView: React.FC<LeafViewProps> = ({ title, description, driveUrl
         ) : (
             <EmptyState title="Content Coming Soon" message="The document URL will be added soon." />
         )}
+        {introId && <PageIntro page={introId} mb={2} />}
         <Box sx={{ display: 'flex', justifyContent: 'flex-end', mt: 4 }}>
             <Button
                 component="a"
