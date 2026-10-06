@@ -1,259 +1,263 @@
 {
-  "_comment": "Original intro text per page/folder for AdSense 'low value content' fix. short = always visible (2-3 lines), full = behind 'Read more' toggle + in DOM for search engines. PageIntro component renders this. Page keys: home, for-teachers, tgt-pgt, circular-formats, primary-hm, math-lovers, about, contribute. Sub-section keys match teachers.json subCard ids (rendered when folder opens).",
-  "home": {
-    "short": "Searching for question papers, worksheets, lesson plans or KVS circulars? Sajhi Shiksha keeps them all in one place — free, no login.",
-    "full": "Searching for question papers, worksheets, lesson plans or KVS circulars? Sajhi Shiksha keeps them all in one place — free for every student and teacher of Classes 1 to 12. Students can find question banks, study material and sample papers. Teachers can download periodic test and pre-board question papers, primary lesson plans and worksheets, NCERT textbooks and lab manuals, GOI/KVS circulars, admission formats, timetable software and office formats. No login, no fees — every file opens directly. New resources are added every week, shared by working teachers."
-  },
-  "for-teachers": {
-    "short": "TGT/PGT Maths papers, Primary Classes 1-5 lesson plans, GOI/KVS circulars and office formats — free for every teacher, no login.",
-    "full": "Teaching resources for KVS and CBSE teachers, all in one place — no more searching through old emails and files. TGT/PGT Maths question papers, question banks, maths lab activities and PPTs. Primary Classes 1-5 lesson plans, worksheets, cycle tests and the new NCERT textbooks. GOI/KVS circulars, admission formats, CBSE curriculum and sample papers, morning assembly material, APAR and office formats. Everything is free to download without login. Missing something? Request it on WhatsApp — teachers like you keep this library growing."
-  },
-  "tgt-pgt": {
-    "short": "Classroom-tested TGT/PGT Maths material: periodic test to pre-board question papers, question banks, lab activities and PPTs — free download, no login.",
-    "full": "Why make question papers from scratch every year? Here TGT and PGT Maths teachers get classroom-tested material: periodic test, half-yearly, session-ending and pre-board question papers; question banks and study material for practice; NCERT lab manual, maths lab activities and project ideas for exhibitions; holiday homework; lesson plans and subject committee records; ready-made PPTs and worksheets. Organised term-wise so you can find the right paper in seconds. All files are free to download — no login required."
-  },
-  "circular-formats": {
-    "short": "GOI rules, KVS circulars, admission formats, CBSE sample papers and free FET timetable software — folder-wise, free to download.",
-    "full": "Stop hunting through email chains for one circular. This section keeps GOI rules, KVS rules, KVS admission guidelines and formats, time table circulars, CBSE/NIOS circulars, CBSE Curriculum 2026-27 and official sample papers for Class 10 and 12 — all folder-wise and free to download. The time table section also includes the free FET software with tutorials in both Hindi and English. Morning assembly material, APAR formats and other office formats are here too."
-  },
-  "primary-hm": {
-    "short": "Classes 1-5 lesson plans, worksheets, cycle tests, new NCERT textbooks, FLN/NIPUN Bharat programme material and the HM Corner for Head Masters.",
-    "full": "Complete material for Primary Classes 1 to 5 — lesson plans, worksheets, cycle test question papers, textbooks, split-ups and learning outcomes, including the new NCERT 2024 series (Santoor, Veena, Maths Magic). Programme material is covered too: SRP/Vidya Pravesh, FLN and NIPUN Bharat targets and rubrics, MDP, CMP, Cub-Bulbul and Toy Based Pedagogy. Head Masters get their own HM Corner with APAR, supervision, records and registers material."
-  },
-  "math-lovers": {
-    "short": "Maths facts, puzzles and blog posts, 250+ project ideas (English + Hindi), Olympiad preparation books and ISI entrance material.",
-    "full": "Maths is much bigger than the exam syllabus. Explore maths facts, puzzles and blog posts; 180+ maths project ideas in English and 79 in Hindi for exhibitions and activities; Mathematical Olympiad preparation books and notes, official HBCSE links for stages, eligibility, syllabus and previous year papers; and the ISI Test of Mathematics at 10+2 level. Perfect for students preparing for Olympiads and ISI, teachers looking for engaging maths lab ideas, and anyone who enjoys a good problem."
-  },
-  "about": {
-    "short": "Sajhi Shiksha means 'shared knowledge' — free, organised teaching material for every teacher, student and parent.",
-    "full": "Sajhi Shiksha means 'shared knowledge'. It started with a simple problem: teachers everywhere have good material — question papers, formats, lesson plans — but it stays scattered in drawers, phones and email chains, so everyone keeps rebuilding the same things. This site collects that material, checks it, organises it and gives it back to every teacher, student and parent — free, no login. It is run by working teachers, for the teaching community. See how you can share your material on the Contribute page."
-  },
-  "contribute": {
-    "short": "Your question papers and formats can save another teacher hours of work — upload in one step, no account needed.",
-    "full": "Have question papers, worksheets or formats that worked well in your classroom? Share them and help thousands of other teachers and students. Upload directly through the form — your files go to our team first, are checked for quality and copyright, then published in the right section. No account needed. One folder of yours could save another teacher hours of work."
-  },
-  "question-papers": {
-    "short": "Set your exam paper in minutes: Periodic Test, Half-Yearly, Session Ending and Pre-Board papers for Classes 6-12, many with marking schemes and blueprints.",
-    "full": "Why start from a blank page? Here you'll find Periodic Test 1 and monthly test papers, Half-Yearly (mid-term) exams, Session Ending exams and Pre-Board papers for Classes 6 to 12 — collected from KVs across regions like Agra, Chandigarh, Ernakulam, Guwahati, Jaipur and Gurugram. Many papers come with their marking schemes and blueprints, and Class 12 pre-boards include both Maths (041) and Applied Maths (241) sets. Download, edit, print — your exam is ready."
-  },
-  "periodic-test": {
-    "short": "Class 6-12 Periodic Test 1 and monthly test papers with marking schemes — from KVs across India.",
-    "full": "Ready Periodic Test question papers for Maths Classes 6 to 12, including PT-1 and monthly tests from KVs across regions (Agra, Baoli Baghpat, Faridkot, Dimapur, Loktak, Missamari, Satna and more). Many sets include the marking scheme. Pick a paper, adapt it to your school, and your periodic test is done — no rebuilding from scratch."
-  },
-  "half-yearly": {
-    "short": "Half-Yearly / Mid-Term Maths papers (Classes 8-12) with marking schemes, from multiple KVS regions.",
-    "full": "Half-Yearly (Mid-Term) exam papers for Maths Classes 8 to 12, contributed by KVs and regional offices — Chandigarh, Ernakulam, Guwahati, Loktak, Satna and others. Sets include question papers, marking schemes and MCQ versions, for sessions from 2020-21 to 2023-24. Compare papers from different regions before setting your own mid-term."
-  },
-  "session-ending": {
-    "short": "Session Ending exam papers for Maths — the folder is ready, papers are being added.",
-    "full": "Session Ending exam question papers for Mathematics will appear here. The collection is small right now — if you have session-ending papers from your school, share them via the Contribute page and help other teachers."
-  },
-  "pre-board": {
-    "short": "Class 10 & 12 Pre-Board papers — Maths (041) and Applied Maths (241) — with blueprints and marking schemes.",
-    "full": "Pre-Board question papers for Class 10 and Class 12 from regions like Agra, Jaipur and Gurugram — including Pre-Board 1 and 2 sets, blueprints and marking schemes. Class 12 covers both Maths (041) and Applied Maths (241); Class 10 includes Maths Basic papers. Ideal practice before boards, and a ready base for setting your school's pre-board."
-  },
-  "question-bank": {
-    "short": "Chapter-wise question banks, case-based & CCT questions, key concepts and summaries for Classes 11-12 Maths.",
-    "full": "Practice material organised chapter-wise for Classes 11 and 12: Complex Numbers, Straight Lines, Continuity & Differentiability, Vectors, Application of Integrals and more. Includes case-based questions, CCT (Creative & Critical Thinking) questions, chapter summaries, key-concept sheets, Class 12 study material 2023-24, reduced-syllabus summaries for 2025-26, and Applied Maths sample papers. Also a LaTeX/Unicode maths symbols reference for teachers making their own papers."
-  },
-  "maths-lab": {
-    "short": "Maths Lab in one place: NCERT manual, Class 11-12 activities with solutions, project ideas and lab-kit catalogues.",
-    "full": "Setting up a maths lab or preparing lab records? Get the official NCERT lab manual, Class 11 and 12 lab activities with solutions (including a probability project file), Indian mathematician slides for lab display, lab-kit catalogues, and 183 ready project ideas — from flexagons and 3D models to an air-powered car and DIY bead microscope. Everything your lab file and exhibition needs."
-  },
-  "ncert-lab-manual": {
-    "short": "Official NCERT Science/Mathematics Laboratory Manual — the source document for lab activities.",
-    "full": "The official NCERT laboratory manual, linking straight to ncert.nic.in — the authoritative reference for prescribed lab activities. Use it to check what's required, then pick ready-made activity files from the Maths Lab Activities folder."
-  },
-  "lab-activities": {
-    "short": "Class 11 & 12 maths lab activities with solutions — plus a ready probability project file.",
-    "full": "Lab activities for Classes 11 and 12 with full solutions, and a Class 12 probability project record file you can use as a model for your own lab file. Download, follow the steps, complete your records."
-  },
-  "lab-ideas": {
-    "short": "Ideas to make your maths lab better: Indian mathematicians, lab kits and display material.",
-    "full": "Ideas and reference material for the maths lab room: information slides on Indian mathematicians (Brahmagupta and more) for display boards, and lab-kit catalogues to see what equipment is available. Combine with the project ideas folder for a complete lab year plan."
-  },
-  "project-ideas": {
-    "short": "183 ready maths project ideas — flexagons, air-powered car, working models — for exhibitions and lab files.",
-    "full": "Need a maths exhibition or activity project fast? Browse 183 project ideas with downloadable PDFs: flexagons (2D and 3D), angle trisector, air-powered car, DIY bead microscope, sum of first N numbers models, rectangle-to-square conversions and many more. Each PDF explains the model, so students can build it directly. The Hindi project ideas are in the For Math Lovers section too."
-  },
-  "holiday-homework": {
-    "short": "Summer vacation homework for Classes 6 and 12 — ready to circulate or adapt.",
-    "full": "Ready holiday homework files, including Class 12 and Class 6 summer vacation assignments. A small collection right now — more classes will be added. If you have well-made vacation homework sheets, share them via Contribute."
-  },
-  "lesson-plan": {
-    "short": "Ready lesson plans for Classes 6-12 (incl. new Class 9 book), inspection lesson plan and annual action plan.",
-    "full": "Complete lesson plans for Classes 6 to 12 Mathematics — including the new Class 9 book in two parts, a one-day lesson plan format for inspection, subject committee/annual action plan, and a guide on making lesson plans with ChatGPT. Download, personalise, and walk into class prepared."
-  },
-  "ppts-worksheets": {
-    "short": "Class 12 chapter PPTs (Vectors, ITF, 3D Geometry...), GeoGebra teaching PPTs and Class 10 worksheets.",
-    "full": "Classroom-ready presentation and practice material: Class 12 PPTs for 3D Geometry, Continuity & Differentiability, Inverse Trigonometric Functions, Differential Equations, Maxima-Minima, Vectors and more; PPTs on teaching Calculus and Trigonometry with GeoGebra; and Class 10 maths worksheets. Save hours of slide-making before your next chapter."
-  },
-  "goi-kvs-circulars": {
-    "short": "Leave rules, allowances, LTC, accounts code, education code — GOI and KVS rules in one folder.",
-    "full": "When a rule question comes up — leave, allowance, medical, finance — find the answer here: CCS leave rules (updated to Sept 2024), allowance orders, NPS handbook, medical attendance rules, General Finance Rules 2017 in English and Hindi, plus the KVS Education Code, Accounts Code (including VVN chapters and fee & fines), CCL orders, LTC rules and staff redistribution orders. Official documents, directly downloadable."
-  },
-  "goi-rules": {
-    "short": "Government of India rules: CCS leave rules 2024, allowances, GFR 2017, NPS, medical attendance.",
-    "full": "Core Government of India rules every teacher and office needs: CCS Leave Rules as updated on 24.09.2024, Allowances orders (02.04.2024), General Finance Rules 2017 (English and Hindi, updated to 31.07.2023), NPS Handbook, Medical Attendance Rules, NCPCR 2005, and KVS BOG meeting minutes. The exact PDF to quote when a rule question comes up."
-  },
-  "kvs-rules": {
-    "short": "KVS Education Code, Accounts Code, CCL, LTC and staff orders — the KVS rulebook set.",
-    "full": "The KVS side of the rules: Education Code, Accounts Code with revised chapters (including VVN Chapter 21 and fee & fines), CCL HQ order, LTC rules presentation, appointing & disciplinary authority orders, staff redistribution, and the Minor Name Correction SOP (Sept 2026). Download the chapter you need instead of scrolling old emails."
-  },
-  "admission": {
-    "short": "KVS admission 2026-27: guidelines, RTE documents, merit list, registration and transfer forms.",
-    "full": "Admission season without the confusion: the official KVS Admission Guidelines 2026-27 link, the exact document lists needed for RTE category and for other-category verification, SC/ST/OBC and CwSN seat reservation rules, merit list preparation for Class XI, option forms, offline registration form, local transfer form, direct admission instructions and TC cases — 39 ready formats and circulars for the whole admission process."
-  },
-  "time-table": {
-    "short": "Time table solved: latest KVS circulars, ready Excel software, and free FET software with tutorials.",
-    "full": "Making the school time table this session? Start here: the latest KVS time table circulars (2026-27 onwards — revised I to VIII, R3 language in Class IX, staff sanction proposals), periods-per-week rules for skill subjects, ready-made time table software in Excel, an absent-teacher arrangement sheet, and the free FET open-source scheduling software with tutorials in Hindi and English. Circulars first, tools second — the whole timetable job covered."
-  },
-  "kvs-tt-circulars": {
-    "short": "KVS time table circulars 2018-2026: revised schemes, staff sanction and periods per week.",
-    "full": "Official KVS time table circulars in one folder — from the 2018 revised time table module up to the 2026-27 scheme (Class III-IX), R3 language implementation in Class IX, advance Maths/Science teaching circulars, skill-subject periods, and staff sanction proposals for each academic session. Check the latest circular before you finalise your school's table."
-  },
-  "tt-softwares": {
-    "short": "Ready-to-use time table software in MS Excel + absent teacher arrangement sheet.",
-    "full": "Don't build a timetable sheet from scratch — download the ready time table software in MS Excel, plus an absent-teacher arrangement sheet for daily substitution. Open, enter your teachers and periods, and the structure is done."
-  },
-  "fet-software": {
-    "short": "FET — free open-source time table software used in schools. Download and start.",
-    "full": "FET (Free Timetabling Software) is a free, open-source program many KVs use for automatic timetable generation. Download it here and follow the step-by-step tutorials (Hindi and English available in the next folder) to generate clash-free schedules for your school."
-  },
-  "fet-tutorial": {
-    "short": "FET software tutorials in Hindi and English — learn step by step.",
-    "full": "Learn FET at your own pace: video tutorials in Hindi and in English take you from installation to a finished timetable. Pick your language and follow along."
-  },
-  "cbsenios": {
-    "short": "CBSE & NIOS circulars and formats: counselors, admissions, PI formula, TA/DA bills, NIOS formats.",
-    "full": "CBSE circulars and ready formats in one place: appointment of counselors and wellness teachers, exemption from the 40-students section limit, direct admission to Classes 10 and 12 (with formats), Performance Index (PI) calculation formula, name correction proforma, TA/DA bill formats and declarations — plus NIOS all-format Excel. Skip the CBSE portal searching; the documents you need are here."
-  },
-  "cbse": {
-    "short": "CBSE circulars + formats: counselor appointment, section limits, PI formula, TA/DA bills.",
-    "full": "The CBSE documents schools actually ask for: circular on appointment of Counselors and Wellness Teachers (2026), exemption from the 40-students per section limit (2025), direct admission circular and formats for Classes 10/12, Performance Index calculation formula, name correction proforma, and TA/DA bill formats with declarations. 29 files, directly downloadable."
-  },
-  "nios": {
-    "short": "NIOS — all formats in one Excel (admission, exam, assignments).",
-    "full": "One Excel workbook containing the formats needed for NIOS work — admission, examination and assignment formats together, so you don't hunt for each one separately."
-  },
-  "morning-assembly": {
-    "short": "Assembly-ready: suvichar, pledge, prayer, commands, CCA house distribution and council formats.",
-    "full": "Never scramble for assembly content again: the KVS circular on conducting morning assembly, a suvichar (thought of the day) collection, prayer-pledge-anthem file, assembly commands, assembly item ideas, CCA house distribution format and student council format. Print once, use all year."
-  },
-  "office-formats": {
-    "short": "Everyday office formats: Teacher's Diary, LTC bills, medical certificates, applications — ready to fill.",
-    "full": "The formats teachers and offices use daily, ready to download and fill: Teacher's Diary format (KVS), stock verification proforma (blank and a filled example), medical certificate for leave and fitness, LTC bill and advance format (CS-17C), joint declaration for reimbursement, CS-41 payment form, and bilingual application formats for office use. 23 formats in one folder."
-  },
-  "miscellaneous": {
-    "short": "APAR formats & drafting tool, remedial action plan, and the DIKSHA national platform.",
-    "full": "The documents that don't fit one box: APAR formats for KV teachers in English, Hindi and Sanskrit plus the online APAR drafting tool; an action plan format for low-achievement and remedial students; and the DIKSHA portal — the national digital platform from NCERT and the Ministry of Education."
-  },
-  "apar": {
-    "short": "APAR formats in English, Hindi and Sanskrit + online drafting tool.",
-    "full": "Annual Performance Appraisal Report made easier: APAR formats for KV teachers in English (short and detailed), Hindi and Sanskrit, the online APAR drafting tool that selects options for you, and the extension circular for dated APARs. Pick your language, download, fill."
-  },
-  "others": {
-    "short": "Action plan format for low-achievement and remedial students.",
-    "full": "A ready action plan format for working with low-achievement and remedial students — objectives, activities and tracking in one document you can adapt to your school."
-  },
-  "diksha-portal": {
-    "short": "DIKSHA — the national digital education platform by NCERT and the Ministry of Education.",
-    "full": "DIKSHA is the Government of India's national platform for school education — e-content, teacher training material and resources from NCERT and the Ministry of Education, open for teachers and students across the country."
-  },
-  "primary-class-1": {
-    "short": "Class 1 complete kit: SRP/Vidya Pravesh, lesson plans, worksheets, cycle tests, textbooks and PPTs.",
-    "full": "Everything for teaching Class 1: the School Readiness Programme and Vidya Pravesh (orientation PPTs, booklets, phonics, assessment and guidelines), lesson plans for English and EVS, worksheets for English, Hindi, Maths and EVS (23 files), cycle tests 1-8 with objective question papers, textbooks with split-ups and the learning outcomes brochure, and topic-wise PPTs — One & Many, Action Words, Gender, Adjectives and more."
-  },
-  "class-1-srp": {
-    "short": "Class 1 SRP & Vidya Pravesh: orientation PPTs, booklets, phonics, worksheets and guidelines.",
-    "full": "Run the School Readiness Programme properly: SRP orientation presentations, Booklets 1 and 2, the School Readiness Activity Booklet, worksheets, English phonics material, Vidya Pravesh guidelines, the 3-month programme plan, and the Vidya Pravesh assessment sheet. The official starting point for Class 1 teaching."
-  },
-  "class-1-lesson-plans": {
-    "short": "Class 1 lesson plans for English and EVS (with topics like Tiger and the Mosquito).",
-    "full": "Ready lesson plans for Class 1 English and EVS — including 'Tiger and the Mosquito' and 'Means of Transportation'. Adapt the format to your own lessons."
-  },
-  "class-1-worksheets": {
-    "short": "Class 1 worksheets: Maths 1-8, English, Hindi — ready practice pages.",
-    "full": "Print-ready worksheets for Class 1: Maths worksheets 1 to 8, English worksheets, and Hindi worksheets — number practice, beginning sounds and language activities. 23 files to cover the whole year's practice."
-  },
-  "class-1-question-papers": {
-    "short": "Class 1 cycle tests 1-8 (English, EVS, Hindi) + objective question papers.",
-    "full": "Cycle test question papers for Class 1 — English cycle tests 7 and 8, EVS cycle tests 1 to 6, objective type question sets and worksheets usable as tests. Match the pattern and your class tests are ready."
-  },
-  "class-1-textbook": {
-    "short": "Class 1 textbooks, subject-wise split-ups and the learning outcomes brochure.",
-    "full": "Class 1 textbook and planning references: the Maths textbook, subject-wise split-ups (English, Hindi, Maths, EVS, plus a combined Classes 1-2 split-up), and the Learning Outcomes brochure — what a Class 1 child should achieve, term by term."
-  },
-  "class-1-av": {
-    "short": "Class 1 teaching PPTs: One & Many, Action Words, Gender, Adjectives, Helpers...",
-    "full": "Topic-wise presentations for Class 1 English: One and Many, Action Words, Verbs, Gender, Adjectives, Helpers, Musical Instruments, Beginning Sounds — plus homework and resource material files. Show the PPT, teach the topic, done."
-  },
-  "primary-class-2": {
-    "short": "Class 2 resources: lesson plans, worksheets, cycle tests + objective papers, textbooks & split-ups.",
-    "full": "Material for Class 2 teachers: lesson plans for English, Maths (including 'A Day at the Beach') and EVS; worksheets for all four subjects; cycle test question papers and objective-type question banks (31 files — a full year of tests); and textbooks with subject-wise split-ups and the learning outcomes brochure."
-  },
-  "class-2-lesson-plans": {
-    "short": "Class 2 lesson plans: English, Maths, EVS.",
-    "full": "Ready lesson plans for Class 2 — English, Maths (including 'A Day at the Beach') and EVS. Use directly or as a model for your own plans."
-  },
-  "class-2-worksheets": {
-    "short": "Class 2 worksheets for English, Hindi, Maths and EVS.",
-    "full": "Practice worksheets for every Class 2 subject: English worksheets 1-8, Hindi, Maths and EVS worksheet sets. Print and use for classwork and homework."
-  },
-  "class-2-question-papers": {
-    "short": "Class 2 cycle tests + objective question banks — 31 test files.",
-    "full": "A full year of Class 2 assessment: cycle tests for Maths, EVS and Hindi (including April tests and sets A-C), and objective type question papers for every subject. Pick, edit school name, print."
-  },
-  "class-2-textbook": {
-    "short": "Class 2 textbooks (English, Hindi, Maths, EVS) + split-ups and learning outcomes.",
-    "full": "Class 2 textbooks for all subjects with subject-wise split-ups and the Class 2 Learning Outcomes brochure — your term planning reference in one folder."
-  },
-  "primary-class-3": {
-    "short": "Class 3 new NCERT 2024 textbooks: Santoor (English), Veena (Hindi), Maths Mela.",
-    "full": "The new NCERT 2024 series for Class 3, ready to download: Santoor for English, Veena for Hindi, and Maths Mela for Mathematics. The current official textbooks in one place — no registration needed."
-  },
-  "class-3-textbook": {
-    "short": "Class 3 textbooks: Santoor, Veena, Maths Mela (new NCERT 2024 series).",
-    "full": "Class 3 textbooks from the new NCERT 2024 series: Santoor (English), Veena (Hindi) and Maths Mela (Mathematics). Direct PDF downloads of the official books."
-  },
-  "programmes-common": {
-    "short": "Primary programmes: FLN/NIPUN Bharat, MDP, CMP, Cub-Bulbul, Toy Pedagogy — guides and real examples.",
-    "full": "All the primary programmes in one place, each with guidelines AND real examples: FLN/NIPUN Bharat (52 files — targets, rubrics, Vidya Pravesh goals, grade-wise numeracy compendiums in Hindi), Multidisciplinary Projects (18 real MDP examples from Classes 3-5 with guidelines and rubrics), CMP (newsletter examples from 20+ KVs), Cub-Bulbul (APRO III book, logbooks, Utsav material), Toy Based Pedagogy training PPTs, NEP 2020 overviews, action research, and the Holistic Progress Card for Classes 1-2."
-  },
-  "programmes-fln": {
-    "short": "FLN / NIPUN Bharat: mission targets, rubrics, Vidya Pravesh goals, Hindi numeracy compendiums.",
-    "full": "The FLN / NIPUN Bharat mission folder: the mission overview and guidelines, NIPUN resource material, Vidya Pravesh goals with homework, grade-wise numeracy compendiums in Hindi for Classes 1-3, teacher activity checklists, assessment rubrics and improvement-planning formats. The documents you need for FLN compliance and training."
-  },
-  "programmes-mdp": {
-    "short": "MDP (Multidisciplinary Project): real examples from Classes 3-5 + CBSE-KVS guidelines and rubrics.",
-    "full": "Multidisciplinary Projects made concrete: real MDP examples from Classes 3-5 (Food and Nutrition, Types of Fever, Water, Family, Food & Animals) with the CBSE-KVS subject enrichment guidelines, assessment rubrics and term plans. See how other schools did it, then run yours."
-  },
-  "programmes-cmp": {
-    "short": "CMP newsletters: 20+ real examples from KVs across India — see the format, make yours.",
-    "full": "Common Minimum Programme newsletter examples from more than 20 Kendriya Vidyalayas across regions (first-quarter and quarterly issues, Word and PDF). Download two or three as references, then produce your Vidyalaya's own CMP newsletter."
-  },
-  "programmes-cub": {
-    "short": "Cub-Bulbul: APRO III complete book, logbook examples, Utsav schedule, prayer songs.",
-    "full": "Scouting material for primary: the complete APRO III book, Cub-Bulbul logbook examples (including handwritten and region examples), the Cub-Bulbul Utsav overview and schedule format, and All Faith Prayer songs. Everything the cub master needs."
-  },
-  "programmes-toy": {
-    "short": "Toy Based Pedagogy (NEP 2020): training PPTs + attributes of a good toy.",
-    "full": "Toy Based Pedagogy training material from NEP 2020: three training presentations plus 'Attributes of a Good Toy' — useful for training sessions and for choosing classroom toys that actually teach."
-  },
-  "programmes-misc": {
-    "short": "Primary teacher essentials: NEP 2020, TLOs, competency-based assessment, action research, Balvatika.",
-    "full": "The mixed teacher-training shelf: NEP 2020 overview (Hindi), Learning Outcomes for all primary classes and CBSE, competency-based assessment training, action research document for HMs, the Holistic Progress Card for Classes 1-2, Balvatika activity book, folk tales e-book, history activity book, Rajbhasha and teaching-language-through-games material. 39 files of staff-training ready content."
-  },
-  "hm-corner": {
-    "short": "Head Master corner: APAR, supervision, inspection checklists + every record & register proforma.",
-    "full": "Two full shelves for Head Masters: HM materials (APAR, class supervision formats, inspection checklists, PIMS observation, teacher profiles, diary submission tracker, supervision reports, education code) and Records & Registers (notebook checking index, student profile competencies, late bloomers and special classes records, TLM and film-show records, daily activity plan, performance portfolio sheets) — 68 files covering primary administration."
-  },
-  "hm-materials": {
-    "short": "HM materials: APAR, class supervision, inspection checklist, PIMS observation, teacher profiles.",
-    "full": "The Head Master's working tools: APAR spreadsheet, class supervision formats, inspection checklist, PIMS observation format, teacher profile and self-evaluation framework, teaching diary submission tracker, supervision report format and the education code. Be inspection-ready every day, not the week before."
-  },
-  "hm-records": {
-    "short": "Records & registers: notebook checking, student profiles, late bloomers, TLM, film show — all proformas.",
-    "full": "Every register the primary section asks for, as a ready proforma: notebook checking index, student profile with competencies, late bloomers list and special classes record, TLM and film-show records (class & teacher-wise), daily activity plan, resource room proforma, performance portfolio, CAL-TAL records and more. Fill, file, done."
-  }
+    "_comment": "Original intro text per page/folder for AdSense 'low value content' fix. short = always visible (2-3 lines), full = behind 'Read more' toggle + in DOM for search engines. PageIntro component renders this. Page keys: home, for-teachers, tgt-pgt, circular-formats, primary-hm, math-lovers, about, contribute. Sub-section keys match teachers.json subCard ids (rendered when folder opens).",
+    "home": {
+        "short": "Searching for question papers, worksheets, lesson plans or KVS circulars? Sajhi Shiksha keeps them all in one place — free, no login.",
+        "full": "Searching for question papers, worksheets, lesson plans or KVS circulars? Sajhi Shiksha keeps them all in one place — free for every student and teacher of Classes 1 to 12. Students can find question banks, study material and sample papers. Teachers can download periodic test and pre-board question papers, primary lesson plans and worksheets, NCERT textbooks and lab manuals, GOI/KVS circulars, admission formats, timetable software and office formats. No login, no fees — every file opens directly. New resources are added every week, shared by working teachers."
+    },
+    "for-teachers": {
+        "short": "TGT/PGT Maths papers, Primary Classes 1-5 lesson plans, GOI/KVS circulars and office formats — free for every teacher, no login.",
+        "full": "Teaching resources for KVS and CBSE teachers, all in one place — no more searching through old emails and files. TGT/PGT Maths question papers, question banks, maths lab activities and PPTs. Primary Classes 1-5 lesson plans, worksheets, cycle tests and the new NCERT textbooks. GOI/KVS circulars, admission formats, CBSE curriculum and sample papers, morning assembly material, APAR and office formats. Everything is free to download without login. Missing something? Request it on WhatsApp — teachers like you keep this library growing."
+    },
+    "tgt-pgt": {
+        "short": "Classroom-tested TGT/PGT Maths material: periodic test to pre-board question papers, question banks, lab activities and PPTs — free download, no login.",
+        "full": "Why make question papers from scratch every year? Here TGT and PGT Maths teachers get classroom-tested material: periodic test, half-yearly, session-ending and pre-board question papers; question banks and study material for practice; NCERT lab manual, maths lab activities and project ideas for exhibitions; holiday homework; lesson plans and subject committee records; ready-made PPTs and worksheets. Organised term-wise so you can find the right paper in seconds. All files are free to download — no login required."
+    },
+    "circular-formats": {
+        "short": "GOI rules, KVS circulars, admission formats, CBSE sample papers and free FET timetable software — folder-wise, free to download.",
+        "full": "Stop hunting through email chains for one circular. This section keeps GOI rules, KVS rules, KVS admission guidelines and formats, time table circulars, CBSE/NIOS circulars, CBSE Curriculum 2026-27 and official sample papers for Class 10 and 12 — all folder-wise and free to download. The time table section also includes the free FET software with tutorials in both Hindi and English. Morning assembly material, APAR formats and other office formats are here too."
+    },
+    "primary-hm": {
+        "short": "Classes 1-5 lesson plans, worksheets, cycle tests, new NCERT textbooks, FLN/NIPUN Bharat programme material and the HM Corner for Head Masters.",
+        "full": "Complete material for Primary Classes 1 to 5 — lesson plans, worksheets, cycle test question papers, textbooks, split-ups and learning outcomes, including the new NCERT 2024 series (Santoor, Veena, Maths Magic). Programme material is covered too: SRP/Vidya Pravesh, FLN and NIPUN Bharat targets and rubrics, MDP, CMP, Cub-Bulbul and Toy Based Pedagogy. Head Masters get their own HM Corner with APAR, supervision, records and registers material."
+    },
+    "math-lovers": {
+        "short": "Maths facts, puzzles and blog posts, 250+ project ideas (English + Hindi), Olympiad preparation books and ISI entrance material.",
+        "full": "Maths is much bigger than the exam syllabus. Explore maths facts, puzzles and blog posts; 180+ maths project ideas in English and 79 in Hindi for exhibitions and activities; Mathematical Olympiad preparation books and notes, official HBCSE links for stages, eligibility, syllabus and previous year papers; and the ISI Test of Mathematics at 10+2 level. Perfect for students preparing for Olympiads and ISI, teachers looking for engaging maths lab ideas, and anyone who enjoys a good problem."
+    },
+    "about": {
+        "short": "Sajhi Shiksha means 'shared knowledge' — free, organised teaching material for every teacher, student and parent.",
+        "full": "Sajhi Shiksha means 'shared knowledge'. It started with a simple problem: teachers everywhere have good material — question papers, formats, lesson plans — but it stays scattered in drawers, phones and email chains, so everyone keeps rebuilding the same things. This site collects that material, checks it, organises it and gives it back to every teacher, student and parent — free, no login. It is run by working teachers, for the teaching community. See how you can share your material on the Contribute page."
+    },
+    "contribute": {
+        "short": "Your question papers and formats can save another teacher hours of work — upload in one step, no account needed.",
+        "full": "Have question papers, worksheets or formats that worked well in your classroom? Share them and help thousands of other teachers and students. Upload directly through the form — your files go to our team first, are checked for quality and copyright, then published in the right section. No account needed. One folder of yours could save another teacher hours of work."
+    },
+    "question-papers": {
+        "short": "Set your exam paper in minutes: Periodic Test, Half-Yearly, Session Ending and Pre-Board papers for Classes 6-12, many with marking schemes and blueprints.",
+        "full": "Why start from a blank page? Here you'll find Periodic Test 1 and monthly test papers, Half-Yearly (mid-term) exams, Session Ending exams and Pre-Board papers for Classes 6 to 12 — collected from KVs across regions like Agra, Chandigarh, Ernakulam, Guwahati, Jaipur and Gurugram. Many papers come with their marking schemes and blueprints, and Class 12 pre-boards include both Maths (041) and Applied Maths (241) sets. Download, edit, print — your exam is ready."
+    },
+    "periodic-test": {
+        "short": "Class 6-12 Periodic Test 1 and monthly test papers with marking schemes — from KVs across India.",
+        "full": "Ready Periodic Test question papers for Maths Classes 6 to 12, including PT-1 and monthly tests from KVs across regions (Agra, Baoli Baghpat, Faridkot, Dimapur, Loktak, Missamari, Satna and more). Many sets include the marking scheme. Pick a paper, adapt it to your school, and your periodic test is done — no rebuilding from scratch."
+    },
+    "half-yearly": {
+        "short": "Half-Yearly / Mid-Term Maths papers (Classes 8-12) with marking schemes, from multiple KVS regions.",
+        "full": "Half-Yearly (Mid-Term) exam papers for Maths Classes 8 to 12, contributed by KVs and regional offices — Chandigarh, Ernakulam, Guwahati, Loktak, Satna and others. Sets include question papers, marking schemes and MCQ versions, for sessions from 2020-21 to 2023-24. Compare papers from different regions before setting your own mid-term."
+    },
+    "session-ending": {
+        "short": "Session Ending exam papers for Maths — the folder is ready, papers are being added.",
+        "full": "Session Ending exam question papers for Mathematics will appear here. The collection is small right now — if you have session-ending papers from your school, share them via the Contribute page and help other teachers."
+    },
+    "pre-board": {
+        "short": "Class 10 & 12 Pre-Board papers — Maths (041) and Applied Maths (241) — with blueprints and marking schemes.",
+        "full": "Pre-Board question papers for Class 10 and Class 12 from regions like Agra, Jaipur and Gurugram — including Pre-Board 1 and 2 sets, blueprints and marking schemes. Class 12 covers both Maths (041) and Applied Maths (241); Class 10 includes Maths Basic papers. Ideal practice before boards, and a ready base for setting your school's pre-board."
+    },
+    "question-bank": {
+        "short": "Chapter-wise question banks, case-based & CCT questions, key concepts and summaries for Classes 11-12 Maths.",
+        "full": "Practice material organised chapter-wise for Classes 11 and 12: Complex Numbers, Straight Lines, Continuity & Differentiability, Vectors, Application of Integrals and more. Includes case-based questions, CCT (Creative & Critical Thinking) questions, chapter summaries, key-concept sheets, Class 12 study material 2023-24, reduced-syllabus summaries for 2025-26, and Applied Maths sample papers. Also a LaTeX/Unicode maths symbols reference for teachers making their own papers."
+    },
+    "maths-lab": {
+        "short": "Maths Lab in one place: NCERT manual, Class 11-12 activities with solutions, project ideas and lab-kit catalogues.",
+        "full": "Setting up a maths lab or preparing lab records? Get the official NCERT lab manual, Class 11 and 12 lab activities with solutions (including a probability project file), Indian mathematician slides for lab display, lab-kit catalogues, and 183 ready project ideas — from flexagons and 3D models to an air-powered car and DIY bead microscope. Everything your lab file and exhibition needs."
+    },
+    "ncert-lab-manual": {
+        "short": "Official NCERT Science/Mathematics Laboratory Manual — the source document for lab activities.",
+        "full": "The official NCERT laboratory manual, linking straight to ncert.nic.in — the authoritative reference for prescribed lab activities. Use it to check what's required, then pick ready-made activity files from the Maths Lab Activities folder."
+    },
+    "lab-activities": {
+        "short": "Class 11 & 12 maths lab activities with solutions — plus a ready probability project file.",
+        "full": "Lab activities for Classes 11 and 12 with full solutions, and a Class 12 probability project record file you can use as a model for your own lab file. Download, follow the steps, complete your records."
+    },
+    "lab-ideas": {
+        "short": "Ideas to make your maths lab better: Indian mathematicians, lab kits and display material.",
+        "full": "Ideas and reference material for the maths lab room: information slides on Indian mathematicians (Brahmagupta and more) for display boards, and lab-kit catalogues to see what equipment is available. Combine with the project ideas folder for a complete lab year plan."
+    },
+    "project-ideas": {
+        "short": "183 ready maths project ideas — flexagons, air-powered car, working models — for exhibitions and lab files.",
+        "full": "Need a maths exhibition or activity project fast? Browse 183 project ideas with downloadable PDFs: flexagons (2D and 3D), angle trisector, air-powered car, DIY bead microscope, sum of first N numbers models, rectangle-to-square conversions and many more. Each PDF explains the model, so students can build it directly. The Hindi project ideas are in the For Math Lovers section too."
+    },
+    "holiday-homework": {
+        "short": "Summer vacation homework for Classes 6 and 12 — ready to circulate or adapt.",
+        "full": "Ready holiday homework files, including Class 12 and Class 6 summer vacation assignments. A small collection right now — more classes will be added. If you have well-made vacation homework sheets, share them via Contribute."
+    },
+    "lesson-plan": {
+        "short": "Ready lesson plans for Classes 6-12 (incl. new Class 9 book), inspection lesson plan and annual action plan.",
+        "full": "Complete lesson plans for Classes 6 to 12 Mathematics — including the new Class 9 book in two parts, a one-day lesson plan format for inspection, subject committee/annual action plan, and a guide on making lesson plans with ChatGPT. Download, personalise, and walk into class prepared."
+    },
+    "ppts-worksheets": {
+        "short": "Class 12 chapter PPTs (Vectors, ITF, 3D Geometry...), GeoGebra teaching PPTs and Class 10 worksheets.",
+        "full": "Classroom-ready presentation and practice material: Class 12 PPTs for 3D Geometry, Continuity & Differentiability, Inverse Trigonometric Functions, Differential Equations, Maxima-Minima, Vectors and more; PPTs on teaching Calculus and Trigonometry with GeoGebra; and Class 10 maths worksheets. Save hours of slide-making before your next chapter."
+    },
+    "goi-kvs-circulars": {
+        "short": "Leave rules, allowances, LTC, accounts code, education code — GOI and KVS rules in one folder.",
+        "full": "When a rule question comes up — leave, allowance, medical, finance — find the answer here: CCS leave rules (updated to Sept 2024), allowance orders, NPS handbook, medical attendance rules, General Finance Rules 2017 in English and Hindi, plus the KVS Education Code, Accounts Code (including VVN chapters and fee & fines), CCL orders, LTC rules and staff redistribution orders. Official documents, directly downloadable."
+    },
+    "goi-rules": {
+        "short": "Government of India rules: CCS leave rules 2024, allowances, GFR 2017, NPS, medical attendance.",
+        "full": "Core Government of India rules every teacher and office needs: CCS Leave Rules as updated on 24.09.2024, Allowances orders (02.04.2024), General Finance Rules 2017 (English and Hindi, updated to 31.07.2023), NPS Handbook, Medical Attendance Rules, NCPCR 2005, and KVS BOG meeting minutes. The exact PDF to quote when a rule question comes up."
+    },
+    "kvs-rules": {
+        "short": "KVS Education Code, Accounts Code, CCL, LTC and staff orders — the KVS rulebook set.",
+        "full": "The KVS side of the rules: Education Code, Accounts Code with revised chapters (including VVN Chapter 21 and fee & fines), CCL HQ order, LTC rules presentation, appointing & disciplinary authority orders, staff redistribution, and the Minor Name Correction SOP (Sept 2026). Download the chapter you need instead of scrolling old emails."
+    },
+    "admission": {
+        "short": "KVS admission 2026-27: guidelines, RTE documents, merit list, registration and transfer forms.",
+        "full": "Admission season without the confusion: the official KVS Admission Guidelines 2026-27 link, the exact document lists needed for RTE category and for other-category verification, SC/ST/OBC and CwSN seat reservation rules, merit list preparation for Class XI, option forms, offline registration form, local transfer form, direct admission instructions and TC cases — 39 ready formats and circulars for the whole admission process."
+    },
+    "time-table": {
+        "short": "Time table solved: latest KVS circulars, ready Excel software, and free FET software with tutorials.",
+        "full": "Making the school time table this session? Start here: the latest KVS time table circulars (2026-27 onwards — revised I to VIII, R3 language in Class IX, staff sanction proposals), periods-per-week rules for skill subjects, ready-made time table software in Excel, an absent-teacher arrangement sheet, and the free FET open-source scheduling software with tutorials in Hindi and English. Circulars first, tools second — the whole timetable job covered."
+    },
+    "kvs-tt-circulars": {
+        "short": "KVS time table circulars 2018-2026: revised schemes, staff sanction and periods per week.",
+        "full": "Official KVS time table circulars in one folder — from the 2018 revised time table module up to the 2026-27 scheme (Class III-IX), R3 language implementation in Class IX, advance Maths/Science teaching circulars, skill-subject periods, and staff sanction proposals for each academic session. Check the latest circular before you finalise your school's table."
+    },
+    "tt-softwares": {
+        "short": "Ready-to-use time table software in MS Excel + absent teacher arrangement sheet.",
+        "full": "Don't build a timetable sheet from scratch — download the ready time table software in MS Excel, plus an absent-teacher arrangement sheet for daily substitution. Open, enter your teachers and periods, and the structure is done."
+    },
+    "fet-software": {
+        "short": "FET — free open-source time table software used in schools. Download and start.",
+        "full": "FET (Free Timetabling Software) is a free, open-source program many KVs use for automatic timetable generation. Download it here and follow the step-by-step tutorials (Hindi and English available in the next folder) to generate clash-free schedules for your school."
+    },
+    "fet-tutorial": {
+        "short": "FET software tutorials in Hindi and English — learn step by step.",
+        "full": "Learn FET at your own pace: video tutorials in Hindi and in English take you from installation to a finished timetable. Pick your language and follow along."
+    },
+    "cbsenios": {
+        "short": "CBSE & NIOS circulars and formats: counselors, admissions, PI formula, TA/DA bills, NIOS formats.",
+        "full": "CBSE circulars and ready formats in one place: appointment of counselors and wellness teachers, exemption from the 40-students section limit, direct admission to Classes 10 and 12 (with formats), Performance Index (PI) calculation formula, name correction proforma, TA/DA bill formats and declarations — plus NIOS all-format Excel. Skip the CBSE portal searching; the documents you need are here."
+    },
+    "cbse": {
+        "short": "CBSE circulars + formats: counselor appointment, section limits, PI formula, TA/DA bills.",
+        "full": "The CBSE documents schools actually ask for: circular on appointment of Counselors and Wellness Teachers (2026), exemption from the 40-students per section limit (2025), direct admission circular and formats for Classes 10/12, Performance Index calculation formula, name correction proforma, and TA/DA bill formats with declarations. 29 files, directly downloadable."
+    },
+    "nios": {
+        "short": "NIOS — all formats in one Excel (admission, exam, assignments).",
+        "full": "One Excel workbook containing the formats needed for NIOS work — admission, examination and assignment formats together, so you don't hunt for each one separately."
+    },
+    "morning-assembly": {
+        "short": "Assembly-ready: suvichar, pledge, prayer, commands, CCA house distribution and council formats.",
+        "full": "Never scramble for assembly content again: the KVS circular on conducting morning assembly, a suvichar (thought of the day) collection, prayer-pledge-anthem file, assembly commands, assembly item ideas, CCA house distribution format and student council format. Print once, use all year."
+    },
+    "office-formats": {
+        "short": "Everyday office formats: Teacher's Diary, LTC bills, medical certificates, applications — ready to fill.",
+        "full": "The formats teachers and offices use daily, ready to download and fill: Teacher's Diary format (KVS), stock verification proforma (blank and a filled example), medical certificate for leave and fitness, LTC bill and advance format (CS-17C), joint declaration for reimbursement, CS-41 payment form, and bilingual application formats for office use. 23 formats in one folder."
+    },
+    "miscellaneous": {
+        "short": "APAR formats & drafting tool, remedial action plan, and the DIKSHA national platform.",
+        "full": "The documents that don't fit one box: APAR formats for KV teachers in English, Hindi and Sanskrit plus the online APAR drafting tool; an action plan format for low-achievement and remedial students; and the DIKSHA portal — the national digital platform from NCERT and the Ministry of Education."
+    },
+    "apar": {
+        "short": "APAR formats in English, Hindi and Sanskrit + online drafting tool.",
+        "full": "Annual Performance Appraisal Report made easier: APAR formats for KV teachers in English (short and detailed), Hindi and Sanskrit, the online APAR drafting tool that selects options for you, and the extension circular for dated APARs. Pick your language, download, fill."
+    },
+    "others": {
+        "short": "Action plan format for low-achievement and remedial students.",
+        "full": "A ready action plan format for working with low-achievement and remedial students — objectives, activities and tracking in one document you can adapt to your school."
+    },
+    "diksha-portal": {
+        "short": "DIKSHA — the national digital education platform by NCERT and the Ministry of Education.",
+        "full": "DIKSHA is the Government of India's national platform for school education — e-content, teacher training material and resources from NCERT and the Ministry of Education, open for teachers and students across the country."
+    },
+    "primary-class-1": {
+        "short": "Class 1 complete kit: SRP/Vidya Pravesh, lesson plans, worksheets, cycle tests, textbooks and PPTs.",
+        "full": "Everything for teaching Class 1: the School Readiness Programme and Vidya Pravesh (orientation PPTs, booklets, phonics, assessment and guidelines), lesson plans for English and EVS, worksheets for English, Hindi, Maths and EVS (23 files), cycle tests 1-8 with objective question papers, textbooks with split-ups and the learning outcomes brochure, and topic-wise PPTs — One & Many, Action Words, Gender, Adjectives and more."
+    },
+    "class-1-srp": {
+        "short": "Class 1 SRP & Vidya Pravesh: orientation PPTs, booklets, phonics, worksheets and guidelines.",
+        "full": "Run the School Readiness Programme properly: SRP orientation presentations, Booklets 1 and 2, the School Readiness Activity Booklet, worksheets, English phonics material, Vidya Pravesh guidelines, the 3-month programme plan, and the Vidya Pravesh assessment sheet. The official starting point for Class 1 teaching."
+    },
+    "class-1-lesson-plans": {
+        "short": "Class 1 lesson plans for English and EVS (with topics like Tiger and the Mosquito).",
+        "full": "Ready lesson plans for Class 1 English and EVS — including 'Tiger and the Mosquito' and 'Means of Transportation'. Adapt the format to your own lessons."
+    },
+    "class-1-worksheets": {
+        "short": "Class 1 worksheets: Maths 1-8, English, Hindi — ready practice pages.",
+        "full": "Print-ready worksheets for Class 1: Maths worksheets 1 to 8, English worksheets, and Hindi worksheets — number practice, beginning sounds and language activities. 23 files to cover the whole year's practice."
+    },
+    "class-1-question-papers": {
+        "short": "Class 1 cycle tests 1-8 (English, EVS, Hindi) + objective question papers.",
+        "full": "Cycle test question papers for Class 1 — English cycle tests 7 and 8, EVS cycle tests 1 to 6, objective type question sets and worksheets usable as tests. Match the pattern and your class tests are ready."
+    },
+    "class-1-textbook": {
+        "short": "Class 1 textbooks, subject-wise split-ups and the learning outcomes brochure.",
+        "full": "Class 1 textbook and planning references: the Maths textbook, subject-wise split-ups (English, Hindi, Maths, EVS, plus a combined Classes 1-2 split-up), and the Learning Outcomes brochure — what a Class 1 child should achieve, term by term."
+    },
+    "class-1-av": {
+        "short": "Class 1 teaching PPTs: One & Many, Action Words, Gender, Adjectives, Helpers...",
+        "full": "Topic-wise presentations for Class 1 English: One and Many, Action Words, Verbs, Gender, Adjectives, Helpers, Musical Instruments, Beginning Sounds — plus homework and resource material files. Show the PPT, teach the topic, done."
+    },
+    "primary-class-2": {
+        "short": "Class 2 resources: lesson plans, worksheets, cycle tests + objective papers, textbooks & split-ups.",
+        "full": "Material for Class 2 teachers: lesson plans for English, Maths (including 'A Day at the Beach') and EVS; worksheets for all four subjects; cycle test question papers and objective-type question banks (31 files — a full year of tests); and textbooks with subject-wise split-ups and the learning outcomes brochure."
+    },
+    "class-2-lesson-plans": {
+        "short": "Class 2 lesson plans: English, Maths, EVS.",
+        "full": "Ready lesson plans for Class 2 — English, Maths (including 'A Day at the Beach') and EVS. Use directly or as a model for your own plans."
+    },
+    "class-2-worksheets": {
+        "short": "Class 2 worksheets for English, Hindi, Maths and EVS.",
+        "full": "Practice worksheets for every Class 2 subject: English worksheets 1-8, Hindi, Maths and EVS worksheet sets. Print and use for classwork and homework."
+    },
+    "class-2-question-papers": {
+        "short": "Class 2 cycle tests + objective question banks — 31 test files.",
+        "full": "A full year of Class 2 assessment: cycle tests for Maths, EVS and Hindi (including April tests and sets A-C), and objective type question papers for every subject. Pick, edit school name, print."
+    },
+    "class-2-textbook": {
+        "short": "Class 2 textbooks (English, Hindi, Maths, EVS) + split-ups and learning outcomes.",
+        "full": "Class 2 textbooks for all subjects with subject-wise split-ups and the Class 2 Learning Outcomes brochure — your term planning reference in one folder."
+    },
+    "primary-class-3": {
+        "short": "Class 3 new NCERT 2024 textbooks: Santoor (English), Veena (Hindi), Maths Mela.",
+        "full": "The new NCERT 2024 series for Class 3, ready to download: Santoor for English, Veena for Hindi, and Maths Mela for Mathematics. The current official textbooks in one place — no registration needed."
+    },
+    "class-3-textbook": {
+        "short": "Class 3 textbooks: Santoor, Veena, Maths Mela (new NCERT 2024 series).",
+        "full": "Class 3 textbooks from the new NCERT 2024 series: Santoor (English), Veena (Hindi) and Maths Mela (Mathematics). Direct PDF downloads of the official books."
+    },
+    "programmes-common": {
+        "short": "Primary programmes: FLN/NIPUN Bharat, MDP, CMP, Cub-Bulbul, Toy Pedagogy — guides and real examples.",
+        "full": "All the primary programmes in one place, each with guidelines AND real examples: FLN/NIPUN Bharat (52 files — targets, rubrics, Vidya Pravesh goals, grade-wise numeracy compendiums in Hindi), Multidisciplinary Projects (18 real MDP examples from Classes 3-5 with guidelines and rubrics), CMP (newsletter examples from 20+ KVs), Cub-Bulbul (APRO III book, logbooks, Utsav material), Toy Based Pedagogy training PPTs, NEP 2020 overviews, action research, and the Holistic Progress Card for Classes 1-2."
+    },
+    "programmes-fln": {
+        "short": "FLN / NIPUN Bharat: mission targets, rubrics, Vidya Pravesh goals, Hindi numeracy compendiums.",
+        "full": "The FLN / NIPUN Bharat mission folder: the mission overview and guidelines, NIPUN resource material, Vidya Pravesh goals with homework, grade-wise numeracy compendiums in Hindi for Classes 1-3, teacher activity checklists, assessment rubrics and improvement-planning formats. The documents you need for FLN compliance and training."
+    },
+    "programmes-mdp": {
+        "short": "MDP (Multidisciplinary Project): real examples from Classes 3-5 + CBSE-KVS guidelines and rubrics.",
+        "full": "Multidisciplinary Projects made concrete: real MDP examples from Classes 3-5 (Food and Nutrition, Types of Fever, Water, Family, Food & Animals) with the CBSE-KVS subject enrichment guidelines, assessment rubrics and term plans. See how other schools did it, then run yours."
+    },
+    "programmes-cmp": {
+        "short": "CMP newsletters: 20+ real examples from KVs across India — see the format, make yours.",
+        "full": "Common Minimum Programme newsletter examples from more than 20 Kendriya Vidyalayas across regions (first-quarter and quarterly issues, Word and PDF). Download two or three as references, then produce your Vidyalaya's own CMP newsletter."
+    },
+    "programmes-cub": {
+        "short": "Cub-Bulbul: APRO III complete book, logbook examples, Utsav schedule, prayer songs.",
+        "full": "Scouting material for primary: the complete APRO III book, Cub-Bulbul logbook examples (including handwritten and region examples), the Cub-Bulbul Utsav overview and schedule format, and All Faith Prayer songs. Everything the cub master needs."
+    },
+    "programmes-toy": {
+        "short": "Toy Based Pedagogy (NEP 2020): training PPTs + attributes of a good toy.",
+        "full": "Toy Based Pedagogy training material from NEP 2020: three training presentations plus 'Attributes of a Good Toy' — useful for training sessions and for choosing classroom toys that actually teach."
+    },
+    "programmes-misc": {
+        "short": "Primary teacher essentials: NEP 2020, TLOs, competency-based assessment, action research, Balvatika.",
+        "full": "The mixed teacher-training shelf: NEP 2020 overview (Hindi), Learning Outcomes for all primary classes and CBSE, competency-based assessment training, action research document for HMs, the Holistic Progress Card for Classes 1-2, Balvatika activity book, folk tales e-book, history activity book, Rajbhasha and teaching-language-through-games material. 39 files of staff-training ready content."
+    },
+    "hm-corner": {
+        "short": "Head Master corner: APAR, supervision, inspection checklists + every record & register proforma.",
+        "full": "Two full shelves for Head Masters: HM materials (APAR, class supervision formats, inspection checklists, PIMS observation, teacher profiles, diary submission tracker, supervision reports, education code) and Records & Registers (notebook checking index, student profile competencies, late bloomers and special classes records, TLM and film-show records, daily activity plan, performance portfolio sheets) — 68 files covering primary administration."
+    },
+    "hm-materials": {
+        "short": "HM materials: APAR, class supervision, inspection checklist, PIMS observation, teacher profiles.",
+        "full": "The Head Master's working tools: APAR spreadsheet, class supervision formats, inspection checklist, PIMS observation format, teacher profile and self-evaluation framework, teaching diary submission tracker, supervision report format and the education code. Be inspection-ready every day, not the week before."
+    },
+    "hm-records": {
+        "short": "Records & registers: notebook checking, student profiles, late bloomers, TLM, film show — all proformas.",
+        "full": "Every register the primary section asks for, as a ready proforma: notebook checking index, student profile with competencies, late bloomers list and special classes record, TLM and film-show records (class & teacher-wise), daily activity plan, resource room proforma, performance portfolio, CAL-TAL records and more. Fill, file, done."
+    },
+    "career-counselling": {
+        "short": "Free, research-backed career guidance for students and parents — stream selection, entrance exams, colleges and more.",
+        "full": "Career Counselling on Sajhi Shiksha brings free, research-backed guidance for Indian students and their parents. Start with the interactive Career Explorer — a bilingual tool that maps every path from Class 10 to a job, covering streams, courses, entrance exams, colleges and careers. More is on the way: a Class 10 stream selection guide, the 2026-27 entrance exam calendar, a free aptitude test, career guides by stream, scholarship information and NIRF-based college data. All awareness and information content is free; personalised one-to-one counselling is a clearly labelled paid service. Everything is researched in-house and written for Indian students."
+    }
 }
