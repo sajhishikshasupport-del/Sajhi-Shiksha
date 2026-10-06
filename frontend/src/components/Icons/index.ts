@@ -53,3 +53,4 @@ export { default as GitHubIcon } from '@mui/icons-material/GitHub';
 export { default as CodeIcon } from '@mui/icons-material/Code';
 
 export { default as CloudUploadIcon } from '@mui/icons-material/CloudUpload';
+export { default as ExploreIcon } from '@mui/icons-material/Explore';
