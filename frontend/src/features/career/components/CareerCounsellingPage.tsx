@@ -29,11 +29,17 @@ interface CareerItem {
 function CareerCounsellingPage(): React.ReactElement {
     const items = careerData.items as CareerItem[];
     const live = items.filter((i) => i.phase === 1);
+    // Items held back until the CEO finalises them with the Career Agent.
+    const HIDDEN = new Set([
+        'free-career-aptitude-test',
+        'one-to-one-counselling-session',
+        'career-ladders',
+        'business-ideas-after-courses',
+        'coaching-and-competition-reality',
+    ]);
     const upcoming = items
-        .filter((i) => i.phase > 1)
+        .filter((i) => i.phase > 1 && !HIDDEN.has(i.id))
         .sort((a, b) => a.phase - b.phase || a.order - b.order);
-    const fvp = careerData.free_vs_paid as { free_area?: string; paid_area?: string };
-
     return (
         <Box sx={{ maxWidth: MAX_CONTENT_WIDTH, mx: 'auto', px: { xs: 2, md: 4 }, py: 4 }}>
             <Typography
@@ -95,23 +101,8 @@ function CareerCounsellingPage(): React.ReactElement {
                 </Box>
             ))}
 
-            {/* Free vs Paid */}
-            <Box sx={{ mb: 5, display: 'grid', gridTemplateColumns: { xs: '1fr', md: '1fr 1fr' }, gap: 3 }}>
-                <Box sx={{ p: 3, bgcolor: 'var(--color-bg)', border: `3px solid ${BORDER}`, boxShadow: `4px 4px 0px ${SHADOW}` }}>
-                    <Typography sx={{ fontFamily: FONT_HEADING, fontWeight: 800, mb: 1 }}>Free</Typography>
-                    <Typography sx={{ fontSize: '0.9rem', color: 'var(--color-text-secondary)', lineHeight: 1.7 }}>
-                        {fvp.free_area}
-                    </Typography>
-                </Box>
-                <Box sx={{ p: 3, bgcolor: 'var(--color-bg)', border: `3px solid ${BORDER}`, boxShadow: `4px 4px 0px ${SHADOW}` }}>
-                    <Typography sx={{ fontFamily: FONT_HEADING, fontWeight: 800, mb: 1 }}>
-                        Paid (clearly labelled)
-                    </Typography>
-                    <Typography sx={{ fontSize: '0.9rem', color: 'var(--color-text-secondary)', lineHeight: 1.7 }}>
-                        {fvp.paid_area}
-                    </Typography>
-                </Box>
-            </Box>
+            {/* Free vs Paid boxes are held back until the CEO finalises the
+                free/paid boundary with the Career Agent. */}
 
             {/* Upcoming (Phase 2/3) */}
             <Typography sx={{ fontFamily: FONT_HEADING, fontWeight: 800, fontSize: '1.35rem', mb: 2 }}>
