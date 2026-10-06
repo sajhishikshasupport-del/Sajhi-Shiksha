@@ -4,6 +4,7 @@
         { "label": "Home", "route": "/" },
         { "label": "Teachers", "route": "/for-teachers" },
         { "label": "Math Lovers", "route": "/for-math-lovers" },
+        { "label": "Career", "route": "/career-counselling" },
         { "label": "Contribute", "route": "/contribute" },
         { "label": "About", "route": "/about" }
     ],
@@ -19,7 +20,8 @@
             "heading": "More",
             "links": [
                 { "label": "About Us", "route": "/about" },
-                { "label": "Contribute", "route": "/contribute" }
+                { "label": "Contribute", "route": "/contribute" },
+                { "label": "Career Counselling", "route": "/career-counselling" }
             ]
         },
         {
