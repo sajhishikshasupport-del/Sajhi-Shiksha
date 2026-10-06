@@ -9,23 +9,37 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as TermsRouteImport } from './routes/terms'
 import { Route as SearchRouteImport } from './routes/search'
+import { Route as PrivacyPolicyRouteImport } from './routes/privacy-policy'
 import { Route as ForTeachersRouteImport } from './routes/for-teachers'
 import { Route as ForStudentsRouteImport } from './routes/for-students'
 import { Route as ForMathLoversRouteImport } from './routes/for-math-lovers'
 import { Route as DevelopersRouteImport } from './routes/developers'
 import { Route as ContributeRouteImport } from './routes/contribute'
+import { Route as CareerCounsellingRouteImport } from './routes/career-counselling'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as SplatRouteImport } from './routes/$'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as ForTeachersIndexRouteImport } from './routes/for-teachers.index'
 import { Route as ViewIdRouteImport } from './routes/view.$id'
 import { Route as ForTeachersTgtPgtRouteImport } from './routes/for-teachers.tgt-pgt'
+import { Route as ForTeachersPrimaryHmRouteImport } from './routes/for-teachers.primary-hm'
 import { Route as ForTeachersCircularFormatsRouteImport } from './routes/for-teachers.circular-formats'
 
+const TermsRoute = TermsRouteImport.update({
+  id: '/terms',
+  path: '/terms',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const SearchRoute = SearchRouteImport.update({
   id: '/search',
   path: '/search',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PrivacyPolicyRoute = PrivacyPolicyRouteImport.update({
+  id: '/privacy-policy',
+  path: '/privacy-policy',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ForTeachersRoute = ForTeachersRouteImport.update({
@@ -51,6 +65,11 @@ const DevelopersRoute = DevelopersRouteImport.update({
 const ContributeRoute = ContributeRouteImport.update({
   id: '/contribute',
   path: '/contribute',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CareerCounsellingRoute = CareerCounsellingRouteImport.update({
+  id: '/career-counselling',
+  path: '/career-counselling',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AboutRoute = AboutRouteImport.update({
@@ -83,6 +102,11 @@ const ForTeachersTgtPgtRoute = ForTeachersTgtPgtRouteImport.update({
   path: '/tgt-pgt',
   getParentRoute: () => ForTeachersRoute,
 } as any)
+const ForTeachersPrimaryHmRoute = ForTeachersPrimaryHmRouteImport.update({
+  id: '/primary-hm',
+  path: '/primary-hm',
+  getParentRoute: () => ForTeachersRoute,
+} as any)
 const ForTeachersCircularFormatsRoute =
   ForTeachersCircularFormatsRouteImport.update({
     id: '/circular-formats',
@@ -94,13 +118,17 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/$': typeof SplatRoute
   '/about': typeof AboutRoute
+  '/career-counselling': typeof CareerCounsellingRoute
   '/contribute': typeof ContributeRoute
   '/developers': typeof DevelopersRoute
   '/for-math-lovers': typeof ForMathLoversRoute
   '/for-students': typeof ForStudentsRoute
   '/for-teachers': typeof ForTeachersRouteWithChildren
+  '/privacy-policy': typeof PrivacyPolicyRoute
   '/search': typeof SearchRoute
+  '/terms': typeof TermsRoute
   '/for-teachers/circular-formats': typeof ForTeachersCircularFormatsRoute
+  '/for-teachers/primary-hm': typeof ForTeachersPrimaryHmRoute
   '/for-teachers/tgt-pgt': typeof ForTeachersTgtPgtRoute
   '/view/$id': typeof ViewIdRoute
   '/for-teachers/': typeof ForTeachersIndexRoute
@@ -109,12 +137,16 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/$': typeof SplatRoute
   '/about': typeof AboutRoute
+  '/career-counselling': typeof CareerCounsellingRoute
   '/contribute': typeof ContributeRoute
   '/developers': typeof DevelopersRoute
   '/for-math-lovers': typeof ForMathLoversRoute
   '/for-students': typeof ForStudentsRoute
+  '/privacy-policy': typeof PrivacyPolicyRoute
   '/search': typeof SearchRoute
+  '/terms': typeof TermsRoute
   '/for-teachers/circular-formats': typeof ForTeachersCircularFormatsRoute
+  '/for-teachers/primary-hm': typeof ForTeachersPrimaryHmRoute
   '/for-teachers/tgt-pgt': typeof ForTeachersTgtPgtRoute
   '/view/$id': typeof ViewIdRoute
   '/for-teachers': typeof ForTeachersIndexRoute
@@ -124,13 +156,17 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/$': typeof SplatRoute
   '/about': typeof AboutRoute
+  '/career-counselling': typeof CareerCounsellingRoute
   '/contribute': typeof ContributeRoute
   '/developers': typeof DevelopersRoute
   '/for-math-lovers': typeof ForMathLoversRoute
   '/for-students': typeof ForStudentsRoute
   '/for-teachers': typeof ForTeachersRouteWithChildren
+  '/privacy-policy': typeof PrivacyPolicyRoute
   '/search': typeof SearchRoute
+  '/terms': typeof TermsRoute
   '/for-teachers/circular-formats': typeof ForTeachersCircularFormatsRoute
+  '/for-teachers/primary-hm': typeof ForTeachersPrimaryHmRoute
   '/for-teachers/tgt-pgt': typeof ForTeachersTgtPgtRoute
   '/view/$id': typeof ViewIdRoute
   '/for-teachers/': typeof ForTeachersIndexRoute
@@ -141,13 +177,17 @@ export interface FileRouteTypes {
     | '/'
     | '/$'
     | '/about'
+    | '/career-counselling'
     | '/contribute'
     | '/developers'
     | '/for-math-lovers'
     | '/for-students'
     | '/for-teachers'
+    | '/privacy-policy'
     | '/search'
+    | '/terms'
     | '/for-teachers/circular-formats'
+    | '/for-teachers/primary-hm'
     | '/for-teachers/tgt-pgt'
     | '/view/$id'
     | '/for-teachers/'
@@ -156,12 +196,16 @@ export interface FileRouteTypes {
     | '/'
     | '/$'
     | '/about'
+    | '/career-counselling'
     | '/contribute'
     | '/developers'
     | '/for-math-lovers'
     | '/for-students'
+    | '/privacy-policy'
     | '/search'
+    | '/terms'
     | '/for-teachers/circular-formats'
+    | '/for-teachers/primary-hm'
     | '/for-teachers/tgt-pgt'
     | '/view/$id'
     | '/for-teachers'
@@ -170,13 +214,17 @@ export interface FileRouteTypes {
     | '/'
     | '/$'
     | '/about'
+    | '/career-counselling'
     | '/contribute'
     | '/developers'
     | '/for-math-lovers'
     | '/for-students'
     | '/for-teachers'
+    | '/privacy-policy'
     | '/search'
+    | '/terms'
     | '/for-teachers/circular-formats'
+    | '/for-teachers/primary-hm'
     | '/for-teachers/tgt-pgt'
     | '/view/$id'
     | '/for-teachers/'
@@ -186,22 +234,39 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   SplatRoute: typeof SplatRoute
   AboutRoute: typeof AboutRoute
+  CareerCounsellingRoute: typeof CareerCounsellingRoute
   ContributeRoute: typeof ContributeRoute
   DevelopersRoute: typeof DevelopersRoute
   ForMathLoversRoute: typeof ForMathLoversRoute
   ForStudentsRoute: typeof ForStudentsRoute
   ForTeachersRoute: typeof ForTeachersRouteWithChildren
+  PrivacyPolicyRoute: typeof PrivacyPolicyRoute
   SearchRoute: typeof SearchRoute
+  TermsRoute: typeof TermsRoute
   ViewIdRoute: typeof ViewIdRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/terms': {
+      id: '/terms'
+      path: '/terms'
+      fullPath: '/terms'
+      preLoaderRoute: typeof TermsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/search': {
       id: '/search'
       path: '/search'
       fullPath: '/search'
       preLoaderRoute: typeof SearchRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/privacy-policy': {
+      id: '/privacy-policy'
+      path: '/privacy-policy'
+      fullPath: '/privacy-policy'
+      preLoaderRoute: typeof PrivacyPolicyRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/for-teachers': {
@@ -237,6 +302,13 @@ declare module '@tanstack/react-router' {
       path: '/contribute'
       fullPath: '/contribute'
       preLoaderRoute: typeof ContributeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/career-counselling': {
+      id: '/career-counselling'
+      path: '/career-counselling'
+      fullPath: '/career-counselling'
+      preLoaderRoute: typeof CareerCounsellingRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/about': {
@@ -281,6 +353,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ForTeachersTgtPgtRouteImport
       parentRoute: typeof ForTeachersRoute
     }
+    '/for-teachers/primary-hm': {
+      id: '/for-teachers/primary-hm'
+      path: '/primary-hm'
+      fullPath: '/for-teachers/primary-hm'
+      preLoaderRoute: typeof ForTeachersPrimaryHmRouteImport
+      parentRoute: typeof ForTeachersRoute
+    }
     '/for-teachers/circular-formats': {
       id: '/for-teachers/circular-formats'
       path: '/circular-formats'
@@ -293,12 +372,14 @@ declare module '@tanstack/react-router' {
 
 interface ForTeachersRouteChildren {
   ForTeachersCircularFormatsRoute: typeof ForTeachersCircularFormatsRoute
+  ForTeachersPrimaryHmRoute: typeof ForTeachersPrimaryHmRoute
   ForTeachersTgtPgtRoute: typeof ForTeachersTgtPgtRoute
   ForTeachersIndexRoute: typeof ForTeachersIndexRoute
 }
 
 const ForTeachersRouteChildren: ForTeachersRouteChildren = {
   ForTeachersCircularFormatsRoute: ForTeachersCircularFormatsRoute,
+  ForTeachersPrimaryHmRoute: ForTeachersPrimaryHmRoute,
   ForTeachersTgtPgtRoute: ForTeachersTgtPgtRoute,
   ForTeachersIndexRoute: ForTeachersIndexRoute,
 }
@@ -311,12 +392,15 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   SplatRoute: SplatRoute,
   AboutRoute: AboutRoute,
+  CareerCounsellingRoute: CareerCounsellingRoute,
   ContributeRoute: ContributeRoute,
   DevelopersRoute: DevelopersRoute,
   ForMathLoversRoute: ForMathLoversRoute,
   ForStudentsRoute: ForStudentsRoute,
   ForTeachersRoute: ForTeachersRouteWithChildren,
+  PrivacyPolicyRoute: PrivacyPolicyRoute,
   SearchRoute: SearchRoute,
+  TermsRoute: TermsRoute,
   ViewIdRoute: ViewIdRoute,
 }
 export const routeTree = rootRouteImport
