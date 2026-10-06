@@ -2,7 +2,7 @@ import React from 'react';
 import { Box, Typography } from '@mui/material';
 import { useNavigate } from '@tanstack/react-router';
 import { motion } from 'framer-motion';
-import { SchoolIcon, MenuBookIcon, AutoAwesomeIcon, ArrowForwardIcon } from '@/components/Icons';
+import { SchoolIcon, MenuBookIcon, AutoAwesomeIcon, ExploreIcon, ArrowForwardIcon } from '@/components/Icons';
 import siteContent from '@/data/sections.json';
 import { FONT_HEADING, FONT_MONO, MAX_CONTENT_WIDTH } from '@/lib/constants';
 
@@ -10,18 +10,22 @@ const ICON_MAP: Record<string, React.ReactElement> = {
     School: <SchoolIcon sx={{ fontSize: 48 }} />,
     ChalkboardTeacher: <MenuBookIcon sx={{ fontSize: 48 }} />,
     Calculator: <AutoAwesomeIcon sx={{ fontSize: 48 }} />,
+    Compass: <ExploreIcon sx={{ fontSize: 48 }} />,
 };
 
-const rotations = [-0.5, 0.8, -0.3];
+const rotations = [-0.5, 0.8, -0.3, 0.4];
 
 const DoorwayCards: React.FC = () => {
     const navigate = useNavigate();
     const borderColor = 'var(--color-border)';
     const sections = siteContent;
 
-    const enabledSections = [sections.students, sections.teachers, sections.mathLovers].filter(
-        (s) => s.enabled
-    );
+    const enabledSections = [
+        sections.careerCounselling,
+        sections.students,
+        sections.teachers,
+        sections.mathLovers,
+    ].filter((s) => s && s.enabled);
 
     return (
         <Box
@@ -62,7 +66,7 @@ const DoorwayCards: React.FC = () => {
                 <Box
                     sx={{
                         display: 'grid',
-                        gridTemplateColumns: { xs: '1fr', md: 'repeat(3, 1fr)' },
+                        gridTemplateColumns: { xs: '1fr', md: 'repeat(2, 1fr)' },
                         gap: 4,
                     }}
                 >
@@ -78,7 +82,7 @@ const DoorwayCards: React.FC = () => {
                                 damping: 20,
                                 delay: i * 0.15,
                             }}
-                            style={{ perspective: '800px' }}
+                            style={{ gridColumn: i === 0 ? '1 / -1' : undefined, perspective: '800px' }}
                         >
                             <motion.div
                                 whileHover={{
