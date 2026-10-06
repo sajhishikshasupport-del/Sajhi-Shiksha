@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- Sajhi Shiksha Career Path Explorer v7.1 — 277 nodes, 3 languages (Hinglish/English/Hindi) -->
+<!-- Sajhi Shiksha Career Path Explorer — version 1 (public) · 332 nodes · 3 languages (Hinglish/English/Hindi) -->
 <html lang="hi">
 <head>
 <meta charset="UTF-8">
@@ -279,6 +279,15 @@
 .st-E{background:#fef9c3;color:#854d0e}
 .st-N{background:#f1f5f9;color:#475569}
 </style>
+<!-- GA4 - Sajhi Shiksha (added 06-10-2026 per GA-TRACKING-SPEC) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0HCV07750L"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-0HCV07750L');
+  window.ssTrack = function(name, params){ try { gtag('event', name, params || {}); } catch(e){} };
+</script>
 </head>
 <body>
 <div class="wrap">
@@ -377,6 +386,7 @@ function waLink(msg){ return 'https://wa.me/'+WA_NUM+'?text='+encodeURIComponent
 function waMsgLink(){ return waLink(lang==='hi'?'नमस्ते साझी शिक्षा! मुझे करियर गाइडेंस चाहिए।':'Hi Sajhi Shiksha! I need career guidance.'); }
 function waJobLink(j){ const l=L(j); return waLink(lang==='hi'?('नमस्ते साझी शिक्षा! मैंने "'+l+'" करियर रास्ता देखा। कृपया गाइड करें।'):('Hi Sajhi Shiksha! I explored the "'+l+'" career path. Please guide me.')); }
 function askOnWhatsApp(){
+  ssTrack('career_whatsapp_ask',{});
   const inp=document.getElementById('askInput'), note=document.getElementById('askNote');
   const q=(inp.value||'').trim();
   if(!q){ note.textContent=T('askEmpty'); if(inp.focus) inp.focus(); return; }
@@ -526,8 +536,8 @@ function render(){
 let _hist=[];
 function _push(){ _hist.push(path.slice()); try{ history.pushState({h:_hist.length},''); }catch(e){} }
 if(typeof window!=='undefined'&&window.addEventListener){ window.addEventListener('popstate', function(){ if(_hist.length){ path=_hist.pop(); render(); window.scrollTo({top:0,behavior:'smooth'}); } }); }
-function select(id){ _push(); path.push(id); render(); window.scrollTo({top:0,behavior:'smooth'}); }
-function switchTo(id){ _push(); path=pathTo(id); render(); window.scrollTo({top:0,behavior:'smooth'}); }
+function select(id){ _push(); path.push(id); var _n=find(id)||{}; ssTrack('career_path_view',{path_id:id, path_label:_n.label||id, node_type:_n.type||'', step:path.length}); var _par=path.length>1?path[path.length-2]:''; if(_par==='c10') ssTrack('career_stream_select',{stream_id:id, stream_label:_n.label||id}); render(); window.scrollTo({top:0,behavior:'smooth'}); }
+function switchTo(id){ _push(); path=pathTo(id); var _n=find(id)||{}; ssTrack('career_path_view',{path_id:id, path_label:_n.label||id, node_type:_n.type||'', step:path.length}); render(); window.scrollTo({top:0,behavior:'smooth'}); }
 function goto(i){ _push(); path=path.slice(0,i+1); render(); }
 function resetAll(){ _push(); path=['c10']; render(); window.scrollTo({top:0,behavior:'smooth'}); }
 
@@ -553,6 +563,7 @@ function doSearch(q){
     (lang==='hi'?(HI.labels[n.id]||n.label):n.label).toLowerCase().includes(q) ||
     (n.label.toLowerCase().includes(q)) || (n.sub||'').toLowerCase().includes(q)
   )).slice(0,8);
+  ssTrack('career_search',{search_term:q, results:hits.length});
   if(!hits.length){ box.innerHTML=`<div class="sr-empty">${T('noResults')}</div>`; box.classList.add('open'); return; }
   let html='';
   hits.forEach(h=>{
@@ -568,6 +579,7 @@ function jumpTo(id){
   document.getElementById('sr').classList.remove('open');
   document.getElementById('searchBox').value='';
   path=pathTo(id);
+  var _n=find(id)||{}; ssTrack('career_search_click',{path_id:id, path_label:_n.label||id});
   render();
   if(find(id).type==='job') openModal(id);
   else window.scrollTo({top:0,behavior:'smooth'});
@@ -576,6 +588,15 @@ document.addEventListener('click',e=>{
   if(!e.target.closest('.search-wrap')) document.getElementById('sr').classList.remove('open');
 });
 
+/* GA4 external-link tracking (added 06-10-2026 per GA-TRACKING-SPEC) */
+document.addEventListener('click', function(e){
+  try{
+    var a=e.target.closest && e.target.closest('a[href]');
+    if(a && /^https?:\/\//i.test(a.href) && a.href.indexOf('sajhishiksha.in')===-1){
+      ssTrack('career_external_click',{link_url:a.href, link_text:(a.textContent||'').trim().slice(0,80)});
+    }
+  }catch(err){}
+});
 /* ================= SHARE ================= */
 function toast(msg){
   const t=document.getElementById('toast');
@@ -583,11 +604,13 @@ function toast(msg){
   setTimeout(()=>t.classList.remove('show'),2200);
 }
 function sharePage(){
+  ssTrack('career_share',{method:'page'});
   const text=(lang==='hi'?'कक्षा 10 से नौकरी तक — अपना करियर रास्ता खुद चुनें! ':'Class 10 to Job — explore your career path! ') + location.href;
   if(navigator.share){ navigator.share({title:'Career Path Explorer — Sajhi Shiksha', text}).catch(()=>{}); }
   else{ navigator.clipboard.writeText(text).then(()=>toast(T('copied'))).catch(()=>toast(text)); }
 }
 function shareMyPath(){
+  ssTrack('career_share',{method:'path'});
   const names=path.map(id=>L(find(id)));
   const text=`${T('pathLabel')}: ${names.join(' \u2192 ')} — Career Explorer (Sajhi Shiksha) ${location.href}`;
   if(navigator.share){ navigator.share({title:'My Career Path', text}).catch(()=>{}); }
@@ -596,7 +619,8 @@ function shareMyPath(){
 
 /* ================= LANGUAGE ================= */
 function setLang(l){
-  lang=l; localStorage.setItem('cpe_lang',l); render();
+  lang=l; localStorage.setItem('cpe_lang',l);
+  ssTrack('career_language_change',{language:l}); render();
   if(document.getElementById('overlay').classList.contains('open') && currentJobId) reModal(currentJobId);
 }
 
@@ -606,6 +630,7 @@ function reModal(id){ openModal(id); }
 function openModal(id){
   currentJobId=id;
   const j=TRJ(find(id));
+  ssTrack('career_job_view',{path_id:id, job_label:(j&&j.label)||id});
   const sheet=document.getElementById('sheet');
   const aiCls=j.ai==='high'?'high':(j.ai==='med'?'med':'low');
   const aiTxt=j.ai==='high'?T('aiHigh'):(j.ai==='med'?T('aiMed'):T('aiLow'));
@@ -638,6 +663,7 @@ function openModal(id){
 }
 function TRJ(n){ if(lang!=='en'||!n||n.type!=='job') return n; const e=ENG.jobs[n.id]; return e?Object.assign({},n,e):n; }
 function openInfo(kind){
+  ssTrack('career_resources_open',{kind:kind});
   const items = kind==='exam' ? T('exams') : T('schols');
   const title = kind==='exam' ? T('resExam') : T('resSchol');
   let html = `<div class="grab"></div>
