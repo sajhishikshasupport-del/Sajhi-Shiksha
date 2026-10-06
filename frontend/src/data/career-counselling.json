@@ -1,0 +1,157 @@
+{
+    "_comment": "Career Counselling section content. Section meta + free/paid boundary + items (phased). Source: Career Counselling Agent (career-website-content.json). Updated by the Night Manager sync. Content is original and English.",
+    "section": {
+        "title": "Career Counselling",
+        "subtitle": "Research-backed career guidance for students and parents — honest, practical, India-focused"
+    },
+    "free_vs_paid": {
+        "free_area": "Awareness and information — everything a student or parent needs to understand the options: stream selection guidance, the entrance exam calendar, career guides, scholarship and college information, plus a free aptitude test with a short WhatsApp report.",
+        "paid_area": "Personalised guidance — interpretation of aptitude results and a one-to-one counselling session with the student and family, ending in a written action plan. Current price: Rs 999 per session.",
+        "boundary_rule": "The section shows both areas separately. Information stays free; the paid service begins only at personalised interpretation and the counselling session. Nothing is placed behind a paywall without a clear label."
+    },
+    "items": [
+        {
+            "id": "career-explorer",
+            "title": "Career Explorer (Interactive Tool)",
+            "description": "An interactive, bilingual tool to explore career paths step by step — from stream choice to courses, exams, colleges and jobs. Built entirely from our own research and free to use. This is the first item going live on the website.",
+            "type": "link",
+            "url": "",
+            "phase": 1,
+            "order": 1,
+            "icon": "map",
+            "access": "free"
+        },
+        {
+            "id": "class10-stream-selection-guide",
+            "title": "Class 10 Stream Selection Guide",
+            "description": "A practical guide for Class 10 students and parents on choosing a stream: Science (PCB or PCM), Commerce, Arts, ITI and Polytechnic diplomas. It explains who each option suits, where it leads, typical costs, and a three-step method — interest, aptitude, family reality — for a sound decision. Simple language, based on our own research.",
+            "type": "page",
+            "url": "",
+            "phase": 2,
+            "order": 1,
+            "icon": "compass",
+            "access": "free"
+        },
+        {
+            "id": "entrance-exam-calendar-2026-27",
+            "title": "Entrance Exam Calendar 2026-27",
+            "description": "One page for the 20 exams that matter most: NEET, JEE Main and Advanced, CUET, CLAT, CTET, SSC, RRB, CAT and more. Each entry shows the application window, exam dates and the official website, labelled CONFIRMED, EXPECTED or NOT ANNOUNCED so no expected date is mistaken for an official one. Updated every Monday.",
+            "type": "page",
+            "url": "",
+            "phase": 2,
+            "order": 2,
+            "icon": "calendar",
+            "access": "free"
+        },
+        {
+            "id": "free-career-aptitude-test",
+            "title": "Free Career Aptitude Test",
+            "description": "Take a free aptitude test built on NCERT's TAMANNA test for Classes 9-10, together with interest and work-importance tools used worldwide. Send your result on WhatsApp and receive a short report showing your strengths and the streams or careers that fit. No fee and no obligation — this is the first step of our guidance process.",
+            "type": "page",
+            "url": "",
+            "phase": 2,
+            "order": 3,
+            "icon": "clipboard-check",
+            "access": "free"
+        },
+        {
+            "id": "one-to-one-counselling-session",
+            "title": "One-to-One Career Counselling Session (Rs 999)",
+            "description": "A personalised session with our counsellor for the student and parents together. We interpret the aptitude and interest results, match them with real courses and careers, compare costs and competition honestly, and finish with a written action plan. Available online or in person. This is a paid service, clearly separate from the free information on this site.",
+            "type": "page",
+            "url": "",
+            "phase": 2,
+            "order": 4,
+            "icon": "user-check",
+            "access": "paid"
+        },
+        {
+            "id": "career-guides-by-stream",
+            "title": "Career Guides by Stream",
+            "description": "Detailed guides for Science (PCB and PCM), Commerce and Arts: courses after Class 12, entrance exams, government and private fees, and realistic job and salary expectations. Each guide is checked against official sources and updated through the year.",
+            "type": "page",
+            "url": "",
+            "phase": 2,
+            "order": 5,
+            "icon": "book-open",
+            "access": "free"
+        },
+        {
+            "id": "scholarships-and-education-finance",
+            "title": "Scholarships & Education Finance",
+            "description": "National and state scholarship schemes with eligibility, application windows and documents required, plus education loan basics and fee waivers. Helps families plan the cost of a course before choosing it.",
+            "type": "page",
+            "url": "",
+            "phase": 2,
+            "order": 6,
+            "icon": "award",
+            "access": "free"
+        },
+        {
+            "id": "top-colleges-and-institutes",
+            "title": "Top Colleges & Institutes (NIRF 2025)",
+            "description": "Profiles of 179 top institutes from the NIRF 2025 rankings — universities, colleges, engineering, medical, law, management, pharmacy and more — with programmes offered, admission routes and official fee information.",
+            "type": "page",
+            "url": "",
+            "phase": 2,
+            "order": 7,
+            "icon": "building",
+            "access": "free"
+        },
+        {
+            "id": "parents-corner",
+            "title": "Parents' Corner",
+            "description": "Short, honest articles for parents: how to discuss careers without pressure, what a family budget can realistically support, and the questions worth asking before a course is chosen.",
+            "type": "page",
+            "url": "",
+            "phase": 2,
+            "order": 8,
+            "icon": "users",
+            "access": "free"
+        },
+        {
+            "id": "workshops-for-schools",
+            "title": "Workshops for Schools & Teachers",
+            "description": "Free career-awareness workshops for schools, run with our counsellor and tailored to Classes 9-12. Teachers get a simple way to bring structured guidance to their students, and schools can request a workshop for a batch.",
+            "type": "page",
+            "url": "",
+            "phase": 2,
+            "order": 9,
+            "icon": "presentation",
+            "access": "free"
+        },
+        {
+            "id": "career-ladders",
+            "title": "Career Ladders: Indirect Routes to Top Positions",
+            "description": "Not every senior position is reached directly. This section maps step-by-step routes — for example, reaching a KVS commissioner post through teaching and promotion, or the IAS through a state service — so ambition is not blocked by a single pathway.",
+            "type": "page",
+            "url": "",
+            "phase": 3,
+            "order": 1,
+            "icon": "trending-up",
+            "access": "free"
+        },
+        {
+            "id": "business-ideas-after-courses",
+            "title": "Business Ideas After Courses",
+            "description": "Realistic self-employment options that follow naturally from a course — for example, a medical store after a pharmacy degree or a workshop after an ITI trade — with a one-line note on what each needs to get started.",
+            "type": "page",
+            "url": "",
+            "phase": 3,
+            "order": 2,
+            "icon": "briefcase",
+            "access": "free"
+        },
+        {
+            "id": "coaching-and-competition-reality",
+            "title": "Coaching Costs & Competition Reality",
+            "description": "Honest numbers for major careers: whether coaching is necessary, typical coaching costs, how many candidates compete for how many seats, and how vacancies are trending. The reality check most career websites leave out.",
+            "type": "page",
+            "url": "",
+            "phase": 3,
+            "order": 3,
+            "icon": "bar-chart",
+            "access": "free"
+        }
+    ]
+}
