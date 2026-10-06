@@ -21,6 +21,14 @@
         "redirectRoute": "/for-teachers",
         "categoryFilters": ["programs", "formats", "admissions"]
     },
+    "careerCounselling": {
+        "enabled": true,
+        "title": "Career Counselling",
+        "subtitle": "Research-backed career guidance for students and parents",
+        "icon": "Compass",
+        "buttonColor": "var(--color-orange)",
+        "redirectRoute": "/career-counselling"
+    },
     "mathLovers": {
         "enabled": true,
         "title": "For Math Lovers",
