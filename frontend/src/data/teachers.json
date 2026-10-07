@@ -138,7 +138,6 @@
                     "description": "KVS admission guidelines and application formats",
                     "icon": "Description",
                     "driveUrl": "https://drive.google.com/embeddedfolderview?id=17JXk96lfAjLdva8_aW5KMesfKkEwVX_S#list"
-                    
                 },
                 {
                     "id": "time-table",
@@ -198,7 +197,7 @@
                             "id": "cbse",
                             "title": "CBSE",
                             "description": "CBSE formats and circulars",
-                            "driveUrl": "https://drive.google.com/embeddedfolderview?id=1Q8XHQJnmjRpRjjnVoYudtOEiO2ZILr3r#list"
+                            "driveUrl": "https://drive.google.com/embeddedfolderview?id=1d8AzeAo0KPaSL58kREiRwXHDZJ0-SzzB#list"
                         },
                         {
                             "id": "cbse-curriculum-2026-27",
@@ -321,120 +320,120 @@
                         }
                     ]
                 },
-            {
-                "id": "primary-class-2",
-                "title": "Class 2",
-                "description": "Class 2 lesson plans, worksheets, question papers, textbooks and split-ups",
-                "icon": "School",
-                "hasSubCards": true,
-                "subCards": [
-                    {
-                        "id": "class-2-lesson-plans",
-                        "title": "Lesson Plans",
-                        "description": "Class 2 lesson plans (EVS, English, Maths)",
-                        "driveUrl": "https://drive.google.com/embeddedfolderview?id=1CDV00lkdtQBW8_U0Xj5JIrZ-rew1cvJJ#list"
-                    },
-                    {
-                        "id": "class-2-worksheets",
-                        "title": "Worksheets",
-                        "description": "Class 2 worksheets (English, EVS, Hindi, Maths)",
-                        "driveUrl": "https://drive.google.com/embeddedfolderview?id=1BYLnzjEo9Az9GtmXBP4v8sz40I6PuCG0#list"
-                    },
-                    {
-                        "id": "class-2-question-papers",
-                        "title": "Question Papers",
-                        "description": "Class 2 cycle tests and question papers",
-                        "driveUrl": "https://drive.google.com/embeddedfolderview?id=1sVTbXNeFWNrj2-D3W5KdhJkx829l_zDs#list"
-                    },
-                    {
-                        "id": "class-2-textbook",
-                        "title": "Textbook, Split-up & TLO",
-                        "description": "Class 2 textbooks, split-ups and learning outcomes",
-                        "driveUrl": "https://drive.google.com/embeddedfolderview?id=1fnM1e5pBF5EPaHEe1AX6C8dwTWbCZfhI#list"
-                    }
-                ]
-            },
-            {
-                "id": "primary-class-3",
-                "title": "Class 3",
-                "description": "Class 3 textbooks (new NCERT 2024 series)",
-                "icon": "School",
-                "hasSubCards": true,
-                "subCards": [
-                    {
-                        "id": "class-3-textbook",
-                        "title": "Textbook",
-                        "description": "Class 3 textbooks: Santoor (English), Veena (Hindi), Maths Mela",
-                        "driveUrl": "https://drive.google.com/embeddedfolderview?id=1P9r30_bU-bjGPwzuJvJ_KZCyr7gAN1wo#list"
-                    }
-                ]
-            },
-            {
-                "id": "programmes-common",
-                "title": "Programmes & Common",
-                "description": "Common primary programmes and teacher resources",
-                "icon": "Campaign",
-                "hasSubCards": true,
-                "subCards": [
-                    {
-                        "id": "programmes-misc",
-                        "title": "Miscellaneous",
-                        "description": "Teacher training and resource materials",
-                        "driveUrl": "https://drive.google.com/embeddedfolderview?id=19pbEhZbnm0b04kdsuUQHlh_r8MCo8kpG#list"
-                    },
-                    {
-                        "id": "programmes-mdp",
-                        "title": "Multidisciplinary Project (MDP)",
-                        "description": "MDP guidelines, rubrics, templates and project examples",
-                        "driveUrl": "https://drive.google.com/embeddedfolderview?id=1YYh-NpCKLHtNturPUKgwTTl3ZDaSPNzm#list"
-                    },
-                    {
-                        "id": "programmes-cmp",
-                        "title": "Common Minimum Programme (CMP)",
-                        "description": "CMP guidelines, training material and newsletter examples",
-                        "driveUrl": "https://drive.google.com/embeddedfolderview?id=1YV_qLv0CZrcnEJTocqSP0ZZ5GxueJrwx#list"
-                    },
-                    {
-                        "id": "programmes-fln",
-                        "title": "FLN / NIPUN Bharat",
-                        "description": "NIPUN Bharat mission resources, targets, rubrics and assessments",
-                        "driveUrl": "https://drive.google.com/embeddedfolderview?id=1FeULgFG8Rw4mJQ2_CIdS4OTxzsgy6kvT#list"
-                    },
-                    {
-                        "id": "programmes-cub",
-                        "title": "Cub Bulbul (Scouts & Guides)",
-                        "description": "APRO book, logbook examples and Utsav resources for Cub Bulbul section",
-                        "driveUrl": "https://drive.google.com/embeddedfolderview?id=1VYD_eb_h2QaNcf62e1rvsi3634690l5F#list"
-                    },
-                    {
-                        "id": "programmes-toy",
-                        "title": "Toy Based Pedagogy",
-                        "description": "Toy Based Pedagogy training presentations (NEP 2020)",
-                        "driveUrl": "https://drive.google.com/embeddedfolderview?id=15MnfWOvrGSlBcVYB0D55VWtsWwuqSOEH#list"
-                    }
-                ]
-            },
-            {
-                "id": "hm-corner",
-                "title": "HM Corner",
-                "description": "Resources for Head Masters and primary section administration",
-                "icon": "School",
-                "hasSubCards": true,
-                "subCards": [
-                    {
-                        "id": "hm-materials",
-                        "title": "HM Materials",
-                        "description": "APAR, supervision, inspection and administration resources for Head Masters",
-                        "driveUrl": "https://drive.google.com/embeddedfolderview?id=1NlSxEdmT0nr7xeP-GDKGUzEDtcLCR7N9#list"
-                    },
-                    {
-                        "id": "hm-records",
-                        "title": "Records & Registers",
-                        "description": "Records, registers and proformas to be maintained in the primary section",
-                        "driveUrl": "https://drive.google.com/embeddedfolderview?id=1XpgkM4M0JII04J5jEt4O3zRX1WtNUtRp#list"
-                    }
-                ]
-            }
+                {
+                    "id": "primary-class-2",
+                    "title": "Class 2",
+                    "description": "Class 2 lesson plans, worksheets, question papers, textbooks and split-ups",
+                    "icon": "School",
+                    "hasSubCards": true,
+                    "subCards": [
+                        {
+                            "id": "class-2-lesson-plans",
+                            "title": "Lesson Plans",
+                            "description": "Class 2 lesson plans (EVS, English, Maths)",
+                            "driveUrl": "https://drive.google.com/embeddedfolderview?id=1CDV00lkdtQBW8_U0Xj5JIrZ-rew1cvJJ#list"
+                        },
+                        {
+                            "id": "class-2-worksheets",
+                            "title": "Worksheets",
+                            "description": "Class 2 worksheets (English, EVS, Hindi, Maths)",
+                            "driveUrl": "https://drive.google.com/embeddedfolderview?id=1BYLnzjEo9Az9GtmXBP4v8sz40I6PuCG0#list"
+                        },
+                        {
+                            "id": "class-2-question-papers",
+                            "title": "Question Papers",
+                            "description": "Class 2 cycle tests and question papers",
+                            "driveUrl": "https://drive.google.com/embeddedfolderview?id=1sVTbXNeFWNrj2-D3W5KdhJkx829l_zDs#list"
+                        },
+                        {
+                            "id": "class-2-textbook",
+                            "title": "Textbook, Split-up & TLO",
+                            "description": "Class 2 textbooks, split-ups and learning outcomes",
+                            "driveUrl": "https://drive.google.com/embeddedfolderview?id=1fnM1e5pBF5EPaHEe1AX6C8dwTWbCZfhI#list"
+                        }
+                    ]
+                },
+                {
+                    "id": "primary-class-3",
+                    "title": "Class 3",
+                    "description": "Class 3 textbooks (new NCERT 2024 series)",
+                    "icon": "School",
+                    "hasSubCards": true,
+                    "subCards": [
+                        {
+                            "id": "class-3-textbook",
+                            "title": "Textbook",
+                            "description": "Class 3 textbooks: Santoor (English), Veena (Hindi), Maths Mela",
+                            "driveUrl": "https://drive.google.com/embeddedfolderview?id=1P9r30_bU-bjGPwzuJvJ_KZCyr7gAN1wo#list"
+                        }
+                    ]
+                },
+                {
+                    "id": "programmes-common",
+                    "title": "Programmes & Common",
+                    "description": "Common primary programmes and teacher resources",
+                    "icon": "Campaign",
+                    "hasSubCards": true,
+                    "subCards": [
+                        {
+                            "id": "programmes-misc",
+                            "title": "Miscellaneous",
+                            "description": "Teacher training and resource materials",
+                            "driveUrl": "https://drive.google.com/embeddedfolderview?id=19pbEhZbnm0b04kdsuUQHlh_r8MCo8kpG#list"
+                        },
+                        {
+                            "id": "programmes-mdp",
+                            "title": "Multidisciplinary Project (MDP)",
+                            "description": "MDP guidelines, rubrics, templates and project examples",
+                            "driveUrl": "https://drive.google.com/embeddedfolderview?id=1YYh-NpCKLHtNturPUKgwTTl3ZDaSPNzm#list"
+                        },
+                        {
+                            "id": "programmes-cmp",
+                            "title": "Common Minimum Programme (CMP)",
+                            "description": "CMP guidelines, training material and newsletter examples",
+                            "driveUrl": "https://drive.google.com/embeddedfolderview?id=1YV_qLv0CZrcnEJTocqSP0ZZ5GxueJrwx#list"
+                        },
+                        {
+                            "id": "programmes-fln",
+                            "title": "FLN / NIPUN Bharat",
+                            "description": "NIPUN Bharat mission resources, targets, rubrics and assessments",
+                            "driveUrl": "https://drive.google.com/embeddedfolderview?id=1FeULgFG8Rw4mJQ2_CIdS4OTxzsgy6kvT#list"
+                        },
+                        {
+                            "id": "programmes-cub",
+                            "title": "Cub Bulbul (Scouts & Guides)",
+                            "description": "APRO book, logbook examples and Utsav resources for Cub Bulbul section",
+                            "driveUrl": "https://drive.google.com/embeddedfolderview?id=1VYD_eb_h2QaNcf62e1rvsi3634690l5F#list"
+                        },
+                        {
+                            "id": "programmes-toy",
+                            "title": "Toy Based Pedagogy",
+                            "description": "Toy Based Pedagogy training presentations (NEP 2020)",
+                            "driveUrl": "https://drive.google.com/embeddedfolderview?id=15MnfWOvrGSlBcVYB0D55VWtsWwuqSOEH#list"
+                        }
+                    ]
+                },
+                {
+                    "id": "hm-corner",
+                    "title": "HM Corner",
+                    "description": "Resources for Head Masters and primary section administration",
+                    "icon": "School",
+                    "hasSubCards": true,
+                    "subCards": [
+                        {
+                            "id": "hm-materials",
+                            "title": "HM Materials",
+                            "description": "APAR, supervision, inspection and administration resources for Head Masters",
+                            "driveUrl": "https://drive.google.com/embeddedfolderview?id=1NlSxEdmT0nr7xeP-GDKGUzEDtcLCR7N9#list"
+                        },
+                        {
+                            "id": "hm-records",
+                            "title": "Records & Registers",
+                            "description": "Records, registers and proformas to be maintained in the primary section",
+                            "driveUrl": "https://drive.google.com/embeddedfolderview?id=1XpgkM4M0JII04J5jEt4O3zRX1WtNUtRp#list"
+                        }
+                    ]
+                }
             ]
         }
     ]
