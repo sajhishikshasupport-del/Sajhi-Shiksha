@@ -8,8 +8,18 @@
         "buttonColor": "var(--color-blue)",
         "redirectRoute": "/for-students",
         "filterParams": {
-            "class": ["6", "7", "8", "9", "10", "11", "12"],
-            "subject": ["Mathematics"]
+            "class": [
+                "6",
+                "7",
+                "8",
+                "9",
+                "10",
+                "11",
+                "12"
+            ],
+            "subject": [
+                "Mathematics"
+            ]
         }
     },
     "teachers": {
@@ -19,7 +29,11 @@
         "icon": "ChalkboardTeacher",
         "buttonColor": "var(--color-green)",
         "redirectRoute": "/for-teachers",
-        "categoryFilters": ["programs", "formats", "admissions"]
+        "categoryFilters": [
+            "programs",
+            "formats",
+            "admissions"
+        ]
     },
     "careerCounselling": {
         "enabled": true,
@@ -42,12 +56,8 @@
             "description": "Comprehensive resources for the Mathematical Olympiad journey — from preparation books to official contest links.",
             "links": [
                 {
-                    "title": "Books and Notes PDFs",
+                    "title": "Olympiad Books",
                     "url": "https://drive.google.com/embeddedfolderview?id=10tgDz7rSVrxCUsto6DxifoFXN3qHy3KU#list"
-                },
-                {
-                    "title": "ISI Test of Mathematics at 10+2 Level (16th Edition)",
-                    "url": "https://drive.google.com/embeddedfolderview?id=1LGH_sBiogqm4RCBT4D0t7pkLv0ro1HjS#list"
                 },
                 {
                     "title": "Stages of Maths Olympiad",
