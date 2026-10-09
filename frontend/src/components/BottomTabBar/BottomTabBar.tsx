@@ -3,6 +3,7 @@ import { BottomNavigation, BottomNavigationAction, Box, IconButton } from '@mui/
 import { HomeIcon, MenuBookIcon, FavoriteIcon, SearchIcon, WhatsAppIcon } from '@/components/Icons';
 import { useLocation, useNavigate } from '@tanstack/react-router';
 import siteContent from '@/data/site.json';
+import { trackEvent } from '@/hooks/useAnalytics';
 import { FONT_MONO, COLOR_TEXT_LIGHT } from '@/lib/constants';
 
 interface TabConfig {
@@ -53,6 +54,7 @@ const BottomTabBar: React.FC = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="Join WhatsApp group"
+                    onClick={() => trackEvent('whatsapp_click', { location: 'website-bottom-bar' })}
                     sx={{
                         width: 40,
                         height: 40,
