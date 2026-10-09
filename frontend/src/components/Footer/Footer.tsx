@@ -4,6 +4,7 @@ import { useNavigate } from '@tanstack/react-router';
 import { useTheme } from '@/context/ThemeContext';
 import siteContent from '@/data/site.json';
 import navigationData from '@/data/navigation.json';
+import { trackEvent } from '@/hooks/useAnalytics';
 import { StarDoodle, SquiggleDoodle } from '@/components/Doodles';
 import { FacebookIcon, TwitterIcon, LinkedInIcon, TelegramIcon, WhatsAppIcon } from '@/components/Icons';
 import { FONT_HEADING, FONT_MONO, MAX_CONTENT_WIDTH } from '@/lib/constants';
@@ -233,6 +234,7 @@ const Footer: React.FC = () => {
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         aria-label={`Share on ${platform.name}`}
+                                        onClick={() => { if (platform.name === 'WhatsApp') trackEvent('whatsapp_click', { location: 'website-footer' }); }}
                                         sx={{
                                             display: 'inline-flex',
                                             alignItems: 'center',
