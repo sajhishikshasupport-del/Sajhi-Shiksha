@@ -2,6 +2,7 @@ import { Box, Typography } from '@mui/material';
 import { CheckCircleIcon, EmailIcon, WhatsAppIcon, LinkIcon } from '@/components/Icons';
 import { useTheme } from '@/context/ThemeContext';
 import contactData from '@/data/contact.json';
+import { trackEvent } from '@/hooks/useAnalytics';
 import Breadcrumb from '@/components/Breadcrumb/Breadcrumb';
 import PageIntro from '@/components/PageIntro';
 import { FONT_HEADING, FONT_MONO, MAX_CONTENT_WIDTH } from '@/lib/constants';
@@ -198,10 +199,11 @@ export default function AboutPage({ onNavigate }: AboutPageProps) {
                 {/* WhatsApp Group */}
                 {contactData.whatsappGroup && (
                     <Box
-                        onClick={() => window.open(contactData.whatsappGroup, '_blank', 'noopener,noreferrer')}
+                        onClick={() => { trackEvent('whatsapp_click', { location: 'website-about-group' }); window.open(contactData.whatsappGroup, '_blank', 'noopener,noreferrer'); }}
                         onKeyDown={(e) => {
                             if (e.key === 'Enter' || e.key === ' ') {
                                 e.preventDefault();
+                                trackEvent('whatsapp_click', { location: 'website-about-group' });
                                 window.open(contactData.whatsappGroup, '_blank', 'noopener,noreferrer');
                             }
                         }}
@@ -265,10 +267,11 @@ export default function AboutPage({ onNavigate }: AboutPageProps) {
                 {/* WhatsApp Channel */}
                 {contactData.whatsappChannel && (
                     <Box
-                        onClick={() => window.open(contactData.whatsappChannel, '_blank', 'noopener,noreferrer')}
+                        onClick={() => { trackEvent('whatsapp_click', { location: 'website-about-channel' }); window.open(contactData.whatsappChannel, '_blank', 'noopener,noreferrer'); }}
                         onKeyDown={(e) => {
                             if (e.key === 'Enter' || e.key === ' ') {
                                 e.preventDefault();
+                                trackEvent('whatsapp_click', { location: 'website-about-channel' });
                                 window.open(contactData.whatsappChannel, '_blank', 'noopener,noreferrer');
                             }
                         }}
