@@ -5,6 +5,7 @@ import contributorsData from '@/data/contributors.json';
 import Breadcrumb from '@/components/Breadcrumb/Breadcrumb';
 import PageIntro from '@/components/PageIntro';
 import { FONT_HEADING, FONT_MONO, MAX_CONTENT_WIDTH, COLOR_TEXT_LIGHT } from '@/lib/constants';
+import { trackEvent } from '@/hooks/useAnalytics';
 
 interface ContributePageProps {
     onNavigate: (route: string) => void;
@@ -272,6 +273,7 @@ export default function ContributePage({ onNavigate }: ContributePageProps) {
                                 variant="contained"
                                 href={way.href}
                                 target="_blank"
+                                onClick={() => { if (way.title === 'WhatsApp Us') trackEvent('whatsapp_click', { location: 'website-contribute' }); }}
                                 sx={cardButtonSx}
                             >
                                 {way.action}
@@ -515,6 +517,7 @@ export default function ContributePage({ onNavigate }: ContributePageProps) {
                     href={whatsappLink}
                     target="_blank"
                     startIcon={<WhatsAppIcon />}
+                    onClick={() => trackEvent('whatsapp_click', { location: 'website-contribute' })}
                     sx={cardButtonSx}
                 >
                     Request on WhatsApp
@@ -552,6 +555,7 @@ export default function ContributePage({ onNavigate }: ContributePageProps) {
                             <Link
                                 href={whatsappLink}
                                 target="_blank"
+                                onClick={() => trackEvent('whatsapp_click', { location: 'website-contribute' })}
                                 sx={{ fontWeight: 700, color: 'var(--color-text)', fontFamily: FONT_MONO }}
                             >
                                 {contributorsData.whatsapp}
