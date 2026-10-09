@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Box, Tooltip } from '@mui/material';
 import { WhatsAppIcon } from '@/components/Icons';
 import contributorsData from '@/data/contributors.json';
+import { trackEvent } from '@/hooks/useAnalytics';
 
 const WhatsAppButton: React.FC = () => {
     const [showPulse, setShowPulse] = useState(false);
@@ -26,6 +27,7 @@ const WhatsAppButton: React.FC = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Chat with us on WhatsApp"
+                onClick={() => trackEvent('whatsapp_click', { location: 'website-float' })}
                 sx={{
                     position: 'fixed',
                     bottom: 24,
