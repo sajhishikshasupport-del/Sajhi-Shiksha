@@ -563,7 +563,7 @@ function doSearch(q){
     (lang==='hi'?(HI.labels[n.id]||n.label):n.label).toLowerCase().includes(q) ||
     (n.label.toLowerCase().includes(q)) || (n.sub||'').toLowerCase().includes(q)
   )).slice(0,8);
-  ssTrack('career_search',{search_term:q, results:hits.length});
+  ssTrack('career_search',{search_term:q, result_count:hits.length});
   if(!hits.length){ box.innerHTML=`<div class="sr-empty">${T('noResults')}</div>`; box.classList.add('open'); return; }
   let html='';
   hits.forEach(h=>{
