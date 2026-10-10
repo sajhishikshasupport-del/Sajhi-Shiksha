@@ -17,9 +17,7 @@ import type { FolderContents } from '@/features/teachers/components/TeacherShare
 
 function CircularFormatsPage(): React.ReactElement {
     const navigate = useNavigate();
-    const { leaf: leafParam } = Route.useParams();
-    const { folder: selectedFolder, leaf: leafSearch } = Route.useSearch();
-    const selectedLeaf = leafParam || leafSearch;
+    const { folder: selectedFolder, leaf: selectedLeaf } = Route.useSearch();
     const mainCard = teachersData.mainCards.find((c) => c.id === 'circular-formats');
     const parentLabel = navigationData.headerLinks.find((l) => l.route === '/for-teachers')?.label ?? 'For Teachers';
     const pageTitle = mainCard?.title ?? '';
@@ -143,7 +141,7 @@ function CircularFormatsPage(): React.ReactElement {
                                     key={child.id}
                                     item={child}
                                     subject={currentFolder.title}
-                                    onView={() => navigate({ to: '/for-teachers/circular-formats', params: { leaf: child.id }, search: { folder: selectedFolder } })}
+                                    onView={() => navigate({ to: '/for-teachers/circular-formats', search: { folder: selectedFolder, leaf: child.id } })}
                                     onDownload={(url) => window.open(url, '_blank')}
                                 />
                             );
@@ -194,7 +192,7 @@ function CircularFormatsPage(): React.ReactElement {
                                 key={subCard.id}
                                 item={subCard}
                                 subject={pageTitle}
-                                onView={(id) => navigate({ to: '/for-teachers/circular-formats', params: { leaf: id } })}
+                                onView={(id) => navigate({ to: '/for-teachers/circular-formats', search: { leaf: id } })}
                                 onDownload={(url) => window.open(url, '_blank')}
                             />
                         );
@@ -208,7 +206,7 @@ function CircularFormatsPage(): React.ReactElement {
 
 export const Route = createRoute({
     getParentRoute: () => forTeachersRoute,
-    path: 'circular-formats/{-$leaf}',
+    path: 'circular-formats',
     component: CircularFormatsPage,
     validateSearch: (search: Record<string, unknown>): { folder?: string; leaf?: string } => ({
         folder: typeof search.folder === 'string' ? search.folder : undefined,
