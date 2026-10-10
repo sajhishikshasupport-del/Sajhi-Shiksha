@@ -15,9 +15,8 @@ import {
 } from '@/features/teachers/components/TeacherShared';
 import type { FolderContents } from '@/features/teachers/components/TeacherShared';
 
-function PrimaryHMPage(): React.ReactElement {
+export function PrimaryHMPage({ folder: selectedFolder, leaf: selectedLeaf }: { folder?: string; leaf?: string }): React.ReactElement {
     const navigate = useNavigate();
-    const { folder: selectedFolder, leaf: selectedLeaf } = Route.useSearch();
     const mainCard = teachersData.mainCards.find((c) => c.id === 'primary-hm');
     const parentLabel = navigationData.headerLinks.find((l) => l.route === '/for-teachers')?.label ?? 'For Teachers';
     const pageTitle = mainCard?.title ?? '';
@@ -141,7 +140,7 @@ function PrimaryHMPage(): React.ReactElement {
                                     key={child.id}
                                     item={child}
                                     subject={currentFolder.title}
-                                    onView={() => navigate({ to: '/for-teachers/primary-hm', search: { folder: selectedFolder, leaf: child.id } })}
+                                    onView={() => navigate({ to: '/for-teachers/primary-hm/$leaf', params: { leaf: child.id }, search: { folder: selectedFolder } })}
                                     onDownload={(url) => window.open(url, '_blank')}
                                 />
                             );
@@ -192,7 +191,7 @@ function PrimaryHMPage(): React.ReactElement {
                                 key={subCard.id}
                                 item={subCard}
                                 subject={pageTitle}
-                                onView={(id) => navigate({ to: '/for-teachers/primary-hm', search: { leaf: id } })}
+                                onView={(id) => navigate({ to: '/for-teachers/primary-hm/$leaf', params: { leaf: id } })}
                                 onDownload={(url) => window.open(url, '_blank')}
                             />
                         );
@@ -204,10 +203,15 @@ function PrimaryHMPage(): React.ReactElement {
     );
 }
 
+function PrimaryHMRoute(): React.ReactElement {
+    const { folder, leaf } = Route.useSearch();
+    return <PrimaryHMPage folder={folder} leaf={leaf} />;
+}
+
 export const Route = createRoute({
     getParentRoute: () => forTeachersRoute,
     path: 'primary-hm',
-    component: PrimaryHMPage,
+    component: PrimaryHMRoute,
     validateSearch: (search: Record<string, unknown>): { folder?: string; leaf?: string } => ({
         folder: typeof search.folder === 'string' ? search.folder : undefined,
         leaf: typeof search.leaf === 'string' ? search.leaf : undefined,
