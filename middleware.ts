@@ -8,8 +8,8 @@
  * cover them).
  *
  * This middleware reads the ?leaf= value, looks it up in the build-time
- * generated /og-meta.json, and injects the leaf's own title/description into the
- * SPA shell before it is sent. It is deliberately conservative:
+ * generated /og-meta.json, and injects the leaf's own title/description/image
+ * into the SPA shell before it is sent. It is deliberately conservative:
  *   - only GET requests that carry a ?leaf= value are touched
  *   - if anything is missing or fails, it returns nothing (Vercel continues
  *     with the normal static response), so the site can never break because of it
@@ -23,8 +23,9 @@ export const config = {
 
 const META_URL = '/og-meta.json';
 const SHELL_URL = '/index.html';
+const DEFAULT_OG_IMAGE = '/images/og-image.png';
 
-let metaCache: Record<string, { t: string; d: string }> | null = null;
+let metaCache: Record<string, { t: string; d: string; i?: string }> | null = null;
 
 function escapeAttr(value: string): string {
     return String(value)
@@ -34,17 +35,20 @@ function escapeAttr(value: string): string {
         .replace(/"/g, '&quot;');
 }
 
-function inject(html: string, title: string, description: string, url: string): string {
+function inject(html: string, title: string, description: string, url: string, image: string): string {
     const t = escapeAttr(title);
     const d = escapeAttr(description);
     const u = escapeAttr(url);
+    const img = escapeAttr(image);
     return html
         .replace(/<title>[\s\S]*?<\/title>/, `<title>${t}</title>`)
         .replace(/(<meta property="og:title" content=")[^"]*(")/, `$1${t}$2`)
         .replace(/(<meta property="og:description" content=")[^"]*(")/, `$1${d}$2`)
         .replace(/(<meta property="og:url" content=")[^"]*(")/, `$1${u}$2`)
+        .replace(/(<meta property="og:image" content=")[^"]*(")/, `$1${img}$2`)
         .replace(/(<meta name="twitter:title" content=")[^"]*(")/, `$1${t}$2`)
         .replace(/(<meta name="twitter:description" content=")[^"]*(")/, `$1${d}$2`)
+        .replace(/(<meta name="twitter:image" content=")[^"]*(")/, `$1${img}$2`)
         .replace(/(<meta name="description" content=")[^"]*(")/, `$1${d}$2`);
 }
 
@@ -69,8 +73,9 @@ export default async function middleware(request: Request): Promise<Response | u
         const shellRes = await fetch(`${url.origin}${SHELL_URL}`);
         if (!shellRes.ok) return undefined;
 
+        const image = `${url.origin}${entry.i || DEFAULT_OG_IMAGE}`;
         const html = await shellRes.text();
-        const out = inject(html, entry.t, entry.d, `${url.origin}${url.pathname}${url.search}`);
+        const out = inject(html, entry.t, entry.d, `${url.origin}${url.pathname}${url.search}`, image);
 
         return new Response(out, {
             headers: { 'content-type': 'text/html; charset=utf-8' },
