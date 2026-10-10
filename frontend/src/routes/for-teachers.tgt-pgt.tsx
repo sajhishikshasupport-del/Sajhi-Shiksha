@@ -27,11 +27,13 @@ function TgtPgtPage(): React.ReactElement {
     const leafItems = hasSubCards ? (currentSubCard?.subCards ?? []) : [];
     const currentLeaf = (hasSubCards ? leafItems : allSubCards).find((l: any) => l.id === (hasSubCards ? selectedLeaf : (selectedLeaf ?? selectedSubCard))) ?? null;
 
+    const viewingLeaf = currentLeaf && (selectedLeaf || (selectedSubCard && !hasSubCards)) ? currentLeaf : null;
+
     useSEO({
-        title: pageTitle || 'TGT/PGT Maths — Teaching Resources',
-        description: 'TGT and PGT Mathematics teaching materials: question papers, question bank, holiday homework, lesson plans, PPTs and worksheets.',
-        canonicalPath: '/for-teachers/tgt-pgt',
-        ogImage: '/images/og-tgt-pgt.png',
+        title: viewingLeaf ? viewingLeaf.title : (pageTitle || 'TGT/PGT Maths — Teaching Resources'),
+        description: viewingLeaf?.description || 'TGT and PGT Mathematics teaching materials: question papers, question bank, holiday homework, lesson plans, PPTs and worksheets.',
+        canonicalPath: viewingLeaf ? `/for-teachers/tgt-pgt?leaf=${viewingLeaf.id}` : '/for-teachers/tgt-pgt',
+        ogImage: viewingLeaf ? `/images/og/leaves/tgt-pgt__${viewingLeaf.id}.png` : '/images/og-tgt-pgt.png',
         jsonLd: breadcrumbSchema([
             { name: 'Home', path: '/' },
             { name: 'For Teachers', path: '/for-teachers' },

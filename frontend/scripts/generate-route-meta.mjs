@@ -313,6 +313,7 @@ try {
             ogMeta[`/${sec.parent}?leaf=${leaf.id}`] = {
                 t: `${leaf.title} — Sajhi Shiksha`,
                 d: (leaf.description || `${leaf.title} — KVS resources on Sajhi Shiksha.`).slice(0, 200),
+                i: `/images/og/leaves/${sec.cardId}__${leaf.id}.png`,
             };
         }
     }

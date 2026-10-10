@@ -27,11 +27,13 @@ function CircularFormatsPage(): React.ReactElement {
     const folderChildren = currentFolder?.subCards ?? [];
     const currentLeafItem = selectedLeaf ? findCardDeep(selectedLeaf, allSubCards) : null;
 
+    const viewingLeaf = selectedLeaf && currentLeafItem ? currentLeafItem : null;
+
     useSEO({
-        title: pageTitle || 'Circulars & Formats',
-        description: 'KVS circulars and office formats: GOI rules, KVS rules, admission, time table, CBSE/NIOS formats, morning assembly and more.',
-        canonicalPath: '/for-teachers/circular-formats',
-        ogImage: '/images/og-circular.png',
+        title: viewingLeaf ? viewingLeaf.title : (pageTitle || 'Circulars & Formats'),
+        description: viewingLeaf?.description || 'KVS circulars and office formats: GOI rules, KVS rules, admission, time table, CBSE/NIOS formats, morning assembly and more.',
+        canonicalPath: viewingLeaf ? `/for-teachers/circular-formats?leaf=${viewingLeaf.id}` : '/for-teachers/circular-formats',
+        ogImage: viewingLeaf ? `/images/og/leaves/circular-formats__${viewingLeaf.id}.png` : '/images/og-circular.png',
         jsonLd: breadcrumbSchema([
             { name: 'Home', path: '/' },
             { name: 'For Teachers', path: '/for-teachers' },

@@ -27,11 +27,13 @@ function PrimaryHMPage(): React.ReactElement {
     const folderChildren = currentFolder?.subCards ?? [];
     const currentLeafItem = selectedLeaf ? findCardDeep(selectedLeaf, allSubCards) : null;
 
+    const viewingLeaf = selectedLeaf && currentLeafItem ? currentLeafItem : null;
+
     useSEO({
-        title: pageTitle || 'Primary Teachers & HM',
-        description: 'Primary classes (1-5) teaching resources: lesson plans, worksheets, cycle tests, SRP, textbooks, split-ups, primary programmes, and Head Master materials.',
-        canonicalPath: '/for-teachers/primary-hm',
-        ogImage: '/images/og-teachers.png',
+        title: viewingLeaf ? viewingLeaf.title : (pageTitle || 'Primary Teachers & HM'),
+        description: viewingLeaf?.description || 'Primary classes (1-5) teaching resources: lesson plans, worksheets, cycle tests, SRP, textbooks, split-ups, primary programmes, and Head Master materials.',
+        canonicalPath: viewingLeaf ? `/for-teachers/primary-hm?leaf=${viewingLeaf.id}` : '/for-teachers/primary-hm',
+        ogImage: viewingLeaf ? `/images/og/leaves/primary-hm__${viewingLeaf.id}.png` : '/images/og-teachers.png',
         jsonLd: breadcrumbSchema([
             { name: 'Home', path: '/' },
             { name: 'For Teachers', path: '/for-teachers' },
