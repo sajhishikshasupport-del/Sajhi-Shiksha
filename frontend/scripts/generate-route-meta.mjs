@@ -288,4 +288,38 @@ for (const file of CONTENT_FILES) {
     }
 }
 
+/* 3. Leaf metadata for query-param URLs (?leaf=) -> og-meta.json for middleware */
+const LEAF_SECTIONS = [
+    { parent: 'for-teachers/tgt-pgt', cardId: 'tgt-pgt' },
+    { parent: 'for-teachers/circular-formats', cardId: 'circular-formats' },
+    { parent: 'for-teachers/primary-hm', cardId: 'primary-hm' },
+];
+
+try {
+    const teachers = JSON.parse(readFileSync(join(frontendDir, 'src', 'data', 'teachers.json'), 'utf8'));
+    const collectLeaves = (cards) => {
+        const out = [];
+        for (const c of cards || []) {
+            if (c.subCards && c.subCards.length) out.push(...collectLeaves(c.subCards));
+            else out.push(c);
+        }
+        return out;
+    };
+    const ogMeta = {};
+    for (const sec of LEAF_SECTIONS) {
+        const main = (teachers.mainCards || []).find((m) => m.id === sec.cardId);
+        if (!main) continue;
+        for (const leaf of collectLeaves(main.subCards)) {
+            ogMeta[`/${sec.parent}?leaf=${leaf.id}`] = {
+                t: `${leaf.title} — Sajhi Shiksha`,
+                d: (leaf.description || `${leaf.title} — KVS resources on Sajhi Shiksha.`).slice(0, 200),
+            };
+        }
+    }
+    writeFileSync(join(distDir, 'og-meta.json'), JSON.stringify(ogMeta));
+    console.log(`generate-route-meta: wrote og-meta.json with ${Object.keys(ogMeta).length} leaf entries`);
+} catch (e) {
+    console.error('generate-route-meta: og-meta.json step failed:', e.message);
+}
+
 console.log(`generate-route-meta: wrote ${generated} route preview pages (${seen.size} documents)`);
