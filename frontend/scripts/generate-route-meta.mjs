@@ -288,4 +288,37 @@ for (const file of CONTENT_FILES) {
     }
 }
 
+/* 3. Section leaves that use a PATH segment (was ?leaf=) */
+const SECTION_LEAVES = [
+    { parent: 'for-teachers/primary-hm', cardId: 'primary-hm' },
+];
+
+try {
+    const teachers = JSON.parse(readFileSync(join(frontendDir, 'src', 'data', 'teachers.json'), 'utf8'));
+    const collectLeaves = (cards) => {
+        const out = [];
+        for (const c of cards || []) {
+            if (c.subCards && c.subCards.length) out.push(...collectLeaves(c.subCards));
+            else out.push(c);
+        }
+        return out;
+    };
+    for (const sec of SECTION_LEAVES) {
+        const main = (teachers.mainCards || []).find((m) => m.id === sec.cardId);
+        if (!main) continue;
+        for (const leaf of collectLeaves(main.subCards)) {
+            const html = renderPage(template, {
+                url: `${SITE_URL}/${sec.parent}/${leaf.id}`,
+                title: `${leaf.title} — Sajhi Shiksha`,
+                description: leaf.description || `${leaf.title} — KVS resources on Sajhi Shiksha.`,
+                ogImage: DEFAULT_OG_IMAGE,
+            });
+            write(join(distDir, sec.parent, leaf.id, 'index.html'), html);
+            generated += 1;
+        }
+    }
+} catch {
+    /* teachers.json missing — skip leaf pages */
+}
+
 console.log(`generate-route-meta: wrote ${generated} route preview pages (${seen.size} documents)`);
