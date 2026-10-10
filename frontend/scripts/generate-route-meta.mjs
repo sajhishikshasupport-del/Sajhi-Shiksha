@@ -12,6 +12,11 @@
  * correct preview tags, while the React app still boots from it (it references
  * the same hashed /assets/* bundles with absolute paths).
  *
+ * Also generates a preview page for EVERY document (/view/<id>), so sharing a
+ * document link shows that document's title + description instead of the
+ * generic site preview. Document ids are the Drive file ids, which match the
+ * keys in src/data/document-descriptions.json.
+ *
  * Runs with plain Node (no dependencies). Fails the build loudly if the
  * expected tags are not found in dist/index.html, so a template change cannot
  * silently disable previews.
@@ -21,6 +26,7 @@ import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const SITE_URL = 'https://www.sajhishiksha.in';
+const DEFAULT_OG_IMAGE = '/images/og-image.png';
 
 /**
  * Route-specific metadata. Titles mirror what the app's useSEO hook renders
@@ -70,6 +76,12 @@ const ROUTES = [
         ogImage: '/images/og-math-lovers.png',
     },
     {
+        path: 'career-counselling',
+        title: 'Career Counselling — Free Career Guidance for Students',
+        description:
+            'Free, research-backed career guidance for Indian students and parents — an interactive career explorer, stream selection, entrance exams, colleges, scholarships and more.',
+    },
+    {
         path: 'contribute',
         title: 'Contribute — Sajhi Shiksha',
         description:
@@ -99,10 +111,26 @@ const ROUTES = [
         description:
             'Terms and Conditions for using Sajhi Shiksha. Read our usage guidelines, content policies, and disclaimers.',
     },
+    {
+        path: 'search',
+        title: 'Search — Sajhi Shiksha',
+        description:
+            'Search free study materials, question papers, and formats for students and teachers (Classes 1-12).',
+        noindex: true,
+    },
+];
+
+/** Data files whose documents get their own /view/<id> preview page. */
+const CONTENT_FILES = [
+    'teacher-contents.json',
+    'teacher-contents-circular.json',
+    'teacher-contents-primary.json',
+    'math-lovers-contents.json',
 ];
 
 const frontendDir = join(dirname(fileURLToPath(import.meta.url)), '..');
-const distIndex = join(frontendDir, 'dist', 'index.html');
+const distDir = join(frontendDir, 'dist');
+const distIndex = join(distDir, 'index.html');
 
 function escapeAttr(value) {
     return String(value)
@@ -119,17 +147,13 @@ function replaceOnce(html, pattern, replacement, label) {
     return html.replace(pattern, replacement);
 }
 
-const template = readFileSync(distIndex, 'utf8');
-
-let generated = 0;
-for (const route of ROUTES) {
-    const url = `${SITE_URL}/${route.path}`;
-    const titleAttr = escapeAttr(route.title);
-    const descAttr = escapeAttr(route.description);
-    const ogImage = `${SITE_URL}${route.ogImage || '/images/og-image.png'}`;
+/** Render one preview page from the dist/index.html template. */
+function renderPage(template, { url, title, description, ogImage, noindex }) {
+    const titleAttr = escapeAttr(title);
+    const descAttr = escapeAttr(String(description).slice(0, 200));
+    const image = `${SITE_URL}${ogImage || DEFAULT_OG_IMAGE}`;
 
     let html = template;
-
     html = replaceOnce(
         html,
         /<meta name="description" content="[^"]*" \/>/,
@@ -175,13 +199,13 @@ for (const route of ROUTES) {
     html = replaceOnce(
         html,
         /<meta property="og:image" content="[^"]*" \/>/,
-        `<meta property="og:image" content="${ogImage}" />`,
+        `<meta property="og:image" content="${image}" />`,
         'og:image',
     );
     html = replaceOnce(
         html,
         /<meta name="twitter:image" content="[^"]*" \/>/,
-        `<meta name="twitter:image" content="${ogImage}" />`,
+        `<meta name="twitter:image" content="${image}" />`,
         'twitter:image',
     );
     html = replaceOnce(
@@ -190,11 +214,78 @@ for (const route of ROUTES) {
         `<title>${titleAttr}</title>`,
         'title tag',
     );
+    if (noindex) {
+        html = replaceOnce(
+            html,
+            /<meta name="robots" content="[^"]*" \/>/,
+            '<meta name="robots" content="noindex, follow" />',
+            'robots tag',
+        );
+    }
+    return html;
+}
 
-    const target = join(frontendDir, 'dist', route.path, 'index.html');
+function write(target, html) {
     mkdirSync(dirname(target), { recursive: true });
     writeFileSync(target, html);
+}
+
+const template = readFileSync(distIndex, 'utf8');
+
+let generated = 0;
+
+/* 1. Named routes */
+for (const route of ROUTES) {
+    const html = renderPage(template, {
+        url: `${SITE_URL}/${route.path}`,
+        title: route.title,
+        description: route.description,
+        ogImage: route.ogImage,
+        noindex: route.noindex,
+    });
+    write(join(distDir, route.path, 'index.html'), html);
     generated += 1;
 }
 
-console.log(`generate-route-meta: wrote ${generated} route preview pages`);
+/* 2. Every document -> /view/<id> preview page */
+let descriptions = {};
+try {
+    descriptions = JSON.parse(
+        readFileSync(join(frontendDir, 'src', 'data', 'document-descriptions.json'), 'utf8'),
+    );
+} catch {
+    descriptions = {};
+}
+
+const seen = new Set();
+for (const file of CONTENT_FILES) {
+    let data;
+    try {
+        data = JSON.parse(readFileSync(join(frontendDir, 'src', 'data', file), 'utf8'));
+    } catch {
+        continue;
+    }
+    for (const key of Object.keys(data)) {
+        if (key === '_comment') continue;
+        const documents = (data[key] && data[key].documents) || [];
+        for (const doc of documents) {
+            if (!doc || !doc.id || seen.has(doc.id)) continue;
+            seen.add(doc.id);
+            const saved = descriptions[doc.id];
+            const description =
+                typeof saved === 'string' && saved.trim().length > 0
+                    ? saved
+                    : `View and download ${doc.title} — free study material on Sajhi Shiksha.`;
+            const html = renderPage(template, {
+                url: `${SITE_URL}/view/${doc.id}`,
+                title: `${doc.title} — Sajhi Shiksha`,
+                description,
+                ogImage: DEFAULT_OG_IMAGE,
+            });
+            write(join(distDir, 'view', doc.id, 'index.html'), html);
+            generated += 1;
+        }
+    }
+}
+
+console.log(`generate-route-meta: wrote ${generated} route preview pages (${seen.size} documents)`);
