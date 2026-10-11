@@ -323,4 +323,47 @@ try {
     console.error('generate-route-meta: og-meta.json step failed:', e.message);
 }
 
+/* 4. sitemap.xml -> dist/sitemap.xml (all indexable pages: sections + every document) */
+try {
+    const staticUrls = [
+        { loc: '/', cf: 'weekly', pr: '1.0' },
+        { loc: '/for-teachers', cf: 'weekly', pr: '0.9' },
+        { loc: '/for-teachers/tgt-pgt', cf: 'weekly', pr: '0.8' },
+        { loc: '/for-teachers/circular-formats', cf: 'weekly', pr: '0.8' },
+        { loc: '/for-teachers/primary-hm', cf: 'weekly', pr: '0.8' },
+        { loc: '/for-math-lovers', cf: 'weekly', pr: '0.8' },
+        { loc: '/career-counselling', cf: 'weekly', pr: '0.8' },
+        { loc: '/contribute', cf: 'monthly', pr: '0.5' },
+        { loc: '/about', cf: 'monthly', pr: '0.5' },
+        { loc: '/privacy-policy', cf: 'yearly', pr: '0.3' },
+        { loc: '/terms', cf: 'yearly', pr: '0.3' },
+    ];
+    const sitemapUrls = staticUrls.map(
+        (s) => `  <url><loc>${SITE_URL}${s.loc}</loc><changefreq>${s.cf}</changefreq><priority>${s.pr}</priority></url>`,
+    );
+    const docIds = new Set();
+    for (const file of CONTENT_FILES) {
+        let data;
+        try {
+            data = JSON.parse(readFileSync(join(frontendDir, 'src', 'data', file), 'utf8'));
+        } catch {
+            continue;
+        }
+        for (const key of Object.keys(data)) {
+            if (key === '_comment') continue;
+            for (const doc of (data[key] && data[key].documents) || []) {
+                if (doc && doc.id) docIds.add(doc.id);
+            }
+        }
+    }
+    for (const id of docIds) {
+        sitemapUrls.push(`  <url><loc>${SITE_URL}/view/${id}</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>`);
+    }
+    const xml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${sitemapUrls.join('\n')}\n</urlset>\n`;
+    writeFileSync(join(distDir, 'sitemap.xml'), xml);
+    console.log(`generate-route-meta: wrote sitemap.xml with ${sitemapUrls.length} urls (${docIds.size} documents)`);
+} catch (e) {
+    console.error('generate-route-meta: sitemap step failed:', e.message);
+}
+
 console.log(`generate-route-meta: wrote ${generated} route preview pages (${seen.size} documents)`);
