@@ -61,6 +61,7 @@ const RecentlyAddedCard: React.FC<{ resource: Resource; index: number }> = ({ re
                     display: 'flex',
                     flexDirection: 'column',
                     height: '100%',
+                    minWidth: 0,
                     p: 2.5,
                     bgcolor: 'var(--color-bg)',
                     border: `3px solid ${borderColor}`,
@@ -110,6 +111,8 @@ const RecentlyAddedCard: React.FC<{ resource: Resource; index: number }> = ({ re
                         lineHeight: 1.35,
                         color: 'var(--color-text)',
                         mb: 'auto',
+                        overflowWrap: 'anywhere',
+                        wordBreak: 'break-word',
                     }}
                 >
                     {resource.title}
@@ -210,9 +213,9 @@ const RecentlyAdded: React.FC = () => {
                     sx={{
                         display: 'grid',
                         gridTemplateColumns: {
-                            xs: '1fr',
-                            sm: 'repeat(2, 1fr)',
-                            md: 'repeat(4, 1fr)',
+                            xs: 'minmax(0, 1fr)',
+                            sm: 'repeat(2, minmax(0, 1fr))',
+                            md: 'repeat(4, minmax(0, 1fr))',
                         },
                         gap: 3,
                     }}

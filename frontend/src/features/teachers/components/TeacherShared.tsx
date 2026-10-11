@@ -193,7 +193,12 @@ const DocCard: React.FC<{ doc: DriveDocument; showClass?: boolean }> = ({ doc, s
                 {doc.title}
             </Typography>
             {description && (
-                <Typography sx={{ fontSize: '0.85rem', color: 'var(--color-text-secondary)', mt: 0.5, lineHeight: 1.5 }}>
+                <Typography
+                    sx={{
+                        fontSize: '0.85rem', color: 'var(--color-text-secondary)', mt: 0.5, lineHeight: 1.5,
+                        display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical', overflow: 'hidden',
+                    }}
+                >
                     {description}
                 </Typography>
             )}
