@@ -151,6 +151,7 @@ function CareerCounsellingPage(): React.ReactElement {
         title: strings.indexTitle,
         description: strings.indexDescription,
         canonicalPath: '/career-counselling',
+        ogImage: lang === 'hi' ? '/images/og-career-counselling.hi.png' : '/images/og-career-counselling.png',
         alternates: hreflangAlternates('/career-counselling'),
         jsonLd: breadcrumbSchema([
             { name: 'Home', path: '/' },

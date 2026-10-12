@@ -80,6 +80,7 @@ const ROUTES = [
         title: 'Career Counselling — Free Career Guidance for Students',
         description:
             'Free, research-backed career guidance for Indian students and parents — an interactive career explorer, stream selection, entrance exams, colleges, scholarships and more.',
+        ogImage: '/images/og-career-counselling.png',
         alternates: true,
     },
     {
@@ -297,6 +298,7 @@ function buildCareerRoutes() {
             path: `career-counselling/${id}`,
             title: `${title} — Career Counselling — Sajhi Shiksha`,
             description,
+            ogImage: `/images/og/career/${id}.png`,
         });
         covered.add(id);
     };
@@ -348,6 +350,7 @@ for (const route of careerRoutes) {
         url,
         title: route.title,
         description: route.description,
+        ogImage: route.ogImage,
         alternates: alternatesFor(url),
     });
     write(join(distDir, route.path, 'index.html'), html);
@@ -451,6 +454,7 @@ try {
             ogMeta['/career-counselling?lang=hi'] = {
                 t: `${i18nHi.indexTitle} — Sajhi Shiksha`,
                 d: String(i18nHi.indexDescription || '').slice(0, 200),
+                i: '/images/og-career-counselling.hi.png',
             };
         }
         for (const route of careerRoutes) {
@@ -465,6 +469,7 @@ try {
             ogMeta[`/${route.path}?lang=hi`] = {
                 t: `${hi.title} — ${sectionName} — Sajhi Shiksha`,
                 d: String(hi.intro_short || route.description || '').slice(0, 200),
+                i: `/images/og/career/${id}.hi.png`,
             };
         }
     } catch (e) {

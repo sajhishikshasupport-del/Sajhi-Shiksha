@@ -402,6 +402,7 @@ function CareerPageView({ slug }: { slug: string }): React.ReactElement {
         title: `${title} — ${strings.sectionName}`,
         description,
         canonicalPath: `/career-counselling/${slug}`,
+        ogImage: lang === 'hi' ? `/images/og/career/${slug}.hi.png` : `/images/og/career/${slug}.png`,
         noIndex: !content && !isGuidesParent,
         alternates: hreflangAlternates(`/career-counselling/${slug}`),
         jsonLd: breadcrumbSchema([
