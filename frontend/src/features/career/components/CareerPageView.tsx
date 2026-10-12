@@ -2,7 +2,7 @@ import React from 'react';
 import { Box, Typography, Chip, Button } from '@mui/material';
 import { Link } from '@tanstack/react-router';
 import { ArrowBackIcon, ArrowForwardIcon, WhatsAppIcon } from '@/components/Icons';
-import { useSEO, breadcrumbSchema } from '@/hooks/useSEO';
+import { useSEO, breadcrumbSchema, hreflangAlternates } from '@/hooks/useSEO';
 import { FONT_HEADING, FONT_MONO, MAX_CONTENT_WIDTH } from '@/lib/constants';
 import careerManifest from '@/data/career-website-content.json';
 import siteData from '@/data/site.json';
@@ -13,6 +13,11 @@ import {
     getStreamGuides,
     CAREER_GUIDES_PARENT_ID,
 } from '@/features/career/careerPages';
+import { useCareerLang } from '@/features/career/useCareerLang';
+import { careerStrings } from '@/features/career/careerStrings';
+import type { CareerStrings } from '@/features/career/careerStrings';
+import type { CareerLang } from '@/features/career/useCareerLang';
+import CareerLanguageToggle from '@/features/career/components/CareerLanguageToggle';
 import type {
     CareerManifest,
     CareerManifestItem,
@@ -31,20 +36,29 @@ const WA_NUMBER = ((siteData.site?.whatsappNumber as string) || '').replace(/[^0
 
 /**
  * Standard end-of-page WhatsApp CTA shown on every career page (REQ-1012-15).
- * The page title is auto-filled, and a click is tracked as whatsapp_click with
- * location 'career-page' plus the page's id.
+ * The page title is auto-filled and the heading/button are localized
+ * (REQ-1012-16); a click is tracked as whatsapp_click with location
+ * 'career-page' plus the page's id — tracking is unchanged.
  */
-function CareerWhatsAppCTA({ title, pageId }: { title: string; pageId: string }): React.ReactElement | null {
+function CareerWhatsAppCTA({
+    title,
+    pageId,
+    strings,
+}: {
+    title: string;
+    pageId: string;
+    strings: CareerStrings;
+}): React.ReactElement | null {
     if (!WA_NUMBER) return null;
     const message = `Hi, I have a question about "${title}" on Sajhi Shiksha (sajhishiksha.in/career-counselling/${pageId}).`;
     const href = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(message)}`;
     return (
         <Box component="section" sx={{ mt: 6, p: 3, bgcolor: 'var(--color-bg)', border: `3px solid ${BORDER}`, boxShadow: `5px 5px 0px ${SHADOW}`, maxWidth: 820 }}>
             <Typography component="h2" sx={{ fontFamily: FONT_HEADING, fontWeight: 800, fontSize: { xs: '1.2rem', md: '1.4rem' }, mb: 1 }}>
-                Question about {title}?
+                {strings.ctaHeading(title)}
             </Typography>
             <Typography sx={{ fontSize: '0.95rem', color: 'var(--color-text-secondary)', lineHeight: 1.8, mb: 2 }}>
-                If anything on this page is unclear, or you want to talk it through for your own situation, message us on WhatsApp. We reply personally.
+                {strings.ctaBody}
             </Typography>
             <Button
                 component="a"
@@ -65,13 +79,13 @@ function CareerWhatsAppCTA({ title, pageId }: { title: string; pageId: string })
                     '&:hover': { bgcolor: '#1FBE5B', color: '#1A1A1A' },
                 }}
             >
-                Ask on WhatsApp
+                {strings.ctaButton}
             </Button>
         </Box>
     );
 }
 
-function BackToSection(): React.ReactElement {
+function BackToSection({ strings }: { strings: CareerStrings }): React.ReactElement {
     return (
         <Button
             component={Link}
@@ -90,7 +104,7 @@ function BackToSection(): React.ReactElement {
                 '&:hover': { bgcolor: 'var(--color-yellow)', color: '#1A1A1A' },
             }}
         >
-            Career Counselling
+            {strings.sectionName}
         </Button>
     );
 }
@@ -131,14 +145,20 @@ function PageItemCard({ item }: { item: CareerPageItem }): React.ReactElement {
  * Auto-generated jump chips for a page's sections (id from sections[].heading).
  * Clicking a chip smooth-scrolls to that section (REQ-1012-14).
  */
-function SectionChips({ sections }: { sections: CareerPageSection[] }): React.ReactElement | null {
+function SectionChips({
+    sections,
+    strings,
+}: {
+    sections: CareerPageSection[];
+    strings: CareerStrings;
+}): React.ReactElement | null {
     if (sections.length < 2) return null;
     const jumpTo = (id: string): void => {
         const el = document.getElementById(id);
         if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
     };
     return (
-        <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1, mb: 4 }} aria-label="Jump to section">
+        <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1, mb: 4 }} aria-label={strings.jumpToSection}>
             {sections.map((section, index) => (
                 <Chip
                     key={`chip-${section.heading}-${index}`}
@@ -164,7 +184,15 @@ function SectionChips({ sections }: { sections: CareerPageSection[] }): React.Re
 }
 
 /** Render one page's finalized content: title, intro, section chips, then each section. */
-function CareerContentPage({ content, slug }: { content: CareerPageContent; slug: string }): React.ReactElement {
+function CareerContentPage({
+    content,
+    slug,
+    strings,
+}: {
+    content: CareerPageContent;
+    slug: string;
+    strings: CareerStrings;
+}): React.ReactElement {
     return (
         <>
             <Typography sx={{ fontFamily: FONT_HEADING, fontWeight: 800, fontSize: { xs: '1.75rem', md: '2.25rem' }, mb: 2 }}>
@@ -174,7 +202,7 @@ function CareerContentPage({ content, slug }: { content: CareerPageContent; slug
                 {content.intro_full}
             </Typography>
 
-            <SectionChips sections={content.sections} />
+            <SectionChips sections={content.sections} strings={strings} />
 
             {content.sections.map((section, index) => (
                 <Box key={`${section.heading}-${index}`} id={`career-section-${index}`} component="section" sx={{ mb: 5, scrollMarginTop: '90px' }}>
@@ -211,18 +239,27 @@ function CareerContentPage({ content, slug }: { content: CareerPageContent; slug
                 </Box>
             ))}
 
-            <CareerWhatsAppCTA title={content.title} pageId={slug} />
+            <CareerWhatsAppCTA title={content.title} pageId={slug} strings={strings} />
         </>
     );
 }
 
 /** Listing page for the four stream guides (manifest id `career-guides-by-stream`). */
-function StreamGuidesListing({ item }: { item: CareerManifestItem | undefined }): React.ReactElement {
-    const guides = getStreamGuides();
+function StreamGuidesListing({
+    item,
+    strings,
+    lang,
+}: {
+    item: CareerManifestItem | undefined;
+    strings: CareerStrings;
+    lang: CareerLang;
+}): React.ReactElement {
+    const guides = getStreamGuides(lang);
+    const heading = item?.title ?? strings.guidesByStreamFallback;
     return (
         <>
             <Typography sx={{ fontFamily: FONT_HEADING, fontWeight: 800, fontSize: { xs: '1.75rem', md: '2.25rem' }, mb: 2 }}>
-                {item?.title ?? 'Career Guides by Stream'}
+                {heading}
             </Typography>
             {item?.description && (
                 <Typography sx={{ fontSize: '1rem', color: 'var(--color-text-secondary)', lineHeight: 1.8, mb: 4, maxWidth: 820 }}>
@@ -258,7 +295,7 @@ function StreamGuidesListing({ item }: { item: CareerManifestItem | undefined })
                             </Typography>
                             <Box sx={{ display: 'flex', alignItems: 'center', gap: 0.75, mt: 2 }}>
                                 <Typography sx={{ fontFamily: FONT_MONO, fontWeight: 700, fontSize: '0.85rem', color: 'var(--color-text)' }}>
-                                    Read the guide
+                                    {strings.readTheGuide}
                                 </Typography>
                                 <ArrowForwardIcon sx={{ fontSize: 18 }} />
                             </Box>
@@ -267,13 +304,19 @@ function StreamGuidesListing({ item }: { item: CareerManifestItem | undefined })
                 ))}
             </Box>
 
-            <CareerWhatsAppCTA title={item?.title ?? 'Career Guides by Stream'} pageId={CAREER_GUIDES_PARENT_ID} />
+            <CareerWhatsAppCTA title={heading} pageId={CAREER_GUIDES_PARENT_ID} strings={strings} />
         </>
     );
 }
 
 /** Shown for a visible manifest page item whose content has not been delivered yet. */
-function PendingPage({ item }: { item: CareerManifestItem }): React.ReactElement {
+function PendingPage({
+    item,
+    strings,
+}: {
+    item: CareerManifestItem;
+    strings: CareerStrings;
+}): React.ReactElement {
     return (
         <>
             <Typography sx={{ fontFamily: FONT_HEADING, fontWeight: 800, fontSize: { xs: '1.75rem', md: '2.25rem' }, mb: 2 }}>
@@ -282,7 +325,7 @@ function PendingPage({ item }: { item: CareerManifestItem }): React.ReactElement
             <Box sx={{ p: 3, bgcolor: 'var(--color-bg)', border: `3px solid ${BORDER}`, boxShadow: `4px 4px 0px ${SHADOW}`, maxWidth: 820 }}>
                 <Box sx={{ display: 'flex', alignItems: 'center', gap: 1.5, mb: 1.5 }}>
                     <Chip
-                        label="Coming soon"
+                        label={strings.comingSoon}
                         size="small"
                         sx={{
                             height: 22,
@@ -303,14 +346,14 @@ function PendingPage({ item }: { item: CareerManifestItem }): React.ReactElement
     );
 }
 
-function NotFoundPage(): React.ReactElement {
+function NotFoundPage({ strings }: { strings: CareerStrings }): React.ReactElement {
     return (
         <>
             <Typography sx={{ fontFamily: FONT_HEADING, fontWeight: 800, fontSize: { xs: '1.75rem', md: '2.25rem' }, mb: 2 }}>
-                Page not found
+                {strings.notFoundTitle}
             </Typography>
             <Typography sx={{ fontSize: '1rem', color: 'var(--color-text-secondary)', lineHeight: 1.8, mb: 3, maxWidth: 820 }}>
-                This career counselling page does not exist. Browse the section to find what you are looking for.
+                {strings.notFoundBody}
             </Typography>
             <Button
                 component={Link}
@@ -328,7 +371,7 @@ function NotFoundPage(): React.ReactElement {
                     '&:hover': { bgcolor: 'var(--color-yellow)', color: '#1A1A1A' },
                 }}
             >
-                Back to Career Counselling
+                {strings.backToCareer}
             </Button>
         </>
     );
@@ -337,24 +380,30 @@ function NotFoundPage(): React.ReactElement {
 /**
  * Generic renderer for `/career-counselling/<slug>`.
  *
- * Resolves the slug against the finalized page content. Unknown slugs render a
- * not-found state; the `career-guides-by-stream` parent id renders a listing of
- * the four stream guides; a visible manifest page item without content yet
- * renders a "coming soon" state.
+ * Resolves the slug against the finalized page content in the active language
+ * (English by default, Hindi when `?lang=hi` is set — falling back to English
+ * when a Hindi file is missing). Unknown slugs render a not-found state; the
+ * `career-guides-by-stream` parent id renders a listing of the four stream
+ * guides; a visible manifest page item without content yet renders a
+ * "coming soon" state.
  */
 function CareerPageView({ slug }: { slug: string }): React.ReactElement {
-    const content = getCareerPage(slug);
+    const { lang, setLang } = useCareerLang();
+    const strings = careerStrings(lang);
+
+    const content = getCareerPage(slug, lang);
     const isGuidesParent = slug === CAREER_GUIDES_PARENT_ID;
     const manifestItem = manifest.items.find((item) => item.id === slug);
 
-    const title = content?.title ?? manifestItem?.title ?? 'Career Counselling';
+    const title = content?.title ?? manifestItem?.title ?? strings.sectionName;
     const description = content?.intro_short ?? manifestItem?.description ?? manifest.section.subtitle;
 
     useSEO({
-        title: `${title} — Career Counselling`,
+        title: `${title} — ${strings.sectionName}`,
         description,
         canonicalPath: `/career-counselling/${slug}`,
         noIndex: !content && !isGuidesParent,
+        alternates: hreflangAlternates(`/career-counselling/${slug}`),
         jsonLd: breadcrumbSchema([
             { name: 'Home', path: '/' },
             { name: 'Career Counselling', path: '/career-counselling' },
@@ -364,18 +413,19 @@ function CareerPageView({ slug }: { slug: string }): React.ReactElement {
 
     let body: React.ReactElement;
     if (isGuidesParent) {
-        body = <StreamGuidesListing item={manifestItem} />;
+        body = <StreamGuidesListing item={manifestItem} strings={strings} lang={lang} />;
     } else if (content) {
-        body = <CareerContentPage content={content} slug={slug} />;
+        body = <CareerContentPage content={content} slug={slug} strings={strings} />;
     } else if (manifestItem) {
-        body = <PendingPage item={manifestItem} />;
+        body = <PendingPage item={manifestItem} strings={strings} />;
     } else {
-        body = <NotFoundPage />;
+        body = <NotFoundPage strings={strings} />;
     }
 
     return (
         <Box sx={{ maxWidth: MAX_CONTENT_WIDTH, mx: 'auto', px: { xs: 2, md: 4 }, py: 4 }}>
-            <BackToSection />
+            <CareerLanguageToggle lang={lang} onChange={setLang} />
+            <BackToSection strings={strings} />
             {body}
         </Box>
     );

@@ -80,6 +80,7 @@ const ROUTES = [
         title: 'Career Counselling — Free Career Guidance for Students',
         description:
             'Free, research-backed career guidance for Indian students and parents — an interactive career explorer, stream selection, entrance exams, colleges, scholarships and more.',
+        alternates: true,
     },
     {
         path: 'contribute',
@@ -147,8 +148,33 @@ function replaceOnce(html, pattern, replacement, label) {
     return html.replace(pattern, replacement);
 }
 
+/**
+ * The en / hi / x-default hreflang alternates for a bilingual page
+ * (REQ-1012-16). English is the default (no query); Hindi adds `?lang=hi`.
+ */
+function alternatesFor(url) {
+    return [
+        { hreflang: 'en', href: url },
+        { hreflang: 'hi', href: `${url}?lang=hi` },
+        { hreflang: 'x-default', href: url },
+    ];
+}
+
+/** Insert `<link rel="alternate" hreflang="…">` tags just before </head>. */
+function injectAlternates(html, alternates) {
+    if (!alternates || alternates.length === 0) return html;
+    if (!html.includes('</head>')) return html;
+    const tags = alternates
+        .map(
+            (a) =>
+                `<link rel="alternate" hreflang="${escapeAttr(a.hreflang)}" href="${escapeAttr(a.href)}" />`,
+        )
+        .join('\n        ');
+    return html.replace('</head>', `        ${tags}\n    </head>`);
+}
+
 /** Render one preview page from the dist/index.html template. */
-function renderPage(template, { url, title, description, ogImage, noindex }) {
+function renderPage(template, { url, title, description, ogImage, noindex, alternates }) {
     const titleAttr = escapeAttr(title);
     const descAttr = escapeAttr(String(description).slice(0, 200));
     const image = `${SITE_URL}${ogImage || DEFAULT_OG_IMAGE}`;
@@ -222,6 +248,7 @@ function renderPage(template, { url, title, description, ogImage, noindex }) {
             'robots tag',
         );
     }
+    html = injectAlternates(html, alternates);
     return html;
 }
 
@@ -301,12 +328,14 @@ let generated = 0;
 
 /* 1. Named routes */
 for (const route of ROUTES) {
+    const url = `${SITE_URL}/${route.path}`;
     const html = renderPage(template, {
-        url: `${SITE_URL}/${route.path}`,
+        url,
         title: route.title,
         description: route.description,
         ogImage: route.ogImage,
         noindex: route.noindex,
+        alternates: route.alternates ? alternatesFor(url) : undefined,
     });
     write(join(distDir, route.path, 'index.html'), html);
     generated += 1;
@@ -314,10 +343,12 @@ for (const route of ROUTES) {
 
 /* 1b. Career Counselling sub-pages -> /career-counselling/<id> preview pages */
 for (const route of careerRoutes) {
+    const url = `${SITE_URL}/${route.path}`;
     const html = renderPage(template, {
-        url: `${SITE_URL}/${route.path}`,
+        url,
         title: route.title,
         description: route.description,
+        alternates: alternatesFor(url),
     });
     write(join(distDir, route.path, 'index.html'), html);
     generated += 1;
@@ -372,29 +403,76 @@ const LEAF_SECTIONS = [
 ];
 
 try {
-    const teachers = JSON.parse(readFileSync(join(frontendDir, 'src', 'data', 'teachers.json'), 'utf8'));
-    const collectLeaves = (cards) => {
-        const out = [];
-        for (const c of cards || []) {
-            if (c.subCards && c.subCards.length) out.push(...collectLeaves(c.subCards));
-            else out.push(c);
-        }
-        return out;
-    };
     const ogMeta = {};
-    for (const sec of LEAF_SECTIONS) {
-        const main = (teachers.mainCards || []).find((m) => m.id === sec.cardId);
-        if (!main) continue;
-        for (const leaf of collectLeaves(main.subCards)) {
-            ogMeta[`/${sec.parent}?leaf=${leaf.id}`] = {
-                t: `${leaf.title} — Sajhi Shiksha`,
-                d: (leaf.description || `${leaf.title} — KVS resources on Sajhi Shiksha.`).slice(0, 200),
-                i: `/images/og/leaves/${sec.cardId}__${leaf.id}.png`,
+
+    /* 3a. Leaf metadata (?leaf=) */
+    try {
+        const teachers = JSON.parse(readFileSync(join(frontendDir, 'src', 'data', 'teachers.json'), 'utf8'));
+        const collectLeaves = (cards) => {
+            const out = [];
+            for (const c of cards || []) {
+                if (c.subCards && c.subCards.length) out.push(...collectLeaves(c.subCards));
+                else out.push(c);
+            }
+            return out;
+        };
+        for (const sec of LEAF_SECTIONS) {
+            const main = (teachers.mainCards || []).find((m) => m.id === sec.cardId);
+            if (!main) continue;
+            for (const leaf of collectLeaves(main.subCards)) {
+                ogMeta[`/${sec.parent}?leaf=${leaf.id}`] = {
+                    t: `${leaf.title} — Sajhi Shiksha`,
+                    d: (leaf.description || `${leaf.title} — KVS resources on Sajhi Shiksha.`).slice(0, 200),
+                    i: `/images/og/leaves/${sec.cardId}__${leaf.id}.png`,
+                };
+            }
+        }
+    } catch (e) {
+        console.error('generate-route-meta: leaf og-meta step failed:', e.message);
+    }
+
+    /* 3b. Career Counselling Hindi metadata (?lang=hi).
+     * Query-param URLs have no file of their own, so the middleware reads this
+     * map to inject the Hindi title/description + hreflang alternates
+     * (REQ-1012-16). English pages get their own static shells instead. */
+    try {
+        const pagesDir = join(frontendDir, 'src', 'data', 'career-pages');
+        let i18nHi = null;
+        try {
+            const i18n = JSON.parse(
+                readFileSync(join(frontendDir, 'src', 'data', 'career-i18n.json'), 'utf8'),
+            );
+            i18nHi = i18n.hi || null;
+        } catch {
+            i18nHi = null;
+        }
+        const sectionName = (i18nHi && i18nHi.sectionName) || 'करियर काउंसलिंग';
+        if (i18nHi && i18nHi.indexTitle) {
+            ogMeta['/career-counselling?lang=hi'] = {
+                t: `${i18nHi.indexTitle} — Sajhi Shiksha`,
+                d: String(i18nHi.indexDescription || '').slice(0, 200),
             };
         }
+        for (const route of careerRoutes) {
+            const id = route.path.replace(/^career-counselling\//, '');
+            let hi = null;
+            try {
+                hi = JSON.parse(readFileSync(join(pagesDir, `${id}.hi.json`), 'utf8'));
+            } catch {
+                hi = null;
+            }
+            if (!hi || !hi.title) continue;
+            ogMeta[`/${route.path}?lang=hi`] = {
+                t: `${hi.title} — ${sectionName} — Sajhi Shiksha`,
+                d: String(hi.intro_short || route.description || '').slice(0, 200),
+            };
+        }
+    } catch (e) {
+        console.error('generate-route-meta: career Hindi og-meta step failed:', e.message);
     }
+
     writeFileSync(join(distDir, 'og-meta.json'), JSON.stringify(ogMeta));
-    console.log(`generate-route-meta: wrote og-meta.json with ${Object.keys(ogMeta).length} leaf entries`);
+    console.log(`generate-route-meta: wrote og-meta.json with ${Object.keys(ogMeta).length} entries`);
 } catch (e) {
     console.error('generate-route-meta: og-meta.json step failed:', e.message);
 }

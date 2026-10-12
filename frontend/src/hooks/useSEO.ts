@@ -12,6 +12,12 @@ interface SEOConfig {
     ogImage?: string;
     noIndex?: boolean;
     jsonLd?: Record<string, unknown>;
+    /**
+     * hreflang alternates for a bilingual page (REQ-1012-16). Each entry
+     * becomes a `<link rel="alternate" hreflang="…" href="…">`. Use
+     * `hreflangAlternates(path)` to build the standard en / hi / x-default set.
+     */
+    alternates?: Array<{ hreflang: string; href: string }>;
 }
 
 /* ------------------------------------------------------------------ */
@@ -62,6 +68,27 @@ function removeLink(rel: string): void {
     }
 }
 
+/** Create/update one `<link rel="alternate" hreflang="…">` element. */
+function setAlternate(hreflang: string, href: string): void {
+    let el = document.querySelector(`link[rel="alternate"][hreflang="${hreflang}"]`);
+    if (!el) {
+        el = document.createElement('link');
+        el.setAttribute('rel', 'alternate');
+        el.setAttribute('hreflang', hreflang);
+        document.head.appendChild(el);
+    }
+    el.setAttribute('href', href);
+}
+
+/** Remove every hreflang alternate link this hook may have added. */
+function removeAlternates(): void {
+    document.querySelectorAll('link[rel="alternate"][hreflang]').forEach((el) => {
+        if (el.parentNode) {
+            el.parentNode.removeChild(el);
+        }
+    });
+}
+
 let jsonLdEl: HTMLScriptElement | null = null;
 
 /* ------------------------------------------------------------------ */
@@ -75,6 +102,7 @@ export function useSEO({
     ogImage,
     noIndex,
     jsonLd,
+    alternates,
 }: SEOConfig): void {
     const prevTitleRef = useRef<string>(document.title);
 
@@ -94,6 +122,14 @@ export function useSEO({
 
         const canonical = canonicalPath ? `${SITE_URL}${canonicalPath}` : SITE_URL;
         setLink('canonical', canonical);
+
+        if (alternates && alternates.length > 0) {
+            for (const alt of alternates) {
+                setAlternate(alt.hreflang, alt.href);
+            }
+        } else {
+            removeAlternates();
+        }
 
         setMeta('og:type', 'website', 'property');
         setMeta('og:url', canonical, 'property');
@@ -148,12 +184,29 @@ export function useSEO({
             /*  Remove canonical */
             removeLink('canonical');
 
+            /*  Remove hreflang alternates */
+            removeAlternates();
+
             /*  Clear JSON-LD */
             if (jsonLdEl) {
                 jsonLdEl.textContent = '';
             }
         };
-    }, [title, description, canonicalPath, ogImage, noIndex, jsonLd]);
+    }, [title, description, canonicalPath, ogImage, noIndex, jsonLd, alternates]);
+}
+
+/**
+ * The standard hreflang alternates for a bilingual page: English (the default,
+ * no query), Hindi (`?lang=hi`) and x-default. Used by the Career Counselling
+ * section (REQ-1012-16).
+ */
+export function hreflangAlternates(path: string): Array<{ hreflang: string; href: string }> {
+    const base = `${SITE_URL}${path}`;
+    return [
+        { hreflang: 'en', href: base },
+        { hreflang: 'hi', href: `${base}?lang=hi` },
+        { hreflang: 'x-default', href: base },
+    ];
 }
 
 /* ------------------------------------------------------------------ */
