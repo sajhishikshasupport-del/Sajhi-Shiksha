@@ -1,0 +1,159 @@
+{
+  "title": "Scholarships & Education Finance",
+  "intro_short": "How to cut the cost of higher education — central and state scholarships, education loans and fee waivers, with the key dates and documents explained.",
+  "intro_full": "Course fees are one of the biggest factors in a family's career decision — and a large share of that cost can be covered. This page covers the main scholarship routes in India (starting with the National Scholarship Portal), the central schemes most students qualify for, education-loan options including PM Vidyalaxmi, and institute-level fee waivers. Amounts and deadlines are revised each year, so treat every figure here as indicative and confirm the current position on the official portal before applying.",
+  "sections": [
+    {
+      "heading": "Start here: the National Scholarship Portal (NSP)",
+      "body": "Almost all central government scholarships are applied for through one portal.",
+      "icon": "app_registration",
+      "items": [
+        {
+          "title": "NSP — one portal, most central schemes",
+          "body": "The National Scholarship Portal (scholarships.gov.in) hosts the central government scholarships. One Time Registration (OTR) — a 14-digit Aadhaar/EID-based registration valid for your entire academic career — is now mandatory before applying.",
+          "meta": "scholarships.gov.in | OTR mandatory"
+        },
+        {
+          "title": "The one-scheme rule",
+          "body": "For 2026-27, a student may apply for one merit-based scheme plus one or more welfare-based schemes in an academic year. Check this before filling multiple forms.",
+          "meta": "One merit scheme + welfare schemes"
+        },
+        {
+          "title": "Renewal deadlines matter as much as new applications",
+          "body": "If you already hold a scholarship, renewal is a fresh application every year. Missing the renewal window — for example, the 31 October 2026 deadline for the Central Sector Scheme (CSSS) renewals — can stop the payment.",
+          "meta": "CSSS renewal: 31 Oct 2026 (verify)"
+        },
+        {
+          "title": "Help is available at Common Service Centres",
+          "body": "CSCs provide assisted NSP application (OTR, biometric and form filling) for a fixed charge of about Rs 30. Find one at locator.csccloud.in.",
+          "meta": "CSC service: ~Rs 30"
+        }
+      ]
+    },
+    {
+      "heading": "Key central schemes",
+      "body": "The schemes most students and families ask about. Amounts are indicative — they are revised periodically.",
+      "icon": "workspace-premium",
+      "items": [
+        {
+          "title": "PM-USP CSSS — merit scholarship",
+          "body": "For top performers of Class 12 (CBSE and state boards) continuing to college. Approximately Rs 12,000 per year at undergraduate level and Rs 20,000 per year at postgraduate level, subject to revision.",
+          "meta": "Merit-based | Renewal 31 Oct 2026 (verify)"
+        },
+        {
+          "title": "PM YASASVI — OBC, EBC and DNT students",
+          "body": "Support for students from Other Backward Classes, Economically Backward Classes and Denotified/Nomadic Tribes, with an income cap. Covers tuition and hostel support.",
+          "meta": "Income-capped | Verify deadlines"
+        },
+        {
+          "title": "Top Class Education — SC and ST students",
+          "body": "For SC/ST students admitted to premier institutions: full tuition plus living expenses.",
+          "meta": "SC/ST | 31 Oct 2026 (verify)"
+        },
+        {
+          "title": "AICTE Pragati and Saksham",
+          "body": "Pragati supports girl students and Saksham supports differently-abled students in AICTE-approved diploma and degree programmes, at roughly Rs 50,000 per year.",
+          "meta": "Girls / differently-abled | 31 Oct 2026 (verify)"
+        },
+        {
+          "title": "Ishan Uday — North East students",
+          "body": "A monthly scholarship for undergraduate students from the North East region studying anywhere in India.",
+          "meta": "North East | Scheme-wise dates"
+        },
+        {
+          "title": "PM Scholarship — wards of CAPF, Assam Rifles and Railways personnel",
+          "body": "Fixed-slab scholarships for children of serving personnel of specified forces.",
+          "meta": "Wards of personnel | 31 Oct 2026 (verify)"
+        },
+        {
+          "title": "ICAR scholarships — agriculture students",
+          "body": "National Talent Scholarship for agriculture undergraduates (about Rs 3,000 per month) and ICAR PG scholarships for postgraduate agriculture students.",
+          "meta": "Agriculture | 31 Oct 2026 (verify)"
+        }
+      ]
+    },
+    {
+      "heading": "Education loans",
+      "body": "For costs that scholarships do not cover, loans are the standard route.",
+      "icon": "savings",
+      "items": [
+        {
+          "title": "PM Vidyalaxmi",
+          "body": "A central scheme providing collateral-free and guarantor-free education loans for students admitted to quality higher-education institutions, with interest subvention for families below the income threshold. Apply through the Vidyalaxmi portal.",
+          "meta": "Collateral-free | Check eligible institutions"
+        },
+        {
+          "title": "PM-USP Central Sector Interest Subsidy (CSIS)",
+          "body": "Interest subsidy on education loans during the moratorium period for students from families with annual income below the prescribed limit, for approved courses.",
+          "meta": "Income-capped interest subsidy"
+        },
+        {
+          "title": "Bank education loans",
+          "body": "All major banks offer education loans under the IBA model scheme — typically collateral-free up to a threshold, with the loan covering tuition, hostel and equipment. Compare interest rates and processing fees before choosing.",
+          "meta": "Compare banks"
+        }
+      ]
+    },
+    {
+      "heading": "Fee waivers and institute support",
+      "body": "Many institutions reduce fees directly for eligible students — often the easiest saving to obtain.",
+      "icon": "percent",
+      "items": [
+        {
+          "title": "IIT and NIT fee waivers",
+          "body": "IITs offer full tuition waivers for families below the income threshold and partial waivers in the next slab. NITs and other centrally funded institutes have similar schemes.",
+          "meta": "Income-linked tuition waiver"
+        },
+        {
+          "title": "State and institute concessions",
+          "body": "State governments and many colleges offer fee concessions, especially for SC/ST/OBC, EWS and girl students. Ask the college office directly — these are often under-used.",
+          "meta": "Ask the college"
+        }
+      ]
+    },
+    {
+      "heading": "How to apply — a short checklist",
+      "body": "What to prepare before you sit down to fill a scholarship or loan form.",
+      "icon": "checklist",
+      "items": [
+        {
+          "title": "Documents to keep ready",
+          "body": "Aadhaar, bank account in the student's name, income certificate, caste/EWS certificate where applicable, Class 10 and 12 marksheets, admission proof, and a passport-size photograph.",
+          "meta": "Prepare before you start"
+        },
+        {
+          "title": "Complete OTR first",
+          "body": "On NSP, complete One Time Registration before applying to any scheme — without it, applications cannot be submitted.",
+          "meta": "NSP: OTR first"
+        },
+        {
+          "title": "Watch the two-stage deadline",
+          "body": "Every NSP scheme has a student deadline, followed by institute verification and then a second-level verification. Missing the institute step can void an otherwise complete application.",
+          "meta": "Student date, then institute date"
+        }
+      ]
+    },
+    {
+      "heading": "Important cautions",
+      "body": "Three things that cost families money every year.",
+      "icon": "warning",
+      "items": [
+        {
+          "title": "Amounts and dates change every year",
+          "body": "Scholarship amounts and deadlines are revised annually. The figures on this page are indicative — always confirm the current amount and deadline on the official portal before relying on them.",
+          "meta": "Verify every year"
+        },
+        {
+          "title": "No one can 'get you' a government scholarship",
+          "body": "Government scholarships are free to apply for. Be cautious of agents who promise a scholarship for a fee — the official process runs only through NSP and the scheme portals.",
+          "meta": "Beware of middlemen"
+        },
+        {
+          "title": "Do not miss the renewal window",
+          "body": "Most students lose scholarships not at the first application but at renewal. Set a reminder for renewal dates each year.",
+          "meta": "Renewal is a fresh application"
+        }
+      ]
+    }
+  ]
+}

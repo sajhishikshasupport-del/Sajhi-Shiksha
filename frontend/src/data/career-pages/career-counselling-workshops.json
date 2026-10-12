@@ -1,0 +1,154 @@
+{
+  "title": "Career Counselling Workshops",
+  "intro_short": "Free career-awareness and guidance sessions for schools, teachers and students — on campus or online, in Hinglish and Hindi.",
+  "intro_full": "Our career counselling workshops are group sessions that help students understand their options and make better decisions — what to choose after Class 10, how to plan after Class 12, and how to think about a career beyond the usual two or three names. Sessions are run by our counsellor, last 45 to 60 minutes, and are available on campus or online. They are free for schools, and there is no commercial pressure on students during or after the session. To be clear about what this is: a workshop is a group awareness and guidance session, not one-to-one counselling — every student gets the same information and the chance to ask questions.",
+  "sections": [
+    {
+      "heading": "For Schools",
+      "body": "A structured career-awareness session for a batch or grade of students, arranged by the school.",
+      "icon": "school",
+      "items": [
+        {
+          "title": "What the session covers",
+          "body": "Career options after Class 10 and Class 12, how to choose a stream, common mistakes students make, and an open question-and-answer round. Sessions are tailored to the class — Class 9-10 focus on stream selection, Class 11-12 on courses and entrance exams.",
+          "meta": "Class 9-12 | 45-60 minutes"
+        },
+        {
+          "title": "What the school provides",
+          "body": "A hall or classroom and a projector or screen for the session. Everything else — the counsellor, the content and the follow-up material — is arranged by us.",
+          "meta": "Hall + projector"
+        },
+        {
+          "title": "How it is organised",
+          "body": "One batch or grade-wise sessions, whichever suits the school timetable. Sessions can be held on campus or online, and can be repeated across grades.",
+          "meta": "Batch or grade-wise"
+        },
+        {
+          "title": "Cost to the school",
+          "body": "Nothing. These awareness workshops are free for schools.",
+          "meta": "Free"
+        }
+      ]
+    },
+    {
+      "heading": "For Teachers",
+      "body": "Teachers are usually the first person a student asks about a career — this session is for them.",
+      "icon": "menu_book",
+      "items": [
+        {
+          "title": "What the session covers",
+          "body": "How to guide students on stream and course choices, how to use our free resources (career guides, exam calendar, college information) in the classroom, and how to handle common student and parent questions.",
+          "meta": "Teacher-focused session"
+        },
+        {
+          "title": "Why it helps",
+          "body": "One trained teacher can guide an entire batch — and can keep guiding students through the year, not just on the day of the workshop.",
+          "meta": "Multiplies the reach"
+        },
+        {
+          "title": "Format",
+          "body": "A short orientation session, on campus or online, tailored to the classes the teachers handle.",
+          "meta": "On campus or online"
+        }
+      ]
+    },
+    {
+      "heading": "For Students (Online)",
+      "body": "Students who are not part of a school workshop can join an open online session directly.",
+      "icon": "videocam",
+      "items": [
+        {
+          "title": "Open online sessions",
+          "body": "We run online career-awareness sessions that individual students can join from home. Session dates are announced in advance, and joining is free.",
+          "meta": "Free | Dates announced"
+        },
+        {
+          "title": "What you get",
+          "body": "The same content as a school workshop — career options, how to choose a stream or course, common mistakes, and a live question-and-answer round.",
+          "meta": "45-60 minutes"
+        },
+        {
+          "title": "Language",
+          "body": "Sessions are conducted in Hinglish and Hindi, so students across the Hindi belt can follow comfortably.",
+          "meta": "Hinglish / Hindi"
+        }
+      ]
+    },
+    {
+      "heading": "How to request a workshop",
+      "body": "Schools and teachers can request a session directly on WhatsApp.",
+      "icon": "chat",
+      "items": [
+        {
+          "title": "Send us a WhatsApp message",
+          "body": "Message us on WhatsApp at +91 7579797637 with the school name, the classes you want covered, an approximate number of students, and your preferred date and mode (on campus or online).",
+          "meta": "WhatsApp: +91 7579797637"
+        },
+        {
+          "title": "What happens next",
+          "body": "We will confirm a date and mode, and share what the school needs to arrange. There is no charge at any step.",
+          "meta": "We confirm a date"
+        }
+      ]
+    },
+    {
+      "heading": "Our commitments",
+      "body": "Three things we promise schools and students.",
+      "icon": "verified",
+      "items": [
+        {
+          "title": "No charge to schools",
+          "body": "The career-awareness workshops are free. We do not ask schools or students to pay for the session.",
+          "meta": "Free"
+        },
+        {
+          "title": "No commercial pressure on students",
+          "body": "We do not push students towards any paid service during the session. If a family later wants personalised help, that is entirely their choice.",
+          "meta": "No pressure"
+        },
+        {
+          "title": "Honest content only",
+          "body": "Everything we present is based on verified, dated research — no exaggerated promises, no false claims about recognition or guarantees.",
+          "meta": "Verified content"
+        }
+      ]
+    },
+    {
+      "heading": "Frequently asked questions",
+      "body": "Questions schools and teachers ask us most.",
+      "icon": "help",
+      "items": [
+        {
+          "title": "How many students can attend?",
+          "body": "Sessions work for a class-sized group as well as a full hall. For very large groups, we may split the session grade-wise for better interaction.",
+          "meta": "Class to full hall"
+        },
+        {
+          "title": "Can the session be held online?",
+          "body": "Yes. Online sessions are available for schools that prefer them, and open online sessions are also held for individual students.",
+          "meta": "Online or on campus"
+        },
+        {
+          "title": "Is it really free?",
+          "body": "Yes — free for schools and for students. There is no charge for the session itself.",
+          "meta": "Free"
+        },
+        {
+          "title": "Can parents attend?",
+          "body": "Yes. Many schools prefer to invite parents along with students, especially for Class 10 stream-selection sessions. We are happy either way.",
+          "meta": "Parents welcome"
+        },
+        {
+          "title": "How long is a session?",
+          "body": "About 45 to 60 minutes, including the question-and-answer round. It can be adjusted to fit the school timetable.",
+          "meta": "45-60 minutes"
+        },
+        {
+          "title": "What language are sessions conducted in?",
+          "body": "Hinglish and Hindi, so students and parents across the Hindi belt can follow comfortably.",
+          "meta": "Hinglish / Hindi"
+        }
+      ]
+    }
+  ]
+}

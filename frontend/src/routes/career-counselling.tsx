@@ -1,27 +1,15 @@
-import { createRoute } from '@tanstack/react-router';
+import { createRoute, Outlet } from '@tanstack/react-router';
 import { Route as rootRoute } from './__root';
-import { Suspense, lazy } from 'react';
-import { ResourcePageSkeleton } from '@/components/Skeletons';
-import { useSEO } from '@/hooks/useSEO';
 
-const CareerCounsellingPage = lazy(() => import('@/features/career/components/CareerCounsellingPage'));
-
-function CareerCounsellingRouteComponent(): React.ReactElement {
-    useSEO({
-        title: 'Career Counselling — Free Career Guidance for Students',
-        description: 'Free, research-backed career guidance for Indian students and parents: an interactive career explorer, stream selection, entrance exams, colleges and more.',
-        canonicalPath: '/career-counselling',
-    });
-
-    return (
-        <Suspense fallback={<ResourcePageSkeleton />}>
-            <CareerCounsellingPage />
-        </Suspense>
-    );
-}
-
+/**
+ * Career Counselling — section parent layout.
+ *
+ * Renders only an <Outlet /> so the index route (`career-counselling.index.tsx`)
+ * and the dynamic page route (`career-counselling.$slug.tsx`) render inside it.
+ * Follows the same parent/Outlet pattern as `for-teachers.tsx`.
+ */
 export const Route = createRoute({
     getParentRoute: () => rootRoute,
     path: 'career-counselling',
-    component: CareerCounsellingRouteComponent,
+    component: () => <Outlet />,
 });

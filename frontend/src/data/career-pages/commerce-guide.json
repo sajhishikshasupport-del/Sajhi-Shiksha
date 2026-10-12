@@ -1,0 +1,162 @@
+{
+  "title": "Career Guide: Commerce — Business, Finance and Management",
+  "intro_short": "The business route after Class 12 — from B.Com and BBA to Chartered Accountancy, company secretaryship, actuarial science and management, with the exams and career paths explained.",
+  "intro_full": "Commerce is the route to business, finance and management careers: B.Com and BBA degrees, professional qualifications like CA, CS and CMA, international accounting certifications, actuarial science, economics and hotel management. This guide explains the options directly after Class 12, the entrance and professional exams involved, and what each path leads to. Commerce is often underrated by families — yet it produces some of the most stable and highest-earning careers in India, and several of these qualifications can be started immediately after Class 12 without waiting for a degree.",
+  "sections": [
+    {
+      "heading": "Entrance exams for this route",
+      "body": "Unlike medicine or engineering, Commerce has no single national gateway — different paths have their own exams.",
+      "icon": "quiz",
+      "items": [
+        {
+          "title": "CUET-UG",
+          "body": "The common university entrance test used by many central and state universities for B.Com (Hons), BBA and economics admissions.",
+          "meta": "University admissions"
+        },
+        {
+          "title": "IPMAT",
+          "body": "The entrance for the five-year Integrated Programme in Management at the IIMs (Indore and Rohtak) — a direct route to management right after Class 12.",
+          "meta": "IIM integrated management"
+        },
+        {
+          "title": "CA Foundation",
+          "body": "The entry exam for the Chartered Accountancy course, which can be registered for after Class 12 and written alongside a degree.",
+          "meta": "ICAI | Start right after 12th"
+        },
+        {
+          "title": "CS Executive Entrance Test and CMA Foundation",
+          "body": "Entry points for the Company Secretary (ICSI) and Cost and Management Accountant (ICMAI) qualifications.",
+          "meta": "Professional qualifications"
+        }
+      ]
+    },
+    {
+      "heading": "Degrees and qualifications after 12th Commerce",
+      "body": "The main options — degrees, professional courses and specialised routes.",
+      "icon": "school",
+      "items": [
+        {
+          "title": "B.Com (plain, Hons or International)",
+          "body": "The core commerce degree, with honours and international variants that add specialisation and global exposure.",
+          "meta": "3 years | CUET-UG / university admission"
+        },
+        {
+          "title": "BBA / BMS",
+          "body": "Bachelor of Business Administration or Management Studies — a management-focused degree with specialisations in finance, marketing, HR and operations.",
+          "meta": "3 years | CUET-UG / university / private tests"
+        },
+        {
+          "title": "IPM at the IIMs",
+          "body": "A five-year integrated bachelor's-plus-MBA style programme at IIM Indore and IIM Rohtak, entered directly after Class 12.",
+          "meta": "5 years | IPMAT"
+        },
+        {
+          "title": "Specialised B.Com variants",
+          "body": "Accounting and Finance (BAF), Financial Markets (BFM) and Banking and Insurance (BBI) — degrees that combine commerce with a professional specialisation.",
+          "meta": "3 years | University admission"
+        },
+        {
+          "title": "BA / B.Sc (Hons) Economics",
+          "body": "The analytical route into economics, policy, data and higher study. Some universities require Mathematics at Class 12.",
+          "meta": "3 years | CUET-UG (check Maths requirement)"
+        },
+        {
+          "title": "B.Com LLB (integrated)",
+          "body": "A five-year integrated commerce-and-law degree for corporate law, taxation and compliance careers.",
+          "meta": "5 years | CLAT or university law entrance"
+        },
+        {
+          "title": "Hotel Management (B.Sc HHA / BHM)",
+          "body": "Hospitality, tourism and service-industry careers, with strong international mobility.",
+          "meta": "3-4 years | NCHMCT JEE / university tests"
+        }
+      ]
+    },
+    {
+      "heading": "Professional qualifications you can start after 12th",
+      "body": "These can be pursued alongside a degree — and often matter more than the degree itself.",
+      "icon": "workspace-premium",
+      "items": [
+        {
+          "title": "CA — Chartered Accountancy (ICAI)",
+          "body": "India's most respected accounting qualification: Foundation, Intermediate and Final, with three years of articleship. Can be started right after Class 12.",
+          "meta": "Foundation to Final | ICAI"
+        },
+        {
+          "title": "CS — Company Secretary (ICSI)",
+          "body": "Corporate governance, compliance and secretarial practice — a qualification with growing regulatory demand.",
+          "meta": "CSEET entry | ICSI"
+        },
+        {
+          "title": "CMA — Cost and Management Accountancy (ICMAI)",
+          "body": "Cost accounting and management accounting for industry; strong demand in manufacturing and services.",
+          "meta": "Foundation entry | ICMAI"
+        },
+        {
+          "title": "ACCA and CIMA",
+          "body": "International accounting and management-accounting certifications recognised by global employers, often taken alongside B.Com.",
+          "meta": "International qualifications"
+        },
+        {
+          "title": "Actuarial Science (IAI)",
+          "body": "The mathematics-heavy qualification for insurance, pensions and risk careers — among the highest-paying paths in commerce, with a small number of qualifiers each year.",
+          "meta": "Long, tough, high reward"
+        }
+      ]
+    },
+    {
+      "heading": "Careers this route leads to",
+      "body": "Where commerce graduates actually work.",
+      "icon": "work",
+      "items": [
+        {
+          "title": "Accounting, audit and taxation",
+          "body": "CA-qualified professionals work in audit firms, corporate finance, taxation and independent practice.",
+          "meta": "Stable, respected, self-employment possible"
+        },
+        {
+          "title": "Banking, insurance and finance",
+          "body": "Bank officer and management-trainee roles through IBPS, SBI and RBI exams; insurance, mutual funds and financial advisory careers.",
+          "meta": "Government and private banking"
+        },
+        {
+          "title": "Management and consulting",
+          "body": "Through BBA, IPM and later MBA routes, careers in marketing, HR, operations and consulting.",
+          "meta": "MBA amplifies this route"
+        },
+        {
+          "title": "Business and entrepreneurship",
+          "body": "Commerce knowledge — accounting, taxation, finance — is the practical foundation for running any business.",
+          "meta": "Own venture"
+        },
+        {
+          "title": "Economics, policy and analytics",
+          "body": "Economics honours leads into policy research, government services, data analysis and higher study.",
+          "meta": "Analytical track"
+        }
+      ]
+    },
+    {
+      "heading": "Is Commerce right for you?",
+      "body": "A quick honest check.",
+      "icon": "help",
+      "items": [
+        {
+          "title": "You are comfortable with numbers and money",
+          "body": "Accounts, finance and taxation are the backbone of this route. If numbers interest you, commerce rewards that.",
+          "meta": "Numbers comfort helps"
+        },
+        {
+          "title": "You do not need to fear Maths — but check the course",
+          "body": "Commerce works without Maths for most degrees; some courses, such as Economics honours, may require it. Verify per course.",
+          "meta": "Maths optional, course-dependent"
+        },
+        {
+          "title": "You want early professional progress",
+          "body": "CA, CS and CMA can be started right after Class 12, so a commerce student can be qualified and earning years before peers finish longer degrees.",
+          "meta": "Start professional courses early"
+        }
+      ]
+    }
+  ]
+}

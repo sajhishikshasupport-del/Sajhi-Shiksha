@@ -1,0 +1,167 @@
+{
+  "title": "Entrance Exam Calendar 2026-27",
+  "intro_short": "The exams that matter most after Class 12 — application windows, exam dates and official websites, each clearly labelled so no expected date is mistaken for an official one.",
+  "intro_full": "This calendar covers the major entrance and recruitment examinations for the 2026-27 season, in one place. Every entry shows what is happening (application window, exam date, result timing) and carries one of three labels: CONFIRMED means an official notification or exam calendar has announced it; EXPECTED means it is projected from the previous cycle and can still change; NOT ANNOUNCED means no official date exists yet. The calendar is refreshed every Monday from official sources — NTA, UPSC, SSC, RRB, CBSE, ICAI and state boards. Use it to plan applications, not as a substitute for the official notification.",
+  "sections": [
+    {
+      "heading": "Apply now — urgent deadlines",
+      "body": "Application windows that are open or closing in the coming weeks. Check the official website before the last date.",
+      "icon": "alarm",
+      "items": [
+        {
+          "title": "CLAT 2027 (Consortium of NLUs)",
+          "body": "Application window is open for the Common Law Admission Test. The exam is a two-hour paper held in the afternoon.",
+          "meta": "Apply by 31 Oct 2026 | Exam 6 Dec 2026 | CONFIRMED (official)"
+        },
+        {
+          "title": "RRB NTPC 2026 (Graduate and Undergraduate)",
+          "body": "Two separate application windows for graduate and undergraduate posts, as per the official indicative notice.",
+          "meta": "Graduate: 8 Oct – 6 Nov 2026 | UG: 15 Oct – 13 Nov 2026 | CONFIRMED (official notice)"
+        },
+        {
+          "title": "UGC NET December 2026 cycle",
+          "body": "The exam dates are published in the NTA calendar, but the notification and application window had not been released at the time of the last update.",
+          "meta": "Exam 14–19 Dec 2026 | Application NOT ANNOUNCED"
+        },
+        {
+          "title": "CTET 2026 (CBSE, 22nd edition)",
+          "body": "The Central Teacher Eligibility Test will be held over two days. Applications for this cycle are already closed.",
+          "meta": "Exam 12–13 Dec 2026 | CONFIRMED (official)"
+        },
+        {
+          "title": "NDA (I) and CDS (I) 2027 (UPSC)",
+          "body": "Notification and application window for the first NDA and CDS exams of 2027, per the UPSC calendar.",
+          "meta": "Apply 2–22 Dec 2026 | Exam 11 Apr 2027 | CONFIRMED (UPSC calendar)"
+        },
+        {
+          "title": "CA Foundation, January 2027 cycle",
+          "body": "Exam form window opens in November, with a late-fee window; the exam runs over four days in early January.",
+          "meta": "Form: 3–16 Nov 2026 | Exam: 3, 5, 7, 9 Jan 2027 | CONFIRMED (official)"
+        },
+        {
+          "title": "UPSSSC PET 2026",
+          "body": "Preliminary Eligibility Test for Uttar Pradesh government posts, held in two shifts per day on the revised schedule.",
+          "meta": "Exam 25 Oct, 30 Oct and 1 Nov 2026 | CONFIRMED (official, revised)"
+        },
+        {
+          "title": "CAT 2026 (IIM Indore)",
+          "body": "The Common Admission Test for MBA admissions. Registration for this cycle has closed.",
+          "meta": "Exam 29 Nov 2026 | CONFIRMED (official)"
+        }
+      ]
+    },
+    {
+      "heading": "After Class 12 — Medical and Engineering",
+      "body": "The two biggest streams after Class 12. NEET UG 2027 will shift to a computer-based test — an officially announced change.",
+      "icon": "medical-services",
+      "items": [
+        {
+          "title": "NEET UG 2027",
+          "body": "The notification is expected in February 2027, with the exam expected in early May. The Education Ministry has officially announced that NEET UG 2027 will be computer-based, conducted over five to six days — replacing the pen-and-paper format.",
+          "meta": "Notification EXPECTED Feb 2027 | Exam NOT ANNOUNCED (early May 2027 expected) | CBT format CONFIRMED"
+        },
+        {
+          "title": "JEE Main 2027 (Session 1)",
+          "body": "Session 1 dates are published in the official NTA exam calendar. Registration had not opened at the last update.",
+          "meta": "Exam 22, 23, 24, 28, 29, 30 Jan 2027 | Registration NOT ANNOUNCED | CONFIRMED (NTA calendar)"
+        },
+        {
+          "title": "JEE Main 2027 (Session 2)",
+          "body": "The second session is expected in April 2027; exact dates are not yet published.",
+          "meta": "April 2027 (expected) | NOT ANNOUNCED"
+        },
+        {
+          "title": "JEE Advanced 2027",
+          "body": "Open to the top JEE Main qualifiers. The official schedule is expected around December 2026; press reports point to mid-May 2027 but treat any specific date as indicative.",
+          "meta": "Schedule EXPECTED Dec 2026 | Exam mid-May 2027 (indicative)"
+        }
+      ]
+    },
+    {
+      "heading": "After Class 12 — Law, Management and Defence",
+      "body": "Law, business and defence entries beyond the science streams.",
+      "icon": "gavel",
+      "items": [
+        {
+          "title": "CLAT 2027",
+          "body": "National law entrance for the 22 National Law Universities and several private law schools.",
+          "meta": "Apply by 31 Oct 2026 | Exam 6 Dec 2026 | CONFIRMED (official)"
+        },
+        {
+          "title": "CAT 2026",
+          "body": "Gateway to the IIMs and most top MBA programmes. Registration closed on 22 September 2026.",
+          "meta": "Exam 29 Nov 2026 | CONFIRMED (official)"
+        },
+        {
+          "title": "NDA and CDS (I) 2027",
+          "body": "Defence entry after Class 12 (NDA) and after graduation (CDS), conducted by UPSC.",
+          "meta": "Apply 2–22 Dec 2026 | Exam 11 Apr 2027 | CONFIRMED (UPSC calendar)"
+        }
+      ]
+    },
+    {
+      "heading": "Teaching and government jobs",
+      "body": "Recruitment examinations for teaching and central or state government posts.",
+      "icon": "badge",
+      "items": [
+        {
+          "title": "CTET 2026",
+          "body": "Eligibility test for teaching in central government schools; required by many state recruitment boards too.",
+          "meta": "Exam 12–13 Dec 2026 | CONFIRMED (official)"
+        },
+        {
+          "title": "UGC NET (December 2026)",
+          "body": "Qualifies candidates for assistant professor and junior research fellowship roles; exam dates are published, application awaited.",
+          "meta": "Exam 14–19 Dec 2026 | Application NOT ANNOUNCED"
+        },
+        {
+          "title": "SSC CGL 2026",
+          "body": "Combined Graduate Level examination for central government posts. Tier-1 is being held in this window; Tier-2 is expected in December.",
+          "meta": "Tier-1: 30 Sep – 30 Oct 2026 (CONFIRMED) | Tier-2: Dec 2026 (EXPECTED)"
+        },
+        {
+          "title": "SSC CHSL 2026",
+          "body": "For 10+2 level central government posts. The Tier-1 window has been notified; exact shift dates appear on the admit card.",
+          "meta": "Tier-1: 30 Nov – 31 Dec 2026 | CONFIRMED (official)"
+        },
+        {
+          "title": "RRB NTPC 2026",
+          "body": "Railway recruitment for graduate and undergraduate posts across zones. Exam dates are not yet announced.",
+          "meta": "Apply Oct–Nov 2026 | Exam NOT ANNOUNCED"
+        },
+        {
+          "title": "UPSSSC PET 2026",
+          "body": "Preliminary test that qualifies candidates for a wide range of Uttar Pradesh government recruitments.",
+          "meta": "Exam 25 Oct, 30 Oct and 1 Nov 2026 | CONFIRMED (official)"
+        }
+      ]
+    },
+    {
+      "heading": "How to read the labels",
+      "body": "Every date in this calendar carries one of three labels. Please treat them differently.",
+      "icon": "help",
+      "items": [
+        {
+          "title": "CONFIRMED",
+          "body": "Announced by the conducting body — NTA, UPSC, SSC, RRB, CBSE, ICAI or a state board — in an official notification or exam calendar. Note that NTA and UPSC calendars carry the caveat that dates are tentative and can be altered.",
+          "meta": "Trust, but re-check at notification"
+        },
+        {
+          "title": "EXPECTED",
+          "body": "Projected from the previous cycle's pattern. Useful for planning, but it is not a promise and can shift.",
+          "meta": "Plan, don't commit"
+        },
+        {
+          "title": "NOT ANNOUNCED",
+          "body": "No official date exists yet. Any specific date circulating on social media or coaching pages should not be treated as fact.",
+          "meta": "Wait for the official notification"
+        },
+        {
+          "title": "Refreshed every Monday",
+          "body": "This calendar is updated from official sources every Monday. If you are reading it on a later date, verify the current position on the official website before applying.",
+          "meta": "Check the official website before applying"
+        }
+      ]
+    }
+  ]
+}

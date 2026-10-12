@@ -1,0 +1,152 @@
+{
+  "title": "Career Guide: Science PCM — Engineering and Technology",
+  "intro_short": "The maths route after Class 12 — engineering, architecture, data, defence and design, with the entrance exams, the college question and the career reality behind the degree.",
+  "intro_full": "Science with Maths (PCM) is the route to engineering and technology careers: B.Tech and B.E. across dozens of branches, architecture, statistics, pure sciences and defence services. This guide explains what you can take directly after Class 12, which entrance exams you need, why the college matters as much as the degree, and the careers that actually follow. One honest note up front: engineering seats are plentiful in India, so the deciding factor is rarely admission — it is the quality of the college and the skills you build there.",
+  "sections": [
+    {
+      "heading": "Entrance exams for this route",
+      "body": "Two national exams cover most engineering and architecture admissions, with state and university tests alongside.",
+      "icon": "quiz",
+      "items": [
+        {
+          "title": "JEE Main",
+          "body": "The national gateway to NITs, IIITs and many state and private engineering colleges. Held in two sessions (January and April), with the best score counted.",
+          "meta": "Two sessions | NTA"
+        },
+        {
+          "title": "JEE Advanced",
+          "body": "For admission to the Indian Institutes of Technology (IITs). Only the top JEE Main qualifiers are eligible; the exam is held in May.",
+          "meta": "IITs only | Top ~2.5 lakh qualifiers"
+        },
+        {
+          "title": "State and university entrances",
+          "body": "Most states run their own engineering entrance (or use Class 12 marks), and many private universities run their own tests (e.g., BITSAT, VITEEE, SRMJEEE).",
+          "meta": "State CETs + private university tests"
+        },
+        {
+          "title": "NATA / JEE Paper 2 for architecture",
+          "body": "B.Arch admissions use either the NATA test or JEE Main Paper 2, depending on the institution.",
+          "meta": "For B.Arch"
+        }
+      ]
+    },
+    {
+      "heading": "Degrees you can take directly after 12th PCM",
+      "body": "The main Level-1 options after Class 12 with Maths.",
+      "icon": "school",
+      "items": [
+        {
+          "title": "B.Tech / B.E.",
+          "body": "The core engineering degree, with branches from computer science, electronics and mechanical to civil, chemical, aerospace, marine, mining, metallurgy, biotechnology, food technology and agricultural engineering.",
+          "meta": "4 years | JEE Main / state CET"
+        },
+        {
+          "title": "B.Arch — Architecture",
+          "body": "Design and planning of buildings and cities; a five-year professional degree with its own entrance requirements.",
+          "meta": "5 years | NATA or JEE Paper 2"
+        },
+        {
+          "title": "B.Sc (PCM) and B.Sc Honours",
+          "body": "Physics, chemistry, mathematics and statistics — the pure-science route to research, teaching and analytics careers.",
+          "meta": "3 years | CUET-UG / university entrance"
+        },
+        {
+          "title": "BS-MS dual degree at IISERs",
+          "body": "A five-year integrated science programme at the Indian Institutes of Science Education and Research, aimed at research careers, with an exit option after the bachelor's degree.",
+          "meta": "5 years | IISER Aptitude Test / JEE / KVPY-type routes"
+        },
+        {
+          "title": "B.Stat (Hons) — Indian Statistical Institute",
+          "body": "A highly selective statistics programme that leads into analytics, data science and research.",
+          "meta": "3 years | ISI admission test"
+        },
+        {
+          "title": "B.Sc Aviation and pilot training routes",
+          "body": "Aviation-related degrees and flying-school routes (CPL) for those aiming at commercial pilot or aviation-management careers.",
+          "meta": "Varies | Medical fitness + training cost"
+        },
+        {
+          "title": "Defence: NDA",
+          "body": "The National Defence Academy route for the Army, Navy and Air Force after Class 12, with a bachelor's degree built into the training.",
+          "meta": "3 years NDA + 1 year academy | UPSC NDA exam"
+        }
+      ]
+    },
+    {
+      "heading": "Why the college matters",
+      "body": "Engineering has many seats; placement quality varies enormously. This is the number to check before you choose.",
+      "icon": "insights",
+      "items": [
+        {
+          "title": "Placement records, not admission brochures",
+          "body": "Ask for the college's recent placement data — how many students were placed, in which companies, and at what salary bands. A degree from a college with weak placements is a costly mistake.",
+          "meta": "Ask for data, not promises"
+        },
+        {
+          "title": "Skills decide the career",
+          "body": "Coding, projects, internships and certifications matter as much as the degree name. Students who build practical skills in any branch find work; those who only attend classes often struggle.",
+          "meta": "Skills > degree name"
+        },
+        {
+          "title": "Fees",
+          "body": "Government colleges (IITs, NITs, state colleges) cost a fraction of private university fees, and IITs offer fee waivers for low-income families. Verify current fee structures before applying.",
+          "meta": "Government is far cheaper"
+        }
+      ]
+    },
+    {
+      "heading": "Careers this route leads to",
+      "body": "What PCM graduates actually do.",
+      "icon": "work",
+      "items": [
+        {
+          "title": "Software and IT",
+          "body": "Software engineering, data science, AI, cybersecurity and product roles — the largest recruiter of engineering graduates in India.",
+          "meta": "Campus and off-campus hiring"
+        },
+        {
+          "title": "Core engineering",
+          "body": "Civil, mechanical, electrical, chemical and similar branches feed construction, manufacturing, energy, automobile and infrastructure sectors.",
+          "meta": "Industry and PSU roles"
+        },
+        {
+          "title": "Government and PSU engineering jobs",
+          "body": "GATE-based recruitment into PSUs, engineering services (ESE) and state departments, plus teaching and research.",
+          "meta": "GATE / ESE route"
+        },
+        {
+          "title": "Architecture and design",
+          "body": "Architects work in design firms, construction, urban planning and private practice after registration.",
+          "meta": "B.Arch plus registration"
+        },
+        {
+          "title": "Research and academia",
+          "body": "Through IISER, ISI and B.Sc honours routes, students move into research institutes, MSc/PhD programmes and teaching.",
+          "meta": "Science research track"
+        }
+      ]
+    },
+    {
+      "heading": "Is PCM right for you?",
+      "body": "A quick honest check.",
+      "icon": "help",
+      "items": [
+        {
+          "title": "You are comfortable with maths",
+          "body": "PCM builds on maths every day. If maths is a struggle and disliked, this route will be painful regardless of marks in other subjects.",
+          "meta": "Maths comfort is essential"
+        },
+        {
+          "title": "You enjoy building and solving",
+          "body": "Engineering rewards people who like making things work — physically or in code.",
+          "meta": "Practical interest helps"
+        },
+        {
+          "title": "You have a realistic college plan",
+          "body": "Decide your target band honestly: IIT/NIT, good state college, or private college with strong placement. The plan, and the fee, differ for each.",
+          "meta": "Choose the college carefully"
+        }
+      ]
+    }
+  ]
+}

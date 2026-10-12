@@ -1,0 +1,100 @@
+/**
+ * Icon mapping for career content.
+ *
+ * The Career Agent writes an `icon` slug on manifest items and page sections.
+ * These are mapped to MUI icons; any unknown slug falls back to a neutral icon
+ * so new content never breaks the page.
+ */
+import {
+    Map as MapIcon,
+    Explore as ExploreIcon,
+    CalendarMonth as CalendarMonthIcon,
+    AssignmentTurnedIn as AssignmentTurnedInIcon,
+    HowToReg as HowToRegIcon,
+    MenuBook as MenuBookIcon,
+    EmojiEvents as EmojiEventsIcon,
+    Business as BusinessIcon,
+    Groups as GroupsIcon,
+    CoPresent as CoPresentIcon,
+    TrendingUp as TrendingUpIcon,
+    Work as WorkIcon,
+    BarChart as BarChartIcon,
+    School as SchoolIcon,
+    Assignment as AssignmentIcon,
+    Insights as InsightsIcon,
+    Route as RouteIcon,
+    Checklist as ChecklistIcon,
+    WarningAmber as WarningAmberIcon,
+    ChatBubbleOutlined as ChatBubbleOutlineIcon,
+    Verified as VerifiedIcon,
+    Videocam as VideocamIcon,
+    Quiz as QuizIcon,
+    WorkspacePremium as WorkspacePremiumIcon,
+    Alarm as AlarmIcon,
+    Badge as BadgeIcon,
+    Gavel as GavelIcon,
+    MedicalServices as MedicalServicesIcon,
+    Payments as PaymentsIcon,
+    Percent as PercentIcon,
+    Savings as SavingsIcon,
+    AppRegistration as AppRegistrationIcon,
+    AccountBalance as AccountBalanceIcon,
+    BusinessCenter as BusinessCenterIcon,
+    Category as CategoryIcon,
+    Engineering as EngineeringIcon,
+    LocalHospital as LocalHospitalIcon,
+    Medication as MedicationIcon,
+    ArrowForward as ArrowForwardIcon,
+    AutoAwesome as AutoAwesomeIcon,
+} from '@mui/icons-material';
+
+/** Slug -> MUI icon component. */
+const ICON_MAP: Record<string, typeof MapIcon> = {
+    map: MapIcon,
+    compass: ExploreIcon,
+    calendar: CalendarMonthIcon,
+    'clipboard-check': AssignmentTurnedInIcon,
+    'user-check': HowToRegIcon,
+    'book-open': MenuBookIcon,
+    award: EmojiEventsIcon,
+    building: BusinessIcon,
+    users: GroupsIcon,
+    presentation: CoPresentIcon,
+    'trending-up': TrendingUpIcon,
+    briefcase: WorkIcon,
+    'bar-chart': BarChartIcon,
+    school: SchoolIcon,
+    assignment: AssignmentIcon,
+    insights: InsightsIcon,
+    route: RouteIcon,
+    checklist: ChecklistIcon,
+    warning: WarningAmberIcon,
+    chat: ChatBubbleOutlineIcon,
+    verified: VerifiedIcon,
+    videocam: VideocamIcon,
+    quiz: QuizIcon,
+    'workspace-premium': WorkspacePremiumIcon,
+    alarm: AlarmIcon,
+    badge: BadgeIcon,
+    gavel: GavelIcon,
+    'medical-services': MedicalServicesIcon,
+    payments: PaymentsIcon,
+    percent: PercentIcon,
+    savings: SavingsIcon,
+    app_registration: AppRegistrationIcon,
+    'account-balance': AccountBalanceIcon,
+    'business-center': BusinessCenterIcon,
+    category: CategoryIcon,
+    engineering: EngineeringIcon,
+    'local-hospital': LocalHospitalIcon,
+    medication: MedicationIcon,
+    'arrow-forward': ArrowForwardIcon,
+    'menu-book': MenuBookIcon,
+    menu_book: MenuBookIcon,
+};
+
+/** Resolve an icon slug to a rendered element, falling back to a neutral icon. */
+export function careerIcon(name: string | undefined, fontSize: number | string = 32): React.ReactElement {
+    const Icon = (name && ICON_MAP[name]) || AutoAwesomeIcon;
+    return <Icon sx={{ fontSize, color: 'var(--color-text)' }} />;
+}

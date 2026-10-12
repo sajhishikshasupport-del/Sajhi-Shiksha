@@ -1,0 +1,157 @@
+{
+  "title": "Career Guide: Science PCB — Medical and Life Sciences",
+  "intro_short": "The biology route after Class 12 — from MBBS and dental to nursing, pharmacy, physiotherapy and paramedical careers, with the exams, costs and competition that matter.",
+  "intro_full": "Choosing Science with Biology (PCB) in Class 11 opens the healthcare and life-sciences route: medicine, dentistry, nursing, pharmacy, physiotherapy, paramedical technology, veterinary science and agriculture. This guide covers the degrees you can take directly after Class 12, the entrance exams involved, the honest cost difference between government and private colleges, and the careers each path leads to. One thing to know before you commit: medicine is the most competitive and expensive route in India, and there are several strong alternatives in the same field at a fraction of the cost.",
+  "sections": [
+    {
+      "heading": "The gateway exam: NEET UG",
+      "body": "Almost every medical and AYUSH degree goes through one national examination.",
+      "icon": "assignment",
+      "items": [
+        {
+          "title": "NEET UG",
+          "body": "The single national entrance test for MBBS, BDS, BAMS, BHMS, BUMS, BNYS, veterinary (BVSc) and several allied courses. Conducted by the NTA; from 2027 the exam is officially shifting to a computer-based format over five to six days.",
+          "meta": "One exam, many degrees | Very high competition"
+        },
+        {
+          "title": "Counselling and seat allotment",
+          "body": "After the result, seats are allotted through central (MCC) and state counselling, in rounds by rank. Government seats are allotted first and cost far less than management or private seats.",
+          "meta": "Your rank decides your college — and your fee"
+        }
+      ]
+    },
+    {
+      "heading": "Degrees you can take directly after 12th PCB",
+      "body": "These are the main Level-1 options — each can be taken straight after Class 12 with Biology.",
+      "icon": "school",
+      "items": [
+        {
+          "title": "MBBS — Medicine",
+          "body": "The main medical degree, followed by internship. Specialisation comes later through postgraduate (NEET PG) study.",
+          "meta": "5.5 years including internship | NEET UG"
+        },
+        {
+          "title": "BDS — Dental Surgery",
+          "body": "Dentistry, with its own clinical practice and postgraduate routes.",
+          "meta": "5 years including internship | NEET UG"
+        },
+        {
+          "title": "AYUSH degrees — BAMS, BHMS, BUMS, BNYS",
+          "body": "Ayurveda, homoeopathy, unani and naturopathy-yogic sciences. These are recognised medical systems with their own practice rights and government posts.",
+          "meta": "5.5 years typical | NEET UG (AYUSH counselling)"
+        },
+        {
+          "title": "BVSc & AH — Veterinary Science",
+          "body": "Animal healthcare and husbandry; leads to veterinary practice, government veterinary officer posts and dairy/animal-sector roles.",
+          "meta": "5.5 years | NEET UG (or state route)"
+        },
+        {
+          "title": "B.Sc Nursing",
+          "body": "The professional nursing degree — strong demand in India and abroad, with clear promotion routes in hospitals and public health.",
+          "meta": "4 years | NEET UG or state nursing entrance"
+        },
+        {
+          "title": "GNM and ANM — Nursing diplomas",
+          "body": "Diploma-level nursing qualifications that allow early entry into the workforce; GNM is 3 years, ANM is 2 years.",
+          "meta": "2-3 years | State-level admission"
+        },
+        {
+          "title": "B.Pharm, D.Pharm and Pharm.D",
+          "body": "Pharmacy at degree, diploma and doctoral levels — from hospital and retail pharmacy to pharmaceutical industry and clinical research.",
+          "meta": "D.Pharm 2 yrs | B.Pharm 4 yrs | Pharm.D 6 yrs"
+        },
+        {
+          "title": "BPT and BOT — Physiotherapy and Occupational Therapy",
+          "body": "Rehabilitation professions with growing demand in hospitals, sports and private practice.",
+          "meta": "4.5 years | NEET UG or state entrance"
+        },
+        {
+          "title": "Paramedical B.Sc courses",
+          "body": "Laboratory technology, radiology, dialysis, operation-theatre technology, cardiac care, optometry and similar applied-health degrees.",
+          "meta": "3-4 years | Varies by state; some use NEET or state tests"
+        },
+        {
+          "title": "B.Sc in life sciences and agriculture",
+          "body": "Biotechnology, microbiology, zoology, botany, agriculture and allied sciences — the research and industry route, also leading to PG and teaching.",
+          "meta": "3 years | CUET-UG / ICAR for agriculture"
+        }
+      ]
+    },
+    {
+      "heading": "Cost reality: government vs private",
+      "body": "The same degree can cost a few lakhs or over a crore depending on the college. This is the single most important number for a PCB family.",
+      "icon": "payments",
+      "items": [
+        {
+          "title": "Government medical colleges",
+          "body": "Fees are heavily subsidised — at premier institutes, total MBBS fees can be in the low thousands of rupees, and in state government colleges a few lakhs over the course. Seats are limited and rank-dependent.",
+          "meta": "Low cost, high competition"
+        },
+        {
+          "title": "Private medical colleges",
+          "body": "Private MBBS fees can run into tens of lakhs for the full course, and management-quota seats can be higher still. Always verify the current fee structure on the college website and in the counselling brochure.",
+          "meta": "Verify before you commit"
+        },
+        {
+          "title": "Cheaper routes in the same field",
+          "body": "Nursing, pharmacy, physiotherapy, paramedical technology and AYUSH courses cost far less than private MBBS while still leading to healthcare careers. These are genuine alternatives, not consolation prizes.",
+          "meta": "Same field, much lower cost"
+        }
+      ]
+    },
+    {
+      "heading": "Careers this route leads to",
+      "body": "What PCB graduates actually do — and how long it takes to get there.",
+      "icon": "work",
+      "items": [
+        {
+          "title": "Doctor (after MBBS and PG)",
+          "body": "MBBS gives you a practising licence; specialisation (MD/MS) comes after NEET PG. Government doctor posts, private practice and hospital careers all follow this path.",
+          "meta": "Long route, high responsibility"
+        },
+        {
+          "title": "Nursing",
+          "body": "Hospital staff nurse to nursing superintendent, with strong overseas demand (UK, Gulf, Australia) and government health-service posts.",
+          "meta": "Early employment, global mobility"
+        },
+        {
+          "title": "Pharmacy",
+          "body": "Hospital pharmacist, retail/community pharmacy, pharmaceutical industry (production, quality, regulatory), clinical research and pharmacovigilance.",
+          "meta": "Industry plus practice"
+        },
+        {
+          "title": "Allied health and rehabilitation",
+          "body": "Physiotherapists, lab technologists, radiographers and OT technologists are employed across hospitals and diagnostic chains, with private-practice options.",
+          "meta": "Practical, in-demand skills"
+        },
+        {
+          "title": "Veterinary and agriculture",
+          "body": "Government veterinary officer, dairy and animal husbandry services, agri-research and agri-business.",
+          "meta": "Government plus private"
+        }
+      ]
+    },
+    {
+      "heading": "Is PCB right for you?",
+      "body": "A short, honest check before you commit four to six years.",
+      "icon": "help",
+      "items": [
+        {
+          "title": "You enjoy biology and human health",
+          "body": "If biology genuinely interests you and you can study long syllabi consistently, PCB is a good fit.",
+          "meta": "Interest first"
+        },
+        {
+          "title": "You are ready for competition and time",
+          "body": "NEET is among India's most competitive exams, and the route to specialisation is long. Patience and steady preparation matter more than a single year's effort.",
+          "meta": "Plan for the long haul"
+        },
+        {
+          "title": "Your family can fund the plan you choose",
+          "body": "Decide with your family which route is affordable: government medicine, AYUSH, nursing, pharmacy or paramedical. Choosing PCB without checking the cost of private medicine is the most common mistake we see.",
+          "meta": "Budget is part of the decision"
+        }
+      ]
+    }
+  ]
+}

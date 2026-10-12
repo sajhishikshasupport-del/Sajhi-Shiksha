@@ -1,0 +1,285 @@
+{
+  "title": "Top Colleges & Institutes in India (NIRF 2025)",
+  "intro_short": "India's top-ranked universities, colleges and specialist institutes from the NIRF 2025 rankings — a starting point for shortlisting, not a final answer.",
+  "intro_full": "The National Institutional Ranking Framework (NIRF), run by the Ministry of Education, ranks Indian institutions every year across categories: universities, colleges, engineering, medical, law, management, pharmacy and more. This page lists the highest-ranked institutions in each category from the NIRF 2025 rankings, with the entrance route where one applies. Use it to build a shortlist — not to make the final choice. A ranking tells you about an institution's overall standing; it does not tell you whether a particular course, fee level or campus suits your child. Always check the official website for programmes, eligibility, fees and admission dates before applying.",
+  "sections": [
+    {
+      "heading": "Universities — top ranked (NIRF 2025)",
+      "body": "Overall university rankings, covering teaching, research, graduation outcomes and perception.",
+      "icon": "account-balance",
+      "items": [
+        {
+          "title": "Indian Institute of Science, Bengaluru",
+          "body": "NIRF 2025: #1 university in India, and #1 in the research category. A science and research institution; undergraduate entry through its own admission test (IISc UG programme).",
+          "meta": "University #1 | Research #1"
+        },
+        {
+          "title": "Jawaharlal Nehru University, New Delhi",
+          "body": "NIRF 2025: #2 university. Known for languages, social sciences and international studies; undergraduate admissions through CUET-UG.",
+          "meta": "University #2"
+        },
+        {
+          "title": "Manipal Academy of Higher Education, Manipal",
+          "body": "NIRF 2025: #3 university. A private deemed university with a wide programme range, including health sciences; admissions through its own entrance tests (MET) and national exams for medical courses.",
+          "meta": "University #3"
+        },
+        {
+          "title": "Jamia Millia Islamia, New Delhi",
+          "body": "NIRF 2025: #4 university (also ranked in engineering and law). A central university with a large programme range; admissions through CUET-UG and its own departmental tests.",
+          "meta": "University #4"
+        },
+        {
+          "title": "University of Delhi",
+          "body": "NIRF 2025: #5 university. One of India's largest university systems, with its colleges ranked separately; undergraduate admissions through CUET-UG and the DU CSAS portal.",
+          "meta": "University #5"
+        }
+      ]
+    },
+    {
+      "heading": "Colleges — top ranked (NIRF 2025)",
+      "body": "The best-ranked colleges in India. Most are University of Delhi colleges admitting through CUET-UG.",
+      "icon": "school",
+      "items": [
+        {
+          "title": "Hindu College, Delhi",
+          "body": "NIRF 2025: #1 college in India. A University of Delhi college; undergraduate admissions through CUET-UG and DU CSAS.",
+          "meta": "College #1"
+        },
+        {
+          "title": "Miranda House, Delhi",
+          "body": "NIRF 2025: #2 college. A women's college of the University of Delhi; CUET-UG admissions.",
+          "meta": "College #2"
+        },
+        {
+          "title": "Hans Raj College, Delhi",
+          "body": "NIRF 2025: #3 college. A University of Delhi college with strong science and commerce programmes; CUET-UG admissions.",
+          "meta": "College #3"
+        },
+        {
+          "title": "Kirori Mal College, Delhi",
+          "body": "NIRF 2025: #4 college. A University of Delhi college; CUET-UG admissions.",
+          "meta": "College #4"
+        },
+        {
+          "title": "St. Stephen's College, Delhi",
+          "body": "NIRF 2025: #5 college. A University of Delhi college with its own interview process for shortlisted CUET candidates.",
+          "meta": "College #5"
+        }
+      ]
+    },
+    {
+      "heading": "Engineering — top ranked (NIRF 2025)",
+      "body": "The Indian Institutes of Technology lead this category. Undergraduate entry is through JEE Advanced, after qualifying JEE Main.",
+      "icon": "engineering",
+      "items": [
+        {
+          "title": "IIT Madras",
+          "body": "NIRF 2025: #1 in engineering (also #1 in innovation). Undergraduate entry through JEE Advanced.",
+          "meta": "Engineering #1"
+        },
+        {
+          "title": "IIT Delhi",
+          "body": "NIRF 2025: #2 in engineering. Undergraduate entry through JEE Advanced.",
+          "meta": "Engineering #2"
+        },
+        {
+          "title": "IIT Bombay",
+          "body": "NIRF 2025: #3 in engineering. Undergraduate entry through JEE Advanced.",
+          "meta": "Engineering #3"
+        },
+        {
+          "title": "IIT Kanpur",
+          "body": "NIRF 2025: #4 in engineering. Undergraduate entry through JEE Advanced.",
+          "meta": "Engineering #4"
+        },
+        {
+          "title": "IIT Kharagpur",
+          "body": "NIRF 2025: #5 in engineering. Undergraduate entry through JEE Advanced.",
+          "meta": "Engineering #5"
+        }
+      ]
+    },
+    {
+      "heading": "Medical — top ranked (NIRF 2025)",
+      "body": "Government medical institutions dominate this category. MBBS entry is through NEET UG; postgraduate medical study is through NEET PG.",
+      "icon": "local-hospital",
+      "items": [
+        {
+          "title": "AIIMS, New Delhi",
+          "body": "NIRF 2025: #1 in medical. India's premier medical institute; MBBS entry through NEET UG, with very low fees compared to private colleges.",
+          "meta": "Medical #1"
+        },
+        {
+          "title": "PGIMER, Chandigarh",
+          "body": "NIRF 2025: #2 in medical. A leading postgraduate medical and research institute.",
+          "meta": "Medical #2"
+        },
+        {
+          "title": "Christian Medical College, Vellore",
+          "body": "NIRF 2025: #3 in medical. A well-known private medical institution with a long service tradition.",
+          "meta": "Medical #3"
+        },
+        {
+          "title": "JIPMER, Puducherry",
+          "body": "NIRF 2025: #4 in medical. An institute of national importance; MBBS entry through NEET UG.",
+          "meta": "Medical #4"
+        },
+        {
+          "title": "SGPGIMS, Lucknow",
+          "body": "NIRF 2025: #5 in medical. A major postgraduate medical institute in Uttar Pradesh.",
+          "meta": "Medical #5"
+        }
+      ]
+    },
+    {
+      "heading": "Law — top ranked (NIRF 2025)",
+      "body": "The National Law Universities lead this category. Entry is through CLAT, or AILET for NLU Delhi.",
+      "icon": "gavel",
+      "items": [
+        {
+          "title": "National Law School of India University, Bengaluru",
+          "body": "NIRF 2025: #1 in law. India's first National Law University; entry through CLAT.",
+          "meta": "Law #1"
+        },
+        {
+          "title": "National Law University, Delhi",
+          "body": "NIRF 2025: #2 in law. Entry through its own AILET examination (not CLAT).",
+          "meta": "Law #2"
+        },
+        {
+          "title": "NALSAR University of Law, Hyderabad",
+          "body": "NIRF 2025: #3 in law. Entry through CLAT.",
+          "meta": "Law #3"
+        },
+        {
+          "title": "West Bengal National University of Juridical Sciences, Kolkata",
+          "body": "NIRF 2025: #4 in law. Entry through CLAT.",
+          "meta": "Law #4"
+        },
+        {
+          "title": "Gujarat National Law University, Gandhinagar",
+          "body": "NIRF 2025: #5 in law. Entry through CLAT.",
+          "meta": "Law #5"
+        }
+      ]
+    },
+    {
+      "heading": "Management — top ranked (NIRF 2025)",
+      "body": "The Indian Institutes of Management lead this category. MBA entry is through CAT; some IIMs also offer a five-year integrated programme after Class 12 through IPMAT.",
+      "icon": "business-center",
+      "items": [
+        {
+          "title": "IIM Ahmedabad",
+          "body": "NIRF 2025: #1 in management. MBA entry through CAT; also offers a five-year integrated programme (IPM) after Class 12 via IPMAT.",
+          "meta": "Management #1"
+        },
+        {
+          "title": "IIM Bangalore",
+          "body": "NIRF 2025: #2 in management. MBA entry through CAT.",
+          "meta": "Management #2"
+        },
+        {
+          "title": "IIM Kozhikode",
+          "body": "NIRF 2025: #3 in management. MBA entry through CAT; offers IPM after Class 12.",
+          "meta": "Management #3"
+        },
+        {
+          "title": "IIM Lucknow",
+          "body": "NIRF 2025: #5 in management. MBA entry through CAT.",
+          "meta": "Management #5"
+        },
+        {
+          "title": "IIM Mumbai",
+          "body": "NIRF 2025: #6 in management. MBA entry through CAT.",
+          "meta": "Management #6"
+        }
+      ]
+    },
+    {
+      "heading": "Pharmacy — top ranked (NIRF 2025)",
+      "body": "Pharmacy education and research institutions. Entry is usually through state or university-level admission, or NIPER JEE for NIPERs.",
+      "icon": "medication",
+      "items": [
+        {
+          "title": "Jamia Hamdard, New Delhi",
+          "body": "NIRF 2025: #1 in pharmacy. A deemed university with strong pharmacy and health programmes.",
+          "meta": "Pharmacy #1"
+        },
+        {
+          "title": "Panjab University, Chandigarh",
+          "body": "NIRF 2025: #3 in pharmacy. A state university with an established pharmacy faculty.",
+          "meta": "Pharmacy #3"
+        },
+        {
+          "title": "JSS College of Pharmacy, Ooty",
+          "body": "NIRF 2025: #4 in pharmacy. Part of the JSS network; known for pharmacy and Pharm.D programmes.",
+          "meta": "Pharmacy #4"
+        },
+        {
+          "title": "NIPER Hyderabad",
+          "body": "NIRF 2025: #5 in pharmacy. A National Institute of Pharmaceutical Education and Research; entry through NIPER JEE.",
+          "meta": "Pharmacy #5"
+        },
+        {
+          "title": "Institute of Chemical Technology, Mumbai",
+          "body": "NIRF 2025: #6 in pharmacy. A research-intensive institute with chemical technology and pharmacy programmes.",
+          "meta": "Pharmacy #6"
+        }
+      ]
+    },
+    {
+      "heading": "Other categories — top ranked (NIRF 2025)",
+      "body": "Dental, agriculture and architecture — specialist categories for focused careers.",
+      "icon": "category",
+      "items": [
+        {
+          "title": "Dental: Maulana Azad Institute of Dental Sciences, Delhi",
+          "body": "NIRF 2025: #3 in dental. A government dental institution; BDS entry through NEET UG.",
+          "meta": "Dental #3"
+        },
+        {
+          "title": "Dental: Manipal College of Dental Sciences, Manipal",
+          "body": "NIRF 2025: #5 in dental. Part of Manipal Academy of Higher Education.",
+          "meta": "Dental #5"
+        },
+        {
+          "title": "Agriculture: ICAR–National Dairy Research Institute, Karnal",
+          "body": "NIRF 2025: #2 in agriculture. A premier dairy research and teaching institute.",
+          "meta": "Agriculture #2"
+        },
+        {
+          "title": "Agriculture: Punjab Agricultural University, Ludhiana",
+          "body": "NIRF 2025: #3 in agriculture. A leading state agricultural university; admission through its own entrance (PAU MET) or ICAR/CUET routes.",
+          "meta": "Agriculture #3"
+        },
+        {
+          "title": "Architecture: School of Planning and Architecture, New Delhi",
+          "body": "NIRF 2025: #8 in architecture. A specialised architecture and planning institute; B.Arch entry through JEE Paper 2 or NATA.",
+          "meta": "Architecture #8"
+        }
+      ]
+    },
+    {
+      "heading": "How to use this list",
+      "body": "Rankings are a starting point, not a decision. Three practical steps.",
+      "icon": "help",
+      "items": [
+        {
+          "title": "Match the course, not just the name",
+          "body": "A high-ranked institution may not offer the specific course your child wants, or may not have the best programme in that subject. Check the course, department and curriculum first.",
+          "meta": "Course before brand"
+        },
+        {
+          "title": "Check fees and eligibility",
+          "body": "Government institutions are far cheaper than private ones, and eligibility (entrance exam, marks, domicile) differs by institution. Verify on the official website and the admission brochure.",
+          "meta": "Verify fees and eligibility"
+        },
+        {
+          "title": "Use our detailed profiles",
+          "body": "Our research includes detailed profiles of 179 NIRF-ranked institutes — programmes, eligibility, admission routes and official fee information. Ask us if you want a specific institution covered.",
+          "meta": "179 institutes researched"
+        }
+      ]
+    }
+  ]
+}

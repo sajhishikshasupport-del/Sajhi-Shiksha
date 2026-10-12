@@ -21,7 +21,7 @@
  * expected tags are not found in dist/index.html, so a template change cannot
  * silently disable previews.
  */
-import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
+import { readFileSync, writeFileSync, mkdirSync, readdirSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -232,6 +232,71 @@ function write(target, html) {
 
 const template = readFileSync(distIndex, 'utf8');
 
+/**
+ * Career Counselling sub-pages.
+ *
+ * Every `type=page` item in the manifest (plus every content file in
+ * src/data/career-pages/) gets its own /career-counselling/<id> preview page,
+ * mirroring the routes the app exposes. Title/description mirror useSEO:
+ * `<page title> — Career Counselling — Sajhi Shiksha`.
+ */
+function buildCareerRoutes() {
+    const routes = [];
+    const pagesDir = join(frontendDir, 'src', 'data', 'career-pages');
+    const readPage = (id) => {
+        try {
+            return JSON.parse(readFileSync(join(pagesDir, `${id}.json`), 'utf8'));
+        } catch {
+            return null;
+        }
+    };
+
+    let manifest;
+    try {
+        manifest = JSON.parse(
+            readFileSync(join(frontendDir, 'src', 'data', 'career-website-content.json'), 'utf8'),
+        );
+    } catch {
+        return routes;
+    }
+
+    const sectionSubtitle = (manifest.section && manifest.section.subtitle) || 'Career Counselling';
+    const covered = new Set();
+    const pushRoute = (id, page, item) => {
+        const title = (page && page.title) || (item && item.title) || id;
+        const description =
+            (page && page.intro_short) || (item && item.description) || sectionSubtitle;
+        routes.push({
+            path: `career-counselling/${id}`,
+            title: `${title} — Career Counselling — Sajhi Shiksha`,
+            description,
+        });
+        covered.add(id);
+    };
+
+    for (const item of manifest.items || []) {
+        if (item.visible === false || item.type !== 'page') continue;
+        pushRoute(item.id, readPage(item.id), item);
+    }
+
+    let files = [];
+    try {
+        files = readdirSync(pagesDir);
+    } catch {
+        files = [];
+    }
+    for (const file of files) {
+        if (!file.endsWith('.json')) continue;
+        const id = file.slice(0, -'.json'.length);
+        if (covered.has(id)) continue;
+        pushRoute(id, readPage(id), null);
+    }
+
+    return routes;
+}
+
+const careerRoutes = buildCareerRoutes();
+
 let generated = 0;
 
 /* 1. Named routes */
@@ -242,6 +307,17 @@ for (const route of ROUTES) {
         description: route.description,
         ogImage: route.ogImage,
         noindex: route.noindex,
+    });
+    write(join(distDir, route.path, 'index.html'), html);
+    generated += 1;
+}
+
+/* 1b. Career Counselling sub-pages -> /career-counselling/<id> preview pages */
+for (const route of careerRoutes) {
+    const html = renderPage(template, {
+        url: `${SITE_URL}/${route.path}`,
+        title: route.title,
+        description: route.description,
     });
     write(join(distDir, route.path, 'index.html'), html);
     generated += 1;
@@ -341,6 +417,9 @@ try {
     const sitemapUrls = staticUrls.map(
         (s) => `  <url><loc>${SITE_URL}${s.loc}</loc><changefreq>${s.cf}</changefreq><priority>${s.pr}</priority></url>`,
     );
+    for (const route of careerRoutes) {
+        sitemapUrls.push(`  <url><loc>${SITE_URL}/${route.path}</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>`);
+    }
     const docIds = new Set();
     for (const file of CONTENT_FILES) {
         let data;
