@@ -18,6 +18,7 @@ import pcmEngineeringGuide from '@/data/career-pages/pcm-engineering-guide.json'
 import pcbMedicalGuide from '@/data/career-pages/pcb-medical-guide.json';
 import commerceGuide from '@/data/career-pages/commerce-guide.json';
 import artsHumanitiesGuide from '@/data/career-pages/arts-humanities-guide.json';
+import parentsCorner from '@/data/career-pages/parents-corner.json';
 
 /**
  * The four stream guides live under the `career-guides-by-stream` parent item
@@ -46,6 +47,7 @@ export const careerPages: Record<string, CareerPageContent> = {
     'pcb-medical-guide': pcbMedicalGuide as unknown as CareerPageContent,
     'commerce-guide': commerceGuide as unknown as CareerPageContent,
     'arts-humanities-guide': artsHumanitiesGuide as unknown as CareerPageContent,
+    'parents-corner': parentsCorner as unknown as CareerPageContent,
 };
 
 /** Look up a page's content by slug. */

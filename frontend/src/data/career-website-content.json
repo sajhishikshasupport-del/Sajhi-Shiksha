@@ -6,7 +6,7 @@
     "color": "indigo"
   },
   "meta": {
-    "version": "1.5",
+    "version": "1.6",
     "updated": "2026-10-05",
     "owner": "Career Agent -> Website (read-only)",
     "update_cadence": "Updated weekly; the Night Manager syncs this file each night.",
@@ -22,7 +22,7 @@
   },
   "free_vs_paid": {
     "free_area": "Awareness and information — everything a student or parent needs to understand the options: stream selection guidance, the entrance exam calendar, career guides, scholarship and college information, plus a free aptitude test with a short WhatsApp report.",
-    "paid_area": "Personalised guidance — interpretation of aptitude results and a one-to-one counselling session with the student and family, ending in a written action plan. Current price: Rs 999 per session.",
+    "paid_area": "Personalised guidance — interpretation of aptitude results and one-to-one counselling for the student and family, ending in a written action plan, with support through the year. Current price: Rs 999 per year (subscription).",
     "boundary_rule": "The section shows both areas separately. Information stays free; the paid service begins only at personalised interpretation and the counselling session. Nothing is placed behind a paywall without a clear label."
   },
   "content_inventory": [
@@ -111,8 +111,8 @@
     },
     {
       "id": "one-to-one-counselling-session",
-      "title": "One-to-One Career Counselling Session (Rs 999)",
-      "description": "A personalised session with our counsellor for the student and parents together. We interpret the aptitude and interest results, match them with real courses and careers, compare costs and competition honestly, and finish with a written action plan. Available online or in person. This is a paid service, clearly separate from the free information on this site.",
+      "title": "Career Counselling Service (Rs 999 per year)",
+      "description": "A year-long subscription to our career counselling service: personalised interpretation of aptitude and interest results, matching with real courses and careers, honest comparison of costs and competition, and a written action plan — with support through the year. Available online or in person. This is a paid service, clearly separate from the free information on this site.",
       "type": "page",
       "url": "",
       "phase": 2,

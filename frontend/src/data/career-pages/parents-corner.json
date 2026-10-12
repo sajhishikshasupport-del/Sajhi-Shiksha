@@ -1,0 +1,194 @@
+{
+  "title": "Parents' Corner",
+  "intro_short": "A practical guide for parents on helping your child choose a career — how to talk about it, what to ask, and the mistakes worth avoiding.",
+  "intro_full": "Most career decisions in India are made by families, not by students alone — and that is not a bad thing. Parents bring experience, financial realism and perspective that a 15- or 17-year-old cannot have yet. The difficulty is finding the balance: supporting without forcing, being realistic without killing ambition. This page is written for parents: how to have the career conversation at home, the questions parents ask us most, how to handle the money side honestly, and the habits that help rather than hurt. Everything here comes from our counselling experience with students and families across India.",
+  "sections": [
+    {
+      "heading": "Your role as a parent",
+      "body": "Three things only a parent can provide — and one they should not.",
+      "icon": "family_restroom",
+      "items": [
+        {
+          "title": "You know the child best",
+          "body": "Teachers see one subject, friends see one side. You have watched your child for fifteen years — what they enjoy, what they avoid, what they are patient with. That knowledge matters more than any ranking list.",
+          "meta": "Observe, don't assume"
+        },
+        {
+          "title": "You know the family's reality",
+          "body": "What the family can fund, how many years of study are feasible, whether relocation is possible — these are decisions only parents can make honestly.",
+          "meta": "Be the reality anchor"
+        },
+        {
+          "title": "You provide the safety net",
+          "body": "A child who knows that a wrong choice is not the end of the world takes better decisions. Reassurance makes students braver, not lazier.",
+          "meta": "Reduce fear, don't add it"
+        },
+        {
+          "title": "But the interest has to be the child's",
+          "body": "You can guide, fund and advise — but the daily effort of a four-year degree will be your child's. A course chosen only for prestige, without interest, rarely ends well.",
+          "meta": "Guide, don't command"
+        }
+      ]
+    },
+    {
+      "heading": "How to have the career conversation at home",
+      "body": "Practical habits that make these discussions easier.",
+      "icon": "forum",
+      "items": [
+        {
+          "title": "Start earlier than Class 12",
+          "body": "The stream decision in Class 10 already shapes later options. Conversations that begin in Class 9 or 10 are calmer than those held after results.",
+          "meta": "Class 9-10, not Class 12"
+        },
+        {
+          "title": "Listen first, advise second",
+          "body": "Ask what your child enjoyed this year, what they found boring, what they would do if marks did not matter. The answers reveal more than any test score.",
+          "meta": "Ask, then speak"
+        },
+        {
+          "title": "Avoid comparison",
+          "body": "The cousin who took engineering, the neighbour's daughter who became a doctor — comparisons push children towards choices that are not theirs, and rarely end well.",
+          "meta": "Every child is different"
+        },
+        {
+          "title": "Share your constraints openly",
+          "body": "If the family cannot fund a private medical college, say so early and calmly. Children handle reality far better than silence, and it lets you plan alternatives together.",
+          "meta": "Honesty prevents heartbreak"
+        },
+        {
+          "title": "Decide together, with data",
+          "body": "Shortlist options together, check fees, eligibility and job reality, and rule things out on facts rather than fear.",
+          "meta": "Facts over fear"
+        }
+      ]
+    },
+    {
+      "heading": "Questions parents ask us most",
+      "body": "The concerns we hear in almost every counselling session.",
+      "icon": "help",
+      "items": [
+        {
+          "title": "'My child has no interest in anything'",
+          "body": "This usually means the child has not been exposed to enough options, not that they lack interest. Exposure — through reading about careers, aptitude testing and talking to people in different jobs — brings interests to the surface.",
+          "meta": "Exposure before decision"
+        },
+        {
+          "title": "'Everyone says doctor or engineer'",
+          "body": "Those are two good careers out of hundreds. India also needs accountants, teachers, nurses, designers, agri-scientists, lawyers, skilled technicians and entrepreneurs — many with better job security than a forced engineering seat.",
+          "meta": "Two careers are not all careers"
+        },
+        {
+          "title": "'The marks are average — what now?'",
+          "body": "Average marks close some doors but open many others: commerce, arts, ITI trades, polytechnic diplomas, nursing and paramedical courses. Many of these have strong, early employment.",
+          "meta": "Average marks, real careers"
+        },
+        {
+          "title": "'Can we afford this course?'",
+          "body": "Check the government option first — the same degree can cost a fraction at a government college. Then look at scholarships and education loans; several central schemes exist for exactly this.",
+          "meta": "See our scholarships page"
+        },
+        {
+          "title": "'What if we choose wrong?'",
+          "body": "Few decisions are truly final. Stream changes, lateral entries, professional certifications and postgraduate switches all exist. The goal is a good decision, not a perfect one.",
+          "meta": "There are second chances"
+        }
+      ]
+    },
+    {
+      "heading": "The money conversation",
+      "body": "Four things to settle before a course is chosen.",
+      "icon": "savings",
+      "items": [
+        {
+          "title": "Decide the budget before the course",
+          "body": "Fix a realistic total budget first, then find courses that fit it — rather than choosing a course and discovering the cost later.",
+          "meta": "Budget first"
+        },
+        {
+          "title": "Compare government and private honestly",
+          "body": "For medicine and engineering, the fee difference between government and private colleges runs into lakhs. Write both numbers down before deciding.",
+          "meta": "Write the numbers down"
+        },
+        {
+          "title": "Use scholarships and loans properly",
+          "body": "Central scholarships, state schemes and education loans (including collateral-free options) can cover a large part of the cost. Apply early — deadlines are strict.",
+          "meta": "See our scholarships page"
+        },
+        {
+          "title": "Do not forget the hidden costs",
+          "body": "Coaching, hostel, travel, books, devices and exam fees add up beyond tuition. Plan for the full cost, not just the college fee.",
+          "meta": "Total cost, not tuition only"
+        }
+      ]
+    },
+    {
+      "heading": "Five things that hurt more than help",
+      "body": "From our sessions — the patterns that damage outcomes.",
+      "icon": "warning",
+      "items": [
+        {
+          "title": "Forcing a stream or career",
+          "body": "A student in a course they dislike is more likely to drop out, fail or graduate without skills.",
+          "meta": "Avoid"
+        },
+        {
+          "title": "Comparing with relatives' children",
+          "body": "It creates resentment and pushes students to hide their real interests.",
+          "meta": "Avoid"
+        },
+        {
+          "title": "Chasing prestige over fit",
+          "body": "A famous course at a weak college, or a 'prestigious' field that does not suit the child, is a costly mistake.",
+          "meta": "Avoid"
+        },
+        {
+          "title": "Ignoring the fee reality",
+          "body": "Choosing private medicine without checking the cost, or engineering without checking placement records, creates problems that money cannot fix later.",
+          "meta": "Avoid"
+        },
+        {
+          "title": "Delaying the conversation",
+          "body": "Deciding everything after the Class 12 result leaves no time to explore alternatives calmly.",
+          "meta": "Avoid"
+        }
+      ]
+    },
+    {
+      "heading": "A parent's checklist",
+      "body": "Six things you can do this month.",
+      "icon": "checklist",
+      "items": [
+        {
+          "title": "Learn the options for your child's stream",
+          "body": "Read our stream guides and career guides — knowing the options is the first step to guiding well.",
+          "meta": "Free guides"
+        },
+        {
+          "title": "Consider an aptitude test",
+          "body": "A standardised aptitude test gives an objective picture of strengths — a useful input alongside your own observations.",
+          "meta": "One input, not the answer"
+        },
+        {
+          "title": "Shortlist three to five realistic paths",
+          "body": "Include one ambitious, one comfortable and one safe option. This removes the all-or-nothing pressure.",
+          "meta": "Three to five options"
+        },
+        {
+          "title": "Check fees and eligibility for each",
+          "body": "Use our college and scholarship pages, then verify on the official website.",
+          "meta": "Verify officially"
+        },
+        {
+          "title": "Talk to a counsellor if you are stuck",
+          "body": "A professional counsellor can interpret aptitude results, compare options and help the family decide together.",
+          "meta": "Ask for help"
+        },
+        {
+          "title": "Keep the conversation open",
+          "body": "The goal is not to win an argument but to reach a decision your child can own and work for.",
+          "meta": "Decide together"
+        }
+      ]
+    }
+  ]
+}

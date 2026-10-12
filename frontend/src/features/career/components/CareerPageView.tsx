@@ -16,6 +16,7 @@ import type {
     CareerManifestItem,
     CareerPageContent,
     CareerPageItem,
+    CareerPageSection,
 } from '@/features/career/types';
 
 const BORDER = 'var(--color-border)';
@@ -79,7 +80,43 @@ function PageItemCard({ item }: { item: CareerPageItem }): React.ReactElement {
     );
 }
 
-/** Render one page's finalized content: title, intro, then each section. */
+/**
+ * Auto-generated jump chips for a page's sections (id from sections[].heading).
+ * Clicking a chip smooth-scrolls to that section (REQ-1012-14).
+ */
+function SectionChips({ sections }: { sections: CareerPageSection[] }): React.ReactElement | null {
+    if (sections.length < 2) return null;
+    const jumpTo = (id: string): void => {
+        const el = document.getElementById(id);
+        if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    };
+    return (
+        <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1, mb: 4 }} aria-label="Jump to section">
+            {sections.map((section, index) => (
+                <Chip
+                    key={`chip-${section.heading}-${index}`}
+                    label={section.heading}
+                    onClick={() => jumpTo(`career-section-${index}`)}
+                    clickable
+                    sx={{
+                        height: 'auto',
+                        py: 0.5,
+                        fontFamily: FONT_HEADING,
+                        fontWeight: 700,
+                        fontSize: '0.8rem',
+                        bgcolor: 'var(--color-bg)',
+                        color: 'var(--color-text)',
+                        border: `2px solid ${BORDER}`,
+                        boxShadow: `2px 2px 0px ${SHADOW}`,
+                        '&:hover': { bgcolor: 'var(--color-yellow)', color: '#1A1A1A' },
+                    }}
+                />
+            ))}
+        </Box>
+    );
+}
+
+/** Render one page's finalized content: title, intro, section chips, then each section. */
 function CareerContentPage({ content }: { content: CareerPageContent }): React.ReactElement {
     return (
         <>
@@ -90,8 +127,10 @@ function CareerContentPage({ content }: { content: CareerPageContent }): React.R
                 {content.intro_full}
             </Typography>
 
+            <SectionChips sections={content.sections} />
+
             {content.sections.map((section, index) => (
-                <Box key={`${section.heading}-${index}`} component="section" sx={{ mb: 5 }}>
+                <Box key={`${section.heading}-${index}`} id={`career-section-${index}`} component="section" sx={{ mb: 5, scrollMarginTop: '90px' }}>
                     <Box sx={{ display: 'flex', alignItems: 'center', gap: 1.5, mb: 1.5 }}>
                         {section.icon && (
                             <Box
