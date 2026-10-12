@@ -1,10 +1,12 @@
 import React from 'react';
 import { Box, Typography, Chip, Button } from '@mui/material';
 import { Link } from '@tanstack/react-router';
-import { ArrowBackIcon, ArrowForwardIcon } from '@/components/Icons';
+import { ArrowBackIcon, ArrowForwardIcon, WhatsAppIcon } from '@/components/Icons';
 import { useSEO, breadcrumbSchema } from '@/hooks/useSEO';
 import { FONT_HEADING, FONT_MONO, MAX_CONTENT_WIDTH } from '@/lib/constants';
 import careerManifest from '@/data/career-website-content.json';
+import siteData from '@/data/site.json';
+import { trackEvent } from '@/hooks/useAnalytics';
 import { careerIcon } from '@/features/career/careerIcons';
 import {
     getCareerPage,
@@ -23,6 +25,51 @@ const BORDER = 'var(--color-border)';
 const SHADOW = 'var(--color-shadow)';
 
 const manifest = careerManifest as unknown as CareerManifest;
+
+/** Website WhatsApp number, digits only (for wa.me links). */
+const WA_NUMBER = ((siteData.site?.whatsappNumber as string) || '').replace(/[^0-9]/g, '');
+
+/**
+ * Standard end-of-page WhatsApp CTA shown on every career page (REQ-1012-15).
+ * The page title is auto-filled, and a click is tracked as whatsapp_click with
+ * location 'career-page' plus the page's id.
+ */
+function CareerWhatsAppCTA({ title, pageId }: { title: string; pageId: string }): React.ReactElement | null {
+    if (!WA_NUMBER) return null;
+    const message = `Hi, I have a question about "${title}" on Sajhi Shiksha (sajhishiksha.in/career-counselling/${pageId}).`;
+    const href = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(message)}`;
+    return (
+        <Box component="section" sx={{ mt: 6, p: 3, bgcolor: 'var(--color-bg)', border: `3px solid ${BORDER}`, boxShadow: `5px 5px 0px ${SHADOW}`, maxWidth: 820 }}>
+            <Typography component="h2" sx={{ fontFamily: FONT_HEADING, fontWeight: 800, fontSize: { xs: '1.2rem', md: '1.4rem' }, mb: 1 }}>
+                Question about {title}?
+            </Typography>
+            <Typography sx={{ fontSize: '0.95rem', color: 'var(--color-text-secondary)', lineHeight: 1.8, mb: 2 }}>
+                If anything on this page is unclear, or you want to talk it through for your own situation, message us on WhatsApp. We reply personally.
+            </Typography>
+            <Button
+                component="a"
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
+                startIcon={<WhatsAppIcon />}
+                onClick={() => trackEvent('whatsapp_click', { location: 'career-page', page_id: pageId })}
+                sx={{
+                    textTransform: 'none',
+                    fontFamily: FONT_HEADING,
+                    fontWeight: 700,
+                    bgcolor: '#25D366',
+                    color: '#1A1A1A',
+                    border: `3px solid ${BORDER}`,
+                    boxShadow: `4px 4px 0px ${SHADOW}`,
+                    px: 2.5,
+                    '&:hover': { bgcolor: '#1FBE5B', color: '#1A1A1A' },
+                }}
+            >
+                Ask on WhatsApp
+            </Button>
+        </Box>
+    );
+}
 
 function BackToSection(): React.ReactElement {
     return (
@@ -117,7 +164,7 @@ function SectionChips({ sections }: { sections: CareerPageSection[] }): React.Re
 }
 
 /** Render one page's finalized content: title, intro, section chips, then each section. */
-function CareerContentPage({ content }: { content: CareerPageContent }): React.ReactElement {
+function CareerContentPage({ content, slug }: { content: CareerPageContent; slug: string }): React.ReactElement {
     return (
         <>
             <Typography sx={{ fontFamily: FONT_HEADING, fontWeight: 800, fontSize: { xs: '1.75rem', md: '2.25rem' }, mb: 2 }}>
@@ -163,6 +210,8 @@ function CareerContentPage({ content }: { content: CareerPageContent }): React.R
                     )}
                 </Box>
             ))}
+
+            <CareerWhatsAppCTA title={content.title} pageId={slug} />
         </>
     );
 }
@@ -217,6 +266,8 @@ function StreamGuidesListing({ item }: { item: CareerManifestItem | undefined })
                     </Link>
                 ))}
             </Box>
+
+            <CareerWhatsAppCTA title={item?.title ?? 'Career Guides by Stream'} pageId={CAREER_GUIDES_PARENT_ID} />
         </>
     );
 }
@@ -315,7 +366,7 @@ function CareerPageView({ slug }: { slug: string }): React.ReactElement {
     if (isGuidesParent) {
         body = <StreamGuidesListing item={manifestItem} />;
     } else if (content) {
-        body = <CareerContentPage content={content} />;
+        body = <CareerContentPage content={content} slug={slug} />;
     } else if (manifestItem) {
         body = <PendingPage item={manifestItem} />;
     } else {
