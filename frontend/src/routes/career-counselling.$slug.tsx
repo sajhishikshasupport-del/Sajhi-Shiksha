@@ -22,4 +22,9 @@ export const Route = createRoute({
     getParentRoute: () => careerCounsellingRoute,
     path: '$slug',
     component: CareerPageRouteComponent,
+    // Preserve ?lang=hi (REQ-1012-16). Without a validateSearch, TanStack Router
+    // drops unknown search params on load, so the language toggle never sees it.
+    validateSearch: (search: Record<string, unknown>): { lang?: string } => ({
+        lang: typeof search.lang === 'string' ? search.lang : undefined,
+    }),
 });
