@@ -84,6 +84,13 @@
             "description": "Apply for duplicate academic documents from CBSE",
             "url": "https://cbseit.in/cbse/web/dads/List.aspx",
             "icon": "Description"
+        },
+        {
+            "id": "ncert-lab-manuals",
+            "title": "NCERT Laboratory Manuals",
+            "description": "Official NCERT science laboratory manuals for Classes 6-12 - practical work, experiments and activities",
+            "url": "https://ncert.nic.in/science-laboratory-manual.php?ln=en",
+            "icon": "Description"
         }
     ]
 }

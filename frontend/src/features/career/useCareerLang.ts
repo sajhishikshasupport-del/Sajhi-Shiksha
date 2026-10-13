@@ -34,17 +34,6 @@ function readUrlLang(): CareerLang | null {
     }
 }
 
-/** The last language the visitor chose, or null when none was stored. */
-function readStoredLang(): CareerLang | null {
-    if (typeof window === 'undefined') return null;
-    try {
-        const value = window.localStorage.getItem(STORAGE_KEY);
-        return isLang(value) ? value : null;
-    } catch {
-        return null;
-    }
-}
-
 /** Reflect a language on the URL without adding a history entry. */
 function syncUrl(lang: CareerLang): void {
     if (typeof window === 'undefined') return;
@@ -79,7 +68,7 @@ function storeLang(lang: CareerLang): void {
  * re-annotates the URL with) the chosen language.
  */
 export function useCareerLang(): { lang: CareerLang; setLang: (lang: CareerLang) => void } {
-    const [lang, setLangState] = useState<CareerLang>(() => readUrlLang() ?? readStoredLang() ?? 'en');
+    const [lang, setLangState] = useState<CareerLang>(() => readUrlLang() ?? 'en');
 
     useEffect(() => {
         syncUrl(lang);

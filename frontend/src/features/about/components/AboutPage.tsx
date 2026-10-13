@@ -1,5 +1,5 @@
 import { Box, Typography } from '@mui/material';
-import { CheckCircleIcon, EmailIcon, WhatsAppIcon, LinkIcon } from '@/components/Icons';
+import { CheckCircleIcon, EmailIcon, WhatsAppIcon } from '@/components/Icons';
 import { useTheme } from '@/context/ThemeContext';
 import contactData from '@/data/contact.json';
 import { trackEvent } from '@/hooks/useAnalytics';
@@ -129,73 +129,6 @@ export default function AboutPage({ onNavigate }: AboutPageProps) {
                     gap: 3,
                 }}
             >
-                {/* Arattai */}
-                {contactData.arattai && (
-                    <Box
-                        onClick={() => window.open(contactData.arattai, '_blank', 'noopener,noreferrer')}
-                        onKeyDown={(e) => {
-                            if (e.key === 'Enter' || e.key === ' ') {
-                                e.preventDefault();
-                                window.open(contactData.arattai, '_blank', 'noopener,noreferrer');
-                            }
-                        }}
-                        role="button"
-                        tabIndex={0}
-                        sx={{
-                            p: 3,
-                            bgcolor: 'var(--color-yellow)',
-                            border: `3px solid ${borderColor}`,
-                            boxShadow: `4px 4px 0px ${shadowColor}`,
-                            display: 'flex',
-                            flexDirection: 'column',
-                            justifyContent: 'space-between',
-                            gap: 2,
-                            cursor: 'pointer',
-                            transition: 'transform 0.15s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.15s cubic-bezier(0.34, 1.56, 0.64, 1)',
-                            '&:hover': {
-                                transform: 'translate(-2px, -2px)',
-                                boxShadow: `6px 6px 0px ${shadowColor}`,
-                            },
-                            '&:active': {
-                                transform: 'translate(1px, 1px)',
-                                boxShadow: `2px 2px 0px ${shadowColor}`,
-                            },
-                        }}
-                    >
-                        <Box>
-                            <Box sx={{ display: 'flex', alignItems: 'center', gap: 1.5, mb: 1 }}>
-                                <Box sx={{ p: 0.8, bgcolor: 'var(--color-bg)', border: `2px solid ${borderColor}`, display: 'inline-flex' }}>
-                                    <LinkIcon sx={{ color: 'var(--color-text)' }} />
-                                </Box>
-                                <Typography sx={{ fontFamily: FONT_HEADING, fontWeight: 800, fontSize: '1.05rem' }}>
-                                    Arattai - Message us
-                                </Typography>
-                            </Box>
-                            <Typography sx={{ fontSize: '0.85rem', color: 'rgba(26,26,26,0.75)', mb: 1 }}>
-                                Reach out directly via Arattai.
-                            </Typography>
-                        </Box>
-                        <Box
-                            sx={{
-                                display: 'inline-flex',
-                                alignItems: 'center',
-                                justifyContent: 'center',
-                                py: 1.2,
-                                px: 2,
-                                bgcolor: 'var(--color-bg)',
-                                color: 'var(--color-text)',
-                                border: `2px solid ${borderColor}`,
-                                boxShadow: `2px 2px 0px ${shadowColor}`,
-                                fontWeight: 700,
-                                fontSize: '0.85rem',
-                                fontFamily: FONT_MONO,
-                            }}
-                        >
-                            Message us @kapil_pundir
-                        </Box>
-                    </Box>
-                )}
-
                 {/* WhatsApp Group */}
                 {contactData.whatsappGroup && (
                     <Box
