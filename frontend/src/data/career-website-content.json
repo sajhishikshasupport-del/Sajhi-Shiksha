@@ -216,6 +216,18 @@
       "icon": "bar-chart",
       "access": "free",
       "visible": false
+    },
+    {
+      "id": "resources",
+      "title": "Resources",
+      "description": "A curated hub of career-related documents and important official links — exam portals, scholarships, higher-education information and guidance material — collected in one place for students and parents.",
+      "type": "page",
+      "url": "",
+      "phase": 2,
+      "order": 10,
+      "icon": "book-open",
+      "access": "free",
+      "visible": true
     }
   ]
 }
