@@ -25,6 +25,7 @@ import pcbMedicalGuide from '@/data/career-pages/pcb-medical-guide.json';
 import commerceGuide from '@/data/career-pages/commerce-guide.json';
 import artsHumanitiesGuide from '@/data/career-pages/arts-humanities-guide.json';
 import parentsCorner from '@/data/career-pages/parents-corner.json';
+import resources from '@/data/career-pages/resources.json';
 
 import class10StreamSelectionGuideHi from '@/data/career-pages/class10-stream-selection-guide.hi.json';
 import entranceExamCalendarHi from '@/data/career-pages/entrance-exam-calendar-2026-27.hi.json';
@@ -36,6 +37,7 @@ import pcbMedicalGuideHi from '@/data/career-pages/pcb-medical-guide.hi.json';
 import commerceGuideHi from '@/data/career-pages/commerce-guide.hi.json';
 import artsHumanitiesGuideHi from '@/data/career-pages/arts-humanities-guide.hi.json';
 import parentsCornerHi from '@/data/career-pages/parents-corner.hi.json';
+import resourcesHi from '@/data/career-pages/resources.hi.json';
 
 /**
  * The four stream guides live under the `career-guides-by-stream` parent item
@@ -65,6 +67,7 @@ export const careerPages: Record<string, CareerPageContent> = {
     'commerce-guide': commerceGuide as unknown as CareerPageContent,
     'arts-humanities-guide': artsHumanitiesGuide as unknown as CareerPageContent,
     'parents-corner': parentsCorner as unknown as CareerPageContent,
+    resources: resources as unknown as CareerPageContent,
 };
 
 /**
@@ -83,6 +86,7 @@ export const careerPagesHi: Record<string, CareerPageContent> = {
     'commerce-guide': commerceGuideHi as unknown as CareerPageContent,
     'arts-humanities-guide': artsHumanitiesGuideHi as unknown as CareerPageContent,
     'parents-corner': parentsCornerHi as unknown as CareerPageContent,
+    resources: resourcesHi as unknown as CareerPageContent,
 };
 
 /** Look up a page's Hindi content by slug; undefined when there is no Hindi file. */
