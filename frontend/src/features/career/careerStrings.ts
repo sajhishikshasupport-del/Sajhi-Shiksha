@@ -37,6 +37,8 @@ export interface CareerStrings {
     paid: string;
     readMore: string;
     openExplorer: string;
+    /** Label on a resource card that opens an external url. */
+    openLink: string;
     /** Language toggle label + page <title>/description for the section index. */
     languageLabel: string;
     indexTitle: string;
@@ -62,6 +64,7 @@ const EN: CareerStrings = {
     paid: 'Paid',
     readMore: 'Read more',
     openExplorer: 'Open Explorer',
+    openLink: 'Open link',
     languageLabel: 'Language',
     indexTitle: 'Career Counselling — Free Career Guidance for Students',
     indexDescription:
@@ -87,6 +90,7 @@ const HI: CareerStrings = {
     paid: 'पेड',
     readMore: 'और पढ़ें',
     openExplorer: 'एक्सप्लोरर खोलें',
+    openLink: 'लिंक खोलें',
     languageLabel: 'भाषा',
     indexTitle: careerI18n.hi.indexTitle,
     indexDescription: careerI18n.hi.indexDescription,
