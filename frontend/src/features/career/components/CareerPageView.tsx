@@ -1,7 +1,7 @@
 import React from 'react';
 import { Box, Typography, Chip, Button } from '@mui/material';
 import { Link } from '@tanstack/react-router';
-import { ArrowBackIcon, ArrowForwardIcon, WhatsAppIcon } from '@/components/Icons';
+import { ArrowBackIcon, ArrowForwardIcon, OpenInNewIcon, WhatsAppIcon } from '@/components/Icons';
 import { useSEO, breadcrumbSchema, hreflangAlternates } from '@/hooks/useSEO';
 import { FONT_HEADING, FONT_MONO, MAX_CONTENT_WIDTH } from '@/lib/constants';
 import careerManifest from '@/data/career-website-content.json';
@@ -109,9 +109,20 @@ function BackToSection({ strings }: { strings: CareerStrings }): React.ReactElem
     );
 }
 
-function PageItemCard({ item }: { item: CareerPageItem }): React.ReactElement {
-    return (
-        <Box sx={{ p: 3, bgcolor: 'var(--color-bg)', border: `3px solid ${BORDER}`, boxShadow: `4px 4px 0px ${SHADOW}`, height: '100%' }}>
+function PageItemCard({ item, strings }: { item: CareerPageItem; strings: CareerStrings }): React.ReactElement {
+    const cardSx = {
+        p: 3,
+        bgcolor: 'var(--color-bg)',
+        border: `3px solid ${BORDER}`,
+        boxShadow: `4px 4px 0px ${SHADOW}`,
+        height: '100%',
+        display: 'block',
+        textDecoration: 'none',
+        color: 'inherit',
+    } as const;
+
+    const inner = (
+        <>
             <Typography sx={{ fontFamily: FONT_HEADING, fontWeight: 800, fontSize: '1.1rem', mb: 1 }}>
                 {item.title}
             </Typography>
@@ -137,8 +148,25 @@ function PageItemCard({ item }: { item: CareerPageItem }): React.ReactElement {
                     {item.meta}
                 </Typography>
             )}
-        </Box>
+            {item.url && (
+                <Box sx={{ display: 'flex', alignItems: 'center', gap: 0.75, mt: 2 }}>
+                    <Typography sx={{ fontFamily: FONT_MONO, fontWeight: 700, fontSize: '0.85rem', color: 'var(--color-text)' }}>
+                        {strings.openLink}
+                    </Typography>
+                    <OpenInNewIcon sx={{ fontSize: 18 }} />
+                </Box>
+            )}
+        </>
     );
+
+    if (item.url) {
+        return (
+            <Box component="a" href={item.url} target="_blank" rel="noopener noreferrer" sx={cardSx}>
+                {inner}
+            </Box>
+        );
+    }
+    return <Box sx={cardSx}>{inner}</Box>;
 }
 
 /**
@@ -232,7 +260,7 @@ function CareerContentPage({
                     {section.items && section.items.length > 0 && (
                         <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: '1fr 1fr' }, gap: 3 }}>
                             {section.items.map((item, itemIndex) => (
-                                <PageItemCard key={`${item.title}-${itemIndex}`} item={item} />
+                                <PageItemCard key={`${item.title}-${itemIndex}`} item={item} strings={strings} />
                             ))}
                         </Box>
                     )}
