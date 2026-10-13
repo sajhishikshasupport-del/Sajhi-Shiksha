@@ -1,44 +1,51 @@
 {
-  "title": "Resources",
-  "intro_short": "A curated hub of career-related documents and important official links — exam portals, scholarships, higher-education information and guidance material — collected in one place for students and parents.",
-  "intro_full": "This page gathers the documents and links we use most in our career counselling work, so you do not have to hunt for them across the internet. Everything here points to an official or openly shared source, and we add to it over time. If you need something specific, message us on WhatsApp.",
-  "sections": [
-    {
-      "heading": "Important Official Links",
-      "icon": "verified",
-      "body": "Official portals worth bookmarking — for entrance exams, scholarships and higher-education information. Always confirm dates, eligibility and fees on the official website before acting.",
-      "items": [
+    "title": "Resources",
+    "intro_short": "A curated hub of career-related documents and important official links — exam portals, scholarships, higher-education information and guidance material — collected in one place for students and parents.",
+    "intro_full": "This page gathers the documents and links we use most in our career counselling work, so you do not have to hunt for them across the internet. Everything here points to an official or openly shared source, and we add to it over time. If you need something specific, message us on WhatsApp.",
+    "sections": [
         {
-          "title": "National Testing Agency (NTA)",
-          "body": "Official portal for JEE Main, NEET, CUET and other national entrance exams — registration, admit cards, answer keys and results.",
-          "url": "https://nta.ac.in"
+            "heading": "Documents",
+            "icon": "book-open",
+            "body": "Career guides and downloadable material will be added here. We are building this collection now — check back soon, or ask us on WhatsApp for a specific document and we will share it.",
+            "items": [
+                {
+                    "title": "What Next After 10th & 12th — Career Path Master Map",
+                    "body": "A single-page map of the routes open after Class 10 and Class 12 — streams, courses, entrance exams and career paths, all on one chart. Free to view or download.",
+                    "url": "https://drive.google.com/file/d/1nLUhIFFXuvQl9eYoG_c1MuSfy0VGewXP/view"
+                }
+            ]
         },
         {
-          "title": "National Scholarship Portal",
-          "body": "One place for central and state government scholarships — search schemes by eligibility and apply online.",
-          "url": "https://scholarships.gov.in"
-        },
-        {
-          "title": "University Grants Commission (UGC)",
-          "body": "Official information on universities, degree recognition and higher-education rules in India.",
-          "url": "https://www.ugc.gov.in"
-        },
-        {
-          "title": "CBSE (Central Board of Secondary Education)",
-          "body": "Curriculum, sample papers, marking schemes and board-exam updates for Classes 9 to 12.",
-          "url": "https://www.cbse.gov.in"
-        },
-        {
-          "title": "Kendriya Vidyalaya Sangathan (KVS)",
-          "body": "Official KVS site — circulars, admissions and academic information for KVS students and teachers.",
-          "url": "https://kvsangathan.nic.in"
+            "heading": "Important Official Links",
+            "icon": "verified",
+            "body": "Official portals worth bookmarking — for entrance exams, scholarships and higher-education information. Always confirm dates, eligibility and fees on the official website before acting.",
+            "items": [
+                {
+                    "title": "National Testing Agency (NTA)",
+                    "body": "Official portal for JEE Main, NEET, CUET and other national entrance exams — registration, admit cards, answer keys and results.",
+                    "url": "https://nta.ac.in"
+                },
+                {
+                    "title": "National Scholarship Portal",
+                    "body": "One place for central and state government scholarships — search schemes by eligibility and apply online.",
+                    "url": "https://scholarships.gov.in"
+                },
+                {
+                    "title": "University Grants Commission (UGC)",
+                    "body": "Official information on universities, degree recognition and higher-education rules in India.",
+                    "url": "https://www.ugc.gov.in"
+                },
+                {
+                    "title": "CBSE (Central Board of Secondary Education)",
+                    "body": "Curriculum, sample papers, marking schemes and board-exam updates for Classes 9 to 12.",
+                    "url": "https://www.cbse.gov.in"
+                },
+                {
+                    "title": "Kendriya Vidyalaya Sangathan (KVS)",
+                    "body": "Official KVS site — circulars, admissions and academic information for KVS students and teachers.",
+                    "url": "https://kvsangathan.nic.in"
+                }
+            ]
         }
-      ]
-    },
-    {
-      "heading": "Documents",
-      "icon": "book-open",
-      "body": "Career guides and downloadable material will be added here. We are building this collection now — check back soon, or ask us on WhatsApp for a specific document and we will share it."
-    }
-  ]
+    ]
 }

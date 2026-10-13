@@ -82,7 +82,7 @@ const DoorwayCards: React.FC = () => {
                                 damping: 20,
                                 delay: i * 0.15,
                             }}
-                            style={{ gridColumn: i === 0 ? '1 / -1' : undefined, perspective: '800px' }}
+                            style={{ perspective: '800px' }}
                         >
                             <motion.div
                                 whileHover={{
