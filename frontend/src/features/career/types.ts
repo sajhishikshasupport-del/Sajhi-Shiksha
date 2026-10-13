@@ -47,6 +47,8 @@ export interface CareerPageItem {
     title: string;
     body?: string;
     meta?: string;
+    /** When set, the card becomes a link that opens this url in a new tab. */
+    url?: string;
 }
 
 /** A heading + body block, optionally with a list of cards. */
