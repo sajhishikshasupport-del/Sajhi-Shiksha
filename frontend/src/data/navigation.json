@@ -2,6 +2,7 @@
     "_comment": "Header and footer navigation links. Changes here update the site menu and footer link columns. Affects Header, Footer, and BottomTabBar components. Visible on every page.",
     "headerLinks": [
         { "label": "Home", "route": "/" },
+        { "label": "Students", "route": "/for-students" },
         { "label": "Teachers", "route": "/for-teachers" },
         { "label": "Math Lovers", "route": "/for-math-lovers" },
         { "label": "Career", "route": "/career-counselling" },
@@ -19,6 +20,7 @@
         {
             "heading": "More",
             "links": [
+                { "label": "For Students", "route": "/for-students" },
                 { "label": "About Us", "route": "/about" },
                 { "label": "Contribute", "route": "/contribute" },
                 { "label": "Career Counselling", "route": "/career-counselling" }
