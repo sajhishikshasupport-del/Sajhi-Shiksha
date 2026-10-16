@@ -484,7 +484,9 @@ try {
 
 /* 4. sitemap.xml -> dist/sitemap.xml (all indexable pages: sections + every document) */
 try {
+    const today = new Date().toISOString().split('T')[0];
     const staticUrls = [
+        { loc: '/for-students', cf: 'weekly', pr: '0.8' },
         { loc: '/', cf: 'weekly', pr: '1.0' },
         { loc: '/for-teachers', cf: 'weekly', pr: '0.9' },
         { loc: '/for-teachers/tgt-pgt', cf: 'weekly', pr: '0.8' },
@@ -498,12 +500,12 @@ try {
         { loc: '/terms', cf: 'yearly', pr: '0.3' },
     ];
     const sitemapUrls = staticUrls.map(
-        (s) => `  <url><loc>${SITE_URL}${s.loc}</loc><changefreq>${s.cf}</changefreq><priority>${s.pr}</priority></url>`,
+        (s) => `  <url><loc>${SITE_URL}${s.loc}</loc><lastmod>${today}</lastmod><changefreq>${s.cf}</changefreq><priority>${s.pr}</priority></url>`,
     );
     for (const route of careerRoutes) {
-        sitemapUrls.push(`  <url><loc>${SITE_URL}/${route.path}</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>`);
+        sitemapUrls.push(`  <url><loc>${SITE_URL}/${route.path}</loc><lastmod>${today}</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>`);
     }
-    const docIds = new Set();
+    const docDates = new Map();
     for (const file of CONTENT_FILES) {
         let data;
         try {
@@ -514,16 +516,20 @@ try {
         for (const key of Object.keys(data)) {
             if (key === '_comment') continue;
             for (const doc of (data[key] && data[key].documents) || []) {
-                if (doc && doc.id) docIds.add(doc.id);
+                if (doc && doc.id && !docDates.has(doc.id)) {
+                    const md = typeof doc.modifiedDate === 'string' ? doc.modifiedDate.slice(0, 10) : '';
+                    const ok = md.length === 10 && md[4] === '-' && md[7] === '-';
+                    docDates.set(doc.id, ok ? md : today);
+                }
             }
         }
     }
-    for (const id of docIds) {
-        sitemapUrls.push(`  <url><loc>${SITE_URL}/view/${id}</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>`);
+    for (const [id, lastmod] of docDates) {
+        sitemapUrls.push(`  <url><loc>${SITE_URL}/view/${id}</loc><lastmod>${lastmod}</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>`);
     }
     const xml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${sitemapUrls.join('\n')}\n</urlset>\n`;
     writeFileSync(join(distDir, 'sitemap.xml'), xml);
-    console.log(`generate-route-meta: wrote sitemap.xml with ${sitemapUrls.length} urls (${docIds.size} documents)`);
+    console.log(`generate-route-meta: wrote sitemap.xml with ${sitemapUrls.length} urls (${docDates.size} documents)`);
 } catch (e) {
     console.error('generate-route-meta: sitemap step failed:', e.message);
 }
