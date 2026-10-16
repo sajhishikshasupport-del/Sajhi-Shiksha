@@ -1,0 +1,28 @@
+name: One-shot patch - Hindi bugs (sitemap .hi URLs + OG tofu)
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Apply patch
+        run: python3 frontend/scripts/patch-hi-bugs-20261016.py
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "sajhishikshasupport-del"
+          git config user.email "sajhishiksha@gmail.com"
+          git add frontend/scripts/generate-route-meta.mjs frontend/scripts/generate-og-images.py
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "fix(seo,og): skip .hi.json in sitemap career routes; sanitise Hindi OG card text (Latin tofu)"
+            git push
+          fi
