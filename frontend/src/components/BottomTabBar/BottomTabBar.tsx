@@ -53,7 +53,7 @@ const BottomTabBar: React.FC = () => {
                     href={whatsappUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    aria-label="Join WhatsApp group"
+                    aria-label="Join our WhatsApp channel"
                     onClick={() => trackEvent('whatsapp_click', { location: 'website-bottom-bar' })}
                     sx={{
                         width: 40,
