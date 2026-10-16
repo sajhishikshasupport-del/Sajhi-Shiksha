@@ -20,7 +20,22 @@ CREAM = '#FFF8E7'
 INK = '#1A1A1A'
 SECONDARY = '#4A4A4A'
 F_BOLD = '/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf'
-F_DEVA = '/usr/share/fonts/truetype/noto/NotoSansDevanagari-Bold.ttf'
+def _deva_font_path():
+    # Locate a Devanagari font: the exact Bold file first, then any Noto
+    # Devanagari on the system (paths vary by distro/package).
+    import glob
+    for pat in (
+        '/usr/share/fonts/truetype/noto/NotoSansDevanagari-Bold.ttf',
+        '/usr/share/fonts/**/NotoSansDevanagari-Bold.ttf',
+        '/usr/share/fonts/**/NotoSansDevanagari*.ttf',
+    ):
+        hits = sorted(glob.glob(pat, recursive=True))
+        if hits:
+            return hits[0]
+    return '/usr/share/fonts/truetype/noto/NotoSansDevanagari-Bold.ttf'
+
+
+F_DEVA = _deva_font_path()
 
 SECTIONS = [
     {'file': 'og-image.png', 'accent': '#FFE066', 'title': 'Sajhi Shiksha',
@@ -194,8 +209,8 @@ def main():
                                short(hi_page.get('intro_short', '')),
                                'करियर काउंसलिंग', F_DEVA, F_DEVA),
                      os.path.normpath(os.path.join(career_dir, f'{pid}.hi.png')))
-            except Exception:
-                pass
+            except Exception as e:
+                print('career og: hindi card failed:', e)
 
         # Stream guides (and any other page files) that are not top-level
         # manifest items — e.g. the four guides under career-guides-by-stream.
