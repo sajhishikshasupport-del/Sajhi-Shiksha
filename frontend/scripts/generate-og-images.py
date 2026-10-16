@@ -63,6 +63,50 @@ CAREER_ACCENT = '#818CF8'
 CAREER_TAG = 'Career Counselling'
 
 
+# --- Hindi card text ---------------------------------------------------
+# The Devanagari font has no Latin glyphs, so Latin in a Hindi card would
+# render as empty boxes. Transliterate the common course/exam
+# abbreviations, drop remaining Latin letters, then drop any parenthetical
+# left empty (the Latin gloss in a Hindi title).
+HI_LATIN = [
+    ('B.Tech', 'बी.टेक'),
+    ('B.Com', 'बी.कॉम'),
+    ('MBBS', 'एमबीबीएस'),
+    ('NIRF', 'एनआईआरएफ'),
+    ('BBA', 'बीबीए'),
+    ('PCB', 'पीसीबी'),
+    ('PCM', 'पीसीएम'),
+]
+
+
+def _drop_empty_parens(t):
+    out = []
+    i = 0
+    while i < len(t):
+        if t[i] == '(':
+            j = t.find(')', i)
+            if j != -1:
+                inner = t[i + 1:j]
+                keep = any('ऀ' <= ch <= 'ॿ' or ch.isdigit() for ch in inner)
+                out.append(t[i:j + 1] if keep else ' ')
+                i = j + 1
+                continue
+        out.append(t[i])
+        i += 1
+    return ''.join(out)
+
+
+def hi_text(text):
+    t = text or ''
+    for k, v in HI_LATIN:
+        t = t.replace(k, v)
+    t = ''.join(ch for ch in t if not ('a' <= ch.lower() <= 'z'))
+    t = _drop_empty_parens(t)
+    while '  ' in t:
+        t = t.replace('  ', ' ')
+    return t.strip()
+
+
 def font(size, path=F_BOLD):
     return ImageFont.truetype(path, size)
 
@@ -205,8 +249,8 @@ def main():
             try:
                 hi_page = json.load(open(os.path.join(pages_dir, f'{pid}.hi.json'), encoding='utf-8'))
                 save(draw_card(CAREER_ACCENT,
-                               hi_page.get('title', title),
-                               short(hi_page.get('intro_short', '')),
+                               hi_text(hi_page.get('title', title)),
+                               short(hi_text(hi_page.get('intro_short', ''))),
                                'करियर काउंसलिंग', F_DEVA, F_DEVA),
                      os.path.normpath(os.path.join(career_dir, f'{pid}.hi.png')))
             except Exception as e:
@@ -228,8 +272,8 @@ def main():
                      os.path.normpath(os.path.join(career_dir, f'{pid}.png')))
                 try:
                     hi_page = json.load(open(os.path.join(pages_dir, f'{pid}.hi.json'), encoding='utf-8'))
-                    save(draw_card(CAREER_ACCENT, hi_page.get('title', pid),
-                                   short(hi_page.get('intro_short', '')), 'करियर काउंसलिंग', F_DEVA, F_DEVA),
+                    save(draw_card(CAREER_ACCENT, hi_text(hi_page.get('title', pid)),
+                                   short(hi_text(hi_page.get('intro_short', ''))), 'करियर काउंसलिंग', F_DEVA, F_DEVA),
                          os.path.normpath(os.path.join(career_dir, f'{pid}.hi.png')))
                 except Exception:
                     pass

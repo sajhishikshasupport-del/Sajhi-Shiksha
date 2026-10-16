@@ -316,6 +316,7 @@ function buildCareerRoutes() {
     }
     for (const file of files) {
         if (!file.endsWith('.json')) continue;
+        if (file.endsWith('.hi.json')) continue;
         const id = file.slice(0, -'.json'.length);
         if (covered.has(id)) continue;
         pushRoute(id, readPage(id), null);
