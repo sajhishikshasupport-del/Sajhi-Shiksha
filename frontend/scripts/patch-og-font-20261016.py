@@ -1,17 +1,14 @@
 #!/usr/bin/env python3
-"""One-shot OG font fix (16 Oct 2026).
+"""One-shot OG font fix - generator part (16 Oct 2026).
 
 Why: the OG workflow only installed the DejaVu (Latin) font, never a
 Devanagari one. So on the runner F_DEVA did not exist, every Hindi card
 failed inside a bare except/pass, and resources.hi.png was never written
 (the older .hi.png files came from an earlier run).
 
-Fixes:
- 1. frontend/scripts/generate-og-images.py
-    - resolve the Devanagari font dynamically (paths vary by distro/package)
-    - stop swallowing the Hindi-card error silently (print it)
- 2. .github/workflows/generate-og-images.yml
-    - install fonts-noto-core and list the Devanagari fonts found
+This script only touches the generator. The workflow file itself is updated
+separately, because the Actions GITHUB_TOKEN is not allowed to create or
+update files under .github/workflows/.
 
 Idempotent: re-running changes nothing.
 Newlines inside the snippets below are written as @@.
@@ -40,7 +37,6 @@ def patch(path, pairs):
         open(path, 'w', encoding='utf-8').write(t)
 
 
-# --- 1. generator ---------------------------------------------------------
 GEN = 'frontend/scripts/generate-og-images.py'
 patch(GEN, [
     (
@@ -78,32 +74,6 @@ elif old_pass in t:
 else:
     print('ERROR: silent-except pattern not found')
     sys.exit(1)
-
-# --- 2. workflow ----------------------------------------------------------
-WF = '.github/workflows/generate-og-images.yml'
-patch(WF, [
-    (
-        "      - name: Ensure DejaVu font available@@"
-        "        run: |@@"
-        "          if [ ! -f /usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf ]; then@@"
-        "            sudo apt-get update && sudo apt-get install -y fonts-dejavu-core@@"
-        "          fi@@",
-        "      - name: Ensure fonts (Latin + Devanagari) available@@"
-        "        run: |@@"
-        "          if [ ! -f /usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf ]; then@@"
-        "            sudo apt-get update && sudo apt-get install -y fonts-dejavu-core@@"
-        "          fi@@"
-        "          if ! find /usr/share/fonts -iname '*Devanagari*.ttf' | grep -q .; then@@"
-        "            sudo apt-get update && sudo apt-get install -y fonts-noto-core@@"
-        "          fi@@"
-        "          find /usr/share/fonts -iname '*Devanagari*' | head -5@@"
-        "          if ! find /usr/share/fonts -iname '*Devanagari*.ttf' | grep -q .; then@@"
-        "            echo DEVANAGARI FONT MISSING@@"
-        "            exit 1@@"
-        "          fi@@",
-        'workflow: install noto devanagari font',
-    ),
-])
 
 print('patched:', ', '.join(changes) if changes else 'nothing')
 print('OK')
