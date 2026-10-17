@@ -4,6 +4,79 @@
     "intro_full": "A single place for the official links, application forms and documents that students and parents ask for most often — scholarship and education-loan portals, exam bodies, admission and counselling links, career and skill resources, and downloadable checklists. Every link points to the official source. This page is maintained alongside our other career-counselling pages.",
     "sections": [
         {
+            "heading": "Documents & Downloads",
+            "body": "Useful documents and checklists to download.",
+            "icon": "download",
+            "items": [
+                {
+                    "title": "What Next After 10th & 12th - Career Path Master Map",
+                    "body": "A 6-page map of career paths after Class 10 and 12 - from streams to courses and jobs.",
+                    "meta": "PDF",
+                    "url": "https://drive.google.com/file/d/1nLUhIFFXuvQl9eYoG_c1MuSfy0VGewXP/view"
+                },
+                {
+                    "title": "Scholarship Document Checklist",
+                    "body": "The documents usually needed for a scholarship application - marksheets, income certificate, bank and Aadhaar details.",
+                    "meta": "PDF",
+                    "url": "https://drive.google.com/file/d/1iv5F6bPcm-Zr-GolKF3PBSH9xr_vlkxS/view"
+                },
+                {
+                    "title": "Class 10 Stream-Selection Checklist",
+                    "body": "A one-page checklist to choose a stream with confidence.",
+                    "meta": "PDF",
+                    "url": "https://drive.google.com/file/d/1GnI4U2iJ6lWPVoUUIdmi7kGrN0EjdkqF/view"
+                },
+                {
+                    "title": "Entrance Exam Calendar 2026-27",
+                    "body": "20 major exams with dates and CONFIRMED / EXPECTED / NOT ANNOUNCED labels.",
+                    "meta": "PDF",
+                    "url": "https://drive.google.com/file/d/1ti35lN_WO8htQFtk-dP3RHrH4S4ES7X2/view"
+                },
+                {
+                    "title": "Career Ladders",
+                    "body": "Indirect routes to top posts - how government and private careers actually climb.",
+                    "meta": "PDF",
+                    "url": "https://drive.google.com/file/d/1a5EG2lFGberjr0G6ybUxEZ6efagDtJiE/view"
+                },
+                {
+                    "title": "Coaching Costs & Competition Reality",
+                    "body": "Honest coaching costs, and how many candidates compete for how many seats.",
+                    "meta": "PDF",
+                    "url": "https://drive.google.com/file/d/1h11_EmLxDOAlrLEW9Hj8FEZoy8s551zd/view"
+                },
+                {
+                    "title": "Scholarship Deadlines 2026",
+                    "body": "Key schemes and their last dates - 31 October is the most crowded.",
+                    "meta": "PDF",
+                    "url": "https://drive.google.com/file/d/1hAfZrVA8hsuTZn9v8nQ4s2FZMoneCI8e/view"
+                },
+                {
+                    "title": "ITI & Polytechnic Guide",
+                    "body": "Skill routes after Class 10 - trades, diplomas and lateral entry to B.Tech.",
+                    "meta": "PDF",
+                    "url": "https://drive.google.com/file/d/12QqVxbCyZrC6I3QyiDEhNNQS0ALA7d6t/view"
+                },
+                {
+                    "title": "A Parent's Guide to Career Decisions",
+                    "body": "How parents can help without pressure - the conversation, the money, the mistakes.",
+                    "meta": "PDF",
+                    "url": "https://drive.google.com/file/d/10XdxKbo2NcGYvvf5a9Kkh4Dyr38xtsP-/view"
+                },
+                {
+                    "title": "Entrance Exam Calendar (our page)",
+                    "body": "Our own web page: 20 major exams with dates and labels.",
+                    "meta": "Our page",
+                    "url": "https://www.sajhishiksha.in/career-counselling/entrance-exam-calendar-2026-27"
+                },
+                {
+                    "title": "Top Colleges & Institutes (NIRF 2025)",
+                    "body": "Our own web page: 179 top institutes with programmes and admission routes.",
+                    "meta": "Our page",
+                    "url": "https://www.sajhishiksha.in/career-counselling/top-colleges-and-institutes"
+                }
+            ]
+        },
+        {
             "heading": "Scholarships & Finance",
             "body": "The scholarship and education-loan portals students use most — always the government's own website.",
             "icon": "award",
@@ -172,79 +245,6 @@
                     "body": "Directorate General of Training — ITI and apprenticeship.",
                     "meta": "",
                     "url": "https://dgt.gov.in/"
-                }
-            ]
-        },
-        {
-            "heading": "Documents & Downloads",
-            "body": "Useful documents and checklists to download.",
-            "icon": "download",
-            "items": [
-                {
-                    "title": "What Next After 10th & 12th - Career Path Master Map",
-                    "body": "A 6-page map of career paths after Class 10 and 12 - from streams to courses and jobs.",
-                    "meta": "PDF",
-                    "url": "https://drive.google.com/file/d/1nLUhIFFXuvQl9eYoG_c1MuSfy0VGewXP/view"
-                },
-                {
-                    "title": "Scholarship Document Checklist",
-                    "body": "The documents usually needed for a scholarship application - marksheets, income certificate, bank and Aadhaar details.",
-                    "meta": "PDF",
-                    "url": "https://drive.google.com/file/d/1iv5F6bPcm-Zr-GolKF3PBSH9xr_vlkxS/view"
-                },
-                {
-                    "title": "Class 10 Stream-Selection Checklist",
-                    "body": "A one-page checklist to choose a stream with confidence.",
-                    "meta": "PDF",
-                    "url": "https://drive.google.com/file/d/1GnI4U2iJ6lWPVoUUIdmi7kGrN0EjdkqF/view"
-                },
-                {
-                    "title": "Entrance Exam Calendar 2026-27",
-                    "body": "20 major exams with dates and CONFIRMED / EXPECTED / NOT ANNOUNCED labels.",
-                    "meta": "PDF",
-                    "url": "https://drive.google.com/file/d/1ti35lN_WO8htQFtk-dP3RHrH4S4ES7X2/view"
-                },
-                {
-                    "title": "Career Ladders",
-                    "body": "Indirect routes to top posts - how government and private careers actually climb.",
-                    "meta": "PDF",
-                    "url": "https://drive.google.com/file/d/1a5EG2lFGberjr0G6ybUxEZ6efagDtJiE/view"
-                },
-                {
-                    "title": "Coaching Costs & Competition Reality",
-                    "body": "Honest coaching costs, and how many candidates compete for how many seats.",
-                    "meta": "PDF",
-                    "url": "https://drive.google.com/file/d/1h11_EmLxDOAlrLEW9Hj8FEZoy8s551zd/view"
-                },
-                {
-                    "title": "Scholarship Deadlines 2026",
-                    "body": "Key schemes and their last dates - 31 October is the most crowded.",
-                    "meta": "PDF",
-                    "url": "https://drive.google.com/file/d/1hAfZrVA8hsuTZn9v8nQ4s2FZMoneCI8e/view"
-                },
-                {
-                    "title": "ITI & Polytechnic Guide",
-                    "body": "Skill routes after Class 10 - trades, diplomas and lateral entry to B.Tech.",
-                    "meta": "PDF",
-                    "url": "https://drive.google.com/file/d/12QqVxbCyZrC6I3QyiDEhNNQS0ALA7d6t/view"
-                },
-                {
-                    "title": "A Parent's Guide to Career Decisions",
-                    "body": "How parents can help without pressure - the conversation, the money, the mistakes.",
-                    "meta": "PDF",
-                    "url": "https://drive.google.com/file/d/10XdxKbo2NcGYvvf5a9Kkh4Dyr38xtsP-/view"
-                },
-                {
-                    "title": "Entrance Exam Calendar (our page)",
-                    "body": "Our own web page: 20 major exams with dates and labels.",
-                    "meta": "Our page",
-                    "url": "https://www.sajhishiksha.in/career-counselling/entrance-exam-calendar-2026-27"
-                },
-                {
-                    "title": "Top Colleges & Institutes (NIRF 2025)",
-                    "body": "Our own web page: 179 top institutes with programmes and admission routes.",
-                    "meta": "Our page",
-                    "url": "https://www.sajhishiksha.in/career-counselling/top-colleges-and-institutes"
                 }
             ]
         },

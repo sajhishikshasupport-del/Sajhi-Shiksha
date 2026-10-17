@@ -4,6 +4,79 @@
     "intro_full": "छात्रों और अभिभावकों के सबसे आम सवालों के आधिकारिक लिंक, आवेदन फ़ॉर्म और दस्तावेज़ एक ही जगह — छात्रवृत्ति और शिक्षा-ऋण पोर्टल, परीक्षा संस्थाएँ, प्रवेश और काउंसलिंग लिंक, करियर और कौशल संसाधन, और डाउनलोड करने योग्य चेकलिस्ट। हर लिंक आधिकारिक स्रोत पर जाता है। यह पेज हमारे बाकी करियर-काउंसलिंग पेजों के साथ बनाए रखा जाता है।",
     "sections": [
         {
+            "heading": "दस्तावेज़ और डाउनलोड",
+            "body": "काम के दस्तावेज़ और चेकलिस्ट — डाउनलोड के लिए।",
+            "icon": "download",
+            "items": [
+                {
+                    "title": "What Next After 10th & 12th - Career Path Master Map",
+                    "body": "कक्षा 10 और 12 के बाद करियर रास्तों का 6-पेज नक़्शा - स्ट्रीम से कोर्स और नौकरी तक।",
+                    "meta": "PDF",
+                    "url": "https://drive.google.com/file/d/1nLUhIFFXuvQl9eYoG_c1MuSfy0VGewXP/view"
+                },
+                {
+                    "title": "छात्रवृत्ति दस्तावेज़ चेकलिस्ट",
+                    "body": "छात्रवृत्ति आवेदन के लिए आम तौर पर ज़रूरी दस्तावेज़ - मार्कशीट, आय प्रमाणपत्र, बैंक और आधार विवरण।",
+                    "meta": "PDF",
+                    "url": "https://drive.google.com/file/d/1iv5F6bPcm-Zr-GolKF3PBSH9xr_vlkxS/view"
+                },
+                {
+                    "title": "कक्षा 10 स्ट्रीम-चयन चेकलिस्ट",
+                    "body": "भरोसे के साथ स्ट्रीम चुनने की एक-पेज चेकलिस्ट।",
+                    "meta": "PDF",
+                    "url": "https://drive.google.com/file/d/1GnI4U2iJ6lWPVoUUIdmi7kGrN0EjdkqF/view"
+                },
+                {
+                    "title": "प्रवेश परीक्षा कैलेंडर 2026-27",
+                    "body": "20 प्रमुख परीक्षाएँ, तारीख़ें और CONFIRMED / EXPECTED / NOT ANNOUNCED लेबल।",
+                    "meta": "PDF",
+                    "url": "https://drive.google.com/file/d/1ti35lN_WO8htQFtk-dP3RHrH4S4ES7X2/view"
+                },
+                {
+                    "title": "करियर लैडर",
+                    "body": "टॉप पदों तक अप्रत्यक्ष रास्ते - सरकारी और निजी करियर असल में कैसे ऊपर चढ़ते हैं।",
+                    "meta": "PDF",
+                    "url": "https://drive.google.com/file/d/1a5EG2lFGberjr0G6ybUxEZ6efagDtJiE/view"
+                },
+                {
+                    "title": "कोचिंग खर्च और प्रतिस्पर्धा की सच्चाई",
+                    "body": "कोचिंग का असली खर्च, और कितने उम्मीदवार कितनी सीटों के लिए लड़ते हैं।",
+                    "meta": "PDF",
+                    "url": "https://drive.google.com/file/d/1h11_EmLxDOAlrLEW9Hj8FEZoy8s551zd/view"
+                },
+                {
+                    "title": "छात्रवृत्ति अंतिम तिथियाँ 2026",
+                    "body": "मुख्य योजनाएँ और उनकी अंतिम तारीख़ें - 31 अक्टूबर सबसे व्यस्त है।",
+                    "meta": "PDF",
+                    "url": "https://drive.google.com/file/d/1hAfZrVA8hsuTZn9v8nQ4s2FZMoneCI8e/view"
+                },
+                {
+                    "title": "ITI और पॉलिटेक्निक गाइड",
+                    "body": "कक्षा 10 के बाद कौशल रास्ते - ट्रेड, डिप्लोमा और B.Tech में लेटरल एंट्री।",
+                    "meta": "PDF",
+                    "url": "https://drive.google.com/file/d/12QqVxbCyZrC6I3QyiDEhNNQS0ALA7d6t/view"
+                },
+                {
+                    "title": "अभिभावकों के लिए करियर गाइड",
+                    "body": "माता-पिता बिना दबाव कैसे मदद करें - बातचीत, पैसा और गलतियाँ।",
+                    "meta": "PDF",
+                    "url": "https://drive.google.com/file/d/10XdxKbo2NcGYvvf5a9Kkh4Dyr38xtsP-/view"
+                },
+                {
+                    "title": "प्रवेश परीक्षा कैलेंडर (हमारा पेज)",
+                    "body": "हमारा अपना वेब पेज: 20 प्रमुख परीक्षाएँ, तारीख़ें और लेबल।",
+                    "meta": "Our page",
+                    "url": "https://www.sajhishiksha.in/career-counselling/entrance-exam-calendar-2026-27"
+                },
+                {
+                    "title": "टॉप कॉलेज और संस्थान (NIRF 2025)",
+                    "body": "हमारा अपना वेब पेज: 179 टॉप संस्थान, प्रोग्राम और प्रवेश मार्ग।",
+                    "meta": "Our page",
+                    "url": "https://www.sajhishiksha.in/career-counselling/top-colleges-and-institutes"
+                }
+            ]
+        },
+        {
             "heading": "छात्रवृत्ति और वित्त",
             "body": "छात्रों के सबसे काम के छात्रवृत्ति और शिक्षा-ऋण पोर्टल — हमेशा सरकार की अपनी वेबसाइट।",
             "icon": "award",
@@ -172,79 +245,6 @@
                     "body": "प्रशिक्षण महानिदेशालय — ITI और अप्रेंटिसशिप।",
                     "meta": "",
                     "url": "https://dgt.gov.in/"
-                }
-            ]
-        },
-        {
-            "heading": "दस्तावेज़ और डाउनलोड",
-            "body": "काम के दस्तावेज़ और चेकलिस्ट — डाउनलोड के लिए।",
-            "icon": "download",
-            "items": [
-                {
-                    "title": "What Next After 10th & 12th - Career Path Master Map",
-                    "body": "कक्षा 10 और 12 के बाद करियर रास्तों का 6-पेज नक़्शा - स्ट्रीम से कोर्स और नौकरी तक।",
-                    "meta": "PDF",
-                    "url": "https://drive.google.com/file/d/1nLUhIFFXuvQl9eYoG_c1MuSfy0VGewXP/view"
-                },
-                {
-                    "title": "छात्रवृत्ति दस्तावेज़ चेकलिस्ट",
-                    "body": "छात्रवृत्ति आवेदन के लिए आम तौर पर ज़रूरी दस्तावेज़ - मार्कशीट, आय प्रमाणपत्र, बैंक और आधार विवरण।",
-                    "meta": "PDF",
-                    "url": "https://drive.google.com/file/d/1iv5F6bPcm-Zr-GolKF3PBSH9xr_vlkxS/view"
-                },
-                {
-                    "title": "कक्षा 10 स्ट्रीम-चयन चेकलिस्ट",
-                    "body": "भरोसे के साथ स्ट्रीम चुनने की एक-पेज चेकलिस्ट।",
-                    "meta": "PDF",
-                    "url": "https://drive.google.com/file/d/1GnI4U2iJ6lWPVoUUIdmi7kGrN0EjdkqF/view"
-                },
-                {
-                    "title": "प्रवेश परीक्षा कैलेंडर 2026-27",
-                    "body": "20 प्रमुख परीक्षाएँ, तारीख़ें और CONFIRMED / EXPECTED / NOT ANNOUNCED लेबल।",
-                    "meta": "PDF",
-                    "url": "https://drive.google.com/file/d/1ti35lN_WO8htQFtk-dP3RHrH4S4ES7X2/view"
-                },
-                {
-                    "title": "करियर लैडर",
-                    "body": "टॉप पदों तक अप्रत्यक्ष रास्ते - सरकारी और निजी करियर असल में कैसे ऊपर चढ़ते हैं।",
-                    "meta": "PDF",
-                    "url": "https://drive.google.com/file/d/1a5EG2lFGberjr0G6ybUxEZ6efagDtJiE/view"
-                },
-                {
-                    "title": "कोचिंग खर्च और प्रतिस्पर्धा की सच्चाई",
-                    "body": "कोचिंग का असली खर्च, और कितने उम्मीदवार कितनी सीटों के लिए लड़ते हैं।",
-                    "meta": "PDF",
-                    "url": "https://drive.google.com/file/d/1h11_EmLxDOAlrLEW9Hj8FEZoy8s551zd/view"
-                },
-                {
-                    "title": "छात्रवृत्ति अंतिम तिथियाँ 2026",
-                    "body": "मुख्य योजनाएँ और उनकी अंतिम तारीख़ें - 31 अक्टूबर सबसे व्यस्त है।",
-                    "meta": "PDF",
-                    "url": "https://drive.google.com/file/d/1hAfZrVA8hsuTZn9v8nQ4s2FZMoneCI8e/view"
-                },
-                {
-                    "title": "ITI और पॉलिटेक्निक गाइड",
-                    "body": "कक्षा 10 के बाद कौशल रास्ते - ट्रेड, डिप्लोमा और B.Tech में लेटरल एंट्री।",
-                    "meta": "PDF",
-                    "url": "https://drive.google.com/file/d/12QqVxbCyZrC6I3QyiDEhNNQS0ALA7d6t/view"
-                },
-                {
-                    "title": "अभिभावकों के लिए करियर गाइड",
-                    "body": "माता-पिता बिना दबाव कैसे मदद करें - बातचीत, पैसा और गलतियाँ।",
-                    "meta": "PDF",
-                    "url": "https://drive.google.com/file/d/10XdxKbo2NcGYvvf5a9Kkh4Dyr38xtsP-/view"
-                },
-                {
-                    "title": "प्रवेश परीक्षा कैलेंडर (हमारा पेज)",
-                    "body": "हमारा अपना वेब पेज: 20 प्रमुख परीक्षाएँ, तारीख़ें और लेबल।",
-                    "meta": "Our page",
-                    "url": "https://www.sajhishiksha.in/career-counselling/entrance-exam-calendar-2026-27"
-                },
-                {
-                    "title": "टॉप कॉलेज और संस्थान (NIRF 2025)",
-                    "body": "हमारा अपना वेब पेज: 179 टॉप संस्थान, प्रोग्राम और प्रवेश मार्ग।",
-                    "meta": "Our page",
-                    "url": "https://www.sajhishiksha.in/career-counselling/top-colleges-and-institutes"
                 }
             ]
         },
