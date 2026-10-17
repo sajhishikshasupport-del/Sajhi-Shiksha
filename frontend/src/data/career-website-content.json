@@ -6,12 +6,12 @@
     "color": "indigo"
   },
   "meta": {
-    "version": "1.6",
-    "updated": "2026-10-05",
+    "version": "1.8",
+    "updated": "2026-10-17",
     "owner": "Career Agent -> Website (read-only)",
     "update_cadence": "Updated weekly; the Night Manager syncs this file each night.",
     "content_change_rule": "The Website Night Manager syncs this file automatically every night - no permission needed for that. But nothing may be ADDED to or CHANGED in this file except by the Career Counselling Agent, and only after confirming with the CEO (Kapil Sir) first.",
-    "note": "Phase 1 is a single item - the Career Explorer - as directed by the CEO. Free and paid offerings are shown separately, and every paid step is clearly labelled. All content is original and researched in-house. The Night Manager's nightly sync is automatic; content changes go through the CEO via the Career Counselling Agent.",
+    "note": "Phase 1 is a single item - the Career Explorer - as directed by the CEO. All content is original and researched in-house. The Night Manager's nightly sync is automatic; content changes go through the CEO via the Career Counselling Agent. NOTE (17 Oct 2026): at the CEO's direction the 'Free and paid, clearly separated' (paid) section has been REMOVED from the website - the career section now shows only free content.",
     "section_url": "https://www.sajhishiksha.in/career-counselling",
     "analytics": {
       "ga4_property": "properties/411761810",
@@ -19,11 +19,6 @@
       "note": "Section + explorer page ki views/users career agent GA4 se track karta hai; Night Manager content sync karta hai."
     },
     "shape": "FINAL (10 Oct 2026, Sir-approved): manifest for the React app. Each type=page item gets its own sub-route /career-counselling/<id>; its content lives in career-pages/<id>.json."
-  },
-  "free_vs_paid": {
-    "free_area": "Awareness and information — everything a student or parent needs to understand the options: stream selection guidance, the entrance exam calendar, career guides, scholarship and college information, plus a free aptitude test with a short WhatsApp report.",
-    "paid_area": "Personalised guidance — interpretation of aptitude results and one-to-one counselling for the student and family, ending in a written action plan, with support through the year. Current price: Rs 999 per year (subscription).",
-    "boundary_rule": "The section shows both areas separately. Information stays free; the paid service begins only at personalised interpretation and the counselling session. Nothing is placed behind a paywall without a clear label."
   },
   "content_inventory": [
     "Career path trees: after Class 10 (Science PCB, Science PCM, Commerce, Arts, ITI, Polytechnic) and after Class 12, with eligibility, entrance exams, duration, fees (government vs private), next options, jobs and entry salaries",
@@ -220,12 +215,12 @@
     {
       "id": "resources",
       "title": "Resources",
-      "description": "A curated hub of career-related documents and important official links — exam portals, scholarships, higher-education information and guidance material — collected in one place for students and parents.",
+      "description": "A single place for the official links, application forms and documents students and parents ask for most often — scholarship and education-loan portals, exam bodies, admission links and downloadable checklists, each pointing to the official source.",
       "type": "page",
       "url": "",
       "phase": 2,
       "order": 10,
-      "icon": "book-open",
+      "icon": "folder",
       "access": "free",
       "visible": true
     }

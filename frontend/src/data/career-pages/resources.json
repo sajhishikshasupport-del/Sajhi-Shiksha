@@ -1,49 +1,279 @@
 {
     "title": "Resources",
-    "intro_short": "A curated hub of career-related documents and important official links — exam portals, scholarships, higher-education information and guidance material — collected in one place for students and parents.",
-    "intro_full": "This page gathers the documents and links we use most in our career counselling work, so you do not have to hunt for them across the internet. Everything here points to an official or openly shared source, and we add to it over time. If you need something specific, message us on WhatsApp.",
+    "intro_short": "Official links, forms and documents for students and parents — kept in one place.",
+    "intro_full": "A single place for the official links, application forms and documents that students and parents ask for most often — scholarship and education-loan portals, exam bodies, admission and counselling links, career and skill resources, and downloadable checklists. Every link points to the official source. This page is maintained alongside our other career-counselling pages.",
     "sections": [
         {
-            "heading": "Documents",
-            "icon": "book-open",
-            "body": "Career guides and downloadable material will be added here. We are building this collection now — check back soon, or ask us on WhatsApp for a specific document and we will share it.",
+            "heading": "Scholarships & Finance",
+            "body": "The scholarship and education-loan portals students use most — always the government's own website.",
+            "icon": "award",
             "items": [
                 {
-                    "title": "What Next After 10th & 12th — Career Path Master Map",
-                    "body": "A single-page map of the routes open after Class 10 and Class 12 — streams, courses, entrance exams and career paths, all on one chart. Free to view or download.",
-                    "url": "https://drive.google.com/file/d/1nLUhIFFXuvQl9eYoG_c1MuSfy0VGewXP/view"
+                    "title": "National Scholarship Portal (NSP)",
+                    "body": "One portal for central and many state scholarships; OTR registration and application.",
+                    "meta": "",
+                    "url": "https://scholarships.gov.in/"
+                },
+                {
+                    "title": "PM-Vidyalaxmi (education loan)",
+                    "body": "Unified portal for collateral-free education loans and interest subvention.",
+                    "meta": "",
+                    "url": "https://pmvidyalaxmi.co.in/"
+                },
+                {
+                    "title": "UP Scholarship & Fee Reimbursement",
+                    "body": "Uttar Pradesh scholarship and fee-reimbursement portal for state students.",
+                    "meta": "",
+                    "url": "https://scholarships.up.gov.in/"
+                },
+                {
+                    "title": "AICTE",
+                    "body": "Technical education — Pragati and Saksham scholarships, approved institutions.",
+                    "meta": "",
+                    "url": "https://www.aicte-india.org/"
+                },
+                {
+                    "title": "UGC",
+                    "body": "University Grants Commission — fellowships, scholarships and higher-education notices.",
+                    "meta": "",
+                    "url": "https://www.ugc.gov.in/"
                 }
             ]
         },
         {
-            "heading": "Important Official Links",
-            "icon": "verified",
-            "body": "Official portals worth bookmarking — for entrance exams, scholarships and higher-education information. Always confirm dates, eligibility and fees on the official website before acting.",
+            "heading": "Exam Bodies",
+            "body": "The official bodies that conduct the major exams — for notifications and registration.",
+            "icon": "calendar",
             "items": [
                 {
-                    "title": "National Testing Agency (NTA)",
-                    "body": "Official portal for JEE Main, NEET, CUET and other national entrance exams — registration, admit cards, answer keys and results.",
-                    "url": "https://nta.ac.in"
+                    "title": "NTA (National Testing Agency)",
+                    "body": "JEE Main, NEET, CUET, UGC NET and other NTA exams — notifications and registration.",
+                    "meta": "",
+                    "url": "https://nta.ac.in/"
                 },
                 {
-                    "title": "National Scholarship Portal",
-                    "body": "One place for central and state government scholarships — search schemes by eligibility and apply online.",
+                    "title": "CBSE",
+                    "body": "Board notifications, results and circulars.",
+                    "meta": "",
+                    "url": "https://www.cbse.gov.in/"
+                },
+                {
+                    "title": "UPSC",
+                    "body": "Civil services and other central government recruitment notifications.",
+                    "meta": "",
+                    "url": "https://upsc.gov.in/"
+                },
+                {
+                    "title": "SSC",
+                    "body": "Staff Selection Commission — CGL, CHSL, GD and other central government posts.",
+                    "meta": "",
+                    "url": "https://ssc.gov.in/"
+                },
+                {
+                    "title": "IBPS",
+                    "body": "Bank recruitment — PO, Clerk and Specialist Officer exams.",
+                    "meta": "",
+                    "url": "https://www.ibps.in/"
+                },
+                {
+                    "title": "RRB (Railways)",
+                    "body": "Railway Recruitment Boards — NTPC, Group D, ALP and others.",
+                    "meta": "",
+                    "url": "https://indianrailways.gov.in/"
+                },
+                {
+                    "title": "ICAI (CA)",
+                    "body": "Institute of Chartered Accountants of India — CA Foundation, Intermediate and Final.",
+                    "meta": "",
+                    "url": "https://www.icai.org/"
+                },
+                {
+                    "title": "Consortium of NLUs (CLAT)",
+                    "body": "Common Law Admission Test for the National Law Universities.",
+                    "meta": "",
+                    "url": "https://consortiumofnlus.ac.in/"
+                },
+                {
+                    "title": "NBE",
+                    "body": "National Board of Examinations in Medical Sciences — NEET PG, INI-CET.",
+                    "meta": "",
+                    "url": "https://natboard.edu.in/"
+                },
+                {
+                    "title": "ICAR",
+                    "body": "Indian Council of Agricultural Research — agriculture admissions and fellowships.",
+                    "meta": "",
+                    "url": "https://icar.org.in/"
+                },
+                {
+                    "title": "NCERT",
+                    "body": "National Council of Educational Research and Training — textbooks and resources.",
+                    "meta": "",
+                    "url": "https://ncert.nic.in/"
+                },
+                {
+                    "title": "KVS",
+                    "body": "Kendriya Vidyalaya Sangathan — school notices and admissions.",
+                    "meta": "",
+                    "url": "https://kvsangathan.nic.in/"
+                }
+            ]
+        },
+        {
+            "heading": "Admission & Counselling",
+            "body": "The main admission and counselling portals — for seat allotment and counselling.",
+            "icon": "compass",
+            "items": [
+                {
+                    "title": "MCC (Medical Counselling)",
+                    "body": "Medical Counselling Committee — NEET UG/PG All-India counselling.",
+                    "meta": "",
+                    "url": "https://mcc.nic.in/"
+                },
+                {
+                    "title": "JoSAA",
+                    "body": "Joint Seat Allocation Authority — IITs, NITs, IIITs and GFTIs.",
+                    "meta": "",
+                    "url": "https://josaa.nic.in/"
+                },
+                {
+                    "title": "UPTAC / UP counselling",
+                    "body": "Uttar Pradesh technical and other admission counselling.",
+                    "meta": "",
+                    "url": "https://uptac.admissions.nic.in/"
+                },
+                {
+                    "title": "NIRF",
+                    "body": "National Institutional Ranking Framework — official rankings.",
+                    "meta": "",
+                    "url": "https://www.nirfindia.org/"
+                }
+            ]
+        },
+        {
+            "heading": "Career & Skills",
+            "body": "Official resources for jobs, skills and vocational training.",
+            "icon": "map",
+            "items": [
+                {
+                    "title": "NCS (National Career Service)",
+                    "body": "National portal for job and career services.",
+                    "meta": "",
+                    "url": "https://www.ncs.gov.in/"
+                },
+                {
+                    "title": "Skill India / NSDC",
+                    "body": "Skill-development courses and certifications.",
+                    "meta": "",
+                    "url": "https://www.skillindia.gov.in/"
+                },
+                {
+                    "title": "DGT (ITI admissions)",
+                    "body": "Directorate General of Training — ITI and apprenticeship.",
+                    "meta": "",
+                    "url": "https://dgt.gov.in/"
+                }
+            ]
+        },
+        {
+            "heading": "Documents & Downloads",
+            "body": "Useful documents and checklists to download.",
+            "icon": "download",
+            "items": [
+                {
+                    "title": "What Next After 10th & 12th - Career Path Master Map",
+                    "body": "A 6-page map of career paths after Class 10 and 12 - from streams to courses and jobs.",
+                    "meta": "PDF",
+                    "url": "https://drive.google.com/file/d/1nLUhIFFXuvQl9eYoG_c1MuSfy0VGewXP/view"
+                },
+                {
+                    "title": "Scholarship Document Checklist",
+                    "body": "The documents usually needed for a scholarship application - marksheets, income certificate, bank and Aadhaar details.",
+                    "meta": "PDF",
+                    "url": "https://drive.google.com/file/d/1iv5F6bPcm-Zr-GolKF3PBSH9xr_vlkxS/view"
+                },
+                {
+                    "title": "Class 10 Stream-Selection Checklist",
+                    "body": "A one-page checklist to choose a stream with confidence.",
+                    "meta": "PDF",
+                    "url": "https://drive.google.com/file/d/1GnI4U2iJ6lWPVoUUIdmi7kGrN0EjdkqF/view"
+                },
+                {
+                    "title": "Entrance Exam Calendar 2026-27",
+                    "body": "20 major exams with dates and CONFIRMED / EXPECTED / NOT ANNOUNCED labels.",
+                    "meta": "PDF",
+                    "url": "https://drive.google.com/file/d/1ti35lN_WO8htQFtk-dP3RHrH4S4ES7X2/view"
+                },
+                {
+                    "title": "Career Ladders",
+                    "body": "Indirect routes to top posts - how government and private careers actually climb.",
+                    "meta": "PDF",
+                    "url": "https://drive.google.com/file/d/1a5EG2lFGberjr0G6ybUxEZ6efagDtJiE/view"
+                },
+                {
+                    "title": "Coaching Costs & Competition Reality",
+                    "body": "Honest coaching costs, and how many candidates compete for how many seats.",
+                    "meta": "PDF",
+                    "url": "https://drive.google.com/file/d/1h11_EmLxDOAlrLEW9Hj8FEZoy8s551zd/view"
+                },
+                {
+                    "title": "Scholarship Deadlines 2026",
+                    "body": "Key schemes and their last dates - 31 October is the most crowded.",
+                    "meta": "PDF",
+                    "url": "https://drive.google.com/file/d/1hAfZrVA8hsuTZn9v8nQ4s2FZMoneCI8e/view"
+                },
+                {
+                    "title": "ITI & Polytechnic Guide",
+                    "body": "Skill routes after Class 10 - trades, diplomas and lateral entry to B.Tech.",
+                    "meta": "PDF",
+                    "url": "https://drive.google.com/file/d/12QqVxbCyZrC6I3QyiDEhNNQS0ALA7d6t/view"
+                },
+                {
+                    "title": "A Parent's Guide to Career Decisions",
+                    "body": "How parents can help without pressure - the conversation, the money, the mistakes.",
+                    "meta": "PDF",
+                    "url": "https://drive.google.com/file/d/10XdxKbo2NcGYvvf5a9Kkh4Dyr38xtsP-/view"
+                },
+                {
+                    "title": "Entrance Exam Calendar (our page)",
+                    "body": "Our own web page: 20 major exams with dates and labels.",
+                    "meta": "Our page",
+                    "url": "https://www.sajhishiksha.in/career-counselling/entrance-exam-calendar-2026-27"
+                },
+                {
+                    "title": "Top Colleges & Institutes (NIRF 2025)",
+                    "body": "Our own web page: 179 top institutes with programmes and admission routes.",
+                    "meta": "Our page",
+                    "url": "https://www.sajhishiksha.in/career-counselling/top-colleges-and-institutes"
+                }
+            ]
+        },
+        {
+            "heading": "Common Questions",
+            "body": "The questions students and parents ask most — answered briefly.",
+            "icon": "help",
+            "items": [
+                {
+                    "title": "How do I apply for a scholarship?",
+                    "body": "Start at the National Scholarship Portal (NSP); keep marksheets, income and bank details ready.",
+                    "meta": "",
                     "url": "https://scholarships.gov.in"
                 },
                 {
-                    "title": "University Grants Commission (UGC)",
-                    "body": "Official information on universities, degree recognition and higher-education rules in India.",
-                    "url": "https://www.ugc.gov.in"
+                    "title": "How do I get an education loan?",
+                    "body": "Use PM-Vidyalaxmi for collateral-free loans and interest subvention.",
+                    "meta": "",
+                    "url": "https://pmvidyalaxmi.co.in"
                 },
                 {
-                    "title": "CBSE (Central Board of Secondary Education)",
-                    "body": "Curriculum, sample papers, marking schemes and board-exam updates for Classes 9 to 12.",
-                    "url": "https://www.cbse.gov.in"
+                    "title": "Which admission portal should I use?",
+                    "body": "Medical -> MCC; engineering (IIT/NIT) -> JoSAA; UP technical -> UPTAC.",
+                    "meta": ""
                 },
                 {
-                    "title": "Kendriya Vidyalaya Sangathan (KVS)",
-                    "body": "Official KVS site — circulars, admissions and academic information for KVS students and teachers.",
-                    "url": "https://kvsangathan.nic.in"
+                    "title": "Is this the official link?",
+                    "body": "Every link here goes to the government's or the exam body's own website. Do not trust look-alike sites or agents who ask for money.",
+                    "meta": "Safety note"
                 }
             ]
         }
