@@ -1,0 +1,28 @@
+name: One-shot patch - Resources section order (Documents first)
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Apply patch
+        run: python3 frontend/scripts/patch-resources-order-20261017.py
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "sajhishikshasupport-del"
+          git config user.email "sajhishiksha@gmail.com"
+          git add frontend/src/data/career-pages/resources.json frontend/src/data/career-pages/resources.hi.json
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "fix(career): Resources page - Documents & Downloads section first (REQ-1017-04)"
+            git push
+          fi
