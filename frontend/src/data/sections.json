@@ -53,10 +53,10 @@
         "olympiadSection": {
             "id": "ml-olympiad",
             "title": "Mathematical Olympiad",
-            "description": "Comprehensive resources for the Mathematical Olympiad journey — from official contest papers to practice material and contest links.",
+            "description": "Comprehensive resources for the Mathematical Olympiad journey — from preparation books to official contest links.",
             "links": [
                 {
-                    "title": "Olympiad Papers & Practice Material",
+                    "title": "Olympiad Books",
                     "url": "https://drive.google.com/embeddedfolderview"
                 },
                 {
