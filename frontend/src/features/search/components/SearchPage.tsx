@@ -20,6 +20,74 @@ interface SearchPageProps {
 
 const MAX_RECENT = 5;
 
+// Synonym groups: terms treated as equivalent during search (helps Hinglish words + abbreviations).
+const SYNONYM_GROUPS: string[][] = [
+    ['maths', 'mathematics', 'math', 'ganit'],
+    ['science', 'vigyan', 'evs', 'environmental studies'],
+    ['english', 'angrezi'],
+    ['hindi'],
+    ['question paper', 'question papers', 'qp', 'pyq', 'previous year', 'previous years', 'past year', 'past years', 'past paper', 'past papers', 'question bank'],
+    ['half yearly', 'half-yearly', 'mid term', 'midterm'],
+    ['session ending', 'annual', 'annual exam', 'final exam', 'year end'],
+    ['periodic test', 'unit test', 'monthly test'],
+    ['pre board', 'pre-board', 'preboard'],
+    ['sample paper', 'sample papers', 'sqp', 'sample question paper'],
+    ['worksheet', 'worksheets'],
+    ['lesson plan', 'lesson plans'],
+    ['circular', 'circulars', 'notification', 'notifications'],
+    ['admission', 'admissions'],
+    ['syllabus', 'curriculum'],
+    ['lab manual', 'lab activity', 'lab activities', 'maths lab'],
+    ['olympiad', 'ioqm', 'prmo', 'rmo', 'imo'],
+    ['answer key', 'marking scheme', 'solutions'],
+    ['holiday homework', 'homework'],
+    ['time table', 'timetable'],
+];
+
+const SYNONYMS: Map<string, string[]> = (() => {
+    const map = new Map<string, string[]>();
+    for (const group of SYNONYM_GROUPS) {
+        for (const term of group) {
+            const set = new Set([...(map.get(term) ?? []), ...group]);
+            map.set(term, Array.from(set));
+        }
+    }
+    return map;
+})();
+
+// A term plus its synonyms and a simple plural/singular variant.
+function expandTerm(term: string): string[] {
+    const t = term.toLowerCase().trim();
+    if (!t) return [];
+    const variants = new Set<string>([t]);
+    for (const s of SYNONYMS.get(t) ?? []) variants.add(s);
+    variants.add(t.endsWith('s') ? t.slice(0, -1) : t + 's');
+    return Array.from(variants).filter(Boolean);
+}
+
+function termMatches(haystack: string, term: string): boolean {
+    return expandTerm(term).some((v) => haystack.includes(v));
+}
+
+// Suggest likely-intended queries when a search returns nothing.
+function getSuggestions(query: string): string[] {
+    const base = ['Mathematics', 'Question Papers', 'Class 6', 'Circulars'];
+    const q = (query || '').toLowerCase().trim();
+    const out: string[] = [];
+    if (q) {
+        for (const [term, syns] of SYNONYMS.entries()) {
+            if (q.includes(term) || term.includes(q)) {
+                for (const s of syns) {
+                    const pretty = s.replace(/\b\w/g, (c) => c.toUpperCase());
+                    if (!out.includes(pretty)) out.push(pretty);
+                }
+            }
+        }
+    }
+    for (const b of base) if (!out.includes(b)) out.push(b);
+    return out.slice(0, 5);
+}
+
 function getRecentSearches(): string[] {
     try {
         const stored = localStorage.getItem('recentSearches');
@@ -41,23 +109,18 @@ function saveRecentSearch(query: string): void {
 }
 
 function scoreResource(resource: Resource, query: string): number {
-    const q = query.toLowerCase();
-    const terms = q.split(/\s+/).filter(Boolean);
+    const terms = query.toLowerCase().split(/\s+/).filter(Boolean);
+    const title = resource.title.toLowerCase();
+    const description = resource.description.toLowerCase();
+    const category = resource.category.toLowerCase();
+    const subject = (resource.subject ?? '').toLowerCase();
     let score = 0;
 
     for (const term of terms) {
-        if (resource.title.toLowerCase().includes(term)) {
-            score += resource.title.toLowerCase() === term ? 10 : 5;
-        }
-        if (resource.description.toLowerCase().includes(term)) {
-            score += 3;
-        }
-        if (resource.category.toLowerCase().includes(term)) {
-            score += 1;
-        }
-        if (resource.subject?.toLowerCase().includes(term)) {
-            score += 1;
-        }
+        if (termMatches(title, term)) score += 5;
+        if (termMatches(description, term)) score += 3;
+        if (termMatches(category, term)) score += 1;
+        if (termMatches(subject, term)) score += 1;
     }
 
     return score;
@@ -80,17 +143,32 @@ export default function SearchPage({
     const allResources = useMemo(() => getAllResources(), []);
 
     const results = useMemo(() => {
-        if (!hasSearched) return [];
+        if (!hasSearched) return { items: [] as Resource[], relaxed: false };
 
         let filtered = allResources;
+        let relaxed = false;
 
         if (filters.search) {
             const terms = filters.search.toLowerCase().split(/\s+/).filter(Boolean);
+            const haystackOf = (r: Resource) =>
+                `${r.title} ${r.description} ${r.category} ${r.subject ?? ''}`.toLowerCase();
 
-            filtered = filtered.filter((r) => {
-                const haystack = `${r.title} ${r.description} ${r.category} ${r.subject ?? ''}`.toLowerCase();
-                return terms.every((term) => haystack.includes(term));
+            // First try a strict match (every term must match, synonyms included).
+            const strict = filtered.filter((r) => {
+                const haystack = haystackOf(r);
+                return terms.every((term) => termMatches(haystack, term));
             });
+
+            if (strict.length > 0) {
+                filtered = strict;
+            } else {
+                // Softer match (any term) so a typo or an extra word doesn't dead-end.
+                relaxed = true;
+                filtered = filtered.filter((r) => {
+                    const haystack = haystackOf(r);
+                    return terms.some((term) => termMatches(haystack, term));
+                });
+            }
 
             filtered = filtered
                 .map((r) => ({ resource: r, score: scoreResource(r, filters.search) }))
@@ -109,7 +187,7 @@ export default function SearchPage({
             filtered = filtered.filter((r) => r.type === filters.type);
         }
 
-        return filtered;
+        return { items: filtered, relaxed };
     }, [allResources, filters, hasSearched]);
 
     const syncFiltersToUrl = useCallback((newFilters: FilterState) => {
@@ -133,8 +211,8 @@ export default function SearchPage({
 
     useEffect(() => {
         if (!hasSearched || !filters.search) return;
-        trackEvent('search_results', { search_term: filters.search, result_count: results.length });
-    }, [hasSearched, filters.search, results.length]);
+        trackEvent('search_results', { search_term: filters.search, result_count: results.items.length });
+    }, [hasSearched, filters.search, results.items.length]);
 
     const handleFilterChange = useCallback((newFilters: FilterState | ((prev: FilterState) => FilterState)) => {
         const resolved = typeof newFilters === 'function' ? newFilters(filters) : newFilters;
@@ -230,7 +308,7 @@ export default function SearchPage({
                                     color: 'var(--color-text-secondary)',
                                 }}
                             >
-                                {results.length} result{results.length !== 1 ? 's' : ''} for "{filters.search}"
+                                {results.items.length} result{results.items.length !== 1 ? 's' : ''} for "{filters.search}"
                             </Typography>
                         ) : (
                             <Typography
@@ -240,10 +318,23 @@ export default function SearchPage({
                                     color: 'var(--color-text-secondary)',
                                 }}
                             >
-                                {results.length} resource{results.length !== 1 ? 's' : ''}
+                                {results.items.length} resource{results.items.length !== 1 ? 's' : ''}
                             </Typography>
                         )}
                     </Box>
+
+                    {results.relaxed && results.items.length > 0 && (
+                        <Typography
+                            sx={{
+                                fontFamily: FONT_MONO,
+                                fontSize: '0.8rem',
+                                color: 'var(--color-text-secondary)',
+                                mb: 2,
+                            }}
+                        >
+                            Exact match nahi mila — nazdeeki results dikha rahe hain. Spelling ya kam shabd try karein.
+                        </Typography>
+                    )}
                 </>
             )}
 
@@ -272,7 +363,7 @@ export default function SearchPage({
                         Type keywords like "mathematics", "class 3", or "question papers"
                     </Typography>
                 </Box>
-            ) : results.length === 0 ? (
+            ) : results.items.length === 0 ? (
                 <Box
                     sx={{
                         p: { xs: 4, md: 6 },
@@ -298,8 +389,11 @@ export default function SearchPage({
                     <Typography sx={{ color: 'var(--color-text-secondary)', fontSize: '0.95rem', mb: 3 }}>
                         Try different keywords or remove some filters
                     </Typography>
-                    <Box sx={{ display: 'flex', gap: 1, justifyContent: 'center', flexWrap: 'wrap' }}>
-                        {['Mathematics', 'Class 3', 'Question Papers'].map((term) => (
+                    <Typography sx={{ color: 'var(--color-text-secondary)', fontSize: '0.9rem', mb: 1 }}>
+                        Try one of these:
+                    </Typography>
+                    <Box sx={{ display: 'flex', gap: 1, justifyContent: 'center', flexWrap: 'wrap', mb: 3 }}>
+                        {getSuggestions(filters.search).map((term) => (
                             <Chip
                                 key={term}
                                 label={term}
@@ -316,6 +410,31 @@ export default function SearchPage({
                             />
                         ))}
                     </Box>
+                    <Typography sx={{ color: 'var(--color-text-secondary)', fontSize: '0.9rem', mb: 1 }}>
+                        Ya browse karein:
+                    </Typography>
+                    <Box sx={{ display: 'flex', gap: 1, justifyContent: 'center', flexWrap: 'wrap' }}>
+                        {[
+                            { label: 'Class 6-12 Maths', q: 'mathematics' },
+                            { label: 'Question Papers', q: 'question paper' },
+                            { label: 'Circulars / Formats', q: 'circular' },
+                        ].map((item) => (
+                            <Chip
+                                key={item.label}
+                                label={item.label}
+                                onClick={() => handleSearch(item.q)}
+                                clickable
+                                sx={{
+                                    border: `2px solid var(--color-border)`,
+                                    boxShadow: `2px 2px 0px var(--color-shadow)`,
+                                    fontFamily: FONT_MONO,
+                                    fontWeight: 600,
+                                    bgcolor: 'var(--color-yellow)',
+                                    color: '#1A1A1A',
+                                }}
+                            />
+                        ))}
+                    </Box>
                 </Box>
             ) : (
                 <Box
@@ -325,7 +444,7 @@ export default function SearchPage({
                         gap: 3,
                     }}
                 >
-                    {results.map((resource) => (
+                    {results.items.map((resource) => (
                         <ResourceCard
                             key={resource.id}
                             resource={resource}
