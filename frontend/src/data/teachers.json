@@ -1,440 +1,440 @@
 {
-    "_comment": "Teacher resources data. This drives the 'For Teachers' section. Two main cards: TGT/PGT Maths and Circulars/Formats. Changes here will reflect on /for-teachers, /for-teachers/tgt-pgt, and /for-teachers/circular-formats. Each mainCard.subCards item can be a folder (hasSubCards:true with nested subCards) or a leaf resource (with driveUrl).",
-    "mainCards": [
+  "_comment": "Teacher resources data. This drives the 'For Teachers' section. Two main cards: TGT/PGT Maths and Circulars/Formats. Changes here will reflect on /for-teachers, /for-teachers/tgt-pgt, and /for-teachers/circular-formats. Each mainCard.subCards item can be a folder (hasSubCards:true with nested subCards) or a leaf resource (with driveUrl).",
+  "mainCards": [
+    {
+      "id": "tgt-pgt",
+      "title": "TGT/PGT Maths",
+      "description": "Teaching resources for TGT and PGT Mathematics teachers",
+      "icon": "School",
+      "buttonColor": "var(--color-blue)",
+      "subCards": [
         {
-            "id": "tgt-pgt",
-            "title": "TGT/PGT Maths",
-            "description": "Teaching resources for TGT and PGT Mathematics teachers",
-            "icon": "School",
-            "buttonColor": "var(--color-blue)",
-            "subCards": [
-                {
-                    "id": "question-papers",
-                    "title": "Question Paper",
-                    "description": "Exam question papers for all terms",
-                    "icon": "Assignment",
-                    "hasSubCards": true,
-                    "subCards": [
-                        {
-                            "id": "periodic-test",
-                            "title": "Periodic Test",
-                            "description": "Periodic Test question papers",
-                            "driveUrl": "https://drive.google.com/embeddedfolderview?id=1x50PirEuuh78CkWFfJrDschSsnHenb1V#list"
-                        },
-                        {
-                            "id": "half-yearly",
-                            "title": "Half Yearly Exam",
-                            "description": "Half Yearly exam question papers",
-                            "driveUrl": "https://drive.google.com/embeddedfolderview?id=1Uw2Nac2rF29H7Xklh10mhEPllYjPXJ1D#list"
-                        },
-                        {
-                            "id": "session-ending",
-                            "title": "Session Ending Exam",
-                            "description": "Session Ending exam question papers",
-                            "driveUrl": "https://drive.google.com/embeddedfolderview?id=1v_DMFtOAPXaqgAF6OM3tMjOdTUnyswk7#list"
-                        },
-                        {
-                            "id": "pre-board",
-                            "title": "Pre Board",
-                            "description": "Pre Board exam question papers",
-                            "driveUrl": "https://drive.google.com/embeddedfolderview?id=1bPB5hS7fvYbDhmKm9ywb_3RgWYgIe6jN#list"
-                        }
-                    ]
-                },
-                {
-                    "id": "question-bank",
-                    "title": "Question Bank / Study Material",
-                    "description": "Comprehensive question banks and study material for practice",
-                    "icon": "MenuBook",
-                    "driveUrl": "https://drive.google.com/embeddedfolderview?id=1iSW7Vxx0sWfmGiawWvulxIcyqqR9UTvU#list"
-                },
-                {
-                    "id": "maths-lab",
-                    "title": "Maths Lab",
-                    "description": "Mathematics lab activities, manuals, and project ideas",
-                    "icon": "Science",
-                    "hasSubCards": true,
-                    "subCards": [
-                        {
-                            "id": "ncert-lab-manual",
-                            "title": "NCERT Lab Manual",
-                            "description": "NCERT Science Laboratory Manual for Maths lab",
-                            "driveUrl": "https://ncert.nic.in/science-laboratory-manual.php?ln=en"
-                        },
-                        {
-                            "id": "lab-activities",
-                            "title": "Maths Lab Activities",
-                            "description": "Maths Lab activities with solutions",
-                            "driveUrl": "https://drive.google.com/embeddedfolderview?id=19W-ouw4vbXPduBMJsXUxUaWJZuzSewnW#list"
-                        },
-                        {
-                            "id": "lab-ideas",
-                            "title": "Maths Lab Ideas",
-                            "description": "Ideas for Maths Lab activities",
-                            "driveUrl": "https://drive.google.com/embeddedfolderview?id=138lT9PwhYpj6AWtC6WR1hNI7atrjwg4E#list"
-                        },
-                        {
-                            "id": "project-ideas",
-                            "title": "Maths Project Ideas",
-                            "description": "Mathematics project ideas for exhibitions and lab activities",
-                            "driveUrl": "https://drive.google.com/embeddedfolderview?id=1hB7zZC-lkU6WhOHGEo8JjnE-kg6urg4y#list"
-                        }
-                    ]
-                },
-                {
-                    "id": "holiday-homework",
-                    "title": "Holiday Homework",
-                    "description": "Holiday homework assignments for students",
-                    "icon": "Description",
-                    "driveUrl": "https://drive.google.com/embeddedfolderview?id=1l5SlBSUsExqQd19IpOd9JHy1vekytMq3#list"
-                },
-                {
-                    "id": "lesson-plan",
-                    "title": "Lesson Plan / Subject Committee",
-                    "description": "Lesson plans and subject committee meeting records",
-                    "icon": "Article",
-                    "driveUrl": "https://drive.google.com/embeddedfolderview?id=1QxqTrq5NmCZuEGNrms-q-o-qdfW__zB8#list"
-                },
-                {
-                    "id": "ppts-worksheets",
-                    "title": "PPTs / Worksheets",
-                    "description": "PowerPoint presentations and worksheets for Mathematics",
-                    "icon": "Description",
-                    "driveUrl": "https://drive.google.com/embeddedfolderview?id=1HxDsBB-4KxValby-I6hCMZImB5dTIArr#list"
-                }
-            ]
+          "id": "question-papers",
+          "title": "Question Paper",
+          "description": "Exam question papers for all terms",
+          "icon": "Assignment",
+          "hasSubCards": true,
+          "subCards": [
+            {
+              "id": "periodic-test",
+              "title": "Periodic Test",
+              "description": "Periodic Test question papers",
+              "driveUrl": "https://drive.google.com/embeddedfolderview?id=1x50PirEuuh78CkWFfJrDschSsnHenb1V#list"
+            },
+            {
+              "id": "half-yearly",
+              "title": "Half Yearly Exam",
+              "description": "Half Yearly exam question papers",
+              "driveUrl": "https://drive.google.com/embeddedfolderview?id=1Uw2Nac2rF29H7Xklh10mhEPllYjPXJ1D#list"
+            },
+            {
+              "id": "session-ending",
+              "title": "Session Ending Exam",
+              "description": "Session Ending exam question papers",
+              "driveUrl": "https://drive.google.com/embeddedfolderview?id=1v_DMFtOAPXaqgAF6OM3tMjOdTUnyswk7#list"
+            },
+            {
+              "id": "pre-board",
+              "title": "Pre Board",
+              "description": "Pre Board exam question papers",
+              "driveUrl": "https://drive.google.com/embeddedfolderview?id=1bPB5hS7fvYbDhmKm9ywb_3RgWYgIe6jN#list"
+            }
+          ]
         },
         {
-            "id": "circular-formats",
-            "title": "Circulars / Formats",
-            "description": "GOI/KVS circulars, admission formats, timetables, and more",
-            "icon": "FolderOpen",
-            "buttonColor": "var(--color-green)",
-            "subCards": [
-                {
-                    "id": "goi-kvs-circulars",
-                    "title": "GOI / KVS Circulars",
-                    "description": "Government of India and KVS rules and circulars",
-                    "icon": "Gavel",
-                    "hasSubCards": true,
-                    "subCards": [
-                        {
-                            "id": "goi-rules",
-                            "title": "GOI Rules",
-                            "description": "Government of India rules and circulars",
-                            "driveUrl": "https://drive.google.com/embeddedfolderview?id=1FCEHcCUAoVJwG7dd0UCJBjaXxhIIWOja#list"
-                        },
-                        {
-                            "id": "kvs-rules",
-                            "title": "KVS Rules",
-                            "description": "Kendriya Vidyalaya Sangathan rules and circulars",
-                            "driveUrl": "https://drive.google.com/embeddedfolderview?id=1U4SAP3WxZxkAakwM-etnWbcL_7GcU6Xm#list"
-                        }
-                    ]
-                },
-                {
-                    "id": "admission",
-                    "title": "KVS Admission Guidelines / Formats",
-                    "description": "KVS admission guidelines and application formats",
-                    "icon": "Description",
-                    "driveUrl": "https://drive.google.com/embeddedfolderview?id=17JXk96lfAjLdva8_aW5KMesfKkEwVX_S#list"
-                },
-                {
-                    "id": "time-table",
-                    "title": "Time Table Circulars and Software",
-                    "description": "Timetable circulars, scheduling software, and tutorials",
-                    "icon": "CalendarMonth",
-                    "hasSubCards": true,
-                    "subCards": [
-                        {
-                            "id": "kvs-tt-circulars",
-                            "title": "KVS Time Table Circulars",
-                            "description": "KVS timetable circulars and guidelines",
-                            "driveUrl": "https://drive.google.com/embeddedfolderview?id=17hbgX1IxjOVLaf0Ba1FD7yoDQeov3fzn#list"
-                        },
-                        {
-                            "id": "tt-softwares",
-                            "title": "Softwares and Formats",
-                            "description": "Timetable software and format files",
-                            "driveUrl": "https://drive.google.com/embeddedfolderview?id=1i_GtbaA7a2800HkotbAyO0PLwcCaq5Dj#list"
-                        },
-                        {
-                            "id": "fet-software",
-                            "title": "FET Time Table Software",
-                            "description": "Free open-source timetable scheduling software",
-                            "driveUrl": "https://lalescu.ro/liveu/fet/"
-                        },
-                        {
-                            "id": "fet-tutorial",
-                            "title": "FET Software Tutorial",
-                            "description": "Video tutorials for FET timetable software",
-                            "hasSubCards": true,
-                            "subCards": [
-                                {
-                                    "id": "fet-tutorial-hindi",
-                                    "title": "Hindi",
-                                    "description": "FET software tutorial in Hindi",
-                                    "driveUrl": "https://youtube.com/playlist?list=PLC92an0f-oqDbFgpj-4fz-7amv7U6RGrb&si=k8LfbSJfau98cfDJ"
-                                },
-                                {
-                                    "id": "fet-tutorial-english",
-                                    "title": "English",
-                                    "description": "FET software tutorial in English",
-                                    "driveUrl": "https://youtube.com/playlist?list=PLxSRqFIznAtWXJP5o941CwBuXrOq8Q9gY&si=ws5n6zT-csiSlmxf"
-                                }
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "id": "cbsenios",
-                    "title": "CBSE / NIOS Formats / Circulars",
-                    "description": "CBSE and NIOS format and circular documents",
-                    "icon": "School",
-                    "hasSubCards": true,
-                    "subCards": [
-                        {
-                            "id": "cbse",
-                            "title": "CBSE",
-                            "description": "CBSE formats and circulars",
-                            "driveUrl": "https://drive.google.com/embeddedfolderview?id=1d8AzeAo0KPaSL58kREiRwXHDZJ0-SzzB#list"
-                        },
-                        {
-                            "id": "cbse-curriculum-2026-27",
-                            "title": "CBSE Curriculum 2026-27 (All Subjects)",
-                            "description": "Official CBSE curriculum for Classes 9-12, session 2026-27 - all subjects, from CBSE Academic",
-                            "driveUrl": "https://cbseacademic.nic.in/curriculum_2027.html"
-                        },
-                        {
-                            "id": "cbse-sqp-2026-27-class-10",
-                            "title": "CBSE Sample Papers 2026-27 - Class 10",
-                            "description": "Sample question papers & marking schemes for Class 10 board exam 2026-27, from CBSE Academic",
-                            "driveUrl": "https://cbseacademic.nic.in/SQP_CLASSX_2026-27.html"
-                        },
-                        {
-                            "id": "cbse-sqp-2026-27-class-12",
-                            "title": "CBSE Sample Papers 2026-27 - Class 12",
-                            "description": "Sample question papers & marking schemes for Class 12 board exam 2026-27, from CBSE Academic",
-                            "driveUrl": "https://cbseacademic.nic.in/SQP_CLASSXII_2026-27.html"
-                        },
-                        {
-                            "id": "nios",
-                            "title": "NIOS",
-                            "description": "NIOS formats and circulars",
-                            "driveUrl": "https://drive.google.com/embeddedfolderview?id=1qsSR8AXO7RXRubGp_mW-l6wl3E9t_RVN#list"
-                        }
-                    ]
-                },
-                {
-                    "id": "morning-assembly",
-                    "title": "Morning Assembly",
-                    "description": "Morning assembly formats and content",
-                    "icon": "AutoStories",
-                    "driveUrl": "https://drive.google.com/embeddedfolderview?id=12JVlUWW6QyDOlDMUWm8ipxm6dR1pwRKx#list"
-                },
-                {
-                    "id": "office-formats",
-                    "title": "Office Related Formats",
-                    "description": "Office-related document formats and templates",
-                    "icon": "FolderOpen",
-                    "driveUrl": "https://drive.google.com/embeddedfolderview?id=1lYWwDwvtw0tORS0Tgbc1PuzQHoyaqqkA#list"
-                },
-                {
-                    "id": "miscellaneous",
-                    "title": "Miscellaneous",
-                    "description": "Other miscellaneous formats and documents",
-                    "icon": "Description",
-                    "hasSubCards": true,
-                    "subCards": [
-                        {
-                            "id": "apar",
-                            "title": "APAR",
-                            "description": "Annual Performance Appraisal Report formats",
-                            "driveUrl": "https://drive.google.com/embeddedfolderview?id=1mz24NF6JTS8MMMSF2LGoGaZ_Eic3nDum#list"
-                        },
-                        {
-                            "id": "others",
-                            "title": "Others",
-                            "description": "Other miscellaneous documents",
-                            "driveUrl": "https://drive.google.com/embeddedfolderview?id=1NFdXj6ijN_NspZCQL-OQEHjRbg70qd3o#list"
-                        },
-                        {
-                            "id": "diksha-portal",
-                            "title": "DIKSHA - National Digital Platform (NCERT/MoE)",
-                            "description": "Sarkari (NCERT/Ministry of Education) digital platform - NCERT-aligned maths videos, practice exercises, question banks and textbook QR-code content, Class 1-12, 36 Indian languages. Free and official.",
-                            "driveUrl": "https://diksha.gov.in/"
-                        }
-                    ]
-                }
-            ]
+          "id": "question-bank",
+          "title": "Question Bank / Study Material",
+          "description": "Comprehensive question banks and study material for practice",
+          "icon": "MenuBook",
+          "driveUrl": "https://drive.google.com/embeddedfolderview?id=1iSW7Vxx0sWfmGiawWvulxIcyqqR9UTvU#list"
         },
         {
-            "id": "primary-hm",
-            "title": "Primary Teachers & HM",
-            "description": "Primary classes (1-5) resources, programmes, and Head Master materials",
-            "icon": "MenuBook",
-            "buttonColor": "var(--color-purple)",
-            "subCards": [
-                {
-                    "id": "primary-class-1",
-                    "title": "Class 1",
-                    "description": "Class 1 lesson plans, worksheets, question papers, SRP and textbooks",
-                    "icon": "School",
-                    "hasSubCards": true,
-                    "subCards": [
-                        {
-                            "id": "class-1-srp",
-                            "title": "SRP / Vidya Pravesh",
-                            "description": "School Readiness Programme and Vidya Pravesh materials",
-                            "driveUrl": "https://drive.google.com/embeddedfolderview?id=12v7jpf-7JRa6SE9P-JhX5dez9HTZ6zbH#list"
-                        },
-                        {
-                            "id": "class-1-lesson-plans",
-                            "title": "Lesson Plans",
-                            "description": "Class 1 lesson plans (English, EVS)",
-                            "driveUrl": "https://drive.google.com/embeddedfolderview?id=1HfdIi7hLZjSMr5aLNlLEp8EkktD-gb72#list"
-                        },
-                        {
-                            "id": "class-1-worksheets",
-                            "title": "Worksheets",
-                            "description": "Class 1 worksheets (English, EVS, Hindi, Maths)",
-                            "driveUrl": "https://drive.google.com/embeddedfolderview?id=1GBdocJ_bx06rwCV99pFNDt3EVJBF9EoE#list"
-                        },
-                        {
-                            "id": "class-1-question-papers",
-                            "title": "Question Papers",
-                            "description": "Class 1 cycle tests and question papers",
-                            "driveUrl": "https://drive.google.com/embeddedfolderview?id=1o4X5hla0be6_YxU7vxkKehqnHSXaEzFP#list"
-                        },
-                        {
-                            "id": "class-1-textbook",
-                            "title": "Textbook, Split-up & TLO",
-                            "description": "Class 1 textbook, split-ups and learning outcomes",
-                            "driveUrl": "https://drive.google.com/embeddedfolderview?id=1HD2WW7xnh4yfc2kup3MTOFwiqKoT3_4G#list"
-                        },
-                        {
-                            "id": "class-1-av",
-                            "title": "Audio-Video Resources",
-                            "description": "Class 1 audio-video teaching resources (PPTs)",
-                            "driveUrl": "https://drive.google.com/embeddedfolderview?id=1UKwW4tlrRRPjszpCx3-pVkB52rnkBROd#list"
-                        }
-                    ]
-                },
-                {
-                    "id": "primary-class-2",
-                    "title": "Class 2",
-                    "description": "Class 2 lesson plans, worksheets, question papers, textbooks and split-ups",
-                    "icon": "School",
-                    "hasSubCards": true,
-                    "subCards": [
-                        {
-                            "id": "class-2-lesson-plans",
-                            "title": "Lesson Plans",
-                            "description": "Class 2 lesson plans (EVS, English, Maths)",
-                            "driveUrl": "https://drive.google.com/embeddedfolderview?id=1CDV00lkdtQBW8_U0Xj5JIrZ-rew1cvJJ#list"
-                        },
-                        {
-                            "id": "class-2-worksheets",
-                            "title": "Worksheets",
-                            "description": "Class 2 worksheets (English, EVS, Hindi, Maths)",
-                            "driveUrl": "https://drive.google.com/embeddedfolderview?id=1BYLnzjEo9Az9GtmXBP4v8sz40I6PuCG0#list"
-                        },
-                        {
-                            "id": "class-2-question-papers",
-                            "title": "Question Papers",
-                            "description": "Class 2 cycle tests and question papers",
-                            "driveUrl": "https://drive.google.com/embeddedfolderview?id=1sVTbXNeFWNrj2-D3W5KdhJkx829l_zDs#list"
-                        },
-                        {
-                            "id": "class-2-textbook",
-                            "title": "Textbook, Split-up & TLO",
-                            "description": "Class 2 textbooks, split-ups and learning outcomes",
-                            "driveUrl": "https://drive.google.com/embeddedfolderview?id=1fnM1e5pBF5EPaHEe1AX6C8dwTWbCZfhI#list"
-                        }
-                    ]
-                },
-                {
-                    "id": "primary-class-3",
-                    "title": "Class 3",
-                    "description": "Class 3 textbooks (new NCERT 2024 series)",
-                    "icon": "School",
-                    "hasSubCards": true,
-                    "subCards": [
-                        {
-                            "id": "class-3-textbook",
-                            "title": "Textbook",
-                            "description": "Class 3 textbooks: Santoor (English), Veena (Hindi), Maths Mela",
-                            "driveUrl": "https://drive.google.com/embeddedfolderview?id=1P9r30_bU-bjGPwzuJvJ_KZCyr7gAN1wo#list"
-                        }
-                    ]
-                },
-                {
-                    "id": "programmes-common",
-                    "title": "Programmes & Common",
-                    "description": "Common primary programmes and teacher resources",
-                    "icon": "Campaign",
-                    "hasSubCards": true,
-                    "subCards": [
-                        {
-                            "id": "programmes-misc",
-                            "title": "Miscellaneous",
-                            "description": "Teacher training and resource materials",
-                            "driveUrl": "https://drive.google.com/embeddedfolderview?id=19pbEhZbnm0b04kdsuUQHlh_r8MCo8kpG#list"
-                        },
-                        {
-                            "id": "programmes-mdp",
-                            "title": "Multidisciplinary Project (MDP)",
-                            "description": "MDP guidelines, rubrics, templates and project examples",
-                            "driveUrl": "https://drive.google.com/embeddedfolderview?id=1YYh-NpCKLHtNturPUKgwTTl3ZDaSPNzm#list"
-                        },
-                        {
-                            "id": "programmes-cmp",
-                            "title": "Common Minimum Programme (CMP)",
-                            "description": "CMP guidelines, training material and newsletter examples",
-                            "driveUrl": "https://drive.google.com/embeddedfolderview?id=1YV_qLv0CZrcnEJTocqSP0ZZ5GxueJrwx#list"
-                        },
-                        {
-                            "id": "programmes-fln",
-                            "title": "FLN / NIPUN Bharat",
-                            "description": "NIPUN Bharat mission resources, targets, rubrics and assessments",
-                            "driveUrl": "https://drive.google.com/embeddedfolderview?id=1FeULgFG8Rw4mJQ2_CIdS4OTxzsgy6kvT#list"
-                        },
-                        {
-                            "id": "programmes-cub",
-                            "title": "Cub Bulbul (Scouts & Guides)",
-                            "description": "APRO book, logbook examples and Utsav resources for Cub Bulbul section",
-                            "driveUrl": "https://drive.google.com/embeddedfolderview?id=1VYD_eb_h2QaNcf62e1rvsi3634690l5F#list"
-                        },
-                        {
-                            "id": "programmes-toy",
-                            "title": "Toy Based Pedagogy",
-                            "description": "Toy Based Pedagogy training presentations (NEP 2020)",
-                            "driveUrl": "https://drive.google.com/embeddedfolderview?id=15MnfWOvrGSlBcVYB0D55VWtsWwuqSOEH#list"
-                        }
-                    ]
-                },
-                {
-                    "id": "hm-corner",
-                    "title": "HM Corner",
-                    "description": "Resources for Head Masters and primary section administration",
-                    "icon": "School",
-                    "hasSubCards": true,
-                    "subCards": [
-                        {
-                            "id": "hm-materials",
-                            "title": "HM Materials",
-                            "description": "APAR, supervision, inspection and administration resources for Head Masters",
-                            "driveUrl": "https://drive.google.com/embeddedfolderview?id=1NlSxEdmT0nr7xeP-GDKGUzEDtcLCR7N9#list"
-                        },
-                        {
-                            "id": "hm-records",
-                            "title": "Records & Registers",
-                            "description": "Records, registers and proformas to be maintained in the primary section",
-                            "driveUrl": "https://drive.google.com/embeddedfolderview?id=1XpgkM4M0JII04J5jEt4O3zRX1WtNUtRp#list"
-                        }
-                    ]
-                }
-            ]
+          "id": "maths-lab",
+          "title": "Maths Lab",
+          "description": "Mathematics lab activities, manuals, and project ideas",
+          "icon": "Science",
+          "hasSubCards": true,
+          "subCards": [
+            {
+              "id": "ncert-lab-manual",
+              "title": "NCERT Lab Manual",
+              "description": "NCERT Science Laboratory Manual for Maths lab",
+              "driveUrl": "https://ncert.nic.in/science-laboratory-manual.php?ln=en"
+            },
+            {
+              "id": "lab-activities",
+              "title": "Maths Lab Activities",
+              "description": "Maths Lab activities with solutions",
+              "driveUrl": "https://drive.google.com/embeddedfolderview?id=19W-ouw4vbXPduBMJsXUxUaWJZuzSewnW#list"
+            },
+            {
+              "id": "lab-ideas",
+              "title": "Maths Lab Ideas",
+              "description": "Ideas for Maths Lab activities",
+              "driveUrl": "https://drive.google.com/embeddedfolderview?id=138lT9PwhYpj6AWtC6WR1hNI7atrjwg4E#list"
+            },
+            {
+              "id": "project-ideas",
+              "title": "Maths Project Ideas",
+              "description": "Mathematics project ideas for exhibitions and lab activities",
+              "driveUrl": "https://drive.google.com/drive/folders/1GFcIZIZ-aH8hT3SUBe8yb81v2kNmEsaA"
+            }
+          ]
+        },
+        {
+          "id": "holiday-homework",
+          "title": "Holiday Homework",
+          "description": "Holiday homework assignments for students",
+          "icon": "Description",
+          "driveUrl": "https://drive.google.com/embeddedfolderview?id=1l5SlBSUsExqQd19IpOd9JHy1vekytMq3#list"
+        },
+        {
+          "id": "lesson-plan",
+          "title": "Lesson Plan / Subject Committee",
+          "description": "Lesson plans and subject committee meeting records",
+          "icon": "Article",
+          "driveUrl": "https://drive.google.com/embeddedfolderview?id=1QxqTrq5NmCZuEGNrms-q-o-qdfW__zB8#list"
+        },
+        {
+          "id": "ppts-worksheets",
+          "title": "PPTs / Worksheets",
+          "description": "PowerPoint presentations and worksheets for Mathematics",
+          "icon": "Description",
+          "driveUrl": "https://drive.google.com/embeddedfolderview?id=1HxDsBB-4KxValby-I6hCMZImB5dTIArr#list"
         }
-    ]
+      ]
+    },
+    {
+      "id": "circular-formats",
+      "title": "Circulars / Formats",
+      "description": "GOI/KVS circulars, admission formats, timetables, and more",
+      "icon": "FolderOpen",
+      "buttonColor": "var(--color-green)",
+      "subCards": [
+        {
+          "id": "goi-kvs-circulars",
+          "title": "GOI / KVS Circulars",
+          "description": "Government of India and KVS rules and circulars",
+          "icon": "Gavel",
+          "hasSubCards": true,
+          "subCards": [
+            {
+              "id": "goi-rules",
+              "title": "GOI Rules",
+              "description": "Government of India rules and circulars",
+              "driveUrl": "https://drive.google.com/embeddedfolderview?id=1FCEHcCUAoVJwG7dd0UCJBjaXxhIIWOja#list"
+            },
+            {
+              "id": "kvs-rules",
+              "title": "KVS Rules",
+              "description": "Kendriya Vidyalaya Sangathan rules and circulars",
+              "driveUrl": "https://drive.google.com/embeddedfolderview?id=1U4SAP3WxZxkAakwM-etnWbcL_7GcU6Xm#list"
+            }
+          ]
+        },
+        {
+          "id": "admission",
+          "title": "KVS Admission Guidelines / Formats",
+          "description": "KVS admission guidelines and application formats",
+          "icon": "Description",
+          "driveUrl": "https://drive.google.com/embeddedfolderview?id=17JXk96lfAjLdva8_aW5KMesfKkEwVX_S#list"
+        },
+        {
+          "id": "time-table",
+          "title": "Time Table Circulars and Software",
+          "description": "Timetable circulars, scheduling software, and tutorials",
+          "icon": "CalendarMonth",
+          "hasSubCards": true,
+          "subCards": [
+            {
+              "id": "kvs-tt-circulars",
+              "title": "KVS Time Table Circulars",
+              "description": "KVS timetable circulars and guidelines",
+              "driveUrl": "https://drive.google.com/embeddedfolderview?id=17hbgX1IxjOVLaf0Ba1FD7yoDQeov3fzn#list"
+            },
+            {
+              "id": "tt-softwares",
+              "title": "Softwares and Formats",
+              "description": "Timetable software and format files",
+              "driveUrl": "https://drive.google.com/embeddedfolderview?id=1i_GtbaA7a2800HkotbAyO0PLwcCaq5Dj#list"
+            },
+            {
+              "id": "fet-software",
+              "title": "FET Time Table Software",
+              "description": "Free open-source timetable scheduling software",
+              "driveUrl": "https://lalescu.ro/liveu/fet/"
+            },
+            {
+              "id": "fet-tutorial",
+              "title": "FET Software Tutorial",
+              "description": "Video tutorials for FET timetable software",
+              "hasSubCards": true,
+              "subCards": [
+                {
+                  "id": "fet-tutorial-hindi",
+                  "title": "Hindi",
+                  "description": "FET software tutorial in Hindi",
+                  "driveUrl": "https://youtube.com/playlist?list=PLC92an0f-oqDbFgpj-4fz-7amv7U6RGrb&si=k8LfbSJfau98cfDJ"
+                },
+                {
+                  "id": "fet-tutorial-english",
+                  "title": "English",
+                  "description": "FET software tutorial in English",
+                  "driveUrl": "https://youtube.com/playlist?list=PLxSRqFIznAtWXJP5o941CwBuXrOq8Q9gY&si=ws5n6zT-csiSlmxf"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "cbsenios",
+          "title": "CBSE / NIOS Formats / Circulars",
+          "description": "CBSE and NIOS format and circular documents",
+          "icon": "School",
+          "hasSubCards": true,
+          "subCards": [
+            {
+              "id": "cbse",
+              "title": "CBSE",
+              "description": "CBSE formats and circulars",
+              "driveUrl": "https://drive.google.com/embeddedfolderview?id=1d8AzeAo0KPaSL58kREiRwXHDZJ0-SzzB#list"
+            },
+            {
+              "id": "cbse-curriculum-2026-27",
+              "title": "CBSE Curriculum 2026-27 (All Subjects)",
+              "description": "Official CBSE curriculum for Classes 9-12, session 2026-27 - all subjects, from CBSE Academic",
+              "driveUrl": "https://cbseacademic.nic.in/curriculum_2027.html"
+            },
+            {
+              "id": "cbse-sqp-2026-27-class-10",
+              "title": "CBSE Sample Papers 2026-27 - Class 10",
+              "description": "Sample question papers & marking schemes for Class 10 board exam 2026-27, from CBSE Academic",
+              "driveUrl": "https://cbseacademic.nic.in/SQP_CLASSX_2026-27.html"
+            },
+            {
+              "id": "cbse-sqp-2026-27-class-12",
+              "title": "CBSE Sample Papers 2026-27 - Class 12",
+              "description": "Sample question papers & marking schemes for Class 12 board exam 2026-27, from CBSE Academic",
+              "driveUrl": "https://cbseacademic.nic.in/SQP_CLASSXII_2026-27.html"
+            },
+            {
+              "id": "nios",
+              "title": "NIOS",
+              "description": "NIOS formats and circulars",
+              "driveUrl": "https://drive.google.com/embeddedfolderview?id=1qsSR8AXO7RXRubGp_mW-l6wl3E9t_RVN#list"
+            }
+          ]
+        },
+        {
+          "id": "morning-assembly",
+          "title": "Morning Assembly",
+          "description": "Morning assembly formats and content",
+          "icon": "AutoStories",
+          "driveUrl": "https://drive.google.com/embeddedfolderview?id=12JVlUWW6QyDOlDMUWm8ipxm6dR1pwRKx#list"
+        },
+        {
+          "id": "office-formats",
+          "title": "Office Related Formats",
+          "description": "Office-related document formats and templates",
+          "icon": "FolderOpen",
+          "driveUrl": "https://drive.google.com/embeddedfolderview?id=1lYWwDwvtw0tORS0Tgbc1PuzQHoyaqqkA#list"
+        },
+        {
+          "id": "miscellaneous",
+          "title": "Miscellaneous",
+          "description": "Other miscellaneous formats and documents",
+          "icon": "Description",
+          "hasSubCards": true,
+          "subCards": [
+            {
+              "id": "apar",
+              "title": "APAR",
+              "description": "Annual Performance Appraisal Report formats",
+              "driveUrl": "https://drive.google.com/embeddedfolderview?id=1mz24NF6JTS8MMMSF2LGoGaZ_Eic3nDum#list"
+            },
+            {
+              "id": "others",
+              "title": "Others",
+              "description": "Other miscellaneous documents",
+              "driveUrl": "https://drive.google.com/embeddedfolderview?id=1NFdXj6ijN_NspZCQL-OQEHjRbg70qd3o#list"
+            },
+            {
+              "id": "diksha-portal",
+              "title": "DIKSHA - National Digital Platform (NCERT/MoE)",
+              "description": "Sarkari (NCERT/Ministry of Education) digital platform - NCERT-aligned maths videos, practice exercises, question banks and textbook QR-code content, Class 1-12, 36 Indian languages. Free and official.",
+              "driveUrl": "https://diksha.gov.in/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "primary-hm",
+      "title": "Primary Teachers & HM",
+      "description": "Primary classes (1-5) resources, programmes, and Head Master materials",
+      "icon": "MenuBook",
+      "buttonColor": "var(--color-purple)",
+      "subCards": [
+        {
+          "id": "primary-class-1",
+          "title": "Class 1",
+          "description": "Class 1 lesson plans, worksheets, question papers, SRP and textbooks",
+          "icon": "School",
+          "hasSubCards": true,
+          "subCards": [
+            {
+              "id": "class-1-srp",
+              "title": "SRP / Vidya Pravesh",
+              "description": "School Readiness Programme and Vidya Pravesh materials",
+              "driveUrl": "https://drive.google.com/embeddedfolderview?id=12v7jpf-7JRa6SE9P-JhX5dez9HTZ6zbH#list"
+            },
+            {
+              "id": "class-1-lesson-plans",
+              "title": "Lesson Plans",
+              "description": "Class 1 lesson plans (English, EVS)",
+              "driveUrl": "https://drive.google.com/embeddedfolderview?id=1HfdIi7hLZjSMr5aLNlLEp8EkktD-gb72#list"
+            },
+            {
+              "id": "class-1-worksheets",
+              "title": "Worksheets",
+              "description": "Class 1 worksheets (English, EVS, Hindi, Maths)",
+              "driveUrl": "https://drive.google.com/embeddedfolderview?id=1GBdocJ_bx06rwCV99pFNDt3EVJBF9EoE#list"
+            },
+            {
+              "id": "class-1-question-papers",
+              "title": "Question Papers",
+              "description": "Class 1 cycle tests and question papers",
+              "driveUrl": "https://drive.google.com/embeddedfolderview?id=1o4X5hla0be6_YxU7vxkKehqnHSXaEzFP#list"
+            },
+            {
+              "id": "class-1-textbook",
+              "title": "Textbook, Split-up & TLO",
+              "description": "Class 1 textbook, split-ups and learning outcomes",
+              "driveUrl": "https://drive.google.com/embeddedfolderview?id=1HD2WW7xnh4yfc2kup3MTOFwiqKoT3_4G#list"
+            },
+            {
+              "id": "class-1-av",
+              "title": "Audio-Video Resources",
+              "description": "Class 1 audio-video teaching resources (PPTs)",
+              "driveUrl": "https://drive.google.com/embeddedfolderview?id=1UKwW4tlrRRPjszpCx3-pVkB52rnkBROd#list"
+            }
+          ]
+        },
+        {
+          "id": "primary-class-2",
+          "title": "Class 2",
+          "description": "Class 2 lesson plans, worksheets, question papers, textbooks and split-ups",
+          "icon": "School",
+          "hasSubCards": true,
+          "subCards": [
+            {
+              "id": "class-2-lesson-plans",
+              "title": "Lesson Plans",
+              "description": "Class 2 lesson plans (EVS, English, Maths)",
+              "driveUrl": "https://drive.google.com/embeddedfolderview?id=1CDV00lkdtQBW8_U0Xj5JIrZ-rew1cvJJ#list"
+            },
+            {
+              "id": "class-2-worksheets",
+              "title": "Worksheets",
+              "description": "Class 2 worksheets (English, EVS, Hindi, Maths)",
+              "driveUrl": "https://drive.google.com/embeddedfolderview?id=1BYLnzjEo9Az9GtmXBP4v8sz40I6PuCG0#list"
+            },
+            {
+              "id": "class-2-question-papers",
+              "title": "Question Papers",
+              "description": "Class 2 cycle tests and question papers",
+              "driveUrl": "https://drive.google.com/embeddedfolderview?id=1sVTbXNeFWNrj2-D3W5KdhJkx829l_zDs#list"
+            },
+            {
+              "id": "class-2-textbook",
+              "title": "Textbook, Split-up & TLO",
+              "description": "Class 2 textbooks, split-ups and learning outcomes",
+              "driveUrl": "https://drive.google.com/embeddedfolderview?id=1fnM1e5pBF5EPaHEe1AX6C8dwTWbCZfhI#list"
+            }
+          ]
+        },
+        {
+          "id": "primary-class-3",
+          "title": "Class 3",
+          "description": "Class 3 textbooks (new NCERT 2024 series)",
+          "icon": "School",
+          "hasSubCards": true,
+          "subCards": [
+            {
+              "id": "class-3-textbook",
+              "title": "Textbook",
+              "description": "Class 3 textbooks: Santoor (English), Veena (Hindi), Maths Mela",
+              "driveUrl": "https://drive.google.com/embeddedfolderview?id=1P9r30_bU-bjGPwzuJvJ_KZCyr7gAN1wo#list"
+            }
+          ]
+        },
+        {
+          "id": "programmes-common",
+          "title": "Programmes & Common",
+          "description": "Common primary programmes and teacher resources",
+          "icon": "Campaign",
+          "hasSubCards": true,
+          "subCards": [
+            {
+              "id": "programmes-misc",
+              "title": "Miscellaneous",
+              "description": "Teacher training and resource materials",
+              "driveUrl": "https://drive.google.com/embeddedfolderview?id=19pbEhZbnm0b04kdsuUQHlh_r8MCo8kpG#list"
+            },
+            {
+              "id": "programmes-mdp",
+              "title": "Multidisciplinary Project (MDP)",
+              "description": "MDP guidelines, rubrics, templates and project examples",
+              "driveUrl": "https://drive.google.com/embeddedfolderview?id=1YYh-NpCKLHtNturPUKgwTTl3ZDaSPNzm#list"
+            },
+            {
+              "id": "programmes-cmp",
+              "title": "Common Minimum Programme (CMP)",
+              "description": "CMP guidelines, training material and newsletter examples",
+              "driveUrl": "https://drive.google.com/embeddedfolderview?id=1YV_qLv0CZrcnEJTocqSP0ZZ5GxueJrwx#list"
+            },
+            {
+              "id": "programmes-fln",
+              "title": "FLN / NIPUN Bharat",
+              "description": "NIPUN Bharat mission resources, targets, rubrics and assessments",
+              "driveUrl": "https://drive.google.com/embeddedfolderview?id=1FeULgFG8Rw4mJQ2_CIdS4OTxzsgy6kvT#list"
+            },
+            {
+              "id": "programmes-cub",
+              "title": "Cub Bulbul (Scouts & Guides)",
+              "description": "APRO book, logbook examples and Utsav resources for Cub Bulbul section",
+              "driveUrl": "https://drive.google.com/embeddedfolderview?id=1VYD_eb_h2QaNcf62e1rvsi3634690l5F#list"
+            },
+            {
+              "id": "programmes-toy",
+              "title": "Toy Based Pedagogy",
+              "description": "Toy Based Pedagogy training presentations (NEP 2020)",
+              "driveUrl": "https://drive.google.com/embeddedfolderview?id=15MnfWOvrGSlBcVYB0D55VWtsWwuqSOEH#list"
+            }
+          ]
+        },
+        {
+          "id": "hm-corner",
+          "title": "HM Corner",
+          "description": "Resources for Head Masters and primary section administration",
+          "icon": "School",
+          "hasSubCards": true,
+          "subCards": [
+            {
+              "id": "hm-materials",
+              "title": "HM Materials",
+              "description": "APAR, supervision, inspection and administration resources for Head Masters",
+              "driveUrl": "https://drive.google.com/embeddedfolderview?id=1NlSxEdmT0nr7xeP-GDKGUzEDtcLCR7N9#list"
+            },
+            {
+              "id": "hm-records",
+              "title": "Records & Registers",
+              "description": "Records, registers and proformas to be maintained in the primary section",
+              "driveUrl": "https://drive.google.com/embeddedfolderview?id=1XpgkM4M0JII04J5jEt4O3zRX1WtNUtRp#list"
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }
