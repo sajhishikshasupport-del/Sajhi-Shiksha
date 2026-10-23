@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Box, Typography, Button } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import pageIntros from '@/data/page-intros.json';
+import { useJsonData } from '@/lib/runtimeData';
 
 interface PageIntroProps {
     /** Key into page-intros.json: a page key or a teachers.json subCard id. Unknown keys render nothing. */
@@ -18,7 +18,11 @@ interface PageIntroProps {
  */
 function PageIntro({ page, mb = 4 }: PageIntroProps): React.ReactElement {
     const [expanded, setExpanded] = useState(false);
-    const intro = (pageIntros as unknown as Record<string, { short: string; full: string } | undefined>)[page];
+    const pageIntros = useJsonData<Record<string, { short: string; full: string } | undefined>>(
+        '/data/page-intros.json',
+        {}
+    );
+    const intro = pageIntros[page];
 
     if (!intro) return <Box sx={{ mb }} />;
 

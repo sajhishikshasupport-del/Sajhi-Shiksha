@@ -7,6 +7,7 @@ import Breadcrumb from '@/components/Breadcrumb/Breadcrumb';
 import type { Resource } from '@/types';
 import { FONT_HEADING, FONT_MONO, MAX_CONTENT_WIDTH, COLOR_TEXT_LIGHT, BORDER_RADIUS_PILL } from '@/lib/constants';
 import { trackEvent } from '@/hooks/useAnalytics';
+import { useJsonData } from '@/lib/runtimeData';
 
 interface ResourceViewPageProps {
     resource: Resource | null;
@@ -19,6 +20,15 @@ export default function ResourceViewPage({ resource, onBack, onNavigate }: Resou
     const { showSnackbar } = useSnackbar();
     const borderColor = 'var(--color-border)';
     const shadowColor = 'var(--color-shadow)';
+    // Fetched at runtime (kept out of the bundle) - must run before any
+    // early return so the hook order stays stable.
+    const documentDescriptions = useJsonData<Record<string, string>>(
+        '/data/document-descriptions.json',
+        {}
+    );
+    const richDescription = resource
+        ? documentDescriptions[resource.id] || resource.description
+        : '';
 
     if (!resource) {
         return (
@@ -130,7 +140,7 @@ export default function ResourceViewPage({ resource, onBack, onNavigate }: Resou
                     {resource.title}
                 </Typography>
                 <Typography sx={{ color: 'var(--color-text-secondary)', mb: 2, fontSize: '1rem' }}>
-                    {resource.description}
+                    {richDescription}
                 </Typography>
 
                 <Box sx={{ display: 'flex', gap: 1.5, flexWrap: 'wrap', mb: 3 }}>

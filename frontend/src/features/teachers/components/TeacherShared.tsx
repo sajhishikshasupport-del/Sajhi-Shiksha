@@ -9,7 +9,7 @@ import { getResourceById } from '@/lib/resourceAggregator';
 import { getUrlType } from '@/lib/urlUtils';
 import { FONT_HEADING, FONT_MONO } from '@/lib/constants';
 import PageIntro from '@/components/PageIntro';
-import documentDescriptions from '@/data/document-descriptions.json';
+import { useJsonData } from '@/lib/runtimeData';
 import { trackEvent } from '@/hooks/useAnalytics';
 
 export const BORDER = 'var(--color-border)';
@@ -156,7 +156,11 @@ interface DocumentListProps {
 const DocCard: React.FC<{ doc: DriveDocument; showClass?: boolean }> = ({ doc, showClass }) => {
     const navigate = useNavigate();
     const classLabel = showClass ? effectiveClassName(doc) : null;
-    const description = doc.description || (documentDescriptions as Record<string, string>)[doc.id];
+    const documentDescriptions = useJsonData<Record<string, string>>(
+        '/data/document-descriptions.json',
+        {}
+    );
+    const description = doc.description || documentDescriptions[doc.id];
     const openDoc = () => {
         trackEvent('document_open', {
             document_title: doc.title,

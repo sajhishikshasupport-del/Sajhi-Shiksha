@@ -3,7 +3,8 @@ import teachersData from '@/data/teachers.json';
 import teacherContentsData from '@/data/teacher-contents.json';
 import teacherContentsCircularData from '@/data/teacher-contents-circular.json';
 import teacherContentsPrimaryData from '@/data/teacher-contents-primary.json';
-import documentDescriptions from '@/data/document-descriptions.json';
+// Document descriptions are large, so they are fetched at runtime
+// (see lib/runtimeData.ts) instead of being bundled here.
 import studentsData from '@/data/students.json';
 import sectionsData from '@/data/sections.json';
 import { findCardDeep, findTeacherResourceById, teacherCardToResource } from '@/lib/utils';
@@ -139,7 +140,7 @@ function buildFlattenedResources(): Resource[] {
             map.set(docId, {
                 id: docId,
                 title: docTitle,
-                description: [(documentDescriptions as Record<string, string>)[docId] || (typeof doc.description === 'string' ? doc.description : ''), leafTitle, className].filter(Boolean).join(' — ') || 'Teacher-shared document',
+                description: [typeof doc.description === 'string' ? doc.description : '', leafTitle, className].filter(Boolean).join(' — ') || 'Teacher-shared document',
                 category: 'teacher',
                 class: classMatch ? parseInt(classMatch[1] ?? '', 10) : null,
                 subject: primaryLeafIds.has(leafId) ? 'General' : 'Mathematics',

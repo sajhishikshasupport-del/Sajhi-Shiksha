@@ -4,6 +4,7 @@ import { Suspense, lazy, useMemo } from 'react';
 import { ViewPageSkeleton } from '@/components/Skeletons';
 import { useSEO, breadcrumbSchema } from '@/hooks/useSEO';
 import { getResourceById } from '@/lib/resourceAggregator';
+import { useJsonData } from '@/lib/runtimeData';
 
 const ResourceViewPage = lazy(() => import('@/features/viewer/components/ResourceViewPage'));
 
@@ -12,10 +13,16 @@ function ViewResourcePage(): React.ReactElement {
     const { id } = useParams({ from: Route.id });
 
     const resource = useMemo(() => getResourceById(id), [id]);
+    const documentDescriptions = useJsonData<Record<string, string>>(
+        '/data/document-descriptions.json',
+        {}
+    );
 
     useSEO({
         title: resource ? resource.title : 'Resource Not Found',
-        description: resource ? `View and download ${resource.title}. ${resource.description}` : 'The requested resource could not be found.',
+        description: resource
+            ? `View and download ${resource.title}. ${documentDescriptions[resource.id] || resource.description}`
+            : 'The requested resource could not be found.',
         canonicalPath: `/view/${id}`,
         noIndex: !resource,
         jsonLd: resource ? breadcrumbSchema([
