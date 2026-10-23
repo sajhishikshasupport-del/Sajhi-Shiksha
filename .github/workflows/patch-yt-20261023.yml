@@ -1,0 +1,28 @@
+name: One-shot patch - normalise YouTube links to www.youtube.com
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Apply patch
+        run: python3 frontend/scripts/patch-yt-20261023.py
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "sajhishikshasupport-del"
+          git config user.email "sajhishiksha@gmail.com"
+          git add frontend/src/features/mathLovers/components/ContentBlock.tsx
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "fix(maths-lovers): normalise YouTube links to www.youtube.com (bare host failed on some mobile networks)"
+            git push
+          fi
