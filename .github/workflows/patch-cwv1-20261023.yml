@@ -19,7 +19,7 @@ jobs:
         run: |
           git config user.name "sajhishikshasupport-del"
           git config user.email "sajhishiksha@gmail.com"
-          git add frontend/src/components/PageIntro.tsx frontend/src/features/teachers/components/TeacherShared.tsx frontend/src/lib/resourceAggregator.ts frontend/src/features/viewer/components/ResourceViewPage.tsx "frontend/src/routes/view.$id.tsx" frontend/public/data
+          git add frontend/src/components/PageIntro.tsx frontend/src/features/teachers/components/TeacherShared.tsx frontend/src/lib/resourceAggregator.ts frontend/src/features/viewer/components/ResourceViewPage.tsx 'frontend/src/routes/view.$id.tsx' frontend/public/data
           if git diff --cached --quiet; then
             echo "No changes to commit"
           else
