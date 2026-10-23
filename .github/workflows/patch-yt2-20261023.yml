@@ -1,0 +1,28 @@
+name: One-shot patch - YouTube links to m.youtube.com
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Apply patch
+        run: python3 frontend/scripts/patch-yt2-20261023.py
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "sajhishikshasupport-del"
+          git config user.email "sajhishiksha@gmail.com"
+          git add frontend/src/components/ResourceCard/ResourceCard.tsx frontend/src/features/mathLovers/components/ContentBlock.tsx
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "fix(links): point YouTube links at m.youtube.com (www host unreachable on some mobile networks)"
+            git push
+          fi
