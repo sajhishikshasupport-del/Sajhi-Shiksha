@@ -25,6 +25,7 @@ import shutil
 import sys
 
 NL = chr(10)
+EMD = chr(8212)  # em dash, built from its code point so no escaping is needed
 changes = []
 SRC = 'frontend/src/data'
 PUB = 'frontend/public/data'
@@ -110,8 +111,8 @@ patch('frontend/src/lib/resourceAggregator.ts', [
         'resourceAggregator: import',
     ),
     (
-        "                description: [(documentDescriptions as Record<string, string>)[docId] || (typeof doc.description === 'string' ? doc.description : ''), leafTitle, className].filter(Boolean).join(' \\u2014 ') || 'Teacher-shared document',@@",
-        "                description: [typeof doc.description === 'string' ? doc.description : '', leafTitle, className].filter(Boolean).join(' \\u2014 ') || 'Teacher-shared document',@@",
+        "                description: [(documentDescriptions as Record<string, string>)[docId] || (typeof doc.description === 'string' ? doc.description : ''), leafTitle, className].filter(Boolean).join(' ' + EMD + ' ') || 'Teacher-shared document',@@",
+        "                description: [typeof doc.description === 'string' ? doc.description : '', leafTitle, className].filter(Boolean).join(' ' + EMD + ' ') || 'Teacher-shared document',@@",
         'resourceAggregator: drop bundled table',
     ),
 ])
