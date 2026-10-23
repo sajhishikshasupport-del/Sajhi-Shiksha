@@ -76,8 +76,11 @@ const ContentBlock: React.FC<ContentBlockProps> = ({ id, title, description, lin
                     class: null,
                     subject: 'Mathematics',
                     type: 'link' as const,
-                    // Bare youtube.com fails on some mobile networks - use www.
-                    driveUrl: link.url.replace('//youtube.com/', '//www.youtube.com/'),
+                    // www.youtube.com is unreachable on some mobile networks - use the
+                    // mobile host, which works on both phone and desktop.
+                    driveUrl: link.url
+                        .replace('//youtube.com/', '//m.youtube.com/')
+                        .replace('//www.youtube.com/', '//m.youtube.com/'),
                     urlType: getUrlType(link.url),
                     thumbnail: null,
                     contributors: ['Sajhi Shiksha Team'],

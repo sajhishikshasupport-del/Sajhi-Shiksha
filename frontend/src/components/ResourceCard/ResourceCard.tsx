@@ -100,8 +100,15 @@ const ResourceCard: React.FC<ResourceCardProps> = React.memo(
         const isWebsite = resource.urlType === 'website';
 
 
+        // YouTube's www host is unreachable on some mobile networks and the
+        // automatic m.youtube.com redirect does not fire in in-app browsers,
+        // so YouTube links are pointed at the mobile host directly.
+        const externalUrl = (resource.driveUrl || '')
+            .replace('//youtube.com/', '//m.youtube.com/')
+            .replace('//www.youtube.com/', '//m.youtube.com/');
+
         const openExternalLink = () => {
-            window.open(resource.driveUrl, '_blank', 'noopener,noreferrer');
+            window.open(externalUrl, '_blank', 'noopener,noreferrer');
         };
 
         const handleCardClick = () => {
@@ -199,7 +206,7 @@ const ResourceCard: React.FC<ResourceCardProps> = React.memo(
                                 size="small"
                                 variant="contained"
                                 component="a"
-                                href={resource.driveUrl}
+                                href={externalUrl}
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 startIcon={<OpenInNewIcon />}
@@ -370,7 +377,7 @@ const ResourceCard: React.FC<ResourceCardProps> = React.memo(
                             size="small"
                             variant="contained"
                             component="a"
-                            href={resource.driveUrl}
+                            href={externalUrl}
                             target="_blank"
                             rel="noopener noreferrer"
                             startIcon={<OpenInNewIcon />}
@@ -397,7 +404,7 @@ const ResourceCard: React.FC<ResourceCardProps> = React.memo(
                             size="small"
                             variant="contained"
                             component="a"
-                            href={resource.driveUrl}
+                            href={externalUrl}
                             target="_blank"
                             rel="noopener noreferrer"
                             startIcon={<OpenInNewIcon />}
