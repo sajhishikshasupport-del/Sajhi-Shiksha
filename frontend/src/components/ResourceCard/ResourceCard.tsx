@@ -198,10 +198,13 @@ const ResourceCard: React.FC<ResourceCardProps> = React.memo(
                             <Button
                                 size="small"
                                 variant="contained"
+                                component="a"
+                                href={resource.driveUrl}
+                                target="_blank"
+                                rel="noopener noreferrer"
                                 startIcon={<OpenInNewIcon />}
                                 onClick={(e) => {
                                     e.stopPropagation();
-                                    openExternalLink();
                                 }}
                                 sx={{
                                     bgcolor: '#FF0000',

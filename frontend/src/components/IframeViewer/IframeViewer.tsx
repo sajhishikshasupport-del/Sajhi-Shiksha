@@ -37,6 +37,14 @@ export default function IframeViewer({
     const [error, setError] = useState(false);
     const embedUrl = getDriveEmbedUrl(driveUrl);
     const canEmbed = embedUrl !== '';
+
+    // embeddedfolderview links are embed-only and cannot be opened in a
+    // tab - use the normal Drive folder URL instead.
+    const folderIdMatch = driveUrl.match(/id=([A-Za-z0-9_-]+)/);
+    const openUrl =
+        driveUrl.includes('embeddedfolderview') && folderIdMatch?.[1]
+            ? `https://drive.google.com/drive/folders/${folderIdMatch[1]}`
+            : driveUrl;
     const borderColor = 'var(--color-border)';
     const shadowColor = 'var(--color-shadow)';
 
@@ -112,8 +120,11 @@ export default function IframeViewer({
                 <Box sx={{ display: 'flex', gap: 2, flexWrap: 'wrap', mt: 2 }}>
                     <Button
                         variant="contained"
+                        component="a"
+                        href={openUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
                         startIcon={<OpenInNewIcon />}
-                        onClick={() => window.open(driveUrl, '_blank')}
                         sx={{
                             bgcolor: 'var(--color-yellow)',
                             color: COLOR_TEXT_LIGHT,
