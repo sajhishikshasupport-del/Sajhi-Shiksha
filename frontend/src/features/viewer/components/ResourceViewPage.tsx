@@ -59,9 +59,19 @@ export default function ResourceViewPage({ resource, onBack, onNavigate }: Resou
         );
     }
 
+    // Drive files download through the uc endpoint; folders cannot be downloaded
+    // (their button is hidden below).
+    const driveFileId = (resource.driveUrl || '').match(/\/d\/([^/]+)/)?.[1] ?? '';
+    const isFolder =
+        (resource.driveUrl || '').includes('embeddedfolderview') ||
+        (resource.driveUrl || '').includes('/drive/folders/');
+    const downloadUrl = driveFileId
+        ? `https://drive.google.com/uc?export=download&id=${driveFileId}`
+        : resource.driveUrl;
+
     const handleDownload = () => {
-        trackEvent('document_open', { document_title: resource.title, source: 'resource_view' });
-        window.open(resource.driveUrl, '_blank');
+        trackEvent('document_download', { document_title: resource.title, source: 'resource_view' });
+        window.open(downloadUrl, '_blank');
     };
 
     const handleShare = async () => {
@@ -177,7 +187,7 @@ export default function ResourceViewPage({ resource, onBack, onNavigate }: Resou
                 </Box>
 
                 <Box sx={{ display: 'flex', gap: 2, flexWrap: 'wrap' }}>
-                    {resource.driveUrl && (
+                    {resource.driveUrl && !isFolder && (
                         <Button
                             variant="contained"
                             startIcon={<DownloadIcon />}
