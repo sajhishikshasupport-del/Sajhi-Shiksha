@@ -36,6 +36,7 @@ export default function IframeViewer({
     });
     const [error, setError] = useState(false);
     const embedUrl = getDriveEmbedUrl(driveUrl);
+    const canEmbed = embedUrl !== '';
     const borderColor = 'var(--color-border)';
     const shadowColor = 'var(--color-shadow)';
 
@@ -74,7 +75,7 @@ export default function IframeViewer({
         return () => clearTimeout(timer);
     }, [loading]);
 
-    if (error) {
+    if (error || !canEmbed) {
         return (
             <Box
                 sx={{
@@ -104,7 +105,9 @@ export default function IframeViewer({
                     Unable to load document
                 </Typography>
                 <Typography sx={{ color: 'var(--color-text-secondary)', fontSize: '0.95rem' }}>
-                    The document could not be displayed in the viewer.
+                    {canEmbed
+                        ? 'The document could not be displayed in the viewer.'
+                        : 'This link opens on another website, so it cannot be shown inside this page. Use the button below.'}
                 </Typography>
                 <Box sx={{ display: 'flex', gap: 2, flexWrap: 'wrap', mt: 2 }}>
                     <Button

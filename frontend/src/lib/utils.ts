@@ -9,6 +9,18 @@ export function isYouTubeUrl(url: string): boolean {
 export function getDriveEmbedUrl(driveUrl: string): string {
     if (!driveUrl || driveUrl.trim() === '') return '';
 
+    // Google retired the embedded Drive FOLDER view - embedding a folder
+    // shows a 500 error. The page shows the file list + an Open button instead.
+    if (driveUrl.includes('embeddedfolderview') || driveUrl.includes('/drive/folders/')) {
+        return '';
+    }
+
+    // Only Drive FILES can be previewed in an iframe. YouTube and normal
+    // websites refuse to be embedded, so those get a plain link instead.
+    if (!driveUrl.includes('drive.google.com')) {
+        return '';
+    }
+
     const fileIdMatch = driveUrl.match(/\/d\/([^/]+)/);
     if (fileIdMatch?.[1]) {
         return `https://drive.google.com/file/d/${fileIdMatch[1]}/preview`;
