@@ -1,9 +1,11 @@
 import React from 'react';
+import { useNavigate } from '@tanstack/react-router';
 import { Box, Typography, Button, Chip } from '@mui/material';
 import { ArrowBackIcon, SearchOffIcon, OpenInNewIcon, DownloadIcon, PictureAsPdfIcon, ArrowForwardIcon, ChevronRightIcon, DescriptionIcon, InsertDriveFileIcon, ErrorOutlineOutlinedIcon } from '@/components/Icons';
 import IframeViewer from '@/components/IframeViewer/IframeViewer';
 import ResourceCard from '@/components/ResourceCard/ResourceCard';
 import { teacherCardToResource } from '@/lib/utils';
+import { getResourceById } from '@/lib/resourceAggregator';
 import { getUrlType } from '@/lib/urlUtils';
 import { FONT_HEADING, FONT_MONO } from '@/lib/constants';
 import PageIntro from '@/components/PageIntro';
@@ -152,6 +154,7 @@ interface DocumentListProps {
 }
 
 const DocCard: React.FC<{ doc: DriveDocument; showClass?: boolean }> = ({ doc, showClass }) => {
+    const navigate = useNavigate();
     const classLabel = showClass ? effectiveClassName(doc) : null;
     const description = doc.description || (documentDescriptions as Record<string, string>)[doc.id];
     const openDoc = () => {
@@ -160,7 +163,14 @@ const DocCard: React.FC<{ doc: DriveDocument; showClass?: boolean }> = ({ doc, s
             document_class: effectiveClassName(doc),
             source: 'teacher_document_list',
         });
-        window.open(doc.link, '_blank', 'noopener,noreferrer');
+        // Open our own /view/<id> page (it shows the description, a preview and
+        // the Drive buttons). Fall back to Drive only if no page exists, so a
+        // document never becomes unreachable.
+        if (getResourceById(doc.id)) {
+            navigate({ to: '/view/$id', params: { id: doc.id } });
+        } else {
+            window.open(doc.link, '_blank', 'noopener,noreferrer');
+        }
     };
 
     return (
