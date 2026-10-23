@@ -1,0 +1,28 @@
+name: One-shot patch - rebuild Olympiad section
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Apply patch
+        run: python3 frontend/scripts/patch-olympiad-20261023.py
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "sajhishikshasupport-del"
+          git config user.email "sajhishiksha@gmail.com"
+          git add frontend/src/data/sections.json
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "content(olympiad): official free resources + recommended book list (buy links) instead of the copyrighted folder link"
+            git push
+          fi
