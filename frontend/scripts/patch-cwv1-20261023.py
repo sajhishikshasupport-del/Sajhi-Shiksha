@@ -103,6 +103,9 @@ patch('frontend/src/features/teachers/components/TeacherShared.tsx', [
 ])
 
 # ---------- resourceAggregator ----------
+OLD_LINE = "                description: [(documentDescriptions as Record<string, string>)[docId] || (typeof doc.description === 'string' ? doc.description : ''), leafTitle, className].filter(Boolean).join(' " + EMD + " ') || 'Teacher-shared document',"
+NEW_LINE = "                description: [typeof doc.description === 'string' ? doc.description : '', leafTitle, className].filter(Boolean).join(' " + EMD + " ') || 'Teacher-shared document',"
+
 patch('frontend/src/lib/resourceAggregator.ts', [
     (
         "import documentDescriptions from '@/data/document-descriptions.json';@@",
@@ -111,8 +114,8 @@ patch('frontend/src/lib/resourceAggregator.ts', [
         'resourceAggregator: import',
     ),
     (
-        "                description: [(documentDescriptions as Record<string, string>)[docId] || (typeof doc.description === 'string' ? doc.description : ''), leafTitle, className].filter(Boolean).join(' ' + EMD + ' ') || 'Teacher-shared document',@@",
-        "                description: [typeof doc.description === 'string' ? doc.description : '', leafTitle, className].filter(Boolean).join(' ' + EMD + ' ') || 'Teacher-shared document',@@",
+        OLD_LINE + '@@',
+        NEW_LINE + '@@',
         'resourceAggregator: drop bundled table',
     ),
 ])
