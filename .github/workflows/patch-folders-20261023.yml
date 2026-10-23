@@ -1,0 +1,28 @@
+name: One-shot patch - fix broken Maths Lovers links + project-ideas folder
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Apply patch
+        run: python3 frontend/scripts/patch-folders-20261023.py
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "sajhishikshasupport-del"
+          git config user.email "sajhishiksha@gmail.com"
+          git add frontend/src/data/sections.json frontend/src/data/teachers.json
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "fix(maths-lovers): remove broken folder links (no folder id), point project ideas at the Maths Lab leaf pages, drop copyright-risky Olympiad Books folder link"
+            git push
+          fi
