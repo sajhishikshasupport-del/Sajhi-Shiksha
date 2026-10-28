@@ -19,16 +19,72 @@ jobs:
           echo "downloaded bytes: $(wc -c < /tmp/cpd.html)"
           grep -q "script.google.com" /tmp/cpd.html || { echo "ERROR: download does not look like the app"; exit 1; }
           grep -q "name=\"robots\" content=\"noindex\"" /tmp/cpd.html || { echo "ERROR: noindex meta missing"; exit 1; }
+
+      - name: Inject social/OG meta tags
+        run: |
+          python3 - <<'PY'
+          html = open('/tmp/cpd.html', encoding='utf-8').read()
+          tags = (
+              '<meta name="description" content="Free CPD certificate generator for Kendriya Vidyalaya schools - fill school and staff details and download the whole staff certificates in one PDF.">\n'
+              '<meta property="og:type" content="website">\n'
+              '<meta property="og:site_name" content="Sajhi Shiksha">\n'
+              '<meta property="og:title" content="CPD Certificate Generator | Sajhi Shiksha">\n'
+              '<meta property="og:description" content="School ke staff ke CPD certificates ek hi PDF me - free tool.">\n'
+              '<meta property="og:url" content="https://www.sajhishiksha.in/cpd-certificate/">\n'
+              '<meta property="og:image" content="https://www.sajhishiksha.in/og/cpd-certificate.png">\n'
+              '<meta property="og:image:width" content="1200">\n'
+              '<meta property="og:image:height" content="630">\n'
+              '<meta name="twitter:card" content="summary_large_image">\n'
+              '<meta name="twitter:title" content="CPD Certificate Generator | Sajhi Shiksha">\n'
+              '<meta name="twitter:image" content="https://www.sajhishiksha.in/og/cpd-certificate.png">\n'
+              '<link rel="icon" href="/favicon.svg">\n'
+          )
+          if 'og:title' in html:
+              print('OG tags already present - skipping')
+          else:
+              marker = '<meta charset="utf-8">'
+              assert marker in html, 'charset meta not found'
+              html = html.replace(marker, marker + '\n' + tags, 1)
+              open('/tmp/cpd.html', 'w', encoding='utf-8').write(html)
+              print('OG tags injected')
+          PY
           cp /tmp/cpd.html frontend/public/cpd-certificate/index.html
+
+      - name: Generate the OG image
+        run: |
+          pip install --quiet pillow
+          mkdir -p frontend/public/og
+          python3 - <<'PY'
+          from PIL import Image, ImageDraw, ImageFont
+          W, H = 1200, 630
+          img = Image.new('RGB', (W, H), '#FFF8E7')
+          d = ImageDraw.Draw(img)
+          d.rectangle([0, 0, W, 18], fill='#FFD84D')
+          d.rectangle([0, H-18, W, H], fill='#FFD84D')
+          d.rectangle([40, 40, W-40, H-40], outline='#111111', width=8)
+          def font(sz):
+              for p in ['/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf',
+                        '/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf']:
+                  try: return ImageFont.truetype(p, sz)
+                  except Exception: pass
+              return ImageFont.load_default()
+          d.text((80, 130), 'CPD Certificate Generator', font=font(72), fill='#111111')
+          d.text((80, 240), 'School ke staff ke certificates ek hi PDF me', font=font(40), fill='#333333')
+          d.text((80, 330), 'Free tool - Kendriya Vidyalaya schools', font=font(34), fill='#555555')
+          d.text((80, 470), 'sajhishiksha.in', font=font(46), fill='#111111')
+          img.save('frontend/public/og/cpd-certificate.png', 'PNG', optimize=True)
+          print('OG image written')
+          PY
+          ls -la frontend/public/og/cpd-certificate.png
 
       - name: Commit and push if changed
         run: |
           git config user.name "sajhishikshasupport-del"
           git config user.email "sajhishiksha@gmail.com"
-          git add frontend/public/cpd-certificate/index.html
+          git add frontend/public/cpd-certificate/index.html frontend/public/og/cpd-certificate.png
           if git diff --cached --quiet; then
             echo "No changes to commit"
           else
-            git commit -m "feat(cpd): deploy CPD certificate app v1.0 (staged - not linked from nav yet)"
+            git commit -m "feat(cpd): add social/OG meta tags + preview image for the CPD certificate page"
             git push
           fi
