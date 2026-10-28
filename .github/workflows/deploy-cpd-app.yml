@@ -1,0 +1,34 @@
+name: Deploy CPD certificate app (from the handoff file in Drive)
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Download the app from Drive
+        run: |
+          mkdir -p frontend/public/cpd-certificate
+          curl -sL "https://drive.google.com/uc?export=download&id=1ATFv7Q9YpIAUAa3Yic6VSioE0y9e296J" -o /tmp/cpd.html
+          echo "downloaded bytes: $(wc -c < /tmp/cpd.html)"
+          grep -q "script.google.com" /tmp/cpd.html || { echo "ERROR: download does not look like the app"; exit 1; }
+          grep -q "name=\"robots\" content=\"noindex\"" /tmp/cpd.html || { echo "ERROR: noindex meta missing"; exit 1; }
+          cp /tmp/cpd.html frontend/public/cpd-certificate/index.html
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "sajhishikshasupport-del"
+          git config user.email "sajhishiksha@gmail.com"
+          git add frontend/public/cpd-certificate/index.html
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "feat(cpd): deploy CPD certificate app v1.0 (staged - not linked from nav yet)"
+            git push
+          fi
