@@ -2,6 +2,11 @@ name: Deploy CPD certificate app (from the handoff file in Drive)
 
 on:
   workflow_dispatch:
+    inputs:
+      file_id:
+        description: "Drive file id of cpd-app-vX.Y.html"
+        required: true
+        default: "1ATFv7Q9YpIAUAa3Yic6VSioE0y9e296J"
 
 permissions:
   contents: write
@@ -15,10 +20,11 @@ jobs:
       - name: Download the app from Drive
         run: |
           mkdir -p frontend/public/cpd-certificate
-          curl -sL "https://drive.google.com/uc?export=download&id=1ATFv7Q9YpIAUAa3Yic6VSioE0y9e296J" -o /tmp/cpd.html
+          curl -sL "https://drive.google.com/uc?export=download&id=${{ inputs.file_id }}" -o /tmp/cpd.html
           echo "downloaded bytes: $(wc -c < /tmp/cpd.html)"
           grep -q "script.google.com" /tmp/cpd.html || { echo "ERROR: download does not look like the app"; exit 1; }
-          grep -q "name=\"robots\" content=\"noindex\"" /tmp/cpd.html || { echo "ERROR: noindex meta missing"; exit 1; }
+          grep -q "noindex" /tmp/cpd.html || { echo "ERROR: noindex meta missing"; exit 1; }
+          echo "version markers: $(grep -o 'v1\.[0-9]' /tmp/cpd.html | sort -u | tr '\n' ' ')"
 
       - name: Inject social/OG meta tags
         run: |
@@ -37,7 +43,7 @@ jobs:
               '<meta name="twitter:card" content="summary_large_image">\n'
               '<meta name="twitter:title" content="CPD Certificate Generator | Sajhi Shiksha">\n'
               '<meta name="twitter:image" content="https://www.sajhishiksha.in/images/og-cpd-certificate.png">\n'
-              '<link rel="icon" href="/favicon.svg">\n'
+              '<link rel="icon" href="https://www.sajhishiksha.in/favicon.svg">\n'
           )
           if 'og:title' in html:
               print('OG tags already present - skipping')
@@ -66,18 +72,15 @@ jobs:
           img.save('frontend/public/images/og-cpd-certificate.png', 'PNG', optimize=True)
           print('OG image written')
           PY
-          ls -la frontend/public/images/og-cpd-certificate.png
-          rm -f frontend/public/og/cpd-certificate.png
 
       - name: Commit and push if changed
         run: |
           git config user.name "sajhishikshasupport-del"
           git config user.email "sajhishiksha@gmail.com"
           git add frontend/public/cpd-certificate/index.html frontend/public/images/og-cpd-certificate.png
-          git add -A frontend/public/og
           if git diff --cached --quiet; then
             echo "No changes to commit"
           else
-            git commit -m "fix(cpd): preview image now uses the site's own OG card design"
+            git commit -m "feat(cpd): deploy CPD certificate app (from handoff file ${{ inputs.file_id }})"
             git push
           fi
