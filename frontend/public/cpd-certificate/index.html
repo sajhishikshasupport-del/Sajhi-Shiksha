@@ -301,6 +301,11 @@ input[type=file]{font-size:13px;width:100%;padding:7px;border:1px dashed #c3cfe4
 .preview{display:flex;gap:14px;align-items:center;margin-top:10px;flex-wrap:wrap}
 .preview img{max-height:52px;max-width:150px;border:1px solid var(--line);border-radius:6px;background:#fff}
 
+/* zaroori field missing */
+.req-missing{color:#c0392b}
+.req-missing span{color:#c0392b}
+input.req-missing{border-color:#c0392b;background:#fff5f4}
+
 </style>
 </head>
 <body>
@@ -454,11 +459,11 @@ input[type=file]{font-size:13px;width:100%;padding:7px;border:1px dashed #c3cfe4
         <textarea id="wTitleEn"></textarea>
       </div>
       <div>
-        <label class="f" for="wHours" data-i18n="s3.hours">Duration (hours)</label>
+        <label class="f" for="wHours"><span data-i18n="s3.hours">Duration (hours)</span> <b style="color:#c0392b">*</b></label>
         <input type="text" id="wHours" value="1.5" autocomplete="off">
       </div>
       <div>
-        <label class="f" for="wDate" data-i18n="s3.date">Workshop date</label>
+        <label class="f" for="wDate"><span data-i18n="s3.date">Workshop date</span> <b style="color:#c0392b">*</b></label>
         <input type="date" id="wDate">
       </div>
     </div>
@@ -862,6 +867,7 @@ xlsx/xlsx.mjs:
       'msg.needSchool': 'कृपया पहले विद्यालय खोजें।',
       'msg.needTeachers': 'कृपया कम से कम एक शिक्षक जोड़ें।',
       'msg.needWorkshop': 'कृपया कार्यशाला का नाम और घंटे भरें।',
+      'msg.needDate': 'कार्यशाला की तारीख़ भरना ज़रूरी है — इसी से प्रमाण-पत्र का वर्ष बनता है।',
       'msg.dupe': 'यह प्रविष्टि पहले से सूची में है।',
       'msg.confirmClear': 'पूरी शिक्षक सूची हटा दें?',
       'msg.needName': 'कृपया नाम भरें।',
@@ -946,6 +952,7 @@ xlsx/xlsx.mjs:
       'msg.needSchool': 'Please search for your school first.',
       'msg.needTeachers': 'Please add at least one teacher.',
       'msg.needWorkshop': 'Please fill the workshop name and hours.',
+      'msg.needDate': 'Workshop date is required — the year on the certificate comes from it.',
       'msg.dupe': 'This entry is already in the list.',
       'msg.confirmClear': 'Remove the entire teacher list?',
       'msg.needName': 'Please enter a name.',
@@ -1062,6 +1069,9 @@ xlsx/xlsx.mjs:
     }
     if (step >= 3 && (!(state.workshop.titleHi || state.workshop.titleEn) || !state.workshop.hours)) {
       go(3); showBanner(t('msg.needWorkshop'), 'err'); return false;
+    }
+    if (step >= 3 && !workshopYear()) {
+      go(3); showBanner(t('msg.needDate'), 'err'); return false;
     }
     return true;
   }
@@ -1249,7 +1259,12 @@ xlsx/xlsx.mjs:
   $('wTitleHi').addEventListener('input', function () { state.workshop.titleHi = $('wTitleHi').value; refreshLinkBox(); });
   $('wTitleEn').addEventListener('input', function () { state.workshop.titleEn = $('wTitleEn').value; refreshLinkBox(); });
   $('wHours').addEventListener('input', function () { state.workshop.hours = $('wHours').value; refreshLinkBox(); });
-  $('wDate').addEventListener('change', function () { state.workshop.date = $('wDate').value; refreshLinkBox(); });
+  $('wDate').addEventListener('change', function () {
+    state.workshop.date = $('wDate').value;
+    refreshLinkBox();
+    var lab = document.querySelector('label[for="wDate"]');
+    if (lab) lab.classList.toggle('req-missing', !workshopYear());
+  });
 
   /* ---------------- attendance ---------------- */
   function renderAttendance() {
@@ -1710,7 +1725,7 @@ xlsx/xlsx.mjs:
   }
 
   /* image -> transparent, resized PNG data URL (safed background hata deta hai) */
-  var IMG_MAX_CHARS = 44000;   /* Sheet cell me 50000 ki limit hai */
+  var IMG_MAX_CHARS = 28000;   /* Sheet cell me 50000 ki limit hai */
 
   function cleanImage(file, maxW) {
     return cleanImageAt(file, maxW);
@@ -1733,20 +1748,20 @@ xlsx/xlsx.mjs:
             for (var i = 0; i < a.length; i += 4) {
               var r = a[i], g = a[i + 1], b = a[i + 2];
               var mn = Math.min(r, g, b);
-              if (mn > 232) a[i + 3] = 0;                        /* safed -> pura gayab */
-              else if (mn > 196) a[i + 3] = Math.round(a[i + 3] * (232 - mn) / 36); /* halka */
+              if (mn > 205) a[i + 3] = 0;                        /* safed/grey -> gayab */
+              else if (mn > 165) a[i + 3] = Math.round(a[i + 3] * (205 - mn) / 40);
             }
             ctx.putImageData(d, 0, 0);
-          } catch (e) { /* tainted nahi hoga, local file hai */ }
-          var url = c.toDataURL('image/png');
-          if (url.length > IMG_MAX_CHARS && c.width > 90) {
-            /* bahut badi - chhoti karke dobara */
+          } catch (e) { /* local file hai, taint nahi */ }
+
+          /* Sheet ki limit me fit hone tak chhota karte raho */
+          var cur = c, url = cur.toDataURL('image/png'), guard = 0;
+          while (url.length > IMG_MAX_CHARS && cur.width > 80 && guard < 8) {
             var c2 = document.createElement('canvas');
-            var f2 = 0.72;
-            c2.width = Math.round(c.width * f2); c2.height = Math.round(c.height * f2);
-            var x2 = c2.getContext('2d');
-            x2.drawImage(c, 0, 0, c2.width, c2.height);
-            url = c2.toDataURL('image/png');
+            c2.width = Math.round(cur.width * 0.8);
+            c2.height = Math.round(cur.height * 0.8);
+            c2.getContext('2d').drawImage(cur, 0, 0, c2.width, c2.height);
+            cur = c2; url = cur.toDataURL('image/png'); guard++;
           }
           resolve(url);
         };
@@ -1820,7 +1835,7 @@ xlsx/xlsx.mjs:
         pill.textContent = t('as.none'); pill.className = 'pill warn';
         box.innerHTML = '<p class="assetmsg">' + esc(t('as.noneMsg')) + '</p>' +
           '<button class="btn ghost sm" id="btnAssetSetup" style="margin-top:10px">' + esc(t('as.setup')) + '</button>';
-        $('btnAssetSetup').onclick = renderAssetForm;
+        $('btnAssetSetup').onclick = function () { renderAssetForm(false); };
       } else {
         pill.textContent = t('as.has'); pill.className = 'pill ok';
         box.innerHTML = '<p class="assetmsg">' + esc(t('as.with')) + ' <b>' + esc(j.incharge || '—') +
@@ -1912,7 +1927,11 @@ xlsx/xlsx.mjs:
           if (r && r.ok) { msg.className = 'assetmsg ok'; msg.textContent = t('as.saved'); renderAssetBox(); }
           else {
             msg.className = 'assetmsg err';
-            msg.textContent = (r && r.error === 'wrong_oldpin') ? t('as.wrongOldPin') : t('as.fail');
+            var e = (r && r.error) || '';
+            if (e === 'wrong_oldpin') msg.textContent = t('as.wrongOldPin');
+            else if (e === 'image_too_big') msg.textContent = t('as.tooBig');
+            else if (e === 'pin_short') msg.textContent = t('as.fillAll');
+            else msg.textContent = t('as.fail') + (e ? ' (' + e + ')' : '');
           }
         })
         .catch(function () { msg.className = 'assetmsg err'; msg.textContent = t('as.fail'); });
