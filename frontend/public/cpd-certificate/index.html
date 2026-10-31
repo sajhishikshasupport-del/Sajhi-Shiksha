@@ -586,7 +586,7 @@ input.req-missing{border-color:#c0392b;background:#fff5f4}
 <footer>
   <div data-i18n="foot.contact">For suggestions, corrections or queries, contact us</div>
   <div style="margin-top:6px"><a href="https://wa.me/918077291675">8077291675</a></div>
-  <div style="margin-top:10px"><a href="https://www.sajhishiksha.in/">sajhishiksha.in</a> · <span class="ver" id="appVersion">v1.2</span></div>
+  <div style="margin-top:10px"><a href="https://www.sajhishiksha.in/">sajhishiksha.in</a> · <span class="ver" id="appVersion">v1.3</span></div>
 </footer>
 
 <script>window.CPD_CONFIG = { API_URL: 'https://script.google.com/macros/s/AKfycbyElTWO0VdFyaWo6sMxgqPF96ttUM1bLPklneiva1X5qS9b3p7TRHXQTJSG6ILZ2FtP/exec', SITE_URL: 'https://www.sajhishiksha.in/cpd-certificate/' };</script>
@@ -783,7 +783,7 @@ xlsx/xlsx.mjs:
 (function () {
   'use strict';
 
-  var VERSION = 'v1.2';
+  var VERSION = 'v1.3';
   var CFG = window.CPD_CONFIG || {};
 
   function track(count) {
@@ -1724,7 +1724,31 @@ xlsx/xlsx.mjs:
     }).then(function (r) { return r.json(); });
   }
 
-  /* image -> transparent, resized PNG data URL (safed background hata deta hai) */
+  /* background ka andaza border se, phir uske qareeb ke pixels gayab */
+  function bgColour_(ctx, w, h) {
+    var d = ctx.getImageData(0, 0, w, h).data;
+    var rs = [], gs = [], bs = [];
+    function add(x, y) { var i = (y * w + x) * 4; rs.push(d[i]); gs.push(d[i + 1]); bs.push(d[i + 2]); }
+    for (var x = 0; x < w; x++) { add(x, 0); add(x, h - 1); }
+    for (var y = 0; y < h; y++) { add(0, y); add(w - 1, y); }
+    function med(a) { a.sort(function (p, q) { return p - q; }); return a[Math.floor(a.length / 2)]; }
+    var r = med(rs), g = med(gs), b = med(bs);
+    if (r + g + b < 210) return { r: 255, g: 255, b: 255 };  /* border hi kaala hai to safed maan lo */
+    return { r: r, g: g, b: b };
+  }
+
+  function stripBg_(ctx, w, h) {
+    var bg = bgColour_(ctx, w, h);
+    var img = ctx.getImageData(0, 0, w, h), a = img.data;
+    for (var i = 0; i < a.length; i += 4) {
+      var d = Math.max(Math.abs(a[i] - bg.r), Math.abs(a[i + 1] - bg.g), Math.abs(a[i + 2] - bg.b));
+      if (d < 28) a[i + 3] = 0;
+      else if (d < 75) a[i + 3] = Math.round(a[i + 3] * (d - 28) / 47);
+    }
+    ctx.putImageData(img, 0, 0);
+  }
+
+  /* image -> transparent, resized PNG data URL (background hata deta hai) */
   var IMG_MAX_CHARS = 28000;   /* Sheet cell me 50000 ki limit hai */
 
   function cleanImage(file, maxW) {
@@ -1743,16 +1767,7 @@ xlsx/xlsx.mjs:
           c.height = Math.round(im.height * scale);
           var ctx = c.getContext('2d');
           ctx.drawImage(im, 0, 0, c.width, c.height);
-          try {
-            var d = ctx.getImageData(0, 0, c.width, c.height), a = d.data;
-            for (var i = 0; i < a.length; i += 4) {
-              var r = a[i], g = a[i + 1], b = a[i + 2];
-              var mn = Math.min(r, g, b);
-              if (mn > 205) a[i + 3] = 0;                        /* safed/grey -> gayab */
-              else if (mn > 165) a[i + 3] = Math.round(a[i + 3] * (205 - mn) / 40);
-            }
-            ctx.putImageData(d, 0, 0);
-          } catch (e) { /* local file hai, taint nahi */ }
+          try { stripBg_(ctx, c.width, c.height); } catch (e) { /* local file hai */ }
 
           /* Sheet ki limit me fit hone tak chhota karte raho */
           var cur = c, url = cur.toDataURL('image/png'), guard = 0;
@@ -1802,13 +1817,7 @@ xlsx/xlsx.mjs:
           c.width = im.naturalWidth; c.height = im.naturalHeight;
           var ctx = c.getContext('2d');
           ctx.drawImage(im, 0, 0);
-          var d = ctx.getImageData(0, 0, c.width, c.height), a = d.data;
-          for (var i = 0; i < a.length; i += 4) {
-            var mn = Math.min(a[i], a[i + 1], a[i + 2]);
-            if (mn > 232) a[i + 3] = 0;
-            else if (mn > 196) a[i + 3] = Math.round(a[i + 3] * (232 - mn) / 36);
-          }
-          ctx.putImageData(d, 0, 0);
+          stripBg_(ctx, c.width, c.height);
           var out = new Image();
           out.onload = function () { res(out); };
           out.onerror = function () { res(im); };
