@@ -24,6 +24,16 @@ const CookieConsent: React.FC<CookieConsentProps> = ({ onAccept }) => {
         }
     }, []);
 
+    // Keep the page content clear of the fixed banner while it is showing.
+    useEffect(() => {
+        if (!visible) return;
+        const prev = document.body.style.paddingBottom;
+        document.body.style.paddingBottom = '180px';
+        return () => {
+            document.body.style.paddingBottom = prev;
+        };
+    }, [visible]);
+
     const handleAccept = () => {
         try {
             localStorage.setItem(CONSENT_KEY, 'accepted');
@@ -56,7 +66,7 @@ const CookieConsent: React.FC<CookieConsentProps> = ({ onAccept }) => {
                 left: { xs: 2, md: 24 },
                 right: { xs: 2, md: 'auto' },
                 maxWidth: { xs: '100%', md: 480 },
-                p: { xs: 3, md: 4 },
+                p: { xs: 2, md: 3 },
                 bgcolor: 'var(--color-bg)',
                 border: `3px solid ${borderColor}`,
                 boxShadow: `6px 6px 0px ${shadowColor}`,
@@ -76,9 +86,9 @@ const CookieConsent: React.FC<CookieConsentProps> = ({ onAccept }) => {
             <Typography
                 id="cookie-consent-desc"
                 sx={{
-                    fontSize: '0.9rem',
+                    fontSize: '0.85rem',
                     color: 'var(--color-text-secondary)',
-                    mb: 3,
+                    mb: 2,
                     lineHeight: 1.5,
                 }}
             >

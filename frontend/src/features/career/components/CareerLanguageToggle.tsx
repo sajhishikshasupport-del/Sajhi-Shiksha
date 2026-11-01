@@ -66,7 +66,8 @@ export default function CareerLanguageToggle({
                         onClick={() => onChange(opt.value)}
                         sx={{
                             cursor: 'pointer',
-                            fontFamily: FONT_HEADING,
+                            fontFamily:
+                                "'Space Grotesk', 'Noto Sans Devanagari', 'Nirmala UI', 'Mangal', sans-serif",
                             fontWeight: 800,
                             fontSize: '0.85rem',
                             lineHeight: 1,
