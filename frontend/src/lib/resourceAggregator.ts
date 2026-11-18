@@ -87,7 +87,15 @@ function applyLatestUrl(resource: Resource): Resource {
 export function getLeafRouteForId(id: string): string | null {
     for (const mc of teachersData.mainCards) {
         for (const sc of mc.subCards ?? []) {
-            if (sc.id === id) return `/for-teachers/${mc.id}?folder=${sc.id}`;
+            if (sc.id === id) {
+                // Jin subCards ke apne subCards hain unke liye ?folder=, leaf-level ke liye ?leaf=
+                // (tgt-pgt page ki leaf view sirf selectedLeaf par khulti hai).
+                const hasKids = !!(sc as { hasSubCards?: boolean; subCards?: unknown[] }).hasSubCards &&
+                    ((sc as { subCards?: unknown[] }).subCards?.length ?? 0) > 0;
+                return hasKids
+                    ? `/for-teachers/${mc.id}?folder=${sc.id}`
+                    : `/for-teachers/${mc.id}?leaf=${sc.id}`;
+            }
             for (const leaf of sc.subCards ?? []) {
                 if (leaf.id === id) return `/for-teachers/${mc.id}?folder=${sc.id}&leaf=${leaf.id}`;
             }
