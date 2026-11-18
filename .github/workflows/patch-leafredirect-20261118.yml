@@ -12,8 +12,10 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Apply patch
-        run: python3 frontend/scripts/patch-leafredirect-20261118.py
+      - name: Apply patches (helper + redirect)
+        run: |
+          python3 frontend/scripts/patch-leafredirect-20261118.py
+          python3 frontend/scripts/patch-leafredirect2-20261118.py
 
       - name: Commit and push if changed
         run: |
@@ -23,6 +25,6 @@ jobs:
           if git diff --cached --quiet; then
             echo "No changes to commit"
           else
-            git commit -m "fix(view): leaf/subCard ids redirect to their section page instead of a document page"
+            git commit -m "fix(view): leaf ids redirect via window.location.replace (router did not parse the query string)"
             git push
           fi
