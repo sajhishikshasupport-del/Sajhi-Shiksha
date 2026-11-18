@@ -1,6 +1,6 @@
 import React from 'react';
 import { Box, Typography } from '@mui/material';
-import { FONT_HEADING, FONT_MONO } from '@/lib/constants';
+import { FONT_MONO } from '@/lib/constants';
 import { careerStrings } from '@/features/career/careerStrings';
 import type { CareerLang } from '@/features/career/useCareerLang';
 
