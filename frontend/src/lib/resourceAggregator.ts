@@ -82,6 +82,20 @@ function applyLatestUrl(resource: Resource): Resource {
  * Look up the human-readable title of a teacher leaf card (e.g. "Periodic Test")
  * from teachers.json, given its id.
  */
+// REQ-A5: leaf/subCard ids bhi resource ki tarah resolve hote hain. Un ids ke liye
+// asli section page lauta do, taaki /view/<leaf-id> document jaisa na dikhe.
+export function getLeafRouteForId(id: string): string | null {
+    for (const mc of teachersData.mainCards) {
+        for (const sc of mc.subCards ?? []) {
+            if (sc.id === id) return `/for-teachers/${mc.id}?folder=${sc.id}`;
+            for (const leaf of sc.subCards ?? []) {
+                if (leaf.id === id) return `/for-teachers/${mc.id}?folder=${sc.id}&leaf=${leaf.id}`;
+            }
+        }
+    }
+    return null;
+}
+
 function getTeacherLeafTitle(leafId: string): string {
     if (!teachersData?.mainCards) return '';
     const card = findCardDeep(leafId, teachersData.mainCards);

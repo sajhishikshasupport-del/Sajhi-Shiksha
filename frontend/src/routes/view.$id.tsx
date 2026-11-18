@@ -1,9 +1,9 @@
-import { createRoute, useNavigate, useParams } from '@tanstack/react-router';
+import { createRoute, useNavigate, useParams, Navigate } from '@tanstack/react-router';
 import { Route as rootRoute } from './__root';
 import { Suspense, lazy, useMemo } from 'react';
 import { ViewPageSkeleton } from '@/components/Skeletons';
 import { useSEO, breadcrumbSchema } from '@/hooks/useSEO';
-import { getResourceById } from '@/lib/resourceAggregator';
+import { getResourceById, getLeafRouteForId } from '@/lib/resourceAggregator';
 import { useJsonData } from '@/lib/runtimeData';
 
 const ResourceViewPage = lazy(() => import('@/features/viewer/components/ResourceViewPage'));
@@ -13,6 +13,8 @@ function ViewResourcePage(): React.ReactElement {
     const { id } = useParams({ from: Route.id });
 
     const resource = useMemo(() => getResourceById(id), [id]);
+    // Leaf/subCard id par aaye to uske asli section page par bhej do (REQ-A5).
+    const leafRoute = useMemo(() => getLeafRouteForId(id), [id]);
     const documentDescriptions = useJsonData<Record<string, string>>(
         '/data/document-descriptions.json',
         {}
@@ -30,6 +32,11 @@ function ViewResourcePage(): React.ReactElement {
             { name: resource.title, path: `/view/${id}` },
         ]) : undefined,
     });
+
+    // Saare hooks ke BAAD redirect - hook order same rahe.
+    if (leafRoute) {
+        return <Navigate to={leafRoute} replace />;
+    }
 
     const handleBack = (): void => {
         navigate({ to: '/' });
