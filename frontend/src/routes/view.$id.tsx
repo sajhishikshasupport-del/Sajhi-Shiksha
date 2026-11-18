@@ -1,6 +1,6 @@
-import { createRoute, useNavigate, useParams, Navigate } from '@tanstack/react-router';
+import { createRoute, useNavigate, useParams } from '@tanstack/react-router';
 import { Route as rootRoute } from './__root';
-import { Suspense, lazy, useMemo } from 'react';
+import { Suspense, lazy, useEffect, useMemo } from 'react';
 import { ViewPageSkeleton } from '@/components/Skeletons';
 import { useSEO, breadcrumbSchema } from '@/hooks/useSEO';
 import { getResourceById, getLeafRouteForId } from '@/lib/resourceAggregator';
@@ -33,10 +33,11 @@ function ViewResourcePage(): React.ReactElement {
         ]) : undefined,
     });
 
-    // Saare hooks ke BAAD redirect - hook order same rahe.
-    if (leafRoute) {
-        return <Navigate to={leafRoute} replace />;
-    }
+    // Leaf/subCard id par aaye to uske asli section page par bhej do (REQ-A5).
+    // window.location.replace: exact URL, router ko query-string parse nahi karni padti.
+    useEffect(() => {
+        if (leafRoute) window.location.replace(leafRoute);
+    }, [leafRoute]);
 
     const handleBack = (): void => {
         navigate({ to: '/' });
