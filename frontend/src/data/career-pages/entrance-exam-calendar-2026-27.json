@@ -1,192 +1,904 @@
 {
- "title": "Entrance Exam Calendar 2026-27",
- "intro_short": "The exams that matter most after Class 12 — application windows, exam dates and official websites, each clearly labelled so no expected date is mistaken for an official one.",
- "intro_full": "This calendar covers the major entrance and recruitment examinations for the 2026-27 season, in one place. Every entry shows what is happening (application window, exam date, result timing) and carries one of three labels: CONFIRMED means an official notification or exam calendar has announced it; EXPECTED means it is projected from the previous cycle and can still change; NOT ANNOUNCED means no official date exists yet. The calendar is refreshed twice a week (Monday and Thursday) from official sources — NTA, UPSC, SSC, RRB, CBSE, ICAI and state boards. Use it to plan applications, not as a substitute for the official notification.",
- "sections": [
-  {
-   "heading": "Apply now — urgent deadlines",
-   "body": "Application windows that are open or closing in the coming weeks. Check the official website before the last date.",
-   "icon": "alarm",
-   "items": [
+  "title": "Entrance Exam Calendar 2026-27 — Exam Dates, Application Windows & Which Exam on Which Date",
+  "intro_short": "Which exam is on 25 Oct, 6 Dec or 14 Dec? The complete 2026-27 entrance and recruitment exam calendar — exam dates, application windows and official websites, each labelled CONFIRMED / EXPECTED / NOT ANNOUNCED. Updated twice a week (Monday and Thursday).",
+  "intro_full": "This calendar covers the major entrance and recruitment examinations for the 2026-27 season, in one place. Start with the date-wise list below if you want to know which exam falls on a particular date. Every entry shows what is happening (application window, exam date, result timing) and carries one of three labels: CONFIRMED means an official notification or exam calendar has announced it; EXPECTED means it is projected from the previous cycle and can still change; NOT ANNOUNCED means no official date exists yet. The calendar is refreshed twice a week — every Monday and Thursday — from official sources (NTA, UPSC, SSC, RRB, CBSE, ICAI and state boards), and immediately whenever a new notification is issued. Use it to plan applications, not as a substitute for the official notification.",
+  "sections": [
     {
-     "title": "CLAT 2027 (Consortium of NLUs)",
-     "body": "Application window is open for the Common Law Admission Test. The exam is a two-hour paper held in the afternoon.",
-     "meta": "Apply by 31 Oct 2026 | Exam 6 Dec 2026 | CONFIRMED (official)"
+      "heading": "Which exam is on which date (Oct 2026 – Apr 2027)",
+      "body": "Looking for a specific date? Here is every key date in this calendar, in order. Tap an exam to open its official website. Last refreshed 26 Nov 2026.",
+      "icon": "calendar",
+      "items": [
+        {
+          "title": "25 Oct 2026",
+          "meta": "CONFIRMED",
+          "body": "UPSSSC PET (Uttar Pradesh Preliminary Eligibility Test) — also held on 30 Oct and 1 Nov.",
+          "url": "https://upsssc.gov.in/"
+        },
+        {
+          "title": "27 Oct 2026",
+          "meta": "CONFIRMED",
+          "body": "Last date to apply for APPSC Group 1 (Andhra Pradesh, 166 posts).",
+          "url": "https://psc.ap.gov.in/"
+        },
+        {
+          "title": "28–31 Oct 2026",
+          "meta": "CONFIRMED",
+          "body": "UP NEET UG 2026 Round 3 choice filling (closed 5 PM on 31 Oct) — state-quota MBBS and BDS seats in Uttar Pradesh.",
+          "url": "https://upneet.gov.in/"
+        },
+        {
+          "title": "29–31 Oct 2026",
+          "meta": "reported (verify on portal)",
+          "body": "UP AYUSH UG 2026 Round 2 registration and document upload (BAMS, BHMS, BUMS).",
+          "url": "https://upayushcounseling.upsdc.gov.in/"
+        },
+        {
+          "title": "31 Oct 2026",
+          "meta": "CONFIRMED",
+          "body": "Last date to apply for UGC NET December 2026 (no late fee; fee payment for submitted forms allowed till 1 Nov) and for UCEED 2027 (design, B.Des at the IITs).",
+          "url": "https://ugcnet.nta.ac.in/"
+        },
+        {
+          "title": "2–4 Nov 2026",
+          "meta": "CONFIRMED (MCC schedule)",
+          "body": "MCC NEET UG 2026 Special Stray Vacancy Round (MBBS) and 5th round for BDS / B.Sc Nursing — registration closes 3 PM on 4 Nov; choice filling till 11 AM on 5 Nov; result 7 Nov.",
+          "url": "https://mcc.nic.in/"
+        },
+        {
+          "title": "2–4 Nov 2026",
+          "meta": "CONFIRMED",
+          "body": "UGC NET December 2026 application correction window (closes 11:50 PM on 4 Nov). Registration is closed.",
+          "url": "https://ugcnet.nta.ac.in/"
+        },
+        {
+          "title": "2 Nov 2026",
+          "meta": "reported (verify on psc.ap.gov.in)",
+          "body": "Last date to apply for APPSC Assistant Statistical Officer (196 posts, Advt 20/2026).",
+          "url": "https://psc.ap.gov.in/"
+        },
+        {
+          "title": "4 Nov 2026",
+          "meta": "CONFIRMED",
+          "body": "CAT 2026 admit card release (IIM Indore); exam 29 Nov 2026.",
+          "url": "https://iimcat.ac.in/"
+        },
+        {
+          "title": "5–7 Nov 2026",
+          "meta": "CONFIRMED (DGME UP notice ME-3/2026/1947, 3 Nov 2026)",
+          "body": "UP NEET UG 2026 special stray vacancy round: registration 5 Nov (11 AM) to 7 Nov (11 AM), fee by 7 Nov (2 PM); merit list and choice filling on 7 Nov; seat allotment 12 Nov; admission 13–16 Nov.",
+          "url": "https://upneet.gov.in/"
+        },
+        {
+          "title": "9 Nov 2026",
+          "meta": "CONFIRMED (NTA / ISRO, 6 Nov 2026)",
+          "body": "Last date to apply for CSIR-UGC NET December 2026 — extended from 5 Nov by NTA on 6 Nov 2026 (form and fee payment both till 11:50 PM). Same day: last date for ISRO SDSC SHAR recruitment (Advt SDSC SHAR/RMT/03/2026). CEED 2027 late-fee window also closes on 10 Nov.",
+          "url": "https://csirnet.nta.ac.in/"
+        },
+        {
+          "title": "10 Nov 2026",
+          "meta": "CONFIRMED (NLU Delhi)",
+          "body": "Last date to apply for AILET 2027 (National Law University Delhi) — B.A. LL.B. (Hons.) and LL.M. applications close; the exam is on 13 Dec 2026.",
+          "url": "https://nationallawuniversitydelhi.in/"
+        },
+        {
+          "title": "6 Nov 2026",
+          "meta": "CONFIRMED",
+          "body": "Last date to apply for RRB NTPC 2026 (Graduate posts).",
+          "url": "https://indianrailways.gov.in/"
+        },
+        {
+          "title": "7 Nov 2026",
+          "meta": "CONFIRMED",
+          "body": "Last date to apply for CLAT 2027 — extended from 31 Oct — and result day of the MCC NEET UG 2026 special stray round. In Uttar Pradesh, 7 Nov is also the merit-list and choice-filling day of the state special stray round (11 AM deadline).",
+          "url": "https://consortiumofnlus.ac.in/"
+        },
+        {
+          "title": "11–30 Nov 2026",
+          "meta": "CONFIRMED (AP School Education Dept notification, 4 Nov 2026)",
+          "body": "APTRT-2026 (Andhra Pradesh DSC) applications for 2,721 teacher posts — 2,111 regular School Assistant / SGT, 350 special education and 260 society posts. Mock test 5 Dec; hall ticket 14 Dec; computer-based test from 20 Dec 2026.",
+          "url": "https://schooledu.ap.gov.in/"
+        },
+        {
+          "title": "12 Nov 2026",
+          "meta": "CONFIRMED (DSSSB advertisement 06/2026)",
+          "body": "DSSSB online applications open at 12 noon for 1,260 posts — 1,075 MTS (10th pass) and 185 Junior Engineer (Electrical); last date 11 Dec 2026.",
+          "url": "https://dsssbonline.nic.in/"
+        },
+        {
+          "title": "13 Nov 2026",
+          "meta": "CONFIRMED",
+          "body": "Last date to apply for RRB NTPC 2026 (Undergraduate posts).",
+          "url": "https://indianrailways.gov.in/"
+        },
+        {
+          "title": "13–16 Nov 2026",
+          "meta": "CONFIRMED (ISRO SDSC SHAR notice dated 13.11.2026)",
+          "body": "ISRO SDSC SHAR recruitment portal reopened — apply by 16 Nov 2026 (11:59 PM) for Advt SDSC SHAR/RMT/03/2026. Eligibility cut-off remains 9 Nov 2026.",
+          "url": "https://apps.shar.gov.in/"
+        },
+        {
+          "title": "14–30 Nov 2026",
+          "meta": "CONFIRMED",
+          "body": "SHRESHTA (NETS) 2027 — NTA entrance test for SC and DNT students of Class 8 and Class 10 (family income up to ₹2.5 lakh) seeking Class 9 and Class 11 admission in private residential schools; about 2,400 seats; no application fee. Exam 10 Jan 2027.",
+          "url": "https://exams.nta.nic.in/shreshta/"
+        },
+        {
+          "title": "14 Nov 2026",
+          "meta": "CONFIRMED (MCC Round-2 schedule dated 07.11.2026)",
+          "body": "MCC NEET PG 2026 Round 2 — registration closes 3 PM and fee payment 6 PM; choice locking opens 4 PM. Final allotment result 17 Nov.",
+          "url": "https://mcc.nic.in/"
+        },
+        {
+          "title": "16–17 Nov 2026",
+          "meta": "CONFIRMED (MCC Round-2 schedule dated 07.11.2026)",
+          "body": "MCC NEET PG 2026 Round 2 — provisional result on 16 Nov, final seat allotment result on 17 Nov (MD/MS/DNB, all-India quota).",
+          "url": "https://mcc.nic.in/"
+        },
+        {
+          "title": "18–24 Nov 2026",
+          "meta": "CONFIRMED (MCC Round-2 schedule dated 07.11.2026)",
+          "body": "MCC NEET PG 2026 Round 2 reporting and joining at allotted colleges; MCC verifies joined candidates' data on 25 Nov.",
+          "url": "https://mcc.nic.in/"
+        },
+        {
+          "title": "16–19 Nov 2026",
+          "meta": "CONFIRMED (official DGME UP schedule, letter ME-3/2026/2001 dated 13 Nov 2026)",
+          "body": "UP NEET PG 2026 Round 2 (state quota, MD/MS/Diploma/DNB): online registration 16 Nov (2 PM) to 19 Nov (11 AM), fee till 19 Nov (2 PM); merit list 19 Nov; choice filling 20–25 Nov; allotment 26 Nov; admission 27 Nov – 2 Dec. Registration ₹3,000 (one-time for rounds 1–3) plus security ₹30,000 for government and ₹2,00,000 for private college seats.",
+          "url": "https://upneet.gov.in/"
+        },
+        {
+          "title": "18–20 Nov 2026",
+          "meta": "CONFIRMED (DGME UP notice 17 Nov 2026; seat matrix 18 Nov 2026)",
+          "body": "UP NEET UG 2026 Round 5 (BDS only): registration and document upload 18 Nov (5 PM) to 20 Nov (11 AM); merit list 20 Nov; choice filling 20 Nov (5 PM) to 23 Nov (11 AM); allotment 23 Nov; admission 25–28 Nov. The seat matrix has just one seat in the whole state — BDS, unreserved, D.J. College of Dental Sciences and Research, Modinagar (Ghaziabad), a private college.",
+          "url": "https://upneet.gov.in/"
+        },
+        {
+          "title": "19–23 Nov 2026",
+          "meta": "CONFIRMED (UP AYUSH Board Round-3 notice 5 Nov 2026)",
+          "body": "UP AYUSH UG 2026 Round 3 (BAMS, BHMS, BUMS): final seat allotment on 19 Nov; document verification at the nodal centre on 20–21 Nov; last date of admission 23 Nov (5 PM). Choice filling closed on 18 Nov at 2 PM.",
+          "url": "https://upayushcounseling.upsdc.gov.in/"
+        },
+        {
+          "title": "19–28 Nov 2026",
+          "meta": "CONFIRMED (BSEB notice, 3 Nov 2026)",
+          "body": "Bihar Board (BSEB) sent-up examinations for the 2027 batch — Intermediate 19–28 Nov and Matric 23–27 Nov 2026. A student who misses or fails the sent-up exam is not issued an admit card for the board exam.",
+          "url": "https://biharboardonline.bihar.gov.in/"
+        },
+        {
+          "title": "23 Nov 2026",
+          "meta": "CONFIRMED (UPESSC Advertisement 07/2026)",
+          "body": "Last date to apply for UPESSC TGT 2026 (Uttar Pradesh, 17,735 Assistant Teacher posts, Advt 07/2026); correction till 26 Nov; written exam 23–24 Dec 2026.",
+          "url": "https://upessc.up.gov.in/"
+        },
+        {
+          "title": "24 Nov 2026",
+          "meta": "CONFIRMED (NTA notice, 14 Nov 2026)",
+          "body": "Last date for NIFT 2027 (NIFTEE) registration — extended from 16 Nov; late fee window 25–29 Nov, correction 30 Nov – 2 Dec, exam 10 Jan 2027.",
+          "url": "https://exams.nta.nic.in/niftee/"
+        },
+        {
+          "title": "25 Nov 2026",
+          "meta": "CONFIRMED (official advts; KEA window extended)",
+          "body": "Three application windows closed on 25 November 2026: RRB Station Master CEN 08/2026 (1,265 posts — revised up from 1,215), UPSSSC Junior Engineer (Mechanical) 24-Exam/2026 (1,156 posts) and Supreme Court Junior Court Attendant (130 posts, 11:55 PM). The KEA Karnataka FDA/SDA window did not close — it was extended to 30 November 2026.",
+          "url": "https://indianrailways.gov.in/"
+        },
+        {
+          "title": "30 Oct – 30 Nov 2026",
+          "meta": "CONFIRMED (KEA extension order, 24 Nov 2026)",
+          "body": "KEA Karnataka FDA, SDA and Group C recruitment (5,431 posts) — the last date for both the form and the fee was extended from 25/26 November to 30 November 2026 (KEA order of 24 Nov 2026). The Kannada language test on 8 Jan and the main exams on 9–17 Jan 2027 are unchanged.",
+          "url": "https://cetonline.karnataka.gov.in/kea/"
+        },
+        {
+          "title": "22 Nov 2026",
+          "meta": "CONFIRMED",
+          "body": "Last date to apply for JEE Main 2027, Session 1 (late fee till 26 Nov — the final day), and for AEES teacher recruitment 2026 (254 posts).",
+          "url": "https://jeemain.nta.nic.in/"
+        },
+        {
+          "title": "26 Nov 2026",
+          "meta": "CONFIRMED",
+          "body": "Last date to apply for APPSC's five fresh notifications dated 6 Nov 2026 (Asst Director Mines, Technical Assistant, Lab Assistant, Asst Chemical Examiner, Assistant Motor Vehicle Inspector — 50 posts); applications opened 6 Nov.",
+          "url": "https://portal-psc.ap.gov.in/HomePages/RecruitmentNotifications"
+        },
+        {
+          "title": "26 Nov 2026",
+          "meta": "CONFIRMED (NTA update, 26 Nov 2026; DGME UP)",
+          "body": "JEE Main 2027 Session 1 — last day to complete the application with the ₹500 late fee (11:50 PM). NTA's own update on 26 November: 15,84,014 forms submitted and 14,06,780 candidates fee-paid. Same day: the UP NEET PG 2026 Round 2 seat allotment result is declared.",
+          "url": "https://jeemain.nta.nic.in/"
+        },
+        {
+          "title": "27 Nov – 2 Dec 2026",
+          "meta": "CONFIRMED (DGME UP schedule, 13 Nov 2026)",
+          "body": "UP NEET PG 2026 Round 2 — download the allotment letter and complete admission at the allotted college; 2 December is the last date.",
+          "url": "https://upneet.gov.in/"
+        },
+        {
+          "title": "27–29 Nov 2026",
+          "meta": "CONFIRMED (NTA calendar, 26 Oct 2026; JKSSB notice, 11 Nov 2026)",
+          "body": "JEE Main 2027 Session-1 correction window (27–29 November) and the last date for JKSSB Class IV (MTS) and Sanitation Worker — 2,863 posts, extended to 27 November 2026.",
+          "url": "https://jeemain.nta.nic.in/"
+        },
+        {
+          "title": "30 Nov 2026",
+          "meta": "CONFIRMED (KEA order 24 Nov 2026; NTA + PIB 19 Nov 2026)",
+          "body": "Last date for KEA Karnataka FDA/SDA (5,431 posts) — form and fee both extended to 30 November — and for SHRESHTA (NETS) 2027 registration (SC and DNT students of Class 8 and 10, no fee).",
+          "url": "https://cetonline.karnataka.gov.in/kea/"
+        },
+        {
+          "title": "29 Nov 2026",
+          "meta": "CONFIRMED",
+          "body": "CAT 2026 (IIM Indore) — Common Admission Test for MBA.",
+          "url": "https://iimcat.ac.in/"
+        },
+        {
+          "title": "2 Dec 2026",
+          "meta": "CONFIRMED (RRC Central Railway notification, 3 Nov 2026)",
+          "body": "Last date to apply for RRC Central Railway Act Apprentice 2026-27 — 2,861 one-year ITI training slots; online closes 5 PM.",
+          "url": "https://www.rrccr.com/"
+        },
+        {
+          "title": "30 Nov – 31 Dec 2026",
+          "meta": "CONFIRMED",
+          "body": "SSC CHSL 2026 Tier-1 exam window.",
+          "url": "https://ssc.gov.in/"
+        },
+        {
+          "title": "6 Dec 2026",
+          "meta": "CONFIRMED",
+          "body": "CLAT 2027 — Common Law Admission Test for the National Law Universities.",
+          "url": "https://consortiumofnlus.ac.in/"
+        },
+        {
+          "title": "12–13 Dec 2026",
+          "meta": "CONFIRMED",
+          "body": "CTET 2026 (CBSE) — Central Teacher Eligibility Test.",
+          "url": "https://ctet.nic.in/"
+        },
+        {
+          "title": "13 Dec 2026",
+          "meta": "CONFIRMED",
+          "body": "AILET 2027 (NLU Delhi) — law entrance exam, 2–4 PM, pen-and-paper; admit card 30 Nov 2026.",
+          "url": "https://nationallawuniversitydelhi.in/"
+        },
+        {
+          "title": "14–18 and 21 Dec 2026",
+          "meta": "CONFIRMED",
+          "body": "UGC NET December 2026 (revised dates announced 26 Oct).",
+          "url": "https://ugcnet.nta.ac.in/"
+        },
+        {
+          "title": "19, 22, 27 Dec 2026",
+          "meta": "CONFIRMED",
+          "body": "CSIR-UGC NET December 2026.",
+          "url": "https://csirnet.nta.ac.in/"
+        },
+        {
+          "title": "20 Dec 2026 – 13 Jan 2027",
+          "meta": "CONFIRMED (AP School Education Dept notification, 4 Nov 2026)",
+          "body": "APTRT-2026 (AP DSC) computer-based test window for the 2,721 teacher posts.",
+          "url": "https://schooledu.ap.gov.in/"
+        },
+        {
+          "title": "3, 5, 7, 9 Jan 2027",
+          "meta": "CONFIRMED",
+          "body": "CA Foundation (January 2027 cycle).",
+          "url": "https://www.icai.org/"
+        },
+        {
+          "title": "10 Jan 2027",
+          "meta": "CONFIRMED (NTA calendar)",
+          "body": "NIFT 2027 entrance (B.Des, B.F.Tech, M.Des and other NIFT programmes).",
+          "url": "https://exams.nta.nic.in/niftee/"
+        },
+        {
+          "title": "17 Jan 2027",
+          "meta": "CONFIRMED",
+          "body": "UCEED 2027 — B.Des admissions at IIT Bombay, Delhi, Guwahati, Hyderabad, Indore, Roorkee and IIITDM Jabalpur.",
+          "url": "https://www.uceed.iitb.ac.in/"
+        },
+        {
+          "title": "20–24 and 28 Jan 2027",
+          "meta": "CONFIRMED (NTA calendar)",
+          "body": "JEE Main 2027, Session 1 (revised dates announced 26 Oct).",
+          "url": "https://jeemain.nta.nic.in/"
+        },
+        {
+          "title": "24 Jan 2027",
+          "meta": "CONFIRMED (official)",
+          "body": "APPSC Group 1 (Andhra Pradesh) screening test, 166 posts — applications closed on 27 Oct 2026.",
+          "url": "https://psc.ap.gov.in/"
+        },
+        {
+          "title": "27 Jan 2027",
+          "meta": "CONFIRMED (BHEL advts 02/2026 and 03/2026)",
+          "body": "BHEL computer-based examination for 200 Engineer/Executive Trainee and 215 Supervisor Trainee posts (applications 25 Nov – 28 Dec 2026).",
+          "url": "https://careers.bhel.in/"
+        },
+        {
+          "title": "5–24 Feb 2027",
+          "meta": "CONFIRMED (UPMSP)",
+          "body": "UP Board (UPMSP) Class 10 and Class 12 board examinations 2027.",
+          "url": "https://upmsp.edu.in/"
+        },
+        {
+          "title": "2–7 Apr 2027",
+          "meta": "CONFIRMED (NTA calendar)",
+          "body": "JEE Main 2027, Session 2 (dates published in NTA's revised calendar).",
+          "url": "https://jeemain.nta.nic.in/"
+        },
+        {
+          "title": "11 Apr 2027",
+          "meta": "CONFIRMED",
+          "body": "NDA (I) and CDS (I) 2027 (UPSC).",
+          "url": "https://upsc.gov.in/"
+        },
+        {
+          "title": "1 Jan – 13 Feb 2027",
+          "meta": "CONFIRMED (CBSE date sheet, 6 Nov 2026)",
+          "body": "CBSE practical examinations, project and internal assessment for Class X and XII (winter-bound schools: 9 Nov – 19 Dec 2026).",
+          "url": "https://www.cbse.gov.in/"
+        },
+        {
+          "title": "9 Feb – 8 Apr 2027",
+          "meta": "CONFIRMED (CISCE date sheet, 10 Nov 2026)",
+          "body": "ISC (Class XII) 2027 board exams — first paper 9 Feb, last paper 8 Apr 2027.",
+          "url": "https://cisce.org/"
+        },
+        {
+          "title": "15 Feb – 31 Mar 2027",
+          "meta": "CONFIRMED (CISCE date sheet, 10 Nov 2026)",
+          "body": "ICSE (Class X) 2027 board exams — first paper 15 Feb, last paper 31 Mar 2027.",
+          "url": "https://cisce.org/"
+        },
+        {
+          "title": "16 Feb – 9 Mar 2027",
+          "meta": "CONFIRMED (CBSE date sheet, 6 Nov 2026)",
+          "body": "CBSE Class X board examinations 2027 — begin 16 Feb, end 9 Mar. 26.5 lakh students registered; 83 subjects.",
+          "url": "https://www.cbse.gov.in/"
+        },
+        {
+          "title": "16 Feb – 9 Apr 2027",
+          "meta": "CONFIRMED (CBSE date sheet, 6 Nov 2026)",
+          "body": "CBSE Class XII board examinations 2027 — begin 16 Feb, end 9 Apr. 19.8 lakh students registered; 121 subjects.",
+          "url": "https://www.cbse.gov.in/"
+        }
+      ]
     },
     {
-     "title": "JEE Main 2027 (Session 1) — registration",
-     "body": "NTA opened Session 1 registration on 24 October 2026. Late fee window 23-26 November, correction 27-29 November, city intimation slip 30 December, admit card 13 January 2027. This is the single biggest deadline for Class 12 science students this quarter.",
-     "meta": "Apply by 22 Nov 2026 | Exam 20-24 & 28 Jan 2027 | CONFIRMED (official, NTA notice 24 Oct 2026)"
+      "heading": "Apply now — urgent deadlines",
+      "body": "Application windows that are open or closing in the coming weeks. Check the official website before the last date.",
+      "icon": "alarm",
+      "items": [
+        {
+          "title": "MCC NEET PG 2026 — Round 2 (MD/MS/DNB, all-India quota)",
+          "meta": "Registration CLOSED 14 Nov 2026 (3 PM; fee 6 PM) | Choices closed 15 Nov | Final result 17 Nov | Reporting 18–24 Nov | CONFIRMED (official MCC Round-2 schedule dated 7 Nov 2026)",
+          "body": "Round 2 of all-India-quota PG counselling, re-scheduled after the National Medical Commission approved additional PG seats. Registration closes 3 PM on 14 Nov, choice filling runs to 11:55 PM on 15 Nov, the final allotment result comes on 17 Nov and reporting is 18–24 Nov. Anyone holding a Round-1 seat could resign without losing the security deposit until 6 PM on 9 Nov. Note: the earlier 'result 14 Nov' date circulating in WhatsApp forwards is out of date.",
+          "url": "https://mcc.nic.in/"
+        },
+        {
+          "title": "AILET 2027 (NLU Delhi) — B.A. LL.B. (Hons.) and LL.M",
+          "meta": "Apply by 10 Nov 2026 (CLOSED) | Exam 13 Dec 2026, 2–4 PM | CONFIRMED (official — NLU Delhi admission announcement 7 Aug 2026; last date re-checked on the portal 9 Nov 2026)",
+          "url": "https://nationallawuniversitydelhi.in/",
+          "body": "The last date for the AILET 2027 online application is 10 November 2026; the pen-and-paper exam is on 13 December 2026, 2–4 PM, and admit cards come out on 30 November 2026. Undergraduate eligibility is Class 12 with 45% (OBC 42%, SC/ST 40%); fee Rs 3,000 (SC/ST/PwD Rs 1,000). A three-day correction window opens after the last date. NLU Delhi's own test — separate from CLAT."
+        },
+        {
+          "title": "DSSSB advertisement 06/2026 — 1,260 posts (Delhi)",
+          "meta": "Apply 12 Nov 2026 (12 noon) – 11 Dec 2026 (11:59 PM) | CONFIRMED (official advertisement dated 6 Nov 2026)",
+          "url": "https://dsssbonline.nic.in/",
+          "body": "Delhi Subordinate Services Selection Board combined examination: 1,075 Multi-Tasking Staff posts (10th pass — 757 MTS General Duty and 239 MTS Aaya (Female) in the Directorate of Education, plus small departmental blocks) and 185 Junior Engineer (Electrical) posts (degree, or diploma with experience, in electrical engineering). Age 18–27 (NDMC JE 18–32); fee Rs 100, with women, SC/ST, PwBD and ex-servicemen exempt. MTS is a one-tier computer-based test, JE two-tier; exam dates will be announced later."
+        },
+        {
+          "title": "APPSC — 8 notifications (Andhra Pradesh), 299 posts — last date extended",
+          "meta": "Apply by 12 Nov 2026 (11:59 PM) — CLOSED (earlier 5 Nov) | CONFIRMED (official — APPSC web note dated 2 Nov 2026)",
+          "url": "https://psc.ap.gov.in/",
+          "body": "Notifications 12, 13, 15, 16, 17, 18, 23 and 24/2026 cover forest services, industries, welfare, Endowments, Executive Officer Grade-III, Probation Officer, Industrial Promotion Officer and Supervisor Grade-I. The post-wise counts add up to 299 provisional vacancies — a computed total, not a grand total printed in the notices. The 2 Nov 2026 web note moved the last date from 5 Nov to 12 Nov and says there will be no further extension. Selection is a single-level computer-based (CBRT) exam; the exam date has not been announced. Keep the OTPR ready before you start the form."
+        },
+        {
+          "title": "ISRO SAC Ahmedabad — Graduate, Technician and Trade Apprentice 2026",
+          "meta": "Apply 11 Nov (9:30 AM) – 2 Dec 2026 (5 PM) | CONFIRMED (official — Advt SAC:03:2026 dated 11 Nov 2026)",
+          "url": "https://careers.sac.gov.in/",
+          "body": "Space Applications Centre, Ahmedabad (ISRO) invites Graduate Apprentices (B.E/B.Tech), Technician Apprentices (Diploma) and Trade Apprentices (ITI / 10th-pass trades) under the Apprentices Act. Stipend is as per the Apprentices Act rates; selection is on merit of qualifying marks, with no written test. The portal stays open only from 9:30 AM on 11 Nov 2026 to 5:00 PM on 2 Dec 2026 — register on careers.sac.gov.in and keep your degree/diploma/ITI certificate and marksheets scanned before you start."
+        },
+        {
+          "title": "RRC Central Railway Act Apprentice 2026-27 — 2,861 training slots",
+          "meta": "Apply 3 Nov (11 AM) – 2 Dec 2026 (5 PM) | CONFIRMED (official notification RRC/CR/AA/2026, 3 Nov 2026)",
+          "url": "https://www.rrccr.com/",
+          "body": "One year of apprenticeship training in ITI trades across five clusters — Mumbai 1,712, Bhusawal 500, Pune 271, Nagpur 221, Solapur 157. Eligibility: Class 10 with at least 50% plus an NCVT or SCVT ITI certificate in the relevant trade; age 15–24 as on 3 Nov 2026 (5 years' relaxation SC/ST, 3 years OBC, 10 years PwBD). Fee Rs 100; stipend Rs 9,600 a month; no hostel. There is no written exam — merit is the simple average of Class 10 and ITI marks. Engineering graduates and diploma holders are not eligible under this notification (a separate scheme applies to them). Only one cluster may be chosen and only one application is allowed."
+        },
+        {
+          "title": "APTRT-2026 / AP DSC — 2,721 teacher posts",
+          "meta": "Apply 11–30 Nov 2026 | Exam from 20 Dec 2026 | CONFIRMED (official notification, 4 Nov 2026)",
+          "body": "Andhra Pradesh Teacher Recruitment Test: 2,111 regular School Assistant and Secondary Grade Teacher posts, 350 special education posts and 260 posts in educational societies (principals, PGTs, TGTs, physical directors). Online applications 11–30 November 2026; mock test 5 December, hall ticket 14 December, CBT from 20 December 2026.",
+          "url": "https://schooledu.ap.gov.in/"
+        },
+        {
+          "title": "UPESSC TGT 2026 (Uttar Pradesh) — 17,735 Assistant Teacher posts",
+          "meta": "Apply 24 Oct – 23 Nov 2026 | Correction 26 Nov | Exam 23–24 Dec 2026 | CONFIRMED (official Advertisement 07/2026 dated 23 Oct 2026)",
+          "body": "Uttar Pradesh Education Service Selection Commission advertisement 07/2026 for 17,735 Assistant Teacher (Trained Graduate Grade) posts in government-aided secondary schools — 16,193 in boys' schools and 1,542 in girls' schools, across 17 subjects. Subject-specific graduation/postgraduation, B.Ed. (or the applicable training qualification) and upper-primary TET are all required — graduation alone is not enough. Fee ₹1,000, Level-7 pay ₹44,900–1,42,400, written exam of 360 marks on 23–24 December 2026.",
+          "url": "https://upessc.up.gov.in/"
+        },
+        {
+          "title": "UP NEET UG 2026 — special stray vacancy round (MBBS/BDS)",
+          "meta": "Registration CLOSED 7 Nov 2026 (11 AM) | Allotment 12 Nov | Admission 13–16 Nov | CONFIRMED (official DGME UP notice ME-3/2026/1947, 3 Nov 2026)",
+          "body": "Uttar Pradesh's special stray vacancy round for state-quota medical and dental seats, opened by DGME UP on 3 November 2026. Fee payment closes 7 November at 2 PM, merit list and choice filling happen the same day, allotment on 12 November and admission 13–16 November. The department also allowed resignation from rounds 1–3 until 5 November, 5 PM.",
+          "url": "https://upneet.gov.in/"
+        },
+        {
+          "title": "APPSC Assistant Executive Engineer 2026 (Andhra Pradesh) — 503 posts",
+          "meta": "Apply 2-22 Nov 2026 - CLOSED (last day was 22 Nov) | CONFIRMED (official notification 27/2026)",
+          "body": "503 Assistant Executive Engineer posts across Andhra Pradesh government departments. Computer-based test of 450 marks; pay scale Rs 57,100–1,47,760. Applications close 22 November 2026.",
+          "url": "https://psc.ap.gov.in/"
+        },
+        {
+          "title": "APPSC — 5 fresh notifications (Andhra Pradesh), 6 Nov 2026",
+          "meta": "Apply 6–26 Nov 2026 | CONFIRMED (official notifications 31, 32, 34, 35, 36/2026)",
+          "body": "Assistant Director (Mines), Technical Assistant, Lab Assistant, Assistant Chemical Examiner and Assistant Motor Vehicle Inspector (50 posts). Online applications close 11:59 PM on 26 Nov 2026. OTPR (One Time Profile Registration) is required before applying.",
+          "url": "https://portal-psc.ap.gov.in/HomePages/RecruitmentNotifications"
+        },
+        {
+          "title": "OPSC Assistant Section Officer 2026 (Odisha) — 340 posts",
+          "meta": "Apply 9–30 Nov 2026 | Exam 17 Jan 2027 | reported (verify on opsc.gov.in)",
+          "body": "340 Assistant Section Officer posts in the Odisha Secretariat and allied offices; Level-9 pay (Rs 35,400–1,12,400). Application window 9–30 November 2026, written exam 17 January 2027.",
+          "url": "https://www.opsc.gov.in/"
+        },
+        {
+          "title": "GSSSB Gujarat CCE 2.0 — 1,237 posts",
+          "meta": "Apply 5–30 Nov 2026 | reported (verify on gsssb.gujarat.gov.in)",
+          "body": "Gujarat Subordinate Services Selection Board combined competitive examination for 1,237 posts, with fixed pay of Rs 26,000–49,600 for the first five years. Application window 5–30 November 2026.",
+          "url": "https://gsssb.gujarat.gov.in/"
+        },
+        {
+          "title": "JEE Main 2027 (Session 1)",
+          "body": "Registration opened on 24 October 2026 and closed on 22 November with 15,04,866 forms; by 26 November NTA reported 15,84,014 forms submitted and 14,06,780 candidates fee-paid. The late-fee window runs 23-26 November with an extra Rs 500 and closes at 11:50 PM on 26 November — it is only for candidates who already generated an application number, not a fresh registration. Correction 27-29 November; city slip 30 December; admit card 13 January 2027. This is the single most important deadline for Class 12 science students right now.",
+          "meta": "Regular window CLOSED 22 Nov 2026 | Late fee 23-26 Nov (final day 26 Nov, 11:50 PM) | Correction 27-29 Nov | Exam 20-24 and 28 Jan 2027 | CONFIRMED (official)",
+          "url": "https://jeemain.nta.nic.in/"
+        },
+        {
+          "title": "RRB NTPC 2026 (Graduate and Undergraduate)",
+          "body": "Two separate application windows for graduate (CEN 06/2026) and undergraduate (CEN 07/2026 — 1,688 posts of Commercial cum Ticket Clerk, Junior Clerk cum Typist, Accounts Clerk cum Typist and Trains Clerk). Corrigendum-1 dated 13 November 2026 moved the UG closing date from 13 to 15 November; the fee deadline stayed 15 November and the modification window runs 16–25 November. CBT-1 dates are not announced.",
+          "meta": "Graduate: 8 Oct - 6 Nov 2026 (CLOSED) | UG: 15 Oct - 15 Nov 2026 (CLOSED) | Modification window closes 25 Nov | CONFIRMED (official Corrigendum-1 dated 13.11.2026)",
+          "url": "https://indianrailways.gov.in/"
+        },
+        {
+          "title": "UGC NET December 2026 cycle",
+          "body": "Registration closed at 11:50 PM on 31 October 2026 (NTA notice of 27 October, no late fee). The application correction window was 2 to 4 November 2026. NTA released the advance exam-city intimation slip on 25 November 2026 (postponed from 23 November) - it names only the city and is not the admit card. NTA has also opened a window for candidates allotted a city outside their four preferences to choose another city. Admit card 7 December; exam 14-18 and 21 December 2026 in two shifts daily (9 AM-12 noon and 3-6 PM); subject-wise schedule released 19 November 2026. Over nine lakh candidates registered.",
+          "meta": "Closed 31 Oct | City slip OUT 25 Nov (was 23 Nov) | Admit card 7 Dec | Exam 14-18 and 21 Dec 2026 | CONFIRMED (official)",
+          "url": "https://ugcnet.nta.ac.in/"
+        },
+        {
+          "title": "CSIR-UGC NET December 2026",
+          "body": "A national eligibility test for research fellowships and lectureships in science subjects, conducted in computer-based mode. NTA extended the application deadline to 9 November 2026 (11:50 PM) on 6 November 2026 — both form submission and fee payment. If you want a funded M.Sc./PhD route or college teaching, this is the door.",
+          "meta": "Apply by 9 Nov 2026 (CLOSED) | Correction 10–12 Nov 2026 | Exam 19, 22, 27 Dec 2026",
+          "url": "https://csirnet.nta.ac.in/"
+        },
+        {
+          "title": "CTET 2026 (CBSE, 22nd edition)",
+          "body": "The Central Teacher Eligibility Test will be held over two days. Applications for this cycle are already closed.",
+          "meta": "Exam 12–13 Dec 2026 | CONFIRMED (official)",
+          "url": "https://ctet.nic.in/"
+        },
+        {
+          "title": "NDA (I) and CDS (I) 2027 (UPSC)",
+          "body": "Notification and application window for the first NDA and CDS exams of 2027, per the UPSC calendar.",
+          "meta": "Apply 2–22 Dec 2026 | Exam 11 Apr 2027 | CONFIRMED (UPSC calendar)",
+          "url": "https://upsc.gov.in/"
+        },
+        {
+          "title": "CA Foundation, January 2027 cycle",
+          "body": "Exam form window opens in November, with a late-fee window; the exam runs over four days in early January.",
+          "meta": "Form: 3–16 Nov 2026 | Exam: 3, 5, 7, 9 Jan 2027 | CONFIRMED (official)",
+          "url": "https://www.icai.org/"
+        },
+        {
+          "title": "UPSSSC PET 2026",
+          "body": "Preliminary Eligibility Test for Uttar Pradesh government posts, held in two shifts per day on the revised schedule.",
+          "meta": "Exam held 25 Oct, 30 Oct and 1 Nov 2026 — DONE | CONFIRMED (official, revised)",
+          "url": "https://upsssc.gov.in/"
+        },
+        {
+          "title": "CAT 2026 (IIM Indore)",
+          "body": "The Common Admission Test for MBA admissions, held in three sessions. Registration closed on 22 September 2026; admit card releases on 4 November 2026 on iimcat.ac.in.",
+          "meta": "Exam 29 Nov 2026 | CONFIRMED (official)",
+          "url": "https://iimcat.ac.in/"
+        },
+        {
+          "title": "UPPSC RO/ARO 2026 — 501 posts",
+          "body": "Review Officer and Assistant Review Officer posts in the Uttar Pradesh Secretariat, UPPSC and the Board of Revenue. A One Time Registration (OTR) number is compulsory before applying.",
+          "meta": "Apply 26 Oct – 26 Nov 2026 | CONFIRMED (official)",
+          "url": "https://uppsc.up.nic.in/"
+        },
+        {
+          "title": "NIFT 2027 entrance",
+          "body": "Bachelor of Design, Bachelor of Fashion Technology and the NIFT postgraduate programmes. NTA extended the regular application window from 16 November to 24 November 2026 (NTA notice, 14 Nov); applications with a ₹5,000 late fee run 25–29 November, correction 30 November – 2 December, admit card 4 January, and the exam is on 10 January 2027 (GAT computer-based, CAT pen-and-paper).",
+          "meta": "Apply by 24 Nov 2026 (extended from 16 Nov) | Late fee 25–29 Nov | Correction 30 Nov – 2 Dec | Exam 10 Jan 2027 | CONFIRMED (official — NTA notice 14 Nov 2026)",
+          "url": "https://exams.nta.nic.in/niftee/"
+        },
+        {
+          "title": "OUSSSC Combined Uniformed Services 2026 (Odisha) — 7,268 posts",
+          "body": "Constable (Civil), Constable (OISF), Constable (Communication), Firefighter, Firefighting Driver, Driver PMT and Traffic Constable. 10th or 12th pass depending on the post; written test plus physical tests.",
+          "meta": "Apply 23 Oct – 12 Nov 2026 (CLOSED; fee till 13 Nov) | CONFIRMED (official)",
+          "url": "https://ousssc.odisha.gov.in/"
+        },
+        {
+          "title": "MCC NEET UG 2026 — Special Stray Vacancy Round (MBBS) and BDS / B.Sc Nursing 5th round",
+          "meta": "Register 2–4 Nov 2026 (3 PM) — CLOSED | Choice filling till 5 Nov (11 AM) | Result 7 Nov | Reporting 7–16 Nov",
+          "body": "The Medical Counselling Committee opened the special stray round for the All India Quota on 2 November 2026. Registration and fee payment close at 3 PM on 4 November (payment till 6 PM), choice filling and locking till 11 AM on 5 November, result on 7 November, and reporting at the allotted college from 7 to 16 November 2026. The seat matrix released with this round lists about 946 MBBS seats, most of them in deemed universities. A 6th round for BDS and B.Sc Nursing runs 17–20 November (reporting 21–28 November).",
+          "url": "https://mcc.nic.in/"
+        },
+        {
+          "title": "CEED 2027 (design — M.Des at the IITs)",
+          "meta": "Apply by 5 Nov 2026 — CLOSED (late fee till 10 Nov) | Exam 17 Jan 2027",
+          "body": "Common Entrance Examination for Design, conducted by IIT Bombay, for M.Des and PhD programmes at IIT Bombay, Delhi, Guwahati, Hyderabad, Roorkee and IIITDM Jabalpur. Regular-fee applications close on 5 November 2026 at 11:59 PM; with a late fee of ₹500 till 10 November. Exam on 17 January 2027.",
+          "url": "https://www.ceed.iitb.ac.in/"
+        },
+        {
+          "title": "AEES teacher recruitment 2026 — 254 posts",
+          "meta": "Apply 2-22 Nov 2026 - CLOSED",
+          "body": "Atomic Energy Education Society (Department of Atomic Energy) advertisement 01/2026, published in Employment News of 31 October–6 November 2026: Principal, Vice Principal, PGT, TGT, PRT, PRT (Music), Balvatika Teacher and Librarian posts. Online applications open on 2 November and close on 22 November 2026 at aees.gov.in.",
+          "url": "https://www.aees.gov.in/"
+        },
+        {
+          "title": "OSSSC Ophthalmic Officer 2026 (Odisha) — 238 posts",
+          "meta": "Apply 5 Nov – 5 Dec 2026",
+          "body": "Odisha Sub-ordinate Staff Selection Commission indicative notice for 238 District Cadre Group-C Ophthalmic Officer posts. Online registration opens on 5 November 2026 and the final submission closes on 5 December 2026. The detailed notification with eligibility is yet to be published.",
+          "url": "https://www.osssc.gov.in/"
+        },
+        {
+          "title": "ISRO SDSC SHAR recruitment 2026 — Sriharikota",
+          "meta": "Portal reopened 13 Nov 2026 (10 AM) – 16 Nov 2026 (11:59 PM) — CLOSED | Age/qualification cut-off stays 9 Nov 2026 | CONFIRMED (official notice No. SDSC SHAR/RMT/03/2026 dated 13.11.2026)",
+          "body": "SDSC SHAR has reopened the online application portal for Advt SDSC SHAR/RMT/03/2026 — candidates who did not apply, or registered candidates who did not complete the form, can submit from 13 Nov 2026 (10:00 hrs) to 16 Nov 2026 (23:59 hrs). Eligibility (essential qualification, age) is still reckoned as on 9 Nov 2026 and all other terms are unchanged. Posts: Technical Assistant, Scientific Assistant, Library Assistant 'A', Nurse 'B', Technician 'B', Draughtsman 'B', Fireman 'A', LVD 'A', HVD 'A' and Multi-Tasking Staff at Sriharikota — 97 posts reported. One of the few central-government openings open to 10th-pass and ITI-qualified candidates.",
+          "url": "https://www.isro.gov.in/SDSCRecruitment26.html"
+        },
+        {
+          "title": "CBSE Board Exams 2027 — date sheet released",
+          "meta": "Released 6 Nov 2026 | Class X: 16 Feb – 9 Mar 2027 | Class XII: 16 Feb – 9 Apr 2027 | CONFIRMED (CBSE)",
+          "body": "CBSE released the 2027 date sheets 101 days in advance. Class X exams run 16 February to 9 March 2027 and Class XII 16 February to 9 April 2027; practicals and internal assessment run 1 January – 13 February 2027. 26.5 lakh students registered for Class X and 19.8 lakh for Class XII (83 and 121 subjects respectively). CBSE says adequate gaps have been kept between subjects usually taken together. Check the official date sheet for your own subject combination.",
+          "url": "https://www.cbse.gov.in/"
+        },
+        {
+          "title": "JKSSB Class IV (MTS) and Sanitation Worker 2026 — 2,863 posts (J&K)",
+          "meta": "Apply by 27 Nov 2026 (extended from 12 Nov) | CONFIRMED (JKSSB extension notice dated 11.11.2026, Advt 09/2026)",
+          "body": "J&K Services Selection Board has extended the last date for Advt 09/2026 (dated 1 Sep 2026) to 27 Nov 2026, after representations from candidates; the earlier corrigendum deadline was 12 Nov. Posts: UT Cadre 105, Divisional Cadre 1,990, District Cadre 768. A valid J&K domicile certificate is required. The extension notice does not separately restate a fee deadline or closing time, so pay the fee while submitting, well before 27 Nov. Exam date not announced.",
+          "url": "https://www.jkssb.nic.in/"
+        },
+        {
+          "title": "CISCE board exams 2027 — ICSE (Class X) and ISC (Class XII) date sheets",
+          "meta": "ICSE 15 Feb – 31 Mar 2027 | ISC 9 Feb – 8 Apr 2027 | Released 10 Nov 2026 | CONFIRMED (official — cisce.org)",
+          "body": "CISCE released the 2027 date sheets on 10 Nov 2026 — ICSE (Class X) runs 15 Feb to 31 Mar 2027 and ISC (Class XII) 9 Feb to 8 Apr 2027; 79,980 candidates from 3,106 affiliated schools. ICSE's first paper is English Language (15 Feb, 10:15 AM); ISC's first day is 9 Feb (Environmental Science / Western Music theory, 2 PM). Practical exams are held earlier in the school session — check the school's internal schedule.",
+          "url": "https://cisce.org/"
+        },
+        {
+          "title": "UP Board (UPMSP) Class 10 and 12 examinations 2027",
+          "meta": "Exams 5–24 Feb 2027 | Proposed centre list out 16 Nov; objections till 21 Nov | CONFIRMED (UPMSP, via Hindustan Times 16 Nov 2026)",
+          "body": "Uttar Pradesh Madhyamik Shiksha Parishad will hold the 2027 High School and Intermediate examinations from 5 to 24 February 2027. The board published the proposed list of examination centres on 16 November 2026; schools can file objections online through upmsp.edu.in until 21 November 2026, after which no representation is accepted. The subject-wise date sheet is not published yet.",
+          "url": "https://upmsp.edu.in/"
+        },
+        {
+          "title": "Bihar Board (BSEB) sent-up examinations — 2027 batch",
+          "meta": "Intermediate 19–28 Nov 2026 | Matric 23–27 Nov 2026 | CONFIRMED (BSEB notice, 3 Nov 2026)",
+          "body": "Sent-up (school-level) examinations for students appearing in the 2027 Matric and Intermediate annual examinations: Intermediate 19–28 November 2026 and Matric 23–27 November 2026, in two shifts (9:30 AM–12:45 PM and 2–5:15 PM); Intermediate practicals 30 November–2 December and Matric practical 28 November. A student absent from, or failing, the sent-up examination is not issued an admit card for the board examination. The main 2027 board dates are not announced yet.",
+          "url": "https://biharboardonline.bihar.gov.in/"
+        },
+        {
+          "title": "UP NEET UG 2026 — Round 5 (BDS only, 1 seat)",
+          "meta": "Choices CLOSED 23 Nov (11 AM) | Allotment 23 Nov | Admission 25-28 Nov | CONFIRMED (DGME UP notice 17 Nov 2026)",
+          "body": "DGME Uttar Pradesh opened a fifth round for state-quota BDS seats only - there is no further MBBS round. The seat matrix published on 18 November had exactly one seat (unreserved BDS at D.J. College of Dental Sciences and Research, Modinagar, Ghaziabad - a private college); the matrix was revised after 18 November and secondary reports counted up to three seats, so read the live matrix on the portal rather than a reported figure. Registration fee is Rs 2,000 and the security deposit for private BDS seats is Rs 1,00,000. Choice filling closed on 23 November at 11 AM, the allotment result comes the same day, and admission runs 25-28 November. Students who want MBBS should know that the Uttar Pradesh state route for 2026 is closed - the stray vacancy round's reporting ended on 16 November.",
+          "url": "https://upneet.gov.in/"
+        },
+        {
+          "title": "UP AYUSH UG 2026 — Round 3 (BAMS/BHMS/BUMS)",
+          "meta": "Choices closed 18 Nov 2026 (2 PM) | Allotment 19 Nov | Verification 20-21 Nov | Admission last date 23 Nov 2026 (5 PM) | CONFIRMED (UP AYUSH Board notice 5 Nov 2026)",
+          "body": "The Round-3 merit list of registered candidates was released on 16 November with 14,741 candidates, of whom 12,464 are Uttar Pradesh domicile. Allotted candidates must attend document verification at the nodal centre in Lucknow on 20–21 November; a candidate who does not attend loses the entire security deposit. About 250 extra seats, allowed by the High Court in five private colleges, will be filled through a fourth or stray round whose dates are not announced yet.",
+          "url": "https://upayushcounseling.upsdc.gov.in/"
+        },
+        {
+          "title": "UP NEET PG 2026 — Round 2 (MD/MS/Diploma/DNB, state quota)",
+          "meta": "Registration CLOSED 19 Nov 2026 (11 AM) | Merit list 19 Nov | Choices 20–25 Nov | Allotment result 26 Nov (declared) | Admission 27 Nov – 2 Dec | CONFIRMED (official DGME UP schedule dated 13 Nov 2026)",
+          "body": "Round 2 of Uttar Pradesh's state-quota PG counselling. The ₹3,000 registration fee is one-time for rounds 1 to 3, so candidates who registered in Round 1 do not pay again; security is ₹30,000 for government and ₹2,00,000 for private college seats and is refundable. Choice filling opens only after the merit list on 19 November.",
+          "url": "https://upneet.gov.in/"
+        },
+        {
+          "title": "SHRESHTA (NETS) 2027 — Class 9 and Class 11 seats in private residential schools",
+          "meta": "Apply 14–30 Nov 2026 | Correction 2–4 Dec | Exam 10 Jan 2027 | CONFIRMED (NTA + PIB, 19 Nov 2026)",
+          "body": "A central scheme that pays for meritorious Scheduled Caste and De-notified Tribe students (not covered under SC/ST/OBC lists) to study in the country's better private residential schools. Roughly 2,400 seats a year — 2,160 for SC and 240 for DNT students. Eligibility: currently in Class 8 (for Class 9 entry) or Class 10 (for Class 11 entry), parental annual income up to ₹2.5 lakh. The test is a 3-hour pen-and-paper MCQ paper in Maths, Science, Social Science and General Awareness, in English and Hindi. No fee. Admission and counselling are handled by the Ministry of Social Justice, not NTA.",
+          "url": "https://exams.nta.nic.in/shreshta/"
+        },
+        {
+          "title": "KEA FDA, SDA and Group C 2026 (Karnataka) — 5,431 posts",
+          "meta": "Apply 30 Oct – 30 Nov 2026 (extended 24 Nov; fee also 30 Nov) | Exams 8–17 Jan 2027 | CONFIRMED (KEA notifications 29 Oct 2026 + extension order 24 Nov 2026)",
+          "body": "Karnataka Examination Authority's biggest clerical-level drive this year, across four separate notifications: 2,163 degree-level and 2,070 PUC-level posts in the Residual Parent Cadre, plus 563 FDA and 635 SDA posts in the Kalyana Karnataka cadre. Pay band ₹34,100–₹1,12,900 depending on post. A compulsory Kannada language test on 8 January 2027 is held before the main papers. You must pick the right notification for your qualification and cadre — one application does not cover all four. The last date for the form and the fee was extended from 25/26 November to 30 November 2026 by KEA's order of 24 November; the exam schedule is unchanged.",
+          "url": "https://cetonline.karnataka.gov.in/kea/"
+        },
+        {
+          "title": "RRB Station Master (CEN 08/2026) - 1,265 posts",
+          "body": "A separate railway notice in the NTPC family, published 26 October 2026: graduate-level Station Master posts across the Railway Recruitment Boards. The vacancy count was revised up from 1,215 to 1,265. Online application closed on 25 November 2026, fee payment 27 November, application modification 28 November to 7 December. The computer-based test date is not announced.",
+          "meta": "Apply by 25 Nov 2026 (CLOSED) | Fee 27 Nov | Modification 28 Nov – 7 Dec | Exam NOT ANNOUNCED | reported (CEN 08/2026 + Corrigendum-1 - verify on rrb.indianrailways.gov.in)",
+          "url": "https://indianrailways.gov.in/"
+        },
+        {
+          "title": "UPSSSC Junior Engineer (Mechanical) 2026 - 1,156 posts",
+          "body": "Advertisement 24-Exam/2026 dated 12 October 2026, filled through the Combined Junior Engineer (Mechanical) Main Examination. Applications run 3-25 November 2026; fee reconciliation and form modification until 2 December. A valid UPSSSC PET-2025 scorecard is compulsory. Processing fee Rs 25. Main exam date not announced.",
+          "meta": "Apply by 25 Nov 2026 | Exam NOT ANNOUNCED | CONFIRMED (official, UPSSSC advt 24-Exam/2026)",
+          "url": "https://upsssc.gov.in/"
+        },
+        {
+          "title": "Supreme Court Junior Court Attendant 2026 - 130 posts",
+          "body": "Group C post in Pay Level 3 (Rs 21,700-69,100). Apply online 4-25 November 2026 (11:55 PM) through sci.gov.in. Class 10 pass, and candidates must not have studied beyond Class 12; age 18-27 years as on 1 October 2026. Fee Rs 1,500 (Rs 750 for SC/ST/OBC-NCL/PwBD/ex-servicemen). Selection is an objective test plus interview.",
+          "meta": "Apply by 25 Nov 2026 (11:55 PM) | Exam date TBA | reported (official notification, sci.gov.in)",
+          "url": "https://www.sci.gov.in/"
+        },
+        {
+          "title": "BHEL — 415 Engineer/Executive and Supervisor Trainee posts",
+          "meta": "Apply 25 Nov – 28 Dec 2026 (11:45 PM) | CBT 27 Jan 2027 | CONFIRMED (BHEL advts 02/2026 and 03/2026, 24-25 Nov 2026)",
+          "body": "200 Engineer/Executive Trainee posts (engineering graduates, CA/CMA, HR postgraduates) and 215 Supervisor Trainee posts (engineering diploma, or BBA/BBS/BMS/B.Com with 65%, 60% for SC/ST). Upper age 27 (29 for Finance/HR executive trainees), counted as on 1 November 2026. Selection is a computer-based examination on 27 January 2027, followed by an interview for the executive posts.",
+          "url": "https://careers.bhel.in/"
+        },
+        {
+          "title": "Karnataka Forest Department — 450 Beat Forester posts (Group C)",
+          "meta": "Apply 23 Nov – 22 Dec 2026 | CONFIRMED (KFD notification, 23 Nov 2026)",
+          "body": "Direct recruitment of Beat Foresters across Karnataka's forest circles for candidates who have passed Class 12 / II PUC. Written exam and physical test dates are not announced.",
+          "url": "https://aranya.gov.in/"
+        },
+        {
+          "title": "NHPC — 250 Trainee Engineer and Trainee Officer posts",
+          "meta": "Apply 27 Nov – 26 Dec 2026 (5 PM) | GATE score + GD/interview | reported (NHPC advts NH/Talent Acquisition/07/2026 and 09/2026 — verify on nhpcindia.com)",
+          "body": "205 posts in Civil, Electrical and Mechanical (advt 07/2026, 24 November 2026) plus 45 in Electronics and Communication, Environment, IT, Geology and Geophysics (advt 09/2026, 25 November 2026). B.E./B.Tech/B.Sc (Engineering) with at least 60%.",
+          "url": "https://www.nhpcindia.com/"
+        }
+      ]
     },
     {
-     "title": "BPSC TRE 4.0 (Bihar school teacher) — 33,320 posts",
-     "body": "Bihar Public Service Commission extended the window on 26 October: fee payment until 2 November and the online form until 3 November 2026. Advertisement 15/2026; exam date not yet announced.",
-     "meta": "Apply by 3 Nov 2026 | Exam NOT ANNOUNCED | CONFIRMED (official, BPSC)"
+      "heading": "After Class 12 — Medical and Engineering",
+      "body": "The two biggest streams after Class 12. NEET UG 2027's exam mode is still undecided — the Nilekani task-force report is now due by January 2027, and NTA's own NEET page shows the information bulletin in February 2027.",
+      "icon": "medical-services",
+      "items": [
+        {
+          "title": "NEET UG 2027",
+          "body": "No official date exists. NTA's revised calendar of 26 October 2026 covers December 2026–April 2027 and does not list NEET UG. The exam-reform task force chaired by Nandan Nilekani, whose report was due in October 2026, has been given time till January 2027 (reported 1 November 2026), which makes a February 2027 notification the realistic window. Press reports say the panel is considering a phased move — computer-based and pen-and-paper shifts running side by side in 2027, with a full CBT switch possibly in 2028-29 — but this is reported, not decided. 2 May 2027 (first Sunday of May) is an estimate only. As of 25 November 2026 no 2027 bulletin or registration is out; NTA's NEET page shows the information bulletin in February 2027 and the exam on the first Sunday of May 2027 (a pattern, not a notified date). On 24 November, government sources were reported saying the Centre may let candidates choose between CBT and pen-and-paper for 2027 — reported, not decided.",
+          "meta": "Notification NOT ANNOUNCED (Feb 2027 now likely) | Exam NOT ANNOUNCED (early May 2027 is only an estimate) | CBT / hybrid / choice-of-mode still undecided (task force reports by Jan 2027)",
+          "url": "https://neet.nta.nic.in/"
+        },
+        {
+          "title": "JEE Main 2027 (Session 1)",
+          "body": "Registration opened on 24 October 2026 and closed on 22 November with 15,04,866 forms; NTA's 26 November update put it at 15,84,014 forms submitted and 14,06,780 fee-paid. Late submission with a Rs 500 late fee closes at 11:50 PM on 26 November, only for candidates who already have an application number; the correction window is 27-29 November; the exam city slip comes on 30 December 2026 and the admit card on 13 January 2027.",
+          "meta": "Regular window closed 22 Nov 2026 | Late fee 23-26 Nov (final day 26 Nov) | Exam 20, 21, 22, 23, 24 and 28 Jan 2027 | CONFIRMED (official)",
+          "url": "https://jeemain.nta.nic.in/"
+        },
+        {
+          "title": "JEE Main 2027 (Session 2)",
+          "body": "NTA's revised calendar published on 26 October gives actual dates for Session 2 for the first time.",
+          "meta": "Exam 2–7 Apr 2027 | CONFIRMED (NTA calendar, 26 Oct 2026)",
+          "url": "https://jeemain.nta.nic.in/"
+        },
+        {
+          "title": "JEE Advanced 2027",
+          "meta": "Exam 23 May 2027 (Sunday) | Eligibility criteria + official website live 13 Nov 2026 | CONFIRMED (official — jeeadv.ac.in / IIT Delhi notice, 13 Nov 2026)",
+          "body": "IIT Delhi is the organising institute and JEE Advanced 2027 will be held on 23 May 2027 (Sunday). The official website jeeadv.ac.in went live on 13 Nov 2026 with the eligibility criteria. New this year: candidates get an on-screen basic (non-scientific) calculator with a 10–12 digit display. Only the top 2.5 lakh JEE Main 2027 scorers can appear; a maximum of two attempts in two consecutive years, the first in the Class-12 passing year. Registration dates are not announced yet.",
+          "url": "https://jeeadv.ac.in/"
+        }
+      ]
     },
     {
-     "title": "KRDP Combined Recruitment 2026-27 — 12,878 posts",
-     "body": "Khadi Reform and Development Programme (MSME Ministry) Group B and Group C posts: 10th, 12th, graduation, B.Com, B.E./B.Tech or Master's depending on the post. Two-step process: registration 26 October-25 November, final submission 26-30 November, correction 2-4 December. No application fee for any category.",
-     "meta": "Register by 25 Nov 2026 | Exam date TBA | CONFIRMED (official, portal.krdp.org.in)"
+      "heading": "After Class 12 — Law, Management and Defence",
+      "body": "Law, business and defence entries beyond the science streams.",
+      "icon": "gavel",
+      "items": [
+        {
+          "title": "CLAT 2027",
+          "body": "National law entrance for the National Law Universities and several private law schools. Applications closed on 7 November 2026 (official notice, 31 October 2026). Admit cards were released on 21 November 2026 and can be downloaded until 6 December, 1:30 PM. The exam is on 6 December 2026, 2–4 PM, offline.",
+          "meta": "Admit card out 21 Nov 2026 | Exam 6 Dec 2026 | Application closed 7 Nov",
+          "url": "https://consortiumofnlus.ac.in/"
+        },
+        {
+          "title": "AILET 2027",
+          "meta": "Apply by 10 Nov 2026 | Exam 13 Dec 2026 (2–4 PM) | CONFIRMED (official — NLU Delhi)",
+          "url": "https://nationallawuniversitydelhi.in/",
+          "body": "NLU Delhi's own law entrance for B.A. LL.B. (Hons.) and LL.M — a separate exam from CLAT, so a law aspirant can sit both. Class 12 with 45% (OBC 42%, SC/ST 40%); admit card 30 Nov 2026."
+        },
+        {
+          "title": "CAT 2026",
+          "body": "Gateway to the IIMs and most top MBA programmes. Registration closed on 22 September 2026.",
+          "meta": "Exam 29 Nov 2026 | CONFIRMED (official)",
+          "url": "https://iimcat.ac.in/"
+        },
+        {
+          "title": "NDA and CDS (I) 2027",
+          "body": "Defence entry after Class 12 (NDA) and after graduation (CDS), conducted by UPSC.",
+          "meta": "Apply 2–22 Dec 2026 | Exam 11 Apr 2027 | CONFIRMED (UPSC calendar)",
+          "url": "https://upsc.gov.in/"
+        }
+      ]
     },
     {
-     "title": "RRB NTPC 2026 (Graduate and Undergraduate)",
-     "body": "Two separate application windows for graduate and undergraduate posts, as per the official indicative notice.",
-     "meta": "Graduate: 8 Oct – 6 Nov 2026 | UG: 15 Oct – 13 Nov 2026 | CONFIRMED (official notice)"
+      "heading": "Teaching and government jobs",
+      "body": "Recruitment examinations for teaching and central or state government posts.",
+      "icon": "badge",
+      "items": [
+        {
+          "title": "APTRT-2026 (Andhra Pradesh DSC) — 2,721 teacher posts",
+          "meta": "Apply 11–30 Nov 2026 | Exam from 20 Dec 2026 | CONFIRMED (official)",
+          "body": "State teacher recruitment test for School Assistant, Secondary Grade Teacher and special education posts in Andhra Pradesh schools. The detailed notification was released on 4 November 2026.",
+          "url": "https://schooledu.ap.gov.in/"
+        },
+        {
+          "title": "CTET 2026",
+          "body": "Eligibility test for teaching in central government schools; required by many state recruitment boards too.",
+          "meta": "Exam 12–13 Dec 2026 | CONFIRMED (official)",
+          "url": "https://ctet.nic.in/"
+        },
+        {
+          "title": "UGC NET (December 2026)",
+          "body": "Qualifies candidates for assistant professor and junior research fellowship roles. Registration closed on 31 October 2026; correction window was 2-4 November 2026; the advance exam-city slip was released on 25 November 2026 (postponed from 23 November) and NTA has opened a window to change city if the allotted city is outside your four preferences; admit card 7 December; exam 14-18 and 21 December 2026, two shifts daily.",
+          "meta": "City slip OUT 25 Nov | Admit card 7 Dec | Exam 14-18 and 21 Dec 2026 | CONFIRMED (official)",
+          "url": "https://ugcnet.nta.ac.in/"
+        },
+        {
+          "title": "SSC CGL 2026",
+          "body": "Combined Graduate Level examination for central government posts. Tier-1 is being held in this window; Tier-2 is expected in December.",
+          "meta": "Tier-1: 30 Sep - 30 Oct 2026 (CONFIRMED) | Tier-2: Dec 2026 (EXPECTED - no date notified as of 23 Nov)",
+          "url": "https://ssc.gov.in/"
+        },
+        {
+          "title": "SSC CHSL 2026",
+          "body": "For 10+2 level central government posts. The Tier-1 window has been notified; exact shift dates appear on the admit card.",
+          "meta": "Tier-1: 30 Nov – 31 Dec 2026 | CONFIRMED (official)",
+          "url": "https://ssc.gov.in/"
+        },
+        {
+          "title": "RRB NTPC 2026",
+          "body": "Railway recruitment for graduate and undergraduate posts across zones. Exam dates are not yet announced.",
+          "meta": "Apply Oct–Nov 2026 | Exam NOT ANNOUNCED",
+          "url": "https://indianrailways.gov.in/"
+        },
+        {
+          "title": "UPSSSC PET 2026",
+          "body": "Preliminary test that qualifies candidates for a wide range of Uttar Pradesh government recruitments.",
+          "meta": "Exam held 25 Oct, 30 Oct and 1 Nov 2026 - DONE | CONFIRMED (official)",
+          "url": "https://upsssc.gov.in/"
+        },
+        {
+          "title": "AEES teacher recruitment 2026 — 254 posts",
+          "meta": "Apply 2-22 Nov 2026 - CLOSED",
+          "body": "Atomic Energy Education Society (Department of Atomic Energy) advertisement 01/2026: Principal, Vice Principal, PGT, TGT, PRT, PRT (Music), Balvatika Teacher and Librarian. Online applications 2–22 November 2026 at aees.gov.in.",
+          "url": "https://www.aees.gov.in/"
+        },
+        {
+          "title": "ISRO SDSC SHAR 2026 — 97 posts (reported)",
+          "meta": "Portal reopened 13–16 Nov 2026 | CONFIRMED (official notice dated 13.11.2026)",
+          "body": "Technical Assistant, Scientific Assistant, Library Assistant, Nurse-B, Technician-B/Draughtsman-B, Fireman-A, Driver LVD/HVD and MTS posts at Sriharikota. The portal was reopened from 13 Nov (10 AM) to 16 Nov 2026 (11:59 PM) after the original 9 Nov deadline; age and qualification cut-off remains 9 Nov 2026. One of the few central recruitment windows open to 10th-pass and ITI-qualified candidates.",
+          "url": "https://www.isro.gov.in/SDSCRecruitment26.html"
+        }
+      ]
     },
     {
-     "title": "UGC NET December 2026 cycle",
-     "body": "Application window is open and was extended on 27 October 2026 to 31 October (11:50 PM) with no late fee. Correction window 2-4 November, exam city slip 23 November, admit card 7 December.",
-     "meta": "Apply by 31 Oct 2026 | Exam 14-18 & 21 Dec 2026 | CONFIRMED (official)"
+      "heading": "Common questions",
+      "body": "The date questions students ask us most often — answered briefly.",
+      "icon": "help",
+      "items": [
+        {
+          "title": "Which exam is on 25 October 2026?",
+          "body": "UPSSSC PET 2026 (Uttar Pradesh Preliminary Eligibility Test). It is also held on 30 October and 1 November 2026.",
+          "meta": "CONFIRMED",
+          "url": "https://upsssc.gov.in/"
+        },
+        {
+          "title": "Which exam is on 6 December 2026?",
+          "body": "CLAT 2027 — the Common Law Admission Test for the National Law Universities and several private law schools.",
+          "meta": "CONFIRMED",
+          "url": "https://consortiumofnlus.ac.in/"
+        },
+        {
+          "title": "When is JEE Main 2027?",
+          "body": "Session 1: 20, 21, 22, 23, 24 and 28 January 2027 (revised 26 Oct). Session 2: 2-7 April 2027. Session 1 registration ran from 24 October to 22 November 2026; a late-fee window with an extra Rs 500 ran 23-26 November 2026 (final day 26 Nov, 11:50 PM) for candidates who had already registered.",
+          "meta": "CONFIRMED (NTA calendar, revised 26 Oct 2026)",
+          "url": "https://jeemain.nta.nic.in/"
+        },
+        {
+          "title": "Which exam is on 7 November 2026?",
+          "meta": "CONFIRMED",
+          "body": "Two things: the last date to apply for CLAT 2027 (extended from 31 October), and the result of the MCC NEET UG 2026 special stray vacancy round, after which reporting at allotted colleges runs 7–16 November 2026.",
+          "url": "https://consortiumofnlus.ac.in/"
+        },
+        {
+          "title": "When is NEET UG 2027?",
+          "body": "Notification not out as of 25 November 2026. NTA's NEET page shows the information bulletin in February 2027 and the exam on the first Sunday of May 2027 (a pattern, not a notified date). The CBT-or-paper decision is still with the Nilekani task force, which reports by January 2027.",
+          "meta": "EXPECTED / NOT ANNOUNCED",
+          "url": "https://neet.nta.nic.in/"
+        },
+        {
+          "title": "When is CTET 2026?",
+          "body": "12–13 December 2026, conducted by CBSE.",
+          "meta": "CONFIRMED",
+          "url": "https://ctet.nic.in/"
+        },
+        {
+          "title": "How often is this calendar updated?",
+          "body": "Twice a week — every Monday and Thursday — from official sources, and immediately whenever a new notification is issued.",
+          "meta": "Updated Mon & Thu"
+        }
+      ]
     },
     {
-     "title": "CTET 2026 (CBSE, 22nd edition)",
-     "body": "The Central Teacher Eligibility Test will be held over two days. Applications for this cycle are already closed.",
-     "meta": "Exam 12–13 Dec 2026 | CONFIRMED (official)"
+      "heading": "How to read the labels",
+      "body": "Every date in this calendar carries one of three labels. Please treat them differently.",
+      "icon": "help",
+      "items": [
+        {
+          "title": "CONFIRMED",
+          "body": "Announced by the conducting body — NTA, UPSC, SSC, RRB, CBSE, ICAI or a state board — in an official notification or exam calendar. Note that NTA and UPSC calendars carry the caveat that dates are tentative and can be altered.",
+          "meta": "Trust, but re-check at notification"
+        },
+        {
+          "title": "EXPECTED",
+          "body": "Projected from the previous cycle's pattern. Useful for planning, but it is not a promise and can shift.",
+          "meta": "Plan, don't commit"
+        },
+        {
+          "title": "NOT ANNOUNCED",
+          "body": "No official date exists yet. Any specific date circulating on social media or coaching pages should not be treated as fact.",
+          "meta": "Wait for the official notification"
+        },
+        {
+          "title": "Refreshed twice a week",
+          "body": "This calendar is updated every Monday and Thursday, and whenever a new notification is issued. If you are reading it on a later date, verify the current position on the official website before applying.",
+          "meta": "Last refreshed 23 Nov 2026"
+        }
+      ]
     },
     {
-     "title": "NDA (I) and CDS (I) 2027 (UPSC)",
-     "body": "Notification and application window for the first NDA and CDS exams of 2027, per the UPSC calendar.",
-     "meta": "Apply 2–22 Dec 2026 | Exam 11 Apr 2027 | CONFIRMED (UPSC calendar)"
-    },
-    {
-     "title": "CA Foundation, January 2027 cycle",
-     "body": "Exam form window opens in November, with a late-fee window; the exam runs over four days in early January.",
-     "meta": "Form: 3–16 Nov 2026 | Exam: 3, 5, 7, 9 Jan 2027 | CONFIRMED (official)"
-    },
-    {
-     "title": "UPSSSC PET 2026",
-     "body": "Preliminary Eligibility Test for Uttar Pradesh government posts, held in two shifts per day on the revised schedule.",
-     "meta": "Exam 25 Oct, 30 Oct and 1 Nov 2026 | CONFIRMED (official, revised)"
-    },
-    {
-     "title": "CAT 2026 (IIM Indore)",
-     "body": "The Common Admission Test for MBA admissions. Registration for this cycle has closed.",
-     "meta": "Exam 29 Nov 2026 | CONFIRMED (official)"
+      "heading": "Related guides on Sajhi Shiksha",
+      "body": "Not sure which path suits you? These free guides explain the streams, courses and careers behind these exams.",
+      "icon": "arrow-forward",
+      "items": [
+        {
+          "title": "Class 10 Stream Selection Guide",
+          "body": "How to choose Science, Commerce, Arts or a skill route after Class 10.",
+          "meta": "Our guide",
+          "url": "https://www.sajhishiksha.in/career-counselling/class10-stream-selection-guide"
+        },
+        {
+          "title": "Science PCB — Medical & Life Science",
+          "body": "MBBS, nursing, pharmacy, physiotherapy and allied health paths.",
+          "meta": "Our guide",
+          "url": "https://www.sajhishiksha.in/career-counselling/pcb-medical-guide"
+        },
+        {
+          "title": "Science PCM — Engineering & Technology",
+          "body": "B.Tech branches, architecture, defence and research routes.",
+          "meta": "Our guide",
+          "url": "https://www.sajhishiksha.in/career-counselling/pcm-engineering-guide"
+        },
+        {
+          "title": "Commerce — Business, Finance & Management",
+          "body": "B.Com, BBA, CA, CS, CMA and finance careers.",
+          "meta": "Our guide",
+          "url": "https://www.sajhishiksha.in/career-counselling/commerce-guide"
+        },
+        {
+          "title": "Arts & Humanities",
+          "body": "Law, design, media, teaching and civil services paths.",
+          "meta": "Our guide",
+          "url": "https://www.sajhishiksha.in/career-counselling/arts-humanities-guide"
+        },
+        {
+          "title": "Top Colleges & Institutes (NIRF 2025)",
+          "body": "India's top-ranked universities, colleges and institutes, by stream.",
+          "meta": "Our guide",
+          "url": "https://www.sajhishiksha.in/career-counselling/top-colleges-and-institutes"
+        },
+        {
+          "title": "Scholarships & Education Finance",
+          "body": "Scholarship portals, education loans and fee waivers.",
+          "meta": "Our guide",
+          "url": "https://www.sajhishiksha.in/career-counselling/scholarships-and-education-finance"
+        },
+        {
+          "title": "All career guides by stream",
+          "body": "Browse every guide on one page.",
+          "meta": "Our guides",
+          "url": "https://www.sajhishiksha.in/career-counselling/career-guides-by-stream"
+        }
+      ]
     }
-   ]
-  },
-  {
-   "heading": "After Class 12 — Medical and Engineering",
-   "body": "The two biggest streams after Class 12. The reported plan to move NEET UG 2027 to a computer-based test is still under consideration — no final decision has been announced (the Centre told the Supreme Court on 18 Sep 2026).",
-   "icon": "medical-services",
-   "items": [
-    {
-     "title": "NEET UG 2027",
-     "body": "The exam date is not announced. NTA's revised calendar (26 October 2026) does not list NEET UG. The reported plan to move NEET UG to a computer-based test from 2027 is still under consideration - the Centre told the Supreme Court on 18 September 2026 that no final decision has been taken, and a parliamentary panel on 9 October 2026 only recommended the shift. Early May 2027 is an estimate from the previous cycle, not an official date.",
-     "meta": "Notification and exam date NOT ANNOUNCED (early May 2027 is an estimate) | CBT shift NOT ANNOUNCED (under consideration)"
-    },
-    {
-     "title": "JEE Main 2027 (Session 1)",
-     "body": "Registration is open from 24 October to 22 November 2026 (11:50 PM); late fee until 26 November, correction 27-29 November. NTA revised the exam dates on 26 October to 20, 21, 22, 23, 24 and 28 January 2027.",
-     "meta": "Apply by 22 Nov 2026 | Exam 20-24 & 28 Jan 2027 | CONFIRMED (NTA notice 24 Oct, revised calendar 26 Oct 2026)"
-    },
-    {
-     "title": "JEE Main 2027 (Session 2)",
-     "body": "NTA's revised calendar (26 October 2026) gives Session 2 its first firm dates: 2 to 7 April 2027. Registration window is expected after Session 1.",
-     "meta": "Exam 2-7 Apr 2027 | CONFIRMED (NTA revised calendar, 26 Oct 2026) | Registration NOT ANNOUNCED"
-    },
-    {
-     "title": "JEE Advanced 2027",
-     "body": "Open to the top JEE Main qualifiers. The official schedule is expected around December 2026; press reports point to mid-May 2027 but treat any specific date as indicative.",
-     "meta": "Schedule EXPECTED Dec 2026 | Exam mid-May 2027 (indicative)"
-    },
-    {
-     "title": "UP NEET UG 2026 counselling — Round 3",
-     "body": "Uttar Pradesh DGME notice ME-3/2026/1890 dated 26 October 2026: registration closed 28 October, merit list 28 October, choice filling 28 October-31 October (5 PM), seat allotment 2 November, admission 3-7 November. This is for the 85% state quota seats in UP medical and dental colleges.",
-     "meta": "Choice filling closes 31 Oct 2026 (5 PM) | CONFIRMED (official, DGME UP notice 26 Oct 2026)"
-    }
-   ]
-  },
-  {
-   "heading": "After Class 12 — Law, Management and Defence",
-   "body": "Law, business and defence entries beyond the science streams.",
-   "icon": "gavel",
-   "items": [
-    {
-     "title": "CLAT 2027",
-     "body": "National law entrance for the 22 National Law Universities and several private law schools.",
-     "meta": "Apply by 31 Oct 2026 | Exam 6 Dec 2026 | CONFIRMED (official)"
-    },
-    {
-     "title": "CAT 2026",
-     "body": "Gateway to the IIMs and most top MBA programmes. Registration closed on 22 September 2026.",
-     "meta": "Exam 29 Nov 2026 | CONFIRMED (official)"
-    },
-    {
-     "title": "NDA and CDS (I) 2027",
-     "body": "Defence entry after Class 12 (NDA) and after graduation (CDS), conducted by UPSC.",
-     "meta": "Apply 2–22 Dec 2026 | Exam 11 Apr 2027 | CONFIRMED (UPSC calendar)"
-    }
-   ]
-  },
-  {
-   "heading": "Teaching and government jobs",
-   "body": "Recruitment examinations for teaching and central or state government posts.",
-   "icon": "badge",
-   "items": [
-    {
-     "title": "CTET 2026",
-     "body": "Eligibility test for teaching in central government schools; required by many state recruitment boards too.",
-     "meta": "Exam 12–13 Dec 2026 | CONFIRMED (official)"
-    },
-    {
-     "title": "UGC NET (December 2026)",
-     "body": "Qualifies candidates for assistant professor and junior research fellowship roles. Application window open, extended on 27 October to 31 October (11:50 PM) with no late fee; correction 2-4 November; exam over 14-18 and 21 December 2026.",
-     "meta": "Apply by 31 Oct 2026 | Exam 14-18 & 21 Dec 2026 | CONFIRMED (official, NTA notice 27 Oct 2026)"
-    },
-    {
-     "title": "SSC CGL 2026",
-     "body": "Combined Graduate Level examination for central government posts. Tier-1 is being held in this window; Tier-2 is expected in December.",
-     "meta": "Tier-1: 30 Sep – 30 Oct 2026 (CONFIRMED) | Tier-2: Dec 2026 (EXPECTED)"
-    },
-    {
-     "title": "SSC CHSL 2026",
-     "body": "For 10+2 level central government posts. The Tier-1 window has been notified; exact shift dates appear on the admit card.",
-     "meta": "Tier-1: 30 Nov – 31 Dec 2026 | CONFIRMED (official)"
-    },
-    {
-     "title": "SSC JE and SSC CPO 2026 — revised exam dates",
-     "body": "SSC corrigendum dated 26 October 2026 revised both schedules. Junior Engineer Paper-I (CBE) is now in two windows: 2-6 November 2026 and 30 November-1 December 2026 (Telecom and IMD Scientific Assistant papers in the second). Sub-Inspector in Delhi Police and CAPF (CPO) is now 23-28 November 2026, from 20-28 November earlier.",
-     "meta": "JE Paper-I 2-6 Nov & 30 Nov-1 Dec 2026 | CPO 23-28 Nov 2026 | CONFIRMED (official, SSC corrigendum 26 Oct 2026)"
-    },
-    {
-     "title": "RRB NTPC 2026",
-     "body": "Railway recruitment for graduate and undergraduate posts across zones. Exam dates are not yet announced.",
-     "meta": "Apply Oct–Nov 2026 | Exam NOT ANNOUNCED"
-    },
-    {
-     "title": "UPSSSC PET 2026",
-     "body": "Preliminary test that qualifies candidates for a wide range of Uttar Pradesh government recruitments.",
-     "meta": "Exam 25 Oct, 30 Oct and 1 Nov 2026 | CONFIRMED (official)"
-    }
-   ]
-  },
-  {
-   "heading": "How to read the labels",
-   "body": "Every date in this calendar carries one of three labels. Please treat them differently.",
-   "icon": "help",
-   "items": [
-    {
-     "title": "CONFIRMED",
-     "body": "Announced by the conducting body — NTA, UPSC, SSC, RRB, CBSE, ICAI or a state board — in an official notification or exam calendar. Note that NTA and UPSC calendars carry the caveat that dates are tentative and can be altered.",
-     "meta": "Trust, but re-check at notification"
-    },
-    {
-     "title": "EXPECTED",
-     "body": "Projected from the previous cycle's pattern. Useful for planning, but it is not a promise and can shift.",
-     "meta": "Plan, don't commit"
-    },
-    {
-     "title": "NOT ANNOUNCED",
-     "body": "No official date exists yet. Any specific date circulating on social media or coaching pages should not be treated as fact.",
-     "meta": "Wait for the official notification"
-    },
-    {
-     "title": "Refreshed twice a week",
-     "body": "This calendar is updated from official sources every Monday and Thursday. If you are reading it on a later date, verify the current position on the official website before applying.",
-     "meta": "Check the official website before applying"
-    }
-   ]
-  }
- ]
+  ]
 }
